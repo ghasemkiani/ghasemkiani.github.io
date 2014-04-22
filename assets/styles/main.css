@@ -1,0 +1,18 @@
+@import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+@import url(http://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css);
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif);
+@import url(http://fonts.googleapis.com/earlyaccess/thabit.css);
+
+
+html,body,input,textarea,select,option,h1,h2,h3,h4,h5,h6 {
+	font-family:Droid Arabic Naskh, Droid Serif;
+}
+.nav,.navbar {
+	font-family:Droid Arabic Kufi, Droid Sans;
+}
+footer {
+	margin-top:0.5em;
+	padding-top:0.25em;
+	border-top:#eee solid thick;
+}
