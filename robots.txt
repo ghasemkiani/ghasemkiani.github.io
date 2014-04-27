@@ -1,3 +1,4 @@
+Sitemap: http://ghasemkiani.ir/sitemap.xml
 User-agent: *
 Disallow: /admin/
 Disallow: /private/
