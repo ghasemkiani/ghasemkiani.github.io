@@ -100,5 +100,16 @@
 				ga("send", "pageview");
 			})();
 		</script>
+		<script>
+			(function () {
+				(function (doc, tag, url) {
+					var scr = doc.createElement(tag);
+					scr.async = 1;
+					scr.src = url + encodeURIComponent(doc.location.href);
+					var scr0 = doc.getElementsByTagName(tag)[0];
+					scr0.parentNode.insertBefore(scr, scr0);
+				})(document, "script", "http://dev.ghasemkiani.ir/site/traffic/tracker?uri=");
+			})();
+		</script>
 	</body>
 </html>
