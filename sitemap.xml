@@ -19,6 +19,18 @@
 		<priority>0.7</priority>
 	</url>
 	<url>
+		<loc>http://ghasemkiani.ir/translation/</loc>
+		<lastmod>2014-06-10</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>http://ghasemkiani.ir/translation/glossary/</loc>
+		<lastmod>2014-06-10</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
 		<loc>http://ghasemkiani.ir/about/</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
