@@ -19,6 +19,12 @@
 		<priority>0.7</priority>
 	</url>
 	<url>
+		<loc>http://ghasemkiani.ir/books/prey/</loc>
+		<lastmod>2014-09-01</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
 		<loc>http://ghasemkiani.ir/translation/</loc>
 		<lastmod>2014-06-10</lastmod>
 		<changefreq>daily</changefreq>
