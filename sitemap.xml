@@ -46,4 +46,10 @@
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
+	<url>
+		<loc>http://ghasemkiani.ir/links/</loc>
+		<lastmod>2016-03-17T12:30:03+03:30</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.7</priority>
+	</url>
 </urlset>
