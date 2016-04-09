@@ -25,6 +25,18 @@
 		<priority>0.6</priority>
 	</url>
 	<url>
+		<loc>http://ghasemkiani.ir/books/veldt/</loc>
+		<lastmod>2016-03-17</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://ghasemkiani.ir/books/aqar/</loc>
+		<lastmod>2016-04-09</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
 		<loc>http://ghasemkiani.ir/translation/</loc>
 		<lastmod>2014-06-10</lastmod>
 		<changefreq>daily</changefreq>
