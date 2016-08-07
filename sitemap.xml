@@ -25,6 +25,12 @@
 		<priority>0.6</priority>
 	</url>
 	<url>
+		<loc>http://ghasemkiani.ir/books/lostlight/</loc>
+		<lastmod>2016-08-07</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
 		<loc>http://ghasemkiani.ir/books/veldt/</loc>
 		<lastmod>2016-03-17</lastmod>
 		<changefreq>daily</changefreq>
