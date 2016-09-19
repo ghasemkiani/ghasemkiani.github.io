@@ -43,6 +43,12 @@
 		<priority>0.6</priority>
 	</url>
 	<url>
+		<loc>http://ghasemkiani.ir/books/hpatcc/</loc>
+		<lastmod>2016-09-19</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
 		<loc>http://ghasemkiani.ir/translation/</loc>
 		<lastmod>2014-06-10</lastmod>
 		<changefreq>daily</changefreq>
