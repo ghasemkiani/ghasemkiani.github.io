@@ -2,77 +2,133 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>http://ghasemkiani.ir/</loc>
-		<lastmod>2014-04-27T15:30:03+04:30</lastmod>
+		<lastmod>2019-03-03T11:50:00+03:30</lastmod>
 		<changefreq>always</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>http://ghasemkiani.ir/books/</loc>
-		<lastmod>2014-04-27</lastmod>
+		<lastmod>2019-03-03</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
-		<loc>http://ghasemkiani.ir/books/jspr/</loc>
-		<lastmod>2014-04-27</lastmod>
+		<loc>http://ghasemkiani.ir/books/predm/</loc>
+		<lastmod>2019-03-03</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
-		<loc>http://ghasemkiani.ir/books/prey/</loc>
-		<lastmod>2014-09-01</lastmod>
+		<loc>http://ghasemkiani.ir/books/afpiah/</loc>
+		<lastmod>2019-03-03</lastmod>
 		<changefreq>daily</changefreq>
-		<priority>0.6</priority>
+		<priority>0.7</priority>
 	</url>
 	<url>
-		<loc>http://ghasemkiani.ir/books/lostlight/</loc>
-		<lastmod>2016-08-07</lastmod>
+		<loc>http://ghasemkiani.ir/books/whistler/</loc>
+		<lastmod>2019-03-03</lastmod>
 		<changefreq>daily</changefreq>
-		<priority>0.6</priority>
+		<priority>0.7</priority>
 	</url>
 	<url>
-		<loc>http://ghasemkiani.ir/books/veldt/</loc>
-		<lastmod>2016-03-17</lastmod>
+		<loc>http://ghasemkiani.ir/books/ntp20drug/</loc>
+		<lastmod>2019-03-03</lastmod>
 		<changefreq>daily</changefreq>
-		<priority>0.6</priority>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>http://ghasemkiani.ir/books/sblp/</loc>
+		<lastmod>2019-03-03</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>http://ghasemkiani.ir/books/aqar/</loc>
-		<lastmod>2016-04-09</lastmod>
+		<lastmod>2019-03-03</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>http://ghasemkiani.ir/books/jspr/</loc>
+		<lastmod>2019-03-03</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>http://ghasemkiani.ir/books/lostlight/</loc>
+		<lastmod>2019-03-03</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>http://ghasemkiani.ir/books/hpatcc/</loc>
-		<lastmod>2016-09-19</lastmod>
+		<loc>http://ghasemkiani.ir/books/sale/</loc>
+		<lastmod>2019-03-03</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://ghasemkiani.ir/books/broker/</loc>
+		<lastmod>2019-03-03</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://ghasemkiani.ir/books/hp6/</loc>
+		<lastmod>2019-03-03</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://ghasemkiani.ir/books/prey/</loc>
+		<lastmod>2019-03-03</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://ghasemkiani.ir/books/moreau/</loc>
+		<lastmod>2019-03-03</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://ghasemkiani.ir/books/kim/</loc>
+		<lastmod>2019-03-03</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://ghasemkiani.ir/books/dimg/</loc>
+		<lastmod>2019-03-03</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
 		<loc>http://ghasemkiani.ir/translation/</loc>
-		<lastmod>2014-06-10</lastmod>
+		<lastmod>2019-03-03</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>http://ghasemkiani.ir/translation/glossary/</loc>
-		<lastmod>2014-06-10</lastmod>
+		<lastmod>2019-03-03</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>http://ghasemkiani.ir/about/</loc>
+		<lastmod>2019-03-03</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
 		<loc>http://ghasemkiani.ir/contact/</loc>
+		<lastmod>2019-03-03</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
 		<loc>http://ghasemkiani.ir/links/</loc>
-		<lastmod>2016-03-17T12:30:03+03:30</lastmod>
+		<lastmod>2019-03-03T11:50:00+03:30</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.7</priority>
 	</url>
