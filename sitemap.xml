@@ -2,15 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>http://ghasemkiani.ir/</loc>
-		<lastmod>2019-03-03T11:50:00+03:30</lastmod>
+		<lastmod>2019-01-27T18:35:00+03:30</lastmod>
 		<changefreq>always</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>http://ghasemkiani.ir/books/</loc>
-		<lastmod>2019-03-03</lastmod>
+		<lastmod>2020-01-27</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>http://ghasemkiani.ir/books/body/</loc>
+		<lastmod>2020-01-27</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>http://ghasemkiani.ir/books/genemachine/</loc>
+		<lastmod>2020-01-27</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>http://ghasemkiani.ir/books/predm/</loc>
