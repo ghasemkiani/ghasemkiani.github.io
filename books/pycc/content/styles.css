@@ -1,0 +1,66 @@
+*,::after,::before{box-sizing:border-box;}
+@page{size:A5;margin:20mm 19mm;}
+main{direction:rtl;font-family:Droid Arabic Naskh,Droid Serif;}
+div.cover{}
+p.cover{text-align:center;text-indent:0;margin:1em 0;}
+p.copyright-text{font-size:80%;text-align:start;text-indent:0;margin:0;}
+p.copyright-text-header{font-weight:bold;}
+p.title,h1,h2,h3,h4,h5,h6{font-family:inherit;}
+div.title-page p{text-align:center;text-indent:0;}
+p.title-page-title{font-family:inherit;font-size:2em;font-weight:bold;margin-top:1em;margin-bottom:0.5em;}
+p.title-page-subtitle{font-family:inherit;font-size:1.25em;font-style:italic;margin-top:0.5em;margin-bottom:1.5em;}
+p.title-page-author{font-family:Droid Arabic Naskh,Droid Serif;font-size:1em;font-weight:bold;margin-top:0.5em;margin-bottom:0.5em;}
+p.title-page-translator{font-family:Droid Arabic Naskh,Droid Serif;font-size:1em;margin-top:0.5em;margin-bottom:1.5em;}
+p.ded{font-family:Droid Arabic Naskh,Droid Serif;font-size:1em;font-style:italic;margin-top:2.5em;margin-bottom:5em;margin-inline:25%;text-indent:0;text-align:center;}
+p.copyright{font-family:Droid Arabic Naskh,Droid Serif;font-size:0.75em;text-indent:0;margin:0;text-align:start;}
+p.copyright-sep{font-family:Droid Arabic Naskh,Droid Serif;font-size:1em;text-indent:0;margin:1em 0;text-align:center;}
+h1,h2,h3,h4,h5,h6,h7,h8,h9{margin:0;margin-top:1.5em;margin-bottom:0.25em;page-break-after:avoid;font-weight:bold;}
+h1.pt-title{text-align:center;margin-top:1.5em;margin-bottom:3em;}
+span.pt-title-num{font-size:300%;}
+span.pt-title-text{font-size:150%;font-weight:bold;}
+h2.ch-title{text-align:center;margin-top:1.5em;margin-bottom:3em;}
+span.ch-title-num{font-size:400%;}
+span.ch-title-text{font-size:150%;font-weight:bold;}
+article.ch>p:first-of-type::first-line{text-shadow:1px 1px 2px #333333;}
+p{text-align:justify;margin:0;text-indent:1.5rem;}
+p.noindent{text-indent:0;}
+p.center{text-align:center;text-indent:0;}
+p.tiy1{margin-top:0.5em;}
+span.tiy{font-weight:bold;}
+pre.snippet{position:relative;direction:ltr;text-align:start;margin:1em 0;background-color:#eeeeee;border-left:none;border-right:none;padding:0.25em 0;padding-left:1em;font-family:Courier Prime;font-style:normal;line-height:120%;}
+pre.snippet{position:relative;}
+pre.snippet::before{position:absolute;left:0;top:0;width:1em;height:100%;background-color:#dddddd;content:"";}
+pre.snippet span.n:not(.inline){position:absolute;left:0;margin-top:0.25em;}
+span.n{display:inline-block;direction:ltr;background-color:black;color:white;text-align:center;text-indent:0;font-family:Courier Prime;font-size:75%;width:1em;height:1em;line-height:1em;border-radius:0.5em;}
+div.snippet-title{direction:ltr;margin:1em 0 0.25em 1em;margin-left:0;padding:0;text-align:start;font-family:inherit;font-weight:bold;line-height:100%;}
+div.snippet-title + pre.snippet{margin-top:0.25em;}
+div.note{padding:1.5rem;margin:1.5rem 0;border:solid black 1.5px;font-style:italic;}
+h6.note-title{margin-top:0;font-size:110%;font-style:normal;}
+div.sidebar{padding:1.5rem;margin:1.5rem 0;border:solid black 1.5px;border-radius:9pt;background-color:#eeeeee;font-family:inherit;}
+h6.sidebar-title{margin-top:0;text-align:center;font-size:110%;}
+span.nobreak{white-space:nowrap;}
+span.emphasis{font-style:italic;}
+span.strong{font-weight:bold;}
+span.it{font-style:italic;}
+span.bo{font-weight:bold;}
+span.enter{font-weight:bold;}
+span.key{direction:ltr;font-variant:small-caps;}
+span.lr{direction:ltr;}
+span.ident{direction:ltr;font-style:italic;}
+span.literal{direction:ltr;font-family:Courier Prime;}
+span.codestrong{direction:ltr;font-family:Courier Prime;font-weight:bold;}
+span.codestrong1{direction:ltr;font-family:Courier Prime;font-weight:bold;}
+span.keyword{direction:ltr;font-family:Courier Prime;}
+span.ash{color:#aaaaaa;}
+a{text-decoration:none;color:inherit;}
+a:visited{text-decoration:none;color:inherit;}
+figure.fig{margin-block-start:2em;margin-block-end:2em;margin-inline-start:1em;margin-inline-end:1em;}
+img.fig{width:100%;}
+figcaption.fig{font-family:inherit;}
+p.toc1,p.toc2,p.toc3,p.toc4{text-align:start;}
+p.toc1{font-family:inherit;font-weight:bold;margin-inline-start:1em;}
+p.toc2{font-family:Droid Arabic Naskh,Droid Serif;margin-inline-start:2em;}
+p.toc3{font-size:0.9em;margin-inline-start:3em;}
+p.toc4{font-size:0.85em;margin-inline-start:4em;}
+p.toc2i{font-style:italic;}
+p.toc2j{font-weight:bold;}
