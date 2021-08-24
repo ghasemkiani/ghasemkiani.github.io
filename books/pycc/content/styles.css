@@ -47,7 +47,7 @@ span.enter{font-weight:bold;}
 span.key{direction:ltr;font-variant:small-caps;}
 span.lr{direction:ltr;}
 span.ident{direction:ltr;font-style:italic;}
-span.literal{direction:ltr;font-family:Courier Prime;}
+span.literal{font-family:Courier Prime;}
 span.codestrong{direction:ltr;font-family:Courier Prime;font-weight:bold;}
 span.codestrong1{direction:ltr;font-family:Courier Prime;font-weight:bold;}
 span.keyword{direction:ltr;font-family:Courier Prime;}
