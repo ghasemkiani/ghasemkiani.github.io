@@ -1,187 +1,292 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="fa" dir="rtl"><head><meta charset="utf-8"/><title>وب‌سایت قاسم کیانی مقدم | هوش مصنوعی و یادگیری ماشینی در پزشکی بالینی، ۲۰۲۳</title><meta name="description" content="وب‌سایت قاسم کیانی مقدم"/><meta name="keywords" content="قاسم کیانی مقدم, وب‌سایت, وب‌سایت قاسم کیانی مقدم, کتاب, فارسی, کتاب فارسی, ترجمه, برنامه‌نویسی, جاوا, جاوا اسکریپت, پزشکی, طب اطفال"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><link rel="stylesheet" crossorigin="anonymous" href="https://cdn.rtlcss.com/bootstrap/v4.0.0/css/bootstrap.min.css" integrity="sha384-P4uhUIGk/q1gaD/NdgkBIl3a6QywJjlsFJFk7SPRdruoGddvRVSwv5qFnvZ73cpz"/><link rel="stylesheet" crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"/><link rel="icon" href="../../favicon.ico"/><style>@import url(https://fonts.googleapis.com/css?family=Droid%20Sans);
-@import url(https://fonts.googleapis.com/css?family=Droid%20Serif);
-@import url(https://fonts.googleapis.com/css?family=Droid%20Arabic%20Kufi);
-@import url(https://fonts.googleapis.com/css?family=Droid%20Arabic%20Naskh);
-html,body,input,textarea,select,option,h1,h2,h3,h4,h5,h6{font-family:Droid Arabic Naskh,Droid Serif;}
-nav,.nav{font-family:Droid Arabic Kufi,Droid Sans;}
-h1,h2,h3,h4,h5,h6{font-family:Droid Arabic Naskh,Droid Serif;}
-#footer{margin-top:0.5rem;padding-top:0.5rem;border-top:#eeeeee solid thick;}</style></head><body style="min-height:75rem;"><nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4"><div class="container"><a class="navbar-brand" href="../../">وب‌سایت قاسم کیانی مقدم</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#divNavBarToggle" aria-controls="divNavBarToggle" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div id="divNavBarToggle" class="collapse navbar-collapse"><ul class="navbar-nav mr-auto"><li class="nav-item"><a class="nav-link" href="../../books/">کتاب‌ها</a></li><li class="nav-item"><a class="nav-link" href="../">مقالات</a></li><li class="nav-item"><a class="nav-link" href="../../translation/">ترجمه</a></li><li class="nav-item"><a class="nav-link" href="../../about/">درباره</a></li><li class="nav-item"><a class="nav-link" href="../../contact/">تماس</a></li></ul></div></div></nav><div class="container"><div class="row"><main class="col-md-10 order-md-last"><article xmlns="http://www.w3.org/1999/xhtml" dir="rtl" style="direction:rtl;">
-	<style>
-		span.ref {
-			vertical-align: super;
-			font-size: 75%;
-		}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fa" dir="rtl">
 
-		a.ref {
-			color: inherit;
-			text-decoration: none;
-		}
+<head>
+    <meta charset="UTF-8" />
+    <title>وب‌سایت قاسم کیانی مقدم | هوش مصنوعی و یادگیری ماشینی در پزشکی بالینی، ۲۰۲۳</title>
+    <meta name="description" content="وب‌سایت قاسم کیانی مقدم" />
+    <meta name="keywords" content="قاسم کیانی مقدم, وب‌سایت, وب‌سایت قاسم کیانی مقدم, کتاب, فارسی, کتاب فارسی, ترجمه, برنامه‌نویسی, جاوا, جاوا اسکریپت, پزشکی, طب اطفال" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" crossorigin="anonymous" href="https://cdn.rtlcss.com/bootstrap/v4.0.0/css/bootstrap.min.css" integrity="sha384-P4uhUIGk/q1gaD/NdgkBIl3a6QywJjlsFJFk7SPRdruoGddvRVSwv5qFnvZ73cpz" />
+    <link rel="stylesheet" crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" />
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico" />
+    <style type="text/css">
+        @import url(https://fonts.googleapis.com/css?family=Droid%20Sans);
+        @import url(https://fonts.googleapis.com/css?family=Droid%20Serif);
+        @import url(https://fonts.googleapis.com/css?family=Droid%20Arabic%20Kufi);
+        @import url(https://fonts.googleapis.com/css?family=Droid%20Arabic%20Naskh);
 
-		ol.references {
-			/*rtl:ignore*/
-			direction: ltr;
-			font-size: 75%;
-		}
+        html,
+        body,
+        input,
+        textarea,
+        select,
+        option,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: Droid Arabic Naskh, Droid Serif;
+        }
 
-		li.reference {
-			/*rtl:ignore*/
-			direction: ltr;
-			text-align: start;
-		}
+        nav,
+        .nav {
+            font-family: Droid Arabic Kufi, Droid Sans;
+        }
 
-		figure.fig {
-			margin-block-start: 2em;
-			margin-block-end: 2em;
-			margin-inline-start: 1em;
-			margin-inline-end: 1em;
-		}
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: Droid Arabic Naskh, Droid Serif;
+        }
 
-		img.fig {
-			width: 100%;
-		}
+        #footer {
+            margin-top: 0.5rem;
+            padding-top: 0.5rem;
+            border-top: #eeeeee solid thick;
+        }
+    </style>
+</head>
 
-		figcaption.fig {
-			font-family: inherit;
-		}
+<body style="min-height: 75rem;">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+        <div class="container"><a class="navbar-brand" href="../../">وب‌سایت قاسم کیانی مقدم</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#divNavBarToggle" aria-controls="divNavBarToggle" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div id="divNavBarToggle" class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../books/">کتاب‌ها</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../">مقالات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../translation/">ترجمه</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../about/">درباره</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../contact/">تماس</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <main class="col-md-10 order-md-last">
+                <div class="row">
+                    <div class="col-12">
+                        <article dir="rtl" style="direction:rtl;">
+                            <style>
+                                span.ref {
+                                    vertical-align: super;
+                                    font-size: 75%;
+                                }
 
-		.article-info {
-			margin-top: 1em;
-			margin-bottom: 1em;
-			padding: 1em;
-			background-color: #eee;
-			border-bottom: #ddd 2px solid;
-		}
+                                a.ref {
+                                    color: inherit;
+                                    text-decoration: none;
+                                }
 
-		.article-info p {
-			margin: 0px;
-		}
+                                ol.references {
+                                    direction: ltr;
+                                    font-size: 75%;
+                                }
 
-		.endnote {
-			font-size: 70%;
-		}
-	</style>
-	<h1> هوش مصنوعی و یادگیری ماشینی در پزشکی بالینی، ۲۰۲۳ </h1>
-	<div class="article-info">
-		<p>
-			<a target="_blank" href="https://doi.org/10.1056/NEJMra2302038"> مجلهٔ پزشکی نیوانگلند </a>
-		</p>
-		<p>
-			<a target="_blank" href="https://bit.ly/3N8fKj8">
-				<span>دانلود <span dir="ltr">PDF</span> ترجمهٔ فارسی</span>
-			</a>
-		</p>
-		<p>
-			<span>نویسندگان: </span>
-			<span> دکتر شارلوت جِی. هاوگ </span>
-			<span> و </span>
-			<span> دکتر جفری اِم. درِیزِن </span>
-		</p>
-		<p>مترجم: دکتر قاسم کیانی مقدم</p>
-	</div>
-	<p> در دهه‌های ۱۹۴۰ و ۱۹۵۰ که کامپیوتر و هوش مصنوعی (<span dir="ltr" style="direction:ltr;">AI</span>) تقریباً هم‌زمان توسعه می‌یافت، رشتهٔ پزشکی نیز به‌سرعت متوجه فواید و کاربردهای بالقوهٔ آن‌ها شد.<span class="ref"><a class="ref" name="_ref01" href="#ref01">۱</a>، <a class="ref" name="_ref02" href="#ref02">۲</a></span> در سال ۱۹۵۹، کیو برادمَن (<span dir="ltr" style="direction:ltr;">Keeve Brodman</span>) و همکاران ادعا کردند که «انجام تفسیر تشخیصی صحیح از نشانه‌ها می‌تواند فرایندی باشد از همه جهت منطقی، و می‌توان آن را چنان کامل تعریف کرد که یک ماشین بتواند آن را انجام دهد».<span class="ref"><a class="ref" name="_ref03" href="#ref03">۳</a></span> یازده سال بعد، ویلیام بی. شوارتز (<span dir="ltr" style="direction:ltr;">William B. Schwartz</span>) در این مجله نوشت: «تأثیر عمدهٔ علوم کامپیوتر احتمالاً به این صورت خواهد بود که کارکردهای فکری پزشک را تقویت کرده، و در برخی موارد، عمدتاً جایگزین آن خواهد شد.»<span class="ref"><a class="ref" name="_ref04" href="#ref04">۴</a></span> او پیش‌بینی کرد که تا سال ۲۰۰۰، کامپیوتر در پزشکی نقشی جدید خواهد یافت، و به‌عنوان افزوده‌ای قوی بر توان فکری پزشک عمل خواهد کرد. </p>
-	<p> با این حال، در اواخر دههٔ ۱۹۷۰، نومیدانه مشاهده شد که دو رویکرد رایانش که در پزشکی به کار گرفته می‌شد—یکی سیستم‌های مبتنی بر قواعد، و دیگری سیستم‌های مبتنی بر انطباق یا بازشناسی الگو—در عمل آن‌گونه که امید می‌رفت، موفق نبوده است. سیستم‌های مبتنی بر قواعد بر پایهٔ این فرض ساخته شده بود که دانش خبره متشکل از تعداد زیادی قواعد مستقل و مختص موقعیت است، و کامپیوتر می‌تواند با استفادهٔ پیاپی از این قواعد در زنجیره‌های استنباط، تفکر خبره را شبیه‌سازی کند. راهبردهای انطباق به این صورت بود که تلاش می‌کرد بین مشخصات بالینی بیمار و بانکی از «پروفایل‌های ذخیره شده»، که امروزه به آن‌ها «اسکریپت بیماری» می‌گوییم،<span class="ref"><a class="ref" name="_ref05" href="#ref05">۵</a></span> برای یک بیماری خاص انطباق پیدا کند. در زمینهٔ درکِ خودِ فرایند تصمیم‌گیری بالینی تلاش‌های بیشتری صورت گرفت.<span class="ref"><a class="ref" name="_ref06" href="#ref06">۶</a></span> روشن شد که نقص کلیدی در اکثر برنامه‌های قبلی از فقدان آگاهی پاتوفیزیولوژی در آن‌ها سرچشمه می‌گرفت. با تلفیق کردن این‌گونه آگاهی‌ها، عملکرد تا حد زیادی بهبود یافت. </p>
-	<p> با این وجود، در دههٔ ۱۹۸۰، کامپیوترها قدرت انجام این کار را نداشتند. تا سال ۱۹۸۷، سیستم‌های مبتنی بر قواعد در برخی کاربردهای تجاری فوایدی را از خود نشان داده بود، ولی در پزشکی بالینی مؤثر واقع نشده بود. در حقیقت، شوارتز و همکاران نوشته‌اند: «این فرایند به‌قدری کُند است که حتی با کامپیوترهای پرسرعت امروزی، عملاً قابل استفاده نیست.»<span class="ref"><a class="ref" name="_ref07" href="#ref07">۷</a></span> آن‌ها در ادامه می‌نویسند: «چندین دهه است که می‌گویند کامپیوتر به‌زودی خواهد توانست در تشخیص‌های دشوار به ما کمک کند، و اکنون پزشکان ممکن است بپرسند که چرا این انقلاب به وقوع نپیوسته است.»<span class="ref"><a class="ref" name="_ref07" href="#ref07">۷</a></span>
-	</p>
-	<section>
-		<h2> پیشرفت در علم داده‌ها </h2>
-		<p> در دههٔ ۱۹۵۰، کامپیوترها خیلی بزرگ بودند و سرعت پایینی داشتند. نخستین گردونهٔ دیسک سخت دنیا، دیسک فایلِ مدل ۳۵۰ آی‌بی‌ام بود، که در سال ۱۹۵۶ ارائه شد. کل ظرفیت ذخیره‌سازی این دستگاه، ۵ میلیون کاراکتر (اندکی کمتر از ۵ مگابایت) بود. نخستین هارد درایوی که ظرفیت بالای ۱ گیگابایت داشت، آی‌بی‌ام ۳۳۸۰ بود، که در سال ۱۹۸۰ ارائه شد. این دستگاه به اندازهٔ یک یچخال بود، و ۵۵۰ پوند (۲۵۰ کیلوگرم) وزن داشت؛ قیمت آن ۱۰۰٬۰۰۰ دلار بود. ولی فناوری مدارهای مجتمع در حال پیشرفت بود. در سال ۱۹۶۵، گوردون مور از بنیان‌گذاران شرکت‌های فِیرچایلد سِمی‌کُنداکتور (<span dir="ltr" style="direction:ltr;">Fairchild Semiconductor</span>) و اینتِل (<span dir="ltr" style="direction:ltr;">Intel</span>)، پیش‌بینی کرد که تعداد ترانزیستورها در یک مدار مجتمع، و در نتیجه، قدرت رایانشی بالقوهٔ آن، هر ۲ سال دو برابر خواهد شد. پیش‌بینی او درست بود؛ این تغییر در تراکم نیمه‌رساناها را قانون مور می‌نامند. با این حال، قانون مور فقط مربوط به تعداد ترانزیستورها در سانتی‌متر مربع نیست، چرا که دیگر جنبه‌های پیشرفت فناوری، از قبیل سرعت پردازش و قیمت محصولات الکترونیکی، نیز پیوندی قوی با قانون مور دارد. با متراکم‌تر شدن مدارها، حافظهٔ کامپیوتر و سرعت رایانش افزایش یافت، به‌طوری که امروزه دستگاه‌های جیبیِ متداول، قوی‌تر از ابررایانه‌های دههٔ ۱۹۸۰ هستند که فضایی به اندازهٔ یک اتاق را اشغال می‌کردند، و قیمتشان کسری از قیمت آن ابررایانه‌ها است (<span class="refFig">شکل <a class="ref" name="_fig01" href="#fig01">۱</a></span>). </p>
-		<figure class="fig"><img class="fig" src="f01.png"/>
-			<figcaption class="fig"><span class="captionFig">شکل <a class="ref" name="fig01" href="#_fig01">۱</a></span>: <strong>بهبودهای صورت گرفته در ۵۰ سال اخیر در توانایی کامپیوترها برای ذخیره‌سازی و پردازش داده‌ها.</strong><br/>پانل <span dir="ltr" style="direction:ltr;">A</span> پیشرفت ذخیره‌سازی داده‌ها را، هم از نظر اندازهٔ فیزیکی و هم از نظر هزینه به‌ازای واحد ذخیره‌سازی، نشان می‌دهد. نام <span dir="ltr" style="direction:ltr;">RAMAC</span> مخفف «روش دسترسی تصادفی حسابداری و کنترل» است. پانل <span dir="ltr" style="direction:ltr;">B</span> پیشرفت در سرعت را نشان می‌دهد. هر نقطه نمایانگر یک نوع خاص کامپیوتر و سال تقریبی ساخت آن است. این بهبودها در ذخیره‌سازی و سرعتْ امکان آن را فراهم کرده که یادگیری ماشینی از رؤیا به واقعیت بدل شود. داده‌ها در هر دو پانل برآوردهایی از چندین نوع معماری سیستم است و از منابع عمومی متعددی گرفته شده است.</figcaption>
-		</figure>
-		<p> پیشرفت در علم داده‌ها صرفاً به افزایش عملکرد، سرعت، و ظرفیت ذخیره‌سازی مربوط نمی‌شود. علاوه بر اطلاعات موجود در کتابخانه‌ها، داده‌های حاصل از سازمان‌ها، و سیستم‌های مستقر طراحی شده برای جمع‌آوری و کدگذاری داده‌ها، شکل‌های جدید فناوری می‌توانند از داده‌هایی که هم به‌وسیلهٔ انسان‌ها و هم به‌وسیلهٔ ماشین‌ها تولید شده‌اند، استفاده کنند. این داده‌ها غالباً آشوبناک و بی‌ساختارند. داده‌ها اکنون از منابع بسیار دیگری نیز حاصل می‌شوند، از جمله شبکه‌های اجتماعی، وبلاگ‌ها، اتاق‌های چَت، سایت‌های نقد محصولات، باهمستان‌ها، صفحات وب، ایمیل‌ها، سندها، تصاویر، ویدئوها، موسیقی، و نیز حسگرهای پوشیدنی و محیطی. خیلی از افراد هستند که برخی جنبه‌های سوابق پزشکی و داده‌های ژنتیکی شخصی خود را برای دسترسی آنلاین در اختیار عموم قرار می‌دهند. ظرفیت ذخیره‌سازی به‌قدری زیاد است که بخش‌های بزرگی از پیکرهٔ مضبوط دانش و فعالیت بشری به آسانی قابل ذخیره‌سازی و دسترسی است. </p>
-		<p> زمانی که داده‌ها به دست آمد، به چیزی بیشتر نیاز پیدا کردیم؛ نیازمند روش‌هایی برای شناسایی و پردازش داده‌ها بودیم. گوگل از آن رو در زمینهٔ جست‌وجوی آنلاین سرآمد شد که جست‌وجوهای انجام شده از سوی دیگران را به خدمت گرفت تا ببیند مردم در پی دانستن چه چیزهایی هستند. این نیازمند انقلاب دیگری بود، الگوریتم‌هایی ریاضی که می‌توانست با سرعت، و با حد قابل قبولی از اعتمادپذیری، این رفتار را ردیابی کند و کاربر نهایی را در یافتن اطلاعات خاص یاری نماید. ذخیره‌سازی متراکم‌تر داده‌ها و رایانش سریع‌تر امکان عملی حل عبارت‌های ریاضی در زمان حاضر را فراهم کرد که می‌شد از آن برای یافتن روابطی در میان داده‌ها استفاده کرد که تا پیش از آن ناشناختنی بود. در نتیجه، امکان شکوفایی و پیشرفت علم داده‌ها به‌گونه‌ای بی‌سابقه فراهم شد. </p>
-		<p> ما اکنون این توانایی را داریم که با استفاده از داده‌های بی‌ساختار، روابطی ناشناخته را در میان عناصر داده‌ها شناسایی کنیم، که این امکان استفاده از داده‌های پویا و داده‌های با سیاق‌های گوناگون را فراهم می‌کند، که وقتی با روش‌هایی غیر از روش‌های غیرمتعارف مورد تحلیل قرار گیرد، بینش‌های مفیدی را دربارهٔ رفتار انسان به بار می‌آورد. به‌تدریج که افزایش توان رایانش امکان آن را فراهم کرد که پرس‌وجوهای داده‌ای در زمان حاضر پاسخ داده شود، شبکه‌های عصبی نیز پیشرفته‌تر شد. ترانسفورمرها (یعنی مدل‌های یادگیری عمیق که به هر بخش از داده‌های ورودی، وزن‌های افتراقی می‌دهند) امکان پردازش زبان طبیعی را فراهم کردند. با این رویکرد، پیچیدگی‌های مدل‌های کامپیوتری مربوطه، و پیکرهٔ داده‌ها که مدل‌ها از آن گرفته می‌شد، روز به روز بزرگ‌تر و قوی‌تر می‌شد. هدفِ ساختن کامپیوتری که بتواند برخی از جنبه‌های تعامل انسانی را تقلید کند، از رؤیایی محال به واقعیت تبدیل شد. </p>
-		<p> به‌هم‌پیوستگیِ حاصل از علم داده‌ها نوع جدیدی از کشف را امکان‌پذیر ساخته است. افراد با استفاده از شبکه‌های اجتماعی پیوندهای خاصی را بین دوستان، اشیا، رویدادها، پسندها، ناپسندها، مکان‌ها، ایده‌ها، و احساسات برقرار می‌کنند. دولت‌ها از تحلیل شبکه‌های اجتماعی برای مقابله با حملات تروریستی استفاده می‌کنند. شرکت‌ها از طریق داده‌کاوی اطلاعاتِ اجتماعی و تعاملی، به‌دنبال یافتن پیوندهایی هستند که در کشف فرصت‌های جدید به آن‌ها کمک کند. دانشمندان در حال ساختن گریدهای عظیمی از داده‌های به‌هم‌پیوسته به‌منظور کسب یافته‌های جدید با استفاده از هوش مصنوعی و یادگیری ماشینی هستند. همان گونه که در زیر به تفصیل بیشتر بیان شده است، این پیشرفت‌ها منجر به ظهور کامپیوتر‌هایی شد که می‌توانند در انجام کارهایی که قبلاً پرزحمت بود، به ما کمک کنند. ربات <span dir="ltr" style="direction:ltr;">C‑3PO</span> در «جنگ ستارگان» نمونهٔ ساده‌ای از دستیارهای مجازی مبتنی بر هوش مصنوعی است (از قبیل سیریِ اپل، دستیار گوگل، و الکسای آمازون)، که جای خود را در زندگی روزمرهٔ ما باز کرده‌اند و در انجام برخی کارهای از پیش تعریف شده به ما یاری می‌رسانند. هر کس از این ابزارها استفاده کرده باشد، قطعاً متوجه راحتی آن‌ها شده است (مثلاً وقتی به آن می‌گویید که «تایمر اجاق را روی ۲۰ دقیقه تنظیم کن»)، ولی خیلی وقت‌ها هم موجب مزاحمت می‌شود، مثلاً زمانی که دستیار مطالب نامربوطی را در گفتگو مطرح می‌کند. هوش مصنوعی و یادگیری ماشینی نیروی محرکهٔ این دستگاه‌ها هستند. </p>
-	</section>
-	<section>
-		<h2> هوش مصنوعی و یادگیری ماشینی در پزشکی </h2>
-		<p> در دههٔ ۱۹۹۰ و اوایل دههٔ ۲۰۰۰، با آنکه هنوز سرعت کامپیوترها و حجم حافظهٔ آن‌ها به حد چندان بالایی نرسیده بود، مسئلهٔ انجام موفق برخی کارهای پزشکی که ماهیتی تکراری داشت و لذا انسان‌ها در آن مستعد خطا بودند، در شُرُفِ حل شدن بود. با صَرفِ مبالغ زیادی پول و تلاش‌های فکری فراوان، امروزه خواندن نوار قلب (<span dir="ltr" style="direction:ltr;">ECG</span>) و شمارش افتراقی گلبول‌های سفید، تحلیل عکس‌های ته چشم و ضایعات جلدی، و انجام دیگر کارهای پردازش تصویر به‌وسیلهٔ کامپیوتر به واقعیت پیوسته است. بسیاری از این کارهای مبتنی بر یادگیری ماشینی تا حد زیادی در روش کار روزمرهٔ پزشکی پذیرفته شده و به کار گرفته می‌شود. عملکرد این کارهای ماشینی بی‌عیب‌ونقص نیست، و خیلی وقت‌ها لازم است که فرد ماهری بر کار آن نظارت کند، ولی در بسیاری از موارد، با در نظر گرفتن تفسیر نسبتاً سریع تصاویر و فقدان تخصص در محل، به‌قدر کافی خوب است. </p>
-		<p> با این حال، استفاده از هوش مصنوعی و یادگیری ماشینی در پزشکی اکنون به چیزی بیش از خواندن تصویرهای پزشکی توسعه یافته است. برنامه‌های هوش مصنوعی و یادگیری ماشینی از زوایای مختلفی وارد رشتهٔ پزشکی شده‌اند، که از آن جمله می‌توان به موارد زیر اشاره کرد: کمک به شناسایی طغیان بیماری‌های عفونی که ممکن است از جهت بهداشت عمومی حائز اهمیت باشد؛ ترکیب یافته‌های بالینی، ژنتیکی، انواع خروجی‌های مختلف آزمایشگاهی برای شناسایی بیماری‌های نادر یا شایعی که به هر طریق ممکن است تشخیص داده نشده باشد؛ و کمک به عملیات اداری بیمارستان (<span class="refFig">شکل <a class="ref" name="_fig02" href="#fig02">۲</a></span>). در طی ماه‌های آینده، این مجله مقالات مروری دیگری را منتشر خواهد کرد که به جنبه‌های خاص هوش مصنوعی در پزشکی در سال ۲۰۲۳ خواهد پرداخت. ولی قبل از آنکه نخستین مقاله حدود یک ماه دیگر منتشر شود، مهم است که به بررسی مسائلی بپردازیم که در کار با ماشین باید مَدّ نظر داشته باشیم. </p>
-		<figure class="fig"><img class="fig" src="f02.png"/>
-			<figcaption class="fig"><span class="captionFig">شکل <a class="ref" name="fig02" href="#_fig02">۲</a></span>: <strong>طیف کاربرد هوش مصنوعی (<span dir="ltr" style="direction:ltr;">AI</span>) در پزشکی</strong><br/>پانل <span dir="ltr" style="direction:ltr;">A</span> برخی از حوزه‌های بهداشت عمومی و پزشکی را نشان می‌دهد که هوش مصنوعی در آن ریشه دوانده و نقش آن رو به گسترش است. این ابزارها هم‌اکنون نیز به متخصصان پزشکی در کارشان یاری می‌رسانند. <span dir="ltr" style="direction:ltr;">EMR</span> مخفف پروندهٔ الکترونیک پزشکی است. پانل <span dir="ltr" style="direction:ltr;">B</span> حوزه‌هایی از رشتهٔ پزشکی را نشان می‌دهد که تأثیر هوش مصنوعی در آن به‌تازگی شروع شده، ولی هنوز کاملاً متداول نشده است.</figcaption>
-		</figure>
-	</section>
-	<section>
-		<h2> مسائل حل‌نشده در رابطه با کاربرد هوش مصنوعی و یادگیری ماشینی در پزشکی </h2>
-		<section>
-			<h3> تعیین هنجارها </h3>
-			<p> به‌طوری که در بالا گفته شد، استفاده از هوش مصنوعی و یادگیری ماشینی هم‌اکنون نیز در پزشکی برای تفسیر برخی از انواع تصاویر پزشکی، از قبیل نوار مغز، عکس ساده، <span dir="ltr" style="direction:ltr;">CT</span>‑اسکن، و <span dir="ltr" style="direction:ltr;">MRI</span>، تصاویر پوست، و عکس‌های شبکیه مورد استقبال قرار گرفته است. برای این کاربردها، مطالعات نشان داده است که هوش مصنوعی و یادگیری ماشینی از طریق مشخص کردن جاهایی از تصویر که از نرمال انحراف دارد، به ارائه کنندهٔ مراقبت بهداشتی یاری می‌رساند. </p>
-			<p> ولی از اینجا پرسشی کلیدی مطرح می‌شود، و آن اینکه نرمال چیست؟ این سؤال ساده یکی از ضعف‌های اصلی کاربرد هوش مصنوعی و یادگیری ماشینی را در پزشکی به‌صورتی که امروزه عموماً متداول است، آشکار می‌کند. سوگیری‌هایی که در «آموزش» دادن به الگوریتم‌های هوش مصنوعی و یادگیری ماشینی دخالت داشته، چه تأثیری بر کارکرد آن‌ها در دنیای واقعی دارد؟ ما چگونه ارزش‌های انسانی را در الگوریتم‌های هوش مصنوعی و یادگیری ماشینی وارد می‌کنیم، تا اینکه نتایج حاصل از آن‌ها منعکس کنندهٔ مسائل واقعی پیش روی پیشه‌وران بهداشتی باشد؟ مسئولان نظارتی چه مسائلی را باید در نظر داشته باشند تا مطمئن شوند که کاربردهای هوش مصنوعی و یادگیری ماشینی در موقعیت‌های مختلف به همان صورتی که ادعا شده، عمل می‌کنند؟ آیا برای مداخلاتی که بر پایهٔ هوش مصنوعی و یادگیری ماشینی صورت می‌گیرد، باید از همان رویکردهای کلاسیک استنباط آماری استفاده شود، و این استفاده به چه صورت باید باشد؟ این‌ها تنها برخی از مسائلی هستند که پیش روی ما قرار دارند؛ سری «هوش مصنوعی در پزشکی» به بررسی برخی از این مسائل خواهد پرداخت. </p>
-		</section>
-	</section>
-	<section>
-		<h2> نقش هوش مصنوعی و یادگیری ماشینی در پزشکی بالینی </h2>
-		<p> با وجود همهٔ مشکلات، نویدهای زیادی در این موضوع نهفته است. اگر الگوریتم‌های هوش مصنوعی و یادگیری ماشینی را بتوان به «اپلیکیشن»هایی تبدیل کرد که از نظر بالینی قابل استفاده باشد، آیا خواهند توانست در میان کوه داده‌های بالینی، ژنومی، متابولومی، و زیست‌محیطی راه خود را پیدا کنند و برای تشخیص دقیق مفید واقع شوند؟ آیا اپلیکیشن‌های مبتنی بر هوش مصنوعی و یادگیری ماشینی می‌توانند تبدیل به منشی شخصی شما شوند و وقتی را که صرف نوشتن پرونده و مستندات می‌کنید، آزاد کنند، تا بتوانید وقت بیشتری را با بیماران بگذرانید؟ آیا اپلیکیشن‌ها می‌توانند شما را به پرسیدن سؤالی کلیدی رهنمون شوند که بتواند در تشخیص افتراقی مفید واقع شود؟ آیا می‌توانند بر آن الگوریتم‌های هوش مصنوعی و یادگیری ماشینی غلبه کنند که شرکت‌های بیمه از آن‌ها استفاده می‌کنند، که سبب می‌شود که نتوانید درخواست <span dir="ltr" style="direction:ltr;">PET</span>‑اسکن یا <span dir="ltr" style="direction:ltr;">CT</span>‑اسکن کنید، یا غرامتِ وقتی را که صَرفِ بیمار یا خانوادهٔ بیمار کرده‌اید، دریافت کنید؟ در هر کدام از این عرصه‌ها، پیشرفت‌هایی به وقوع پیوسته است. ولی آیا به‌قدر کافی خوب هست؟ </p>
-		<section>
-			<h3> پژوهش بالینی دربارهٔ کاربردهای هوش مصنوعی و یادگیری ماشینی </h3>
-			<p> ارزیابی پیشرفت، خود با مشکلات ویژه‌ای روبه‌رو است. در پژوهش‌های بالینی سُنّتی، وقتی که پیشرفت به‌صورت داروی جدیدی برای یک بیماریِ معین است، استانداردهای مشخصی برای آزمایش کردن و پذیرفتن داروی جدید به‌عنوان پیشرفت وجود دارند. اما زمانی که مداخله به‌صورت یک الگوریتم هوش مصنوعی و یادگیری ماشینی است نه به‌صورت یک دارو، با وجود آنکه جامعهٔ پزشکی انتظار همان سطح از اطمینان را دارد، ولی استانداردها برای توصیف و آزمایش مداخلات هوش مصنوعی و یادگیری ماشینی به‌هیچ‌وجه روشن نیست. </p>
-			<p> اگر قرار باشد یک اپلیکیشن به‌عنوان استانداردی برای شکل‌دهی، اصلاح، و بهبود روش‌های بالینی پذیرفته شود، در آن صورت استانداردهایی که باید در پژوهش‌های مداخله‌ای مبتنی بر هوش مصنوعی و یادگیری ماشینی رعایت شود، کدام است؟ این پژوهش‌ها سه مؤلفه دارد. نخست اینکه ساختار پژوهش باید به‌گونه‌ای که باشد که به یک پرسش معنی‌دار بالینی پاسخ دهد، به نحوی که بتواند بر رفتار کارشناسان بهداشتی تأثیرگذار باشد، و منجر به بهبود نتیجه برای بیمار شود. دوم اینکه مداخله باید قابل تعریف، قابل مقیاس، و قابل اعمال برای مسئلهٔ مورد نظر باشد. نباید تحت تأثیر عواملی خارج از حوزهٔ مسئله قرار گیرد و باید پیامدهایی داشته باشد که در محدودهٔ وسیعی از جمعیت‌ها و نرخ‌های شیوع بیماری، برای مسائل بالینی مشابه قابل اعمال باشد. آیا مراقبت مبتنی بر هوش مصنوعی و یادگیری ماشینی می‌تواند این استانداردها را تأمین کند—استانداردهایی که از یک مداخلهٔ درمانی یا روش تشخیصی آزمایشگاهی جدید توقع داریم—یا اینکه باید مجموعهٔ منحصر به فردی از استانداردها برای این نوع مداخله داشته باشیم؟ سوم اینکه وقتی نتایج پژوهش به‌گونه‌ای تأثیرگذار بر عملکرد بالینی مورد استفاده قرار می‌گیرد، پیامد آن باید برای تمام بیماران تحت بررسی سودمند باشد، نه فقط برای کسانی که از نظر مشخصات و یافته‌ها شبیه افرادی هستند که الگوریتم روی آن‌ها آموزش داده شده است. پس این سؤال مطرح می‌شود که آیا این‌گونه الگوریتم‌ها باید در انجام توصیه‌های تشخیصی و درمانی، ملاحظات بهداشت عمومی (مثلاً کمیاب بودن منابع مورد استفاده) را نیز در نظر بگیرند یا خیر، و اینکه این‌گونه محدودیت‌ها تا چه حد در فرایند تصمیم‌گیری الگوریتم دخالت داده می‌شوند.<span class="ref"><a class="ref" name="_ref08" href="#ref08">۸</a></span>
-			</p>
-		</section>
-		<section>
-			<h3> استفاده از اپلیکیشن‌های هوش مصنوعی و یادگیری ماشینی در انجام پژوهش بالینی </h3>
-			<p> هوش مصنوعی و یادگیری ماشینی این قابلیت را دارد که هم از طریق افزایش کارایی ثبت‌نام و تطبیق شرکت کنندگان مطالعه و هم از طریق تحلیل جامع‌تر داده‌ها، کارآزمایی‌های بالینی را بهبود داده و چه بسا آن‌ها را ساده‌تر و سریع‌تر کند. علاوه بر این، شاید امکان ایجاد گروه‌های شاهد مصنوعی از طریق انطباق دادن داده‌های تاریخی با معیارهای ثبت‌نام کارآزمایی هدف وجود داشته باشد. از هوش مصنوعی و یادگیری ماشینی برای پیش‌بینی و درک بهتر عوارض ناخواسته و زیرجمعیت‌های بیماران نیز می‌توان استفاده کرد. به نظر می‌رسد امکان آن وجود داشته باشد که هوش مصنوعی «بیماران مصنوعی» ایجاد کند تا بتوان پیامدهای تشخیصی یا درمانی را شبیه‌سازی کرد. ولی کاربرد اپلیکیشن‌ها و مداخلات هوش مصنوعی و یادگیری ماشینی موجب ورود برخی موارد عدم اطمینان می‌شود که باید هم در پروتکل‌ها و هم در گزارش‌دهی کارآزمایی‌های بالینی مورد توجه قرار گیرد.<span class="ref"><a class="ref" name="_ref09" href="#ref09">۹</a>، <a class="ref" name="_ref10" href="#ref10">۱۰</a></span>
-			</p>
-			<p> در این سری مقالات دربارهٔ هوش مصنوعی در پزشکی، قصد داریم به بررسی پیشرفت‌ها، موانع، چشم‌اندازها، و مطالب جدید در حد واسط هوش مصنوعی و پزشکی بپردازیم. باید در نظر داشت که این رشته با سرعت در حرکت است، بنابراین، مطالبی که بیان می‌کنیم، مانند عکسی است که از درون قطاری سریع‌السیر از منظرهٔ بیرون گرفته شده باشد. به‌طور خاص، اتفاقاتی که در حوالی زمان انتشار می‌افتد، ممکن است به‌صورت مبهمی بیان شود، چرا که به‌سرعت تغییر می‌کند، ولی زمینهٔ دوردست این چشم‌اندازْ وضوح معقول و قابل قبولی خواهد داشت. یکی از عرصه‌هایی که در هوش مصنوعی و یادگیری ماشینی پیشرفت قابل‌توجهی دارد (یعنی روزمینهٔ تصویر در همان عکسی که گفتیم)، ظهور چَت‌بات‌های پیشرفته است که برای استفاده در دسترس عموم قرار گرفته است. گرچه چت‌بات‌های ارائه شده تازه در این اواخر به حدی از پیشرفتگی رسیده‌اند که بتوانند تأثیری بر عملکرد روزمرهٔ پزشکی داشته باشند، ولی ما بر این باوریم که قابلیت آن‌ها برای تأثیرگذاری بر نحوهٔ کار در رشتهٔ پزشکی قابل‌توجه است، و درست نیست که از بررسی قابلیت آن‌ها و نیز مشکلات بالقوهٔ ناشی از کاربرد آن‌ها غافل شویم. </p>
-		</section>
-	</section>
-	<section>
-		<h2> چت‌بات‌ها در پزشکی </h2>
-		<p> در این شماره از مجله، مقاله‌ای به قلم لی (<span dir="ltr" style="direction:ltr;">Lee</span>) و همکاران<span class="ref"><a class="ref" name="_ref11" href="#ref11">۱۱</a></span> به معرفی چت‌بات <span dir="ltr" style="direction:ltr;">GPT-4</span> و کاربردهای پزشکی آن پرداخته است. این مقاله از سوی تیمی از پژوهشگران که برای نهادهای سازندهٔ <span dir="ltr" style="direction:ltr;">GPT-4</span> کار می‌کنند، به رشتهٔ تحریر درآمده است. این چت‌بات آموزش گسترده‌ای داده شده است که شامل دانش پزشکی نیز هست. قبل از آنکه به بررسی آینده بپردازیم، نگاه سریعی به گذشته خالی از فایده نیست. چت‌بات یک برنامهٔ کامپیوتری است که با استفاده از هوش مصنوعی و پردازش زبان طبیعی، پرسش‌ها را می‌فهمد و به‌طور خودکار، مانند یک مکالمهٔ انسانی، به آن‌ها پاسخ می‌دهد. خیلی قبل‌تر، یک چت‌بات پزشکی به نام الایزا (<span dir="ltr" style="direction:ltr;">ELIZA</span>) بین سال‌های ۱۹۶۴ و ۱۹۶۶ توسط جوزِف وایزِنباوم (<span dir="ltr" style="direction:ltr;">Joseph Weizenbaum</span>) در آزمایشگاه هوش مصنوعی مؤسسهٔ فناوری ماساچوسِت توسعه داده شد (<span class="refFig">شکل <a class="ref" name="_fig03" href="#fig03">۳</a></span>). </p>
-		<figure class="fig"><img class="fig" src="f03.png"/>
-			<figcaption class="fig"><span class="captionFig">شکل <a class="ref" name="fig03" href="#_fig03">۳</a></span>: <strong>چت‌بات‌ها در پزشکی.</strong><br/>پانل <span dir="ltr" style="direction:ltr;">A</span> اسکرین‌شاتی از خروجی یک چت‌بات خیلی قدیمی پزشکی به نام الایزا را نشان می‌دهد، که بین سال‌های ۱۹۶۴ و ۱۹۶۶ توسط جوزف وایزنباوم در آزمایشگاه هوش مصنوعی مؤسسهٔ فناوری ماساچوست توسعه داده شد. پانل <span dir="ltr" style="direction:ltr;">B</span> (برگرفته از لی و همکاران<span class="ref"><a class="ref" name="_ref11" href="#ref11">۱۱</a></span>) [ترجمهٔ] ورودی و خروجی <span dir="ltr" style="direction:ltr;">GPT‑4</span> را نشان می‌دهد، چت‌باتی که قرار است در سال ۲۰۲۳ در اختیار همگان قرار گیرد. <span dir="ltr" style="direction:ltr;">BMI</span> مخفف شاخص تودهٔ بدنی است.</figcaption>
-		</figure>
-		<p> فناوری چت‌بات امروزه تقریباً در همه‌جا یافت می‌شود، ازخدمات مشتریان گرفته تا دستیارهای مجازی شخصی که در بالا به آن اشاره شد. با کامپیوترهای قدرتمندی که امروزه در دسترس هستند، مدل‌های زبان میلیاردها پارامتر دارند، که می‌توان از آن‌ها برای تولید متن جدید استفاده کرد. این توانایی، در ترکیب با میزان تقریباً نامحدود داده‌های موجود (اینترنت) برای آموزش دادن شبکه، نشان می‌دهد که مدل‌های زبانی خواهند توانست کارهای بیشتر و بیشتری انجام دهند، که نمونهٔ آن سیستم چت تبدیلگر مولّد از پیش آموزش داده شده، یا <span dir="ltr" style="direction:ltr;">ChatGPT</span>، است. </p>
-		<p>
-			<span dir="ltr" style="direction:ltr;">ChatGPT </span>یک مدل زبانی است که توسط شرکت <span dir="ltr" style="direction:ltr;">OpenAI</span> آموزش داده شده است. این سیستم در نوامبر ۲۰۲۲ عرضهٔ عمومی شد (https://openai.com/blog/chatgpt)، و روش جدیدی را برای تعامل افراد با ماشین‌های مبتنی بر هوش مصنوعی متداول کرد. چت‌بات‌های نسل جدید می‌توانند نقش منشی و مربی را داشته باشند، ولی برخی ایرادات کلیدی نیز دارند. بسیاری از ایرادات را توسعه دهندگان <span dir="ltr" style="direction:ltr;">ChatGPT</span> در زمان راه‌اندازی آن بیان کرده‌اند، ولی برای استفاده در پزشکی باید به‌طور خاص به آن‌ها توجه شود، که تفصیل آن در مقالهٔ لی و همکاران<span class="ref"><a class="ref" name="_ref11" href="#ref11">۱۱</a></span> آمده است. نسل کنونی چت‌بات‌ها به‌صورت فعلی می‌توانند در زمینهٔ مدارک پزشکی مفید واقع شوند، و به پرسش‌های کلیدی در زمینهٔ تشخیص افتراقی پاسخ دهند که در بالا به آن اشاره شد. ولی به‌سختی می‌توان فهمید که آیا پاسخ‌های داده شده ریشه در واقعیت‌های مربوطه دارد یا نه. پس این وظیفه بر عهدهٔ کلینیسین‌ها خواهد بود که کارهای چت‌بات را غلط‌گیری کنند، همان گونه که یادداشت‌هایی را هم که دیکته می‌کنند، باید غلط‌گیری کنند. مشکل آن است که این غلط‌گیری ممکن است از تخصص کاربر خارج باشد. غلط‌گیری یک یادداشت در ویزیت بیمار ممکن است به‌خوبی در حیطهٔ تخصص ارائه دهندگان خدمات باشد، ولی اگر سؤالی از <span dir="ltr" style="direction:ltr;">ChatGPT</span> به‌عنوان «مشاورهٔ کنار خیابان» پرسیده شود، تعیین صحتِ پاسخ بسیار دشوارتر خواهد بود.
-		</p>
-		<p> کاربردی که بیشترین قابلیت و نگرانی را دارد، استفاده از چت‌بات‌ها برای تشخیص یا توصیهٔ درمانی است. کاربری که تجربهٔ بالینی ندارد، ممکن است نتواند به‌سادگی مطالب درست و نادرست را از هم تمییز دهد. هر دوی این مسائل در مقالهٔ لی و همکاران<span class="ref"><a class="ref" name="_ref11" href="#ref11">۱۱</a></span> مورد بررسی قرار گرفته است، و این مؤلفان نقاط قوت و ضعف استفاده از چت‌بات‌ها در پزشکی را بیان کرده‌اند. از آنجا که خود این مؤلفان سازندهٔ یک چنین سیستمی هستند، لذا ممکن است سوگیری هم در نظرات آن‌ها وجود داشته باشد. </p>
-		<p> با این وجود، ما بر این باوریم که چت‌بات‌ها تبدیل به ابزارهای مهمی در کار پزشکی خواهند شد. این ابزارها، مانند هر ابزار خوبی، می‌توانند به ما در انجام بهتر کارمان کمک کنند، ولی اگر به‌درستی از آن‌ها استفاده نشود، قابلیت آسیب رساندن هم دارند. از آنجا که این‌ها ابزارهایی جدید هستند و آزمایش کردن آن‌ها با روش‌های سنتی که در بالا گفته شد، سخت است، لذا جامعهٔ پزشکی هنوز در حال یادگیری نحوهٔ استفاده از آن‌ها است، ولی این یادگیری واجب است. تردیدی نیست که خود چت‌بات‌ها هم از کاربران خود چیزهایی خواهند آموخت. لذا پیش‌بینی ما این است که در طول مدتی، هم کاربران و هم خود ابزار مشغول سازگار شدن با شرایط خواهند بود. </p>
-	</section>
-	<section>
-		<h2> نتیجه‌گیری </h2>
-		<p> اعتقاد راسخ ما این است که ورود هوش مصنوعی و یادگیری ماشینی به پزشکی به متخصصان سلامت در بهبود کیفیت مراقبتی که ارائه می‌کنند، یاری رسانده است، و امید هست که در آیندهٔ نزدیک و پس از آن، بهبود باز هم بیشتری ایجاد کند. همان گونه که برداشت عکس‌های رادیولوژیک به‌وسیلهٔ کامپیوتر موجب حذف بایگانی کلیشه‌های رادیوگرافی و گم شدن عکس‌ها شده است، هوش مصنوعی و یادگیری ماشینی نیز می‌توانند پزشکی را متحول کنند. ما متخصصان سلامت ضمن استفاده از این فناوری جدید، نحوهٔ کار با هوش مصنوعی و یادگیری ماشینی را فرا خواهیم گرفت. هوش مصنوعی و یادگیری ماشینی کارشناسان سلامت را از کار بیکار نخواهد کرد؛ بلکه امکان آن را فراهم خواهد کرد که متخصصان سلامت کارشان را بهتر انجام دهند، و فرصت بیشتر برای تعامل چهره به چهره با بیماران داشته باشند، که این همان چیزی است که سبب می‌شود که این رشته برای ما ارزشمند و رضایت‌بخش باشد. </p>
-	</section>
-	<section>
-		<h2> تأمین مالی و فاش‌سازی </h2>
-		<p> فرم‌های فاش‌سازی که مؤلفان ارائه کرده‌اند، به‌همراه متن کامل مقاله در وب‌سایت <span dir="ltr" style="direction:ltr;">NEJM.org</span> موجود است. </p>
-	</section>
-	<section>
-		<h2> وابستگی مؤلفان </h2>
-		<p> برای تماس با دکتر هاوگ (<span dir="ltr" style="direction:ltr;">Haug</span>)، نمایندهٔ بین‌الملل مجلهٔ نیوانگلند، از طریق ایمیل charlottejohanne@gmail.com یا نشانی نروژ، اُسلو، کد پستی ۰۸۸۰، خیابان <span dir="ltr" style="direction:ltr;">Åmotveien</span> شمارهٔ ۶۳، اقدام نمایید. </p>
-	</section>
-	<section>
-		<h2> مطالب تکمیلی </h2>
-		<p> فرم‌های فاش‌سازی: </p>
-		<p> https://www.nejm.org/doi/suppl/10.1056/NEJMra2302038/suppl_file/nejmra2302038_disclosures.pdf </p>
-	</section>
-	<section>
-		<h2> منابع </h2>
-		<ol dir="ltr" class="references">
-			<li class="reference" dir="ltr" id="ref01">Turing AM. Computing machinery and intelligence. Mind 1950;59:433-60.</li>
-			<li class="reference" dir="ltr" id="ref02">Yu K-H, Beam AL, Kohane IS. Artificial intelligence in healthcare. Nat Biomed Eng 2018;2:719-31.</li>
-			<li class="reference" dir="ltr" id="ref03">Brodman K, Van Woerkom AJ, Erdmann AJ Jr, Goldstein LS. Interpretation of symptoms with a data-processing machine. AMA Arch Intern Med 1959;103:776-82.</li>
-			<li class="reference" dir="ltr" id="ref04">Schwartz WB. Medicine and the computer — the promise and problems of change. N Engl J Med 1970;283:1257-64.</li>
-			<li class="reference" dir="ltr" id="ref05">Bowen JL. Educational strategies to promote clinical diagnostic reasoning. N Engl J Med 2006;355:2217-25.</li>
-			<li class="reference" dir="ltr" id="ref06">Pauker SG, Gorry GA, Kassirer JP, Schwartz WB. Towards the simulation of clinical cognition: taking a present illness by computer. Am J Med 1976;60:981-96.</li>
-			<li class="reference" dir="ltr" id="ref07">Schwartz WB, Patil RS, Szolovits P. Artificial intelligence in medicine. Where do we stand? N Engl J Med 1987;316:685-8.</li>
-			<li class="reference" dir="ltr" id="ref08">Rosenbaum L. Trolleyology and the dengue vaccine dilemma. N Engl J Med 2018;379:305-7.</li>
-			<li class="reference" dir="ltr" id="ref09">Liu X, Cruz Rivera S, Moher D, Calvert MJ, Denniston AK; SPIRIT-AI and CONSORT-AI Working Group. Reporting guidelines for clinical trial reports for interventions involving artificial intelligence: the CONSORT-AI extension. Nat Med 2020;26:1364-74.</li>
-			<li class="reference" dir="ltr" id="ref10">Cruz Rivera S, Liu X, Chan A-W, Denniston AK, Calvert MJ; SPIRIT-AI and CONSORT-AI Working Group. Guidelines for clinical trial protocols for interventions involving artificial intelligence: the SPIRIT-AI extension. Lancet Digit Health 2020;2(10):e549-e560.</li>
-			<li class="reference" dir="ltr" id="ref11">Lee P, Bubeck S, Petro J. Benefits, limits, and risks of GPT-4 as an AI chatbot for medicine. N Engl J Med 2023;388: 1233-9.</li>
-		</ol>
-	</section>
-	<div class="endnote">
-		<hr/>
-		<p>این یک مقاله‌ی مروری از سری مقالات «هوش مصنوعی در پزشکی» <i>مجله‌ی پزشکی نیوانگلند</i> است که در تاریخ ۳۰ مارس ۲۰۲۳ منتشر شده است.</p>
-		<footer>
-			<h3>منبع</h3>
-			<p dir="ltr" style="direction:ltr;text-align:start;">
-				<span>Charlotte J. Haug, M.D., Ph.D., and Jeffrey M. Drazen, M.D. (March 30, 2023). </span>
-				<span>“Artificial Intelligence and Machine Learning in Clinical Medicine, 2023” </span>
-				<span><i>N Engl J Med</i> 2023; 388:1201-1208 </span>
-				<a target="_blank" href="https://doi.org/10.1056/NEJMra2302038">DOI: 10.1056/NEJMra2302038</a><span>.</span>
-			</p>
-		</footer>
-	</div>
-</article><section id="disqus"><div id="disqus_thread"></div><script src="data:application/javascript;charset=UTF-8;base64,KCh7dXNlcm5hbWUsIHRpdGxlLCB1cmwsIHVyaX0pID0+IHsNCgl2YXIgZGlzcXVzX2NvbmZpZyA9IHdpbmRvdy5kaXNxdXNfY29uZmlnID0gZnVuY3Rpb24gKCkgew0KCQl0aGlzLnBhZ2UudGl0bGUgPSB0aXRsZTsNCgkJdGhpcy5wYWdlLnVybCA9IHVybDsNCgkJdGhpcy5wYWdlLmlkZW50aWZpZXIgPSB1cmk7DQoJfTsNCgkoZnVuY3Rpb24gKCkgew0KCQl2YXIgZCA9IHdpbmRvdy5kb2N1bWVudCwNCgkJcyA9IGQuY3JlYXRlRWxlbWVudCgic2NyaXB0Iik7DQoJCXMuc3JjID0gYGh0dHBzOi8vJHt1c2VybmFtZX0uZGlzcXVzLmNvbS9lbWJlZC5qc2A7DQoJCXMuc2V0QXR0cmlidXRlKCJkYXRhLXRpbWVzdGFtcCIsIG5ldyBEYXRlKCkuZ2V0VGltZSgpKTsNCgkJKGQuaGVhZCB8fCBkLmJvZHkpLmFwcGVuZENoaWxkKHMpOw0KCX0pKCk7DQp9KSh7InVzZXJuYW1lIjoiZ2hhc2Vta2lhbmkiLCJ0aXRsZSI6ItmH2YjYtCDZhdi12YbZiNi524wg2Ygg24zYp9iv2q/bjNix24wg2YXYp9i024zZhtuMINiv2LEg2b7Ysti02qnbjCDYqNin2YTbjNmG24zYjCDbstuw27LbsyIsInVybCI6Imh0dHBzOi8vZ2hhc2Vta2lhbmkuaXIvZXNzYXlzL2UwMDIvIiwidXJpIjoiL2Vzc2F5cy9lMDAyLyJ9KTsK"></script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>.</noscript></section></main><aside class="col-md-2 order-md-first"><ul class="nav nav-pills flex-column"><li class="nav-item"><a class="nav-link" href="../../books/a-thousand-brains/">هزار مغز</a></li><li class="nav-item"><a class="nav-link" href="../../books/brainlessons/">هفت و نیم درس درباره‌ی مغز</a></li><li class="nav-item"><a class="nav-link" href="../../books/livewired/">مغز پویا</a></li><li class="nav-item"><a class="nav-link" href="../../books/some-assembly-required/">دگرگونی‌های بزرگ</a></li><li class="nav-item"><a class="nav-link" href="../../books/worldphys/">جهان هستی بر اساس فیزیک</a></li><li class="nav-item"><a class="nav-link" href="../../books/bbor/">بلاک‌چین: حباب یا انقلاب</a></li><li class="nav-item"><a class="nav-link" href="../../books/body/">بدن</a></li><li class="nav-item"><a class="nav-link" href="../../books/genemachine/">ماشین ژن</a></li><li class="nav-item"><a class="nav-link" href="../../books/predm/">ماشین‌های پیش‌بینی</a></li><li class="nav-item"><a class="nav-link" href="../../books/afpiah/">اخترفیزیک برای افراد بی‌قرار</a></li><li class="nav-item"><a class="nav-link" href="../../books/sblp/">هفت درس کوتاه فیزیک</a></li><li class="nav-item"><a class="nav-link" href="../../books/jspr/">مرجع برنامه‌نویسی جاوا اسکریپت</a></li><li class="nav-item"><a class="nav-link" href="../../links/">پیوندها</a></li></ul></aside></div></div><div class="container"><div id="footer" class="row"><div class="col-sm-6"><p><span>© ۱۴۰۰، قاسم کیانی مقدم.</span></p></div><div class="col-sm-6"><p class="text-right"><span><a target="_blank" rel="me" href="https://linkedin.com/in/ghasemkiani" title="لینکدین"><span class="fab fa-linkedin"></span></a></span><span> </span><span><a target="_blank" rel="me" href="https://github.com/ghasemkiani" title="گیت‌هاب"><span class="fab fa-github"></span></a></span><span> </span><span><a target="_blank" rel="me" href="https://twitter.com/ghasemkiani" title="توئیتر"><span class="fab fa-twitter"></span></a></span><span> </span><span><a target="_blank" rel="me" href="https://facebook.com/ghasemkiani" title="فیس‌بوک"><span class="fab fa-facebook"></span></a></span><span> </span><span><a target="_blank" rel="me" href="https://telegram.me/ghasemkiani" title="تلگرام"><span class="fab fa-telegram"></span></a></span><span> </span><span><a target="_blank" rel="me" href="https://instagram.com/ghasem.kiani" title="اینستاگرام"><span class="fab fa-instagram"></span></a></span><span> </span><span><a target="_blank" rel="me" href="https://mastodon.social/@ghasemkiani" title="ماستودون"><span class="fab fa-mastodon"></span></a></span></p></div></div></div><script crossorigin="anonymous" src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"></script><script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"></script><script crossorigin="anonymous" src="https://cdn.rtlcss.com/bootstrap/v4.0.0/js/bootstrap.min.js" integrity="sha384-54+cucJ4QbVb99v8dcttx/0JRx4FHMmhOWi4W+xrXpKcsKQodCBwAvu3xxkZAwsH"></script><script src="https://www.googletagmanager.com/gtag/js?id=UA-135468998-1"></script><script src="data:application/javascript;charset=UTF-8;base64,KCh7aWR9KSA9PiB7DQoJd2luZG93LmRhdGFMYXllciA9IHdpbmRvdy5kYXRhTGF5ZXIgfHwgW107DQoJZnVuY3Rpb24gZ3RhZygpe2RhdGFMYXllci5wdXNoKGFyZ3VtZW50cyk7fQ0KCWd0YWcoImpzIiwgbmV3IERhdGUoKSk7DQoNCglndGFnKCJjb25maWciLCBpZCk7DQp9KSh7ImlkIjoiVUEtMTM1NDY4OTk4LTEifSk7Cg=="></script></body></html>
+                                li.reference {
+                                    direction: ltr;
+                                    text-align: start;
+                                }
+
+                                figure.fig {
+                                    margin-block-start: 2em;
+                                    margin-block-end: 2em;
+                                    margin-inline-start: 1em;
+                                    margin-inline-end: 1em;
+                                }
+
+                                img.fig {
+                                    width: 100%;
+                                }
+
+                                figcaption.fig {
+                                    font-family: inherit;
+                                }
+
+                                .article-info {
+                                    margin-top: 1em;
+                                    margin-bottom: 1em;
+                                    padding: 1em;
+                                    background-color: #eee;
+                                    border-bottom: #ddd 2px solid;
+                                }
+
+                                .article-info p {
+                                    margin: 0px;
+                                }
+
+                                .endnote {
+                                    font-size: 70%;
+                                }
+                            </style>
+                            <h1> هوش مصنوعی و یادگیری ماشینی در پزشکی بالینی، ۲۰۲۳ </h1>
+                            <div class="article-info">
+                                <p>
+                                    <a target="_blank" href="https://doi.org/10.1056/NEJMra2302038"> مجلهٔ پزشکی نیوانگلند </a>
+                                </p>
+                                <p>
+                                    <a target="_blank" href="https://bit.ly/3N8fKj8">
+                                        <span>دانلود <span dir="ltr">PDF</span> ترجمهٔ فارسی</span>
+                                    </a>
+                                </p>
+                                <p>
+                                    <span>نویسندگان: </span>
+                                    <span>دکتر شارلوت جِی. هاوگ</span>
+                                    <span> و </span>
+                                    <span>دکتر جفری اِم. درِیزِن</span>
+                                </p>
+                                <p>مترجم: دکتر قاسم کیانی مقدم</p>
+                            </div>
+                            <p>در دهه‌های ۱۹۴۰ و ۱۹۵۰ که کامپیوتر و هوش مصنوعی (<span dir="ltr" style="direction:ltr;">AI</span>) تقریباً هم‌زمان توسعه می‌یافت، رشتهٔ پزشکی نیز به‌سرعت متوجه فواید و کاربردهای بالقوهٔ آن‌ها شد.<span class="ref"><a class="ref" name="_ref01" href="#ref01">۱</a>، <a class="ref" name="_ref02" href="#ref02">۲</a></span> در سال ۱۹۵۹، کیو برادمَن (<span dir="ltr" style="direction:ltr;">Keeve Brodman</span>) و همکاران ادعا کردند که «انجام تفسیر تشخیصی صحیح از نشانه‌ها می‌تواند فرایندی باشد از همه جهت منطقی، و می‌توان آن را چنان کامل تعریف کرد که یک ماشین بتواند آن را انجام دهد».<span class="ref"><a class="ref" name="_ref03" href="#ref03">۳</a></span> یازده سال بعد، ویلیام بی. شوارتز (<span dir="ltr" style="direction:ltr;">William B. Schwartz</span>) در این مجله نوشت: «تأثیر عمدهٔ علوم کامپیوتر احتمالاً به این صورت خواهد بود که کارکردهای فکری پزشک را تقویت کرده، و در برخی موارد، عمدتاً جایگزین آن خواهد شد.»<span class="ref"><a class="ref" name="_ref04" href="#ref04">۴</a></span> او پیش‌بینی کرد که تا سال ۲۰۰۰، کامپیوتر در پزشکی نقشی جدید خواهد یافت، و به‌عنوان افزوده‌ای قوی بر توان فکری پزشک عمل خواهد کرد.</p>
+                            <p>با این حال، در اواخر دههٔ ۱۹۷۰، نومیدانه مشاهده شد که دو رویکرد رایانش که در پزشکی به کار گرفته می‌شد—یکی سیستم‌های مبتنی بر قواعد، و دیگری سیستم‌های مبتنی بر انطباق یا بازشناسی الگو—در عمل آن‌گونه که امید می‌رفت، موفق نبوده است. سیستم‌های مبتنی بر قواعد بر پایهٔ این فرض ساخته شده بود که دانش خبره متشکل از تعداد زیادی قواعد مستقل و مختص موقعیت است، و کامپیوتر می‌تواند با استفادهٔ پیاپی از این قواعد در زنجیره‌های استنباط، تفکر خبره را شبیه‌سازی کند. راهبردهای انطباق به این صورت بود که تلاش می‌کرد بین مشخصات بالینی بیمار و بانکی از «پروفایل‌های ذخیره شده»، که امروزه به آن‌ها «اسکریپت بیماری» می‌گوییم،<span class="ref"><a class="ref" name="_ref05" href="#ref05">۵</a></span> برای یک بیماری خاص انطباق پیدا کند. در زمینهٔ درکِ خودِ فرایند تصمیم‌گیری بالینی تلاش‌های بیشتری صورت گرفت.<span class="ref"><a class="ref" name="_ref06" href="#ref06">۶</a></span> روشن شد که نقص کلیدی در اکثر برنامه‌های قبلی از فقدان آگاهی پاتوفیزیولوژی در آن‌ها سرچشمه می‌گرفت. با تلفیق کردن این‌گونه آگاهی‌ها، عملکرد تا حد زیادی بهبود یافت.</p>
+                            <p>با این وجود، در دههٔ ۱۹۸۰، کامپیوترها قدرت انجام این کار را نداشتند. تا سال ۱۹۸۷، سیستم‌های مبتنی بر قواعد در برخی کاربردهای تجاری فوایدی را از خود نشان داده بود، ولی در پزشکی بالینی مؤثر واقع نشده بود. در حقیقت، شوارتز و همکاران نوشته‌اند: «این فرایند به‌قدری کُند است که حتی با کامپیوترهای پرسرعت امروزی، عملاً قابل استفاده نیست.»<span class="ref"><a class="ref" name="_ref07" href="#ref07">۷</a></span> آن‌ها در ادامه می‌نویسند: «چندین دهه است که می‌گویند کامپیوتر به‌زودی خواهد توانست در تشخیص‌های دشوار به ما کمک کند، و اکنون پزشکان ممکن است بپرسند که چرا این انقلاب به وقوع نپیوسته است.»<span class="ref"><a class="ref" name="_ref07" href="#ref07">۷</a></span></p>
+                            <section>
+                                <h2> پیشرفت در علم داده‌ها </h2>
+                                <p>در دههٔ ۱۹۵۰، کامپیوترها خیلی بزرگ بودند و سرعت پایینی داشتند. نخستین گردونهٔ دیسک سخت دنیا، دیسک فایلِ مدل ۳۵۰ آی‌بی‌ام بود، که در سال ۱۹۵۶ ارائه شد. کل ظرفیت ذخیره‌سازی این دستگاه، ۵ میلیون کاراکتر (اندکی کمتر از ۵ مگابایت) بود. نخستین هارد درایوی که ظرفیت بالای ۱ گیگابایت داشت، آی‌بی‌ام ۳۳۸۰ بود، که در سال ۱۹۸۰ ارائه شد. این دستگاه به اندازهٔ یک یچخال بود، و ۵۵۰ پوند (۲۵۰ کیلوگرم) وزن داشت؛ قیمت آن ۱۰۰٬۰۰۰ دلار بود. ولی فناوری مدارهای مجتمع در حال پیشرفت بود. در سال ۱۹۶۵، گوردون مور از بنیان‌گذاران شرکت‌های فِیرچایلد سِمی‌کُنداکتور (<span dir="ltr" style="direction:ltr;">Fairchild Semiconductor</span>) و اینتِل (<span dir="ltr" style="direction:ltr;">Intel</span>)، پیش‌بینی کرد که تعداد ترانزیستورها در یک مدار مجتمع، و در نتیجه، قدرت رایانشی بالقوهٔ آن، هر ۲ سال دو برابر خواهد شد. پیش‌بینی او درست بود؛ این تغییر در تراکم نیمه‌رساناها را قانون مور می‌نامند. با این حال، قانون مور فقط مربوط به تعداد ترانزیستورها در سانتی‌متر مربع نیست، چرا که دیگر جنبه‌های پیشرفت فناوری، از قبیل سرعت پردازش و قیمت محصولات الکترونیکی، نیز پیوندی قوی با قانون مور دارد. با متراکم‌تر شدن مدارها، حافظهٔ کامپیوتر و سرعت رایانش افزایش یافت، به‌طوری که امروزه دستگاه‌های جیبیِ متداول، قوی‌تر از ابررایانه‌های دههٔ ۱۹۸۰ هستند که فضایی به اندازهٔ یک اتاق را اشغال می‌کردند، و قیمتشان کسری از قیمت آن ابررایانه‌ها است (<span class="refFig">شکل <a class="ref" name="_fig01" href="#fig01">۱</a></span>).</p>
+                                <figure class="fig"><img class="fig" src="f01.png" />
+                                    <figcaption class="fig"><span class="captionFig">شکل <a class="ref" name="fig01" href="#_fig01">۱</a></span>: <strong>بهبودهای صورت گرفته در ۵۰ سال اخیر در توانایی کامپیوترها برای ذخیره‌سازی و پردازش داده‌ها.</strong><br />پانل <span dir="ltr" style="direction:ltr;">A</span> پیشرفت ذخیره‌سازی داده‌ها را، هم از نظر اندازهٔ فیزیکی و هم از نظر هزینه به‌ازای واحد ذخیره‌سازی، نشان می‌دهد. نام <span dir="ltr" style="direction:ltr;">RAMAC</span> مخفف «روش دسترسی تصادفی حسابداری و کنترل» است. پانل <span dir="ltr" style="direction:ltr;">B</span> پیشرفت در سرعت را نشان می‌دهد. هر نقطه نمایانگر یک نوع خاص کامپیوتر و سال تقریبی ساخت آن است. این بهبودها در ذخیره‌سازی و سرعتْ امکان آن را فراهم کرده که یادگیری ماشینی از رؤیا به واقعیت بدل شود. داده‌ها در هر دو پانل برآوردهایی از چندین نوع معماری سیستم است و از منابع عمومی متعددی گرفته شده است.</figcaption>
+                                </figure>
+                                <p>پیشرفت در علم داده‌ها صرفاً به افزایش عملکرد، سرعت، و ظرفیت ذخیره‌سازی مربوط نمی‌شود. علاوه بر اطلاعات موجود در کتابخانه‌ها، داده‌های حاصل از سازمان‌ها، و سیستم‌های مستقر طراحی شده برای جمع‌آوری و کدگذاری داده‌ها، شکل‌های جدید فناوری می‌توانند از داده‌هایی که هم به‌وسیلهٔ انسان‌ها و هم به‌وسیلهٔ ماشین‌ها تولید شده‌اند، استفاده کنند. این داده‌ها غالباً آشوبناک و بی‌ساختارند. داده‌ها اکنون از منابع بسیار دیگری نیز حاصل می‌شوند، از جمله شبکه‌های اجتماعی، وبلاگ‌ها، اتاق‌های چَت، سایت‌های نقد محصولات، باهمستان‌ها، صفحات وب، ایمیل‌ها، سندها، تصاویر، ویدئوها، موسیقی، و نیز حسگرهای پوشیدنی و محیطی. خیلی از افراد هستند که برخی جنبه‌های سوابق پزشکی و داده‌های ژنتیکی شخصی خود را برای دسترسی آنلاین در اختیار عموم قرار می‌دهند. ظرفیت ذخیره‌سازی به‌قدری زیاد است که بخش‌های بزرگی از پیکرهٔ مضبوط دانش و فعالیت بشری به آسانی قابل ذخیره‌سازی و دسترسی است.</p>
+                                <p>زمانی که داده‌ها به دست آمد، به چیزی بیشتر نیاز پیدا کردیم؛ نیازمند روش‌هایی برای شناسایی و پردازش داده‌ها بودیم. گوگل از آن رو در زمینهٔ جست‌وجوی آنلاین سرآمد شد که جست‌وجوهای انجام شده از سوی دیگران را به خدمت گرفت تا ببیند مردم در پی دانستن چه چیزهایی هستند. این نیازمند انقلاب دیگری بود، الگوریتم‌هایی ریاضی که می‌توانست با سرعت، و با حد قابل قبولی از اعتمادپذیری، این رفتار را ردیابی کند و کاربر نهایی را در یافتن اطلاعات خاص یاری نماید. ذخیره‌سازی متراکم‌تر داده‌ها و رایانش سریع‌تر امکان عملی حل عبارت‌های ریاضی در زمان حاضر را فراهم کرد که می‌شد از آن برای یافتن روابطی در میان داده‌ها استفاده کرد که تا پیش از آن ناشناختنی بود. در نتیجه، امکان شکوفایی و پیشرفت علم داده‌ها به‌گونه‌ای بی‌سابقه فراهم شد.</p>
+                                <p>ما اکنون این توانایی را داریم که با استفاده از داده‌های بی‌ساختار، روابطی ناشناخته را در میان عناصر داده‌ها شناسایی کنیم، که این امکان استفاده از داده‌های پویا و داده‌های با سیاق‌های گوناگون را فراهم می‌کند، که وقتی با روش‌هایی غیر از روش‌های غیرمتعارف مورد تحلیل قرار گیرد، بینش‌های مفیدی را دربارهٔ رفتار انسان به بار می‌آورد. به‌تدریج که افزایش توان رایانش امکان آن را فراهم کرد که پرس‌وجوهای داده‌ای در زمان حاضر پاسخ داده شود، شبکه‌های عصبی نیز پیشرفته‌تر شد. ترانسفورمرها (یعنی مدل‌های یادگیری عمیق که به هر بخش از داده‌های ورودی، وزن‌های افتراقی می‌دهند) امکان پردازش زبان طبیعی را فراهم کردند. با این رویکرد، پیچیدگی‌های مدل‌های کامپیوتری مربوطه، و پیکرهٔ داده‌ها که مدل‌ها از آن گرفته می‌شد، روز به روز بزرگ‌تر و قوی‌تر می‌شد. هدفِ ساختن کامپیوتری که بتواند برخی از جنبه‌های تعامل انسانی را تقلید کند، از رؤیایی محال به واقعیت تبدیل شد.</p>
+                                <p>به‌هم‌پیوستگیِ حاصل از علم داده‌ها نوع جدیدی از کشف را امکان‌پذیر ساخته است. افراد با استفاده از شبکه‌های اجتماعی پیوندهای خاصی را بین دوستان، اشیا، رویدادها، پسندها، ناپسندها، مکان‌ها، ایده‌ها، و احساسات برقرار می‌کنند. دولت‌ها از تحلیل شبکه‌های اجتماعی برای مقابله با حملات تروریستی استفاده می‌کنند. شرکت‌ها از طریق داده‌کاوی اطلاعاتِ اجتماعی و تعاملی، به‌دنبال یافتن پیوندهایی هستند که در کشف فرصت‌های جدید به آن‌ها کمک کند. دانشمندان در حال ساختن گریدهای عظیمی از داده‌های به‌هم‌پیوسته به‌منظور کسب یافته‌های جدید با استفاده از هوش مصنوعی و یادگیری ماشینی هستند. همان گونه که در زیر به تفصیل بیشتر بیان شده است، این پیشرفت‌ها منجر به ظهور کامپیوتر‌هایی شد که می‌توانند در انجام کارهایی که قبلاً پرزحمت بود، به ما کمک کنند. ربات <span dir="ltr" style="direction:ltr;">C‑3PO</span> در «جنگ ستارگان» نمونهٔ ساده‌ای از دستیارهای مجازی مبتنی بر هوش مصنوعی است (از قبیل سیریِ اپل، دستیار گوگل، و الکسای آمازون)، که جای خود را در زندگی روزمرهٔ ما باز کرده‌اند و در انجام برخی کارهای از پیش تعریف شده به ما یاری می‌رسانند. هر کس از این ابزارها استفاده کرده باشد، قطعاً متوجه راحتی آن‌ها شده است (مثلاً وقتی به آن می‌گویید که «تایمر اجاق را روی ۲۰ دقیقه تنظیم کن»)، ولی خیلی وقت‌ها هم موجب مزاحمت می‌شود، مثلاً زمانی که دستیار مطالب نامربوطی را در گفتگو مطرح می‌کند. هوش مصنوعی و یادگیری ماشینی نیروی محرکهٔ این دستگاه‌ها هستند.</p>
+                            </section>
+                            <section>
+                                <h2> هوش مصنوعی و یادگیری ماشینی در پزشکی </h2>
+                                <p>در دههٔ ۱۹۹۰ و اوایل دههٔ ۲۰۰۰، با آنکه هنوز سرعت کامپیوترها و حجم حافظهٔ آن‌ها به حد چندان بالایی نرسیده بود، مسئلهٔ انجام موفق برخی کارهای پزشکی که ماهیتی تکراری داشت و لذا انسان‌ها در آن مستعد خطا بودند، در شُرُفِ حل شدن بود. با صَرفِ مبالغ زیادی پول و تلاش‌های فکری فراوان، امروزه خواندن نوار قلب (<span dir="ltr" style="direction:ltr;">ECG</span>) و شمارش افتراقی گلبول‌های سفید، تحلیل عکس‌های ته چشم و ضایعات جلدی، و انجام دیگر کارهای پردازش تصویر به‌وسیلهٔ کامپیوتر به واقعیت پیوسته است. بسیاری از این کارهای مبتنی بر یادگیری ماشینی تا حد زیادی در روش کار روزمرهٔ پزشکی پذیرفته شده و به کار گرفته می‌شود. عملکرد این کارهای ماشینی بی‌عیب‌ونقص نیست، و خیلی وقت‌ها لازم است که فرد ماهری بر کار آن نظارت کند، ولی در بسیاری از موارد، با در نظر گرفتن تفسیر نسبتاً سریع تصاویر و فقدان تخصص در محل، به‌قدر کافی خوب است.</p>
+                                <p>با این حال، استفاده از هوش مصنوعی و یادگیری ماشینی در پزشکی اکنون به چیزی بیش از خواندن تصویرهای پزشکی توسعه یافته است. برنامه‌های هوش مصنوعی و یادگیری ماشینی از زوایای مختلفی وارد رشتهٔ پزشکی شده‌اند، که از آن جمله می‌توان به موارد زیر اشاره کرد: کمک به شناسایی طغیان بیماری‌های عفونی که ممکن است از جهت بهداشت عمومی حائز اهمیت باشد؛ ترکیب یافته‌های بالینی، ژنتیکی، انواع خروجی‌های مختلف آزمایشگاهی برای شناسایی بیماری‌های نادر یا شایعی که به هر طریق ممکن است تشخیص داده نشده باشد؛ و کمک به عملیات اداری بیمارستان (<span class="refFig">شکل <a class="ref" name="_fig02" href="#fig02">۲</a></span>). در طی ماه‌های آینده، این مجله مقالات مروری دیگری را منتشر خواهد کرد که به جنبه‌های خاص هوش مصنوعی در پزشکی در سال ۲۰۲۳ خواهد پرداخت. ولی قبل از آنکه نخستین مقاله حدود یک ماه دیگر منتشر شود، مهم است که به بررسی مسائلی بپردازیم که در کار با ماشین باید مَدّ نظر داشته باشیم.</p>
+                                <figure class="fig"><img class="fig" src="f02.png" />
+                                    <figcaption class="fig"><span class="captionFig">شکل <a class="ref" name="fig02" href="#_fig02">۲</a></span>: <strong>طیف کاربرد هوش مصنوعی (<span dir="ltr" style="direction:ltr;">AI</span>) در پزشکی</strong><br />پانل <span dir="ltr" style="direction:ltr;">A</span> برخی از حوزه‌های بهداشت عمومی و پزشکی را نشان می‌دهد که هوش مصنوعی در آن ریشه دوانده و نقش آن رو به گسترش است. این ابزارها هم‌اکنون نیز به متخصصان پزشکی در کارشان یاری می‌رسانند. <span dir="ltr" style="direction:ltr;">EMR</span> مخفف پروندهٔ الکترونیک پزشکی است. پانل <span dir="ltr" style="direction:ltr;">B</span> حوزه‌هایی از رشتهٔ پزشکی را نشان می‌دهد که تأثیر هوش مصنوعی در آن به‌تازگی شروع شده، ولی هنوز کاملاً متداول نشده است.</figcaption>
+                                </figure>
+                            </section>
+                            <section>
+                                <h2> مسائل حل‌نشده در رابطه با کاربرد هوش مصنوعی و یادگیری ماشینی در پزشکی </h2>
+                                <section>
+                                    <h3> تعیین هنجارها </h3>
+                                    <p>به‌طوری که در بالا گفته شد، استفاده از هوش مصنوعی و یادگیری ماشینی هم‌اکنون نیز در پزشکی برای تفسیر برخی از انواع تصاویر پزشکی، از قبیل نوار مغز، عکس ساده، <span dir="ltr" style="direction:ltr;">CT</span>‑اسکن، و <span dir="ltr" style="direction:ltr;">MRI</span>، تصاویر پوست، و عکس‌های شبکیه مورد استقبال قرار گرفته است. برای این کاربردها، مطالعات نشان داده است که هوش مصنوعی و یادگیری ماشینی از طریق مشخص کردن جاهایی از تصویر که از نرمال انحراف دارد، به ارائه کنندهٔ مراقبت بهداشتی یاری می‌رساند.</p>
+                                    <p>ولی از اینجا پرسشی کلیدی مطرح می‌شود، و آن اینکه نرمال چیست؟ این سؤال ساده یکی از ضعف‌های اصلی کاربرد هوش مصنوعی و یادگیری ماشینی را در پزشکی به‌صورتی که امروزه عموماً متداول است، آشکار می‌کند. سوگیری‌هایی که در «آموزش» دادن به الگوریتم‌های هوش مصنوعی و یادگیری ماشینی دخالت داشته، چه تأثیری بر کارکرد آن‌ها در دنیای واقعی دارد؟ ما چگونه ارزش‌های انسانی را در الگوریتم‌های هوش مصنوعی و یادگیری ماشینی وارد می‌کنیم، تا اینکه نتایج حاصل از آن‌ها منعکس کنندهٔ مسائل واقعی پیش روی پیشه‌وران بهداشتی باشد؟ مسئولان نظارتی چه مسائلی را باید در نظر داشته باشند تا مطمئن شوند که کاربردهای هوش مصنوعی و یادگیری ماشینی در موقعیت‌های مختلف به همان صورتی که ادعا شده، عمل می‌کنند؟ آیا برای مداخلاتی که بر پایهٔ هوش مصنوعی و یادگیری ماشینی صورت می‌گیرد، باید از همان رویکردهای کلاسیک استنباط آماری استفاده شود، و این استفاده به چه صورت باید باشد؟ این‌ها تنها برخی از مسائلی هستند که پیش روی ما قرار دارند؛ سری «هوش مصنوعی در پزشکی» به بررسی برخی از این مسائل خواهد پرداخت.</p>
+                                </section>
+                            </section>
+                            <section>
+                                <h2> نقش هوش مصنوعی و یادگیری ماشینی در پزشکی بالینی </h2>
+                                <p>با وجود همهٔ مشکلات، نویدهای زیادی در این موضوع نهفته است. اگر الگوریتم‌های هوش مصنوعی و یادگیری ماشینی را بتوان به «اپلیکیشن»هایی تبدیل کرد که از نظر بالینی قابل استفاده باشد، آیا خواهند توانست در میان کوه داده‌های بالینی، ژنومی، متابولومی، و زیست‌محیطی راه خود را پیدا کنند و برای تشخیص دقیق مفید واقع شوند؟ آیا اپلیکیشن‌های مبتنی بر هوش مصنوعی و یادگیری ماشینی می‌توانند تبدیل به منشی شخصی شما شوند و وقتی را که صرف نوشتن پرونده و مستندات می‌کنید، آزاد کنند، تا بتوانید وقت بیشتری را با بیماران بگذرانید؟ آیا اپلیکیشن‌ها می‌توانند شما را به پرسیدن سؤالی کلیدی رهنمون شوند که بتواند در تشخیص افتراقی مفید واقع شود؟ آیا می‌توانند بر آن الگوریتم‌های هوش مصنوعی و یادگیری ماشینی غلبه کنند که شرکت‌های بیمه از آن‌ها استفاده می‌کنند، که سبب می‌شود که نتوانید درخواست <span dir="ltr" style="direction:ltr;">PET</span>‑اسکن یا <span dir="ltr" style="direction:ltr;">CT</span>‑اسکن کنید، یا غرامتِ وقتی را که صَرفِ بیمار یا خانوادهٔ بیمار کرده‌اید، دریافت کنید؟ در هر کدام از این عرصه‌ها، پیشرفت‌هایی به وقوع پیوسته است. ولی آیا به‌قدر کافی خوب هست؟</p>
+                                <section>
+                                    <h3> پژوهش بالینی دربارهٔ کاربردهای هوش مصنوعی و یادگیری ماشینی </h3>
+                                    <p>ارزیابی پیشرفت، خود با مشکلات ویژه‌ای روبه‌رو است. در پژوهش‌های بالینی سُنّتی، وقتی که پیشرفت به‌صورت داروی جدیدی برای یک بیماریِ معین است، استانداردهای مشخصی برای آزمایش کردن و پذیرفتن داروی جدید به‌عنوان پیشرفت وجود دارند. اما زمانی که مداخله به‌صورت یک الگوریتم هوش مصنوعی و یادگیری ماشینی است نه به‌صورت یک دارو، با وجود آنکه جامعهٔ پزشکی انتظار همان سطح از اطمینان را دارد، ولی استانداردها برای توصیف و آزمایش مداخلات هوش مصنوعی و یادگیری ماشینی به‌هیچ‌وجه روشن نیست.</p>
+                                    <p>اگر قرار باشد یک اپلیکیشن به‌عنوان استانداردی برای شکل‌دهی، اصلاح، و بهبود روش‌های بالینی پذیرفته شود، در آن صورت استانداردهایی که باید در پژوهش‌های مداخله‌ای مبتنی بر هوش مصنوعی و یادگیری ماشینی رعایت شود، کدام است؟ این پژوهش‌ها سه مؤلفه دارد. نخست اینکه ساختار پژوهش باید به‌گونه‌ای که باشد که به یک پرسش معنی‌دار بالینی پاسخ دهد، به نحوی که بتواند بر رفتار کارشناسان بهداشتی تأثیرگذار باشد، و منجر به بهبود نتیجه برای بیمار شود. دوم اینکه مداخله باید قابل تعریف، قابل مقیاس، و قابل اعمال برای مسئلهٔ مورد نظر باشد. نباید تحت تأثیر عواملی خارج از حوزهٔ مسئله قرار گیرد و باید پیامدهایی داشته باشد که در محدودهٔ وسیعی از جمعیت‌ها و نرخ‌های شیوع بیماری، برای مسائل بالینی مشابه قابل اعمال باشد. آیا مراقبت مبتنی بر هوش مصنوعی و یادگیری ماشینی می‌تواند این استانداردها را تأمین کند—استانداردهایی که از یک مداخلهٔ درمانی یا روش تشخیصی آزمایشگاهی جدید توقع داریم—یا اینکه باید مجموعهٔ منحصر به فردی از استانداردها برای این نوع مداخله داشته باشیم؟ سوم اینکه وقتی نتایج پژوهش به‌گونه‌ای تأثیرگذار بر عملکرد بالینی مورد استفاده قرار می‌گیرد، پیامد آن باید برای تمام بیماران تحت بررسی سودمند باشد، نه فقط برای کسانی که از نظر مشخصات و یافته‌ها شبیه افرادی هستند که الگوریتم روی آن‌ها آموزش داده شده است. پس این سؤال مطرح می‌شود که آیا این‌گونه الگوریتم‌ها باید در انجام توصیه‌های تشخیصی و درمانی، ملاحظات بهداشت عمومی (مثلاً کمیاب بودن منابع مورد استفاده) را نیز در نظر بگیرند یا خیر، و اینکه این‌گونه محدودیت‌ها تا چه حد در فرایند تصمیم‌گیری الگوریتم دخالت داده می‌شوند.<span class="ref"><a class="ref" name="_ref08" href="#ref08">۸</a></span></p>
+                                </section>
+                                <section>
+                                    <h3> استفاده از اپلیکیشن‌های هوش مصنوعی و یادگیری ماشینی در انجام پژوهش بالینی </h3>
+                                    <p>هوش مصنوعی و یادگیری ماشینی این قابلیت را دارد که هم از طریق افزایش کارایی ثبت‌نام و تطبیق شرکت کنندگان مطالعه و هم از طریق تحلیل جامع‌تر داده‌ها، کارآزمایی‌های بالینی را بهبود داده و چه بسا آن‌ها را ساده‌تر و سریع‌تر کند. علاوه بر این، شاید امکان ایجاد گروه‌های شاهد مصنوعی از طریق انطباق دادن داده‌های تاریخی با معیارهای ثبت‌نام کارآزمایی هدف وجود داشته باشد. از هوش مصنوعی و یادگیری ماشینی برای پیش‌بینی و درک بهتر عوارض ناخواسته و زیرجمعیت‌های بیماران نیز می‌توان استفاده کرد. به نظر می‌رسد امکان آن وجود داشته باشد که هوش مصنوعی «بیماران مصنوعی» ایجاد کند تا بتوان پیامدهای تشخیصی یا درمانی را شبیه‌سازی کرد. ولی کاربرد اپلیکیشن‌ها و مداخلات هوش مصنوعی و یادگیری ماشینی موجب ورود برخی موارد عدم اطمینان می‌شود که باید هم در پروتکل‌ها و هم در گزارش‌دهی کارآزمایی‌های بالینی مورد توجه قرار گیرد.<span class="ref"><a class="ref" name="_ref09" href="#ref09">۹</a>، <a class="ref" name="_ref10" href="#ref10">۱۰</a></span></p>
+                                    <p>در این سری مقالات دربارهٔ هوش مصنوعی در پزشکی، قصد داریم به بررسی پیشرفت‌ها، موانع، چشم‌اندازها، و مطالب جدید در حد واسط هوش مصنوعی و پزشکی بپردازیم. باید در نظر داشت که این رشته با سرعت در حرکت است، بنابراین، مطالبی که بیان می‌کنیم، مانند عکسی است که از درون قطاری سریع‌السیر از منظرهٔ بیرون گرفته شده باشد. به‌طور خاص، اتفاقاتی که در حوالی زمان انتشار می‌افتد، ممکن است به‌صورت مبهمی بیان شود، چرا که به‌سرعت تغییر می‌کند، ولی زمینهٔ دوردست این چشم‌اندازْ وضوح معقول و قابل قبولی خواهد داشت. یکی از عرصه‌هایی که در هوش مصنوعی و یادگیری ماشینی پیشرفت قابل‌توجهی دارد (یعنی روزمینهٔ تصویر در همان عکسی که گفتیم)، ظهور چَت‌بات‌های پیشرفته است که برای استفاده در دسترس عموم قرار گرفته است. گرچه چت‌بات‌های ارائه شده تازه در این اواخر به حدی از پیشرفتگی رسیده‌اند که بتوانند تأثیری بر عملکرد روزمرهٔ پزشکی داشته باشند، ولی ما بر این باوریم که قابلیت آن‌ها برای تأثیرگذاری بر نحوهٔ کار در رشتهٔ پزشکی قابل‌توجه است، و درست نیست که از بررسی قابلیت آن‌ها و نیز مشکلات بالقوهٔ ناشی از کاربرد آن‌ها غافل شویم.</p>
+                                </section>
+                            </section>
+                            <section>
+                                <h2> چت‌بات‌ها در پزشکی </h2>
+                                <p>در این شماره از مجله، مقاله‌ای به قلم لی (<span dir="ltr" style="direction:ltr;">Lee</span>) و همکاران<span class="ref"><a class="ref" name="_ref11" href="#ref11">۱۱</a></span> به معرفی چت‌بات <span dir="ltr" style="direction:ltr;">GPT-4</span> و کاربردهای پزشکی آن پرداخته است. این مقاله از سوی تیمی از پژوهشگران که برای نهادهای سازندهٔ <span dir="ltr" style="direction:ltr;">GPT-4</span> کار می‌کنند، به رشتهٔ تحریر درآمده است. این چت‌بات آموزش گسترده‌ای داده شده است که شامل دانش پزشکی نیز هست. قبل از آنکه به بررسی آینده بپردازیم، نگاه سریعی به گذشته خالی از فایده نیست. چت‌بات یک برنامهٔ کامپیوتری است که با استفاده از هوش مصنوعی و پردازش زبان طبیعی، پرسش‌ها را می‌فهمد و به‌طور خودکار، مانند یک مکالمهٔ انسانی، به آن‌ها پاسخ می‌دهد. خیلی قبل‌تر، یک چت‌بات پزشکی به نام الایزا (<span dir="ltr" style="direction:ltr;">ELIZA</span>) بین سال‌های ۱۹۶۴ و ۱۹۶۶ توسط جوزِف وایزِنباوم (<span dir="ltr" style="direction:ltr;">Joseph Weizenbaum</span>) در آزمایشگاه هوش مصنوعی مؤسسهٔ فناوری ماساچوسِت توسعه داده شد (<span class="refFig">شکل <a class="ref" name="_fig03" href="#fig03">۳</a></span>).</p>
+                                <figure class="fig"><img class="fig" src="f03.png" />
+                                    <figcaption class="fig"><span class="captionFig">شکل <a class="ref" name="fig03" href="#_fig03">۳</a></span>: <strong>چت‌بات‌ها در پزشکی.</strong><br />پانل <span dir="ltr" style="direction:ltr;">A</span> اسکرین‌شاتی از خروجی یک چت‌بات خیلی قدیمی پزشکی به نام الایزا را نشان می‌دهد، که بین سال‌های ۱۹۶۴ و ۱۹۶۶ توسط جوزف وایزنباوم در آزمایشگاه هوش مصنوعی مؤسسهٔ فناوری ماساچوست توسعه داده شد. پانل <span dir="ltr" style="direction:ltr;">B</span> (برگرفته از لی و همکاران<span class="ref"><a class="ref" name="_ref11" href="#ref11">۱۱</a></span>) [ترجمهٔ] ورودی و خروجی <span dir="ltr" style="direction:ltr;">GPT‑4</span> را نشان می‌دهد، چت‌باتی که قرار است در سال ۲۰۲۳ در اختیار همگان قرار گیرد. <span dir="ltr" style="direction:ltr;">BMI</span> مخفف شاخص تودهٔ بدنی است.</figcaption>
+                                </figure>
+                                <p>فناوری چت‌بات امروزه تقریباً در همه‌جا یافت می‌شود، ازخدمات مشتریان گرفته تا دستیارهای مجازی شخصی که در بالا به آن اشاره شد. با کامپیوترهای قدرتمندی که امروزه در دسترس هستند، مدل‌های زبان میلیاردها پارامتر دارند، که می‌توان از آن‌ها برای تولید متن جدید استفاده کرد. این توانایی، در ترکیب با میزان تقریباً نامحدود داده‌های موجود (اینترنت) برای آموزش دادن شبکه، نشان می‌دهد که مدل‌های زبانی خواهند توانست کارهای بیشتر و بیشتری انجام دهند، که نمونهٔ آن سیستم چت تبدیلگر مولّد از پیش آموزش داده شده، یا <span dir="ltr" style="direction:ltr;">ChatGPT</span>، است.</p>
+                                <p><span dir="ltr" style="direction:ltr;">ChatGPT </span>یک مدل زبانی است که توسط شرکت <span dir="ltr" style="direction:ltr;">OpenAI</span> آموزش داده شده است. این سیستم در نوامبر ۲۰۲۲ عرضهٔ عمومی شد (https://openai.com/blog/chatgpt)، و روش جدیدی را برای تعامل افراد با ماشین‌های مبتنی بر هوش مصنوعی متداول کرد. چت‌بات‌های نسل جدید می‌توانند نقش منشی و مربی را داشته باشند، ولی برخی ایرادات کلیدی نیز دارند. بسیاری از ایرادات را توسعه دهندگان <span dir="ltr" style="direction:ltr;">ChatGPT</span> در زمان راه‌اندازی آن بیان کرده‌اند، ولی برای استفاده در پزشکی باید به‌طور خاص به آن‌ها توجه شود، که تفصیل آن در مقالهٔ لی و همکاران<span class="ref"><a class="ref" name="_ref11" href="#ref11">۱۱</a></span> آمده است. نسل کنونی چت‌بات‌ها به‌صورت فعلی می‌توانند در زمینهٔ مدارک پزشکی مفید واقع شوند، و به پرسش‌های کلیدی در زمینهٔ تشخیص افتراقی پاسخ دهند که در بالا به آن اشاره شد. ولی به‌سختی می‌توان فهمید که آیا پاسخ‌های داده شده ریشه در واقعیت‌های مربوطه دارد یا نه. پس این وظیفه بر عهدهٔ کلینیسین‌ها خواهد بود که کارهای چت‌بات را غلط‌گیری کنند، همان گونه که یادداشت‌هایی را هم که دیکته می‌کنند، باید غلط‌گیری کنند. مشکل آن است که این غلط‌گیری ممکن است از تخصص کاربر خارج باشد. غلط‌گیری یک یادداشت در ویزیت بیمار ممکن است به‌خوبی در حیطهٔ تخصص ارائه دهندگان خدمات باشد، ولی اگر سؤالی از <span dir="ltr" style="direction:ltr;">ChatGPT</span> به‌عنوان «مشاورهٔ کنار خیابان» پرسیده شود، تعیین صحتِ پاسخ بسیار دشوارتر خواهد بود.</p>
+                                <p>کاربردی که بیشترین قابلیت و نگرانی را دارد، استفاده از چت‌بات‌ها برای تشخیص یا توصیهٔ درمانی است. کاربری که تجربهٔ بالینی ندارد، ممکن است نتواند به‌سادگی مطالب درست و نادرست را از هم تمییز دهد. هر دوی این مسائل در مقالهٔ لی و همکاران<span class="ref"><a class="ref" name="_ref11" href="#ref11">۱۱</a></span> مورد بررسی قرار گرفته است، و این مؤلفان نقاط قوت و ضعف استفاده از چت‌بات‌ها در پزشکی را بیان کرده‌اند. از آنجا که خود این مؤلفان سازندهٔ یک چنین سیستمی هستند، لذا ممکن است سوگیری هم در نظرات آن‌ها وجود داشته باشد.</p>
+                                <p>با این وجود، ما بر این باوریم که چت‌بات‌ها تبدیل به ابزارهای مهمی در کار پزشکی خواهند شد. این ابزارها، مانند هر ابزار خوبی، می‌توانند به ما در انجام بهتر کارمان کمک کنند، ولی اگر به‌درستی از آن‌ها استفاده نشود، قابلیت آسیب رساندن هم دارند. از آنجا که این‌ها ابزارهایی جدید هستند و آزمایش کردن آن‌ها با روش‌های سنتی که در بالا گفته شد، سخت است، لذا جامعهٔ پزشکی هنوز در حال یادگیری نحوهٔ استفاده از آن‌ها است، ولی این یادگیری واجب است. تردیدی نیست که خود چت‌بات‌ها هم از کاربران خود چیزهایی خواهند آموخت. لذا پیش‌بینی ما این است که در طول مدتی، هم کاربران و هم خود ابزار مشغول سازگار شدن با شرایط خواهند بود.</p>
+                            </section>
+                            <section>
+                                <h2> نتیجه‌گیری </h2>
+                                <p>اعتقاد راسخ ما این است که ورود هوش مصنوعی و یادگیری ماشینی به پزشکی به متخصصان سلامت در بهبود کیفیت مراقبتی که ارائه می‌کنند، یاری رسانده است، و امید هست که در آیندهٔ نزدیک و پس از آن، بهبود باز هم بیشتری ایجاد کند. همان گونه که برداشت عکس‌های رادیولوژیک به‌وسیلهٔ کامپیوتر موجب حذف بایگانی کلیشه‌های رادیوگرافی و گم شدن عکس‌ها شده است، هوش مصنوعی و یادگیری ماشینی نیز می‌توانند پزشکی را متحول کنند. ما متخصصان سلامت ضمن استفاده از این فناوری جدید، نحوهٔ کار با هوش مصنوعی و یادگیری ماشینی را فرا خواهیم گرفت. هوش مصنوعی و یادگیری ماشینی کارشناسان سلامت را از کار بیکار نخواهد کرد؛ بلکه امکان آن را فراهم خواهد کرد که متخصصان سلامت کارشان را بهتر انجام دهند، و فرصت بیشتر برای تعامل چهره به چهره با بیماران داشته باشند، که این همان چیزی است که سبب می‌شود که این رشته برای ما ارزشمند و رضایت‌بخش باشد.</p>
+                            </section>
+                            <section>
+                                <h2> تأمین مالی و فاش‌سازی </h2>
+                                <p>فرم‌های فاش‌سازی که مؤلفان ارائه کرده‌اند، به‌همراه متن کامل مقاله در وب‌سایت <span dir="ltr" style="direction:ltr;">NEJM.org</span> موجود است.</p>
+                            </section>
+                            <section>
+                                <h2> وابستگی مؤلفان </h2>
+                                <p>برای تماس با دکتر هاوگ (<span dir="ltr" style="direction:ltr;">Haug</span>)، نمایندهٔ بین‌الملل مجلهٔ نیوانگلند، از طریق ایمیل charlottejohanne@gmail.com یا نشانی نروژ، اُسلو، کد پستی ۰۸۸۰، خیابان <span dir="ltr" style="direction:ltr;">Åmotveien</span> شمارهٔ ۶۳، اقدام نمایید.</p>
+                            </section>
+                            <section>
+                                <h2> مطالب تکمیلی </h2>
+                                <p><a target="_blank" href="https://www.nejm.org/doi/suppl/10.1056/NEJMra2302038/suppl_file/nejmra2302038_disclosures.pdf">فرم‌های فاش‌سازی</a>.</p>
+                            </section>
+                            <section>
+                                <h2> منابع </h2>
+                                <ol dir="ltr" class="references">
+                                    <li class="reference" dir="ltr" id="ref01">Turing AM. Computing machinery and intelligence. Mind 1950;59:433-60.</li>
+                                    <li class="reference" dir="ltr" id="ref02">Yu K-H, Beam AL, Kohane IS. Artificial intelligence in healthcare. Nat Biomed Eng 2018;2:719-31.</li>
+                                    <li class="reference" dir="ltr" id="ref03">Brodman K, Van Woerkom AJ, Erdmann AJ Jr, Goldstein LS. Interpretation of symptoms with a data-processing machine. AMA Arch Intern Med 1959;103:776-82.</li>
+                                    <li class="reference" dir="ltr" id="ref04">Schwartz WB. Medicine and the computer — the promise and problems of change. N Engl J Med 1970;283:1257-64.</li>
+                                    <li class="reference" dir="ltr" id="ref05">Bowen JL. Educational strategies to promote clinical diagnostic reasoning. N Engl J Med 2006;355:2217-25.</li>
+                                    <li class="reference" dir="ltr" id="ref06">Pauker SG, Gorry GA, Kassirer JP, Schwartz WB. Towards the simulation of clinical cognition: taking a present illness by computer. Am J Med 1976;60:981-96.</li>
+                                    <li class="reference" dir="ltr" id="ref07">Schwartz WB, Patil RS, Szolovits P. Artificial intelligence in medicine. Where do we stand? N Engl J Med 1987;316:685-8.</li>
+                                    <li class="reference" dir="ltr" id="ref08">Rosenbaum L. Trolleyology and the dengue vaccine dilemma. N Engl J Med 2018;379:305-7.</li>
+                                    <li class="reference" dir="ltr" id="ref09">Liu X, Cruz Rivera S, Moher D, Calvert MJ, Denniston AK; SPIRIT-AI and CONSORT-AI Working Group. Reporting guidelines for clinical trial reports for interventions involving artificial intelligence: the CONSORT-AI extension. Nat Med 2020;26:1364-74.</li>
+                                    <li class="reference" dir="ltr" id="ref10">Cruz Rivera S, Liu X, Chan A-W, Denniston AK, Calvert MJ; SPIRIT-AI and CONSORT-AI Working Group. Guidelines for clinical trial protocols for interventions involving artificial intelligence: the SPIRIT-AI extension. Lancet Digit Health 2020;2(10):e549-e560.</li>
+                                    <li class="reference" dir="ltr" id="ref11">Lee P, Bubeck S, Petro J. Benefits, limits, and risks of GPT-4 as an AI chatbot for medicine. N Engl J Med 2023;388: 1233-9.</li>
+                                </ol>
+                            </section>
+                            <div class="endnote">
+                                <hr />
+                                <p>این یک مقاله‌ی مروری از سری مقالات «هوش مصنوعی در پزشکی» <i>مجله‌ی پزشکی نیوانگلند</i> است که در تاریخ ۳۰ مارس ۲۰۲۳ منتشر شده است.</p>
+                                <footer>
+                                    <h3>منبع</h3>
+                                    <p dir="ltr" style="direction:ltr;text-align:start;">
+                                        <span>Charlotte J. Haug, M.D., Ph.D., and Jeffrey M. Drazen, M.D. (March 30, 2023). </span>
+                                        <span>“Artificial Intelligence and Machine Learning in Clinical Medicine, 2023” </span>
+                                        <span><i>N Engl J Med</i> 2023; 388:1201-1208 </span>
+                                        <a target="_blank" href="https://doi.org/10.1056/NEJMra2302038">DOI: 10.1056/NEJMra2302038</a><span>.</span>
+                                    </p>
+                                </footer>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="disqus" class="col-12">
+                        <div id="disqus_thread"></div>
+                        <script src="data:application/javascript;charset=UTF-8;base64,KCgoew0KICAgIHVzZXJuYW1lLA0KICAgIHRpdGxlLA0KICAgIHVybCwNCiAgICB1cmkNCn0pID0+IHsNCiAgICB2YXIgZGlzcXVzX2NvbmZpZyA9IHdpbmRvdy5kaXNxdXNfY29uZmlnID0gZnVuY3Rpb24oKSB7DQogICAgICAgIHRoaXMucGFnZS50aXRsZSA9IHRpdGxlOw0KICAgICAgICB0aGlzLnBhZ2UudXJsID0gdXJsOw0KICAgICAgICB0aGlzLnBhZ2UuaWRlbnRpZmllciA9IHVyaTsNCiAgICB9Ow0KICAgIChmdW5jdGlvbigpIHsNCiAgICAgICAgdmFyIGQgPSB3aW5kb3cuZG9jdW1lbnQsDQogICAgICAgICAgICBzID0gZC5jcmVhdGVFbGVtZW50KCJzY3JpcHQiKTsNCiAgICAgICAgcy5zcmMgPSBgaHR0cHM6Ly8ke3VzZXJuYW1lfS5kaXNxdXMuY29tL2VtYmVkLmpzYDsNCiAgICAgICAgcy5zZXRBdHRyaWJ1dGUoImRhdGEtdGltZXN0YW1wIiwgbmV3IERhdGUoKS5nZXRUaW1lKCkpOw0KICAgICAgICAoZC5oZWFkIHx8IGQuYm9keSkuYXBwZW5kQ2hpbGQocyk7DQogICAgfSkoKTsNCn0pKHsidXNlcm5hbWUiOiJnaGFzZW1raWFuaSIsInRpdGxlIjoi2YfZiNi0INmF2LXZhtmI2LnbjCDZiCDbjNin2K/ar9uM2LHbjCDZhdin2LTbjNmG24wg2K/YsSDZvtiy2LTaqduMINio2KfZhNuM2YbbjNiMINuy27DbstuzIiwidXJsIjoiaHR0cHM6Ly9naGFzZW1raWFuaS5pci9lc3NheXMvZTAwMi8iLCJ1cmkiOiIvZXNzYXlzL2UwMDIvIn0pKTsK"></script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus</a>.</noscript>
+                    </div>
+                </div>
+            </main>
+            <aside class="col-md-2 order-md-first">
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item"><a class="nav-link" href="../../books/a-thousand-brains/">هزار مغز</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../books/brainlessons/">هفت و نیم درس درباره‌ی مغز</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../books/livewired/">مغز پویا</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../books/some-assembly-required/">دگرگونی‌های بزرگ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../books/worldphys/">جهان هستی بر اساس فیزیک</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../books/bbor/">بلاک‌چین: حباب یا انقلاب</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../books/body/">بدن</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../books/genemachine/">ماشین ژن</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../books/predm/">ماشین‌های پیش‌بینی</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../books/afpiah/">اخترفیزیک برای افراد بی‌قرار</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../books/sblp/">هفت درس کوتاه فیزیک</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../books/jspr/">مرجع برنامه‌نویسی جاوا اسکریپت</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../links/">پیوندها</a></li>
+                </ul>
+            </aside>
+        </div>
+    </div>
+    <div class="container">
+        <div id="footer" class="row">
+            <div class="col-sm-6">
+                <p><span>© ۱۴۰۰، قاسم کیانی مقدم.</span></p>
+            </div>
+            <div class="col-sm-6">
+                <p class="text-right"><span><a target="_blank" rel="me" href="https://linkedin.com/in/ghasemkiani" title="لینکدین"><span class="fab fa-linkedin"></span></a></span><span> </span><span><a target="_blank" rel="me" href="https://github.com/ghasemkiani" title="گیت‌هاب"><span class="fab fa-github"></span></a></span><span> </span><span><a target="_blank" rel="me" href="https://twitter.com/ghasemkiani" title="توئیتر"><span class="fab fa-twitter"></span></a></span><span> </span><span><a target="_blank" rel="me" href="https://facebook.com/ghasemkiani" title="فیس‌بوک"><span class="fab fa-facebook"></span></a></span><span> </span><span><a target="_blank" rel="me" href="https://telegram.me/ghasemkiani" title="تلگرام"><span class="fab fa-telegram"></span></a></span><span> </span><span><a target="_blank" rel="me" href="https://instagram.com/ghasem.kiani" title="اینستاگرام"><span class="fab fa-instagram"></span></a></span><span> </span><span><a target="_blank" rel="me" href="https://mastodon.social/@ghasemkiani" title="ماستودون"><span class="fab fa-mastodon"></span></a></span></p>
+            </div>
+        </div>
+    </div>
+    <script crossorigin="anonymous" src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"></script>
+    <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"></script>
+    <script crossorigin="anonymous" src="https://cdn.rtlcss.com/bootstrap/v4.0.0/js/bootstrap.min.js" integrity="sha384-54+cucJ4QbVb99v8dcttx/0JRx4FHMmhOWi4W+xrXpKcsKQodCBwAvu3xxkZAwsH"></script>
+    <script src="https://www.googletagmanager.com/gtag/js?id=UA-135468998-1"></script>
+    <script src="data:application/javascript;charset=UTF-8;base64,KCgoew0KICAgIGlkDQp9KSA9PiB7DQogICAgd2luZG93LmRhdGFMYXllciA9IHdpbmRvdy5kYXRhTGF5ZXIgfHwgW107DQoNCiAgICBmdW5jdGlvbiBndGFnKCkgew0KICAgICAgICBkYXRhTGF5ZXIucHVzaChhcmd1bWVudHMpOw0KICAgIH0NCiAgICBndGFnKCJqcyIsIG5ldyBEYXRlKCkpOw0KICAgIGd0YWcoImNvbmZpZyIsIGlkKTsNCn0pKHsiaWQiOiJVQS0xMzU0Njg5OTgtMSJ9KSk7Cg=="></script>
+</body>
+
+</html>
