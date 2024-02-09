@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>بیگانه‌ها!</title>
+    <meta name="description" content="وب‌سایت قاسم کیانی مقدم" />
+    <meta name="keywords" content="قاسم کیانی مقدم, وب‌سایت, وب‌سایت قاسم کیانی مقدم, کتاب, فارسی, کتاب فارسی, ترجمه, برنامه‌نویسی, جاوا, جاوا اسکریپت, پزشکی, طب اطفال" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" crossorigin="anonymous" href="https://cdn.rtlcss.com/bootstrap/v4.0.0/css/bootstrap.min.css" integrity="sha384-P4uhUIGk/q1gaD/NdgkBIl3a6QywJjlsFJFk7SPRdruoGddvRVSwv5qFnvZ73cpz" />
+    <link rel="stylesheet" crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" />
+    <link rel="icon" type="image/x-icon" href="../../../favicon.ico" />
+    <style type="text/css">
+        @import url(https://fonts.googleapis.com/css?family=Droid%20Sans);
+        @import url(https://fonts.googleapis.com/css?family=Droid%20Serif);
+        @import url(https://fonts.googleapis.com/css?family=Droid%20Arabic%20Kufi);
+        @import url(https://fonts.googleapis.com/css?family=Droid%20Arabic%20Naskh);
+
+        html,
+        body,
+        input,
+        textarea,
+        select,
+        option,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: Droid Arabic Naskh, Droid Serif;
+        }
+
+        nav,
+        .nav {
+            font-family: Droid Arabic Kufi, Droid Sans;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: Droid Arabic Naskh, Droid Serif;
+        }
+
+        #footer {
+            margin-top: 0.5rem;
+            padding-top: 0.5rem;
+            border-top: #eeeeee solid thick;
+        }
+    </style>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Courier+Prime);
+
+        div.row.pager {
+            margin-top: 0.5em;
+            padding: 0.5em 0;
+            border-top: solid #cccccc 2px;
+            background-color: #dddddd;
+        }
+
+        div.pager-prev {}
+
+        div.pager-title {}
+
+        div.pager-next {}
+    </style>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+
+<body style="min-height: 75rem;">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+        <div class="container"><a class="navbar-brand" href="../../../">وب‌سایت قاسم کیانی مقدم</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#divNavBarToggle" aria-controls="divNavBarToggle" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div id="divNavBarToggle" class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link" href="../../">کتاب‌ها<span class="sr-only"> (current)</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../../essays/">مقالات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../../translation/">ترجمه</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../../about/">درباره</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../../contact/">تماس</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <main class="col-md-10 order-md-last">
+                <div class="ch" id="ch13">
+                    <h2 class="ch-title"><a class="bkmk" name="ch13"></a><a class="rtoc" href="c06-toc.xhtml"><span class="ch-title-num">۱۳</span><br /><span class="ch-title-text">بیگانه‌ها!</span></a></h2><img style="float:   right; margin-left:  0.5em; margin-bottom: 0.25em;" alt="تصویر ابتدای فصل" src="images/ch.svg" />
+                    <a id="p255"></a>
+                    <p>در این فصل، بیگانه‌ها را به بازی <span class="emphasis">تهاجم بیگانگان</span> اضافه می‌کنیم. ابتدا یک بیگانه به بالای صفحه اضافه می‌کنیم، و بعد ناوگان کاملی از بیگانه‌ها ایجاد می‌کنیم. بیگانه‌ها به دو طرف و به سمت پایین حرکت می‌کنند و هر بیگانه‌ای که گلوله بخورد، نابود می‌شود. سرانجام، تعداد سفینه‌هایی را که بازیکن دارد، محدود می‌کنیم، و وقتی که سفینه‌های بازیکن تمام شد، بازی تمام می‌شود.</p>
+                    <p>در طول این فصل، با پای‌گیم بیشتر آشنا خواهید شد و مطالبی را درباره‌ی مدیریت پروژه‌های بزرگ یاد خواهید گرفت. در ضمن، یاد خواهید گرفت که برخورد بین اشیای بازی، مانند گلوله‌ها و بیگانه‌ها، را شناسایی کنید. شناسایی برخورد به تعریف تعامل بین عناصر بازی کمک می‌کند: مثلاً می‌توانید <a id="p256"></a>یک کاراکتر را به درون دیوارهای یک ماز محدود کنید، یا اینکه توپی را بین دو کاراکتر پاس بدهید. همچنان بر اساس برنامه عمل خواهیم کرد و گهگاه این برنامه را بازبینی خواهیم نمود تا تمرکزمان را در برنامه‌نویسی حفظ کنیم.</p>
+                    <p>قبل از آنکه شروع به نوشتن کد جدید کنیم تا ناوگانی از بیگانه‌ها را به صفحه اضافه کنیم، بهتر است نگاهی به پروژه بیندازیم و برنامه‌ی کاری‌مان را به‌روز کنیم.</p>
+                    <div class="sect" id="ch13lev1sec1"><a class="bkmk" name="ch13lev1sec1"></a>
+                        <h3>مرور پروژه</h3>
+                        <p>وقتی که فاز جدیدی از برنامه‌نویسی را در یک پروژه‌ی بزرگ شروع می‌کنید، همیشه بهتر است که نگاهی به برنامه‌ی کاری‌تان بیندازید و مشخص کنید که می‌خواهید با کدنویسی جدید چه کاری انجام دهید. در این فصل، کارهای زیر را انجام می‌دهیم:</p>
+                        <ul>
+                            <li>کد را بررسی می‌کنیم و مشخص می‌کنیم که آیا لازم است قبل از پیاده‌سازی ویژگی‌های جدید، آن را بازساخت کنیم.</li>
+                            <li>یک بیگانه به گوشه‌ی بالای چپ صفحه اضافه می‌کنیم و اطراف آن فاصله‌گذاری مناسب ایجاد می‌کنیم.</li>
+                            <li>بر اساس فاصله‌گذاری اطراف بیگانه و انداز‌ه‌ی کلی صفحه، مشخص می‌کنیم که چند بیگانه در صفحه جا می‌شوند. حلقه‌ای می‌نویسیم و آن‌قدر بیگانه درست می‌کنیم که بخش بالایی صفحه را پر کنند.</li>
+                            <li>کاری می‌کنیم که ناوگان بیگانه‌ها به اطراف و به پایین حرکت کنند تا زمانی که تمام آن‌ها ساقط شوند، یا یکی از بیگانه‌ها به سفینه برخورد کند، و یا اینکه یک بیگانه به زمین برسد. اگر تمام ناوگان ساقط شوند، یک ناوگان جدید ایجاد خواهیم کرد. اگر یکی از بیگانه‌ها به سفینه یا زمین برخورد کند، سفینه را نابود می‌کنیم و سفینه‌ی جدیدی ایجاد می‌کنیم.</li>
+                            <li>تعداد سفینه‌هایی را که بازیکن می‌تواند استفاده کند، محدود می‌کنیم، به‌طوری که وقتی بازیکن از تمام سفینه‌های اختصاص داده شده استفاده کرد، بازی تمام می‌شود.</li>
+                        </ul>
+                        <p>به تدریج که ویژگی‌های جدید را پیاده‌سازی می‌کنیم، این برنامه‌ی کاری را بیشتر مشخص خواهیم کرد، ولی فعلاً همین برای شروع کار کافی است.</p>
+                        <p>در ضمن، وقتی شروع به کار بر روی ویژگی‌های جدیدی برای پروژه می‌کنید، باید کدتان را هم مرور کنید. از آنجا که هر فاز جدید معمولاً پروژه را پیچیده‌تر می‌کند، بنابراین، بهتر است که جاهایی از کد را که شلوغ یا نارسا است، تمیزکاری کنید. ما قبلاً در حین برنامه‌نویسی، بازساخت کد را هم انجام دادیم، بنابراین، فعلاً نیازی به بازساخت بیشتر نیست.</p>
+                    </div>
+                    <div class="sect" id="ch13lev1sec2"><a class="bkmk" name="ch13lev1sec2"></a>
+                        <h3>ایجاد نخستین بیگانه</h3>
+                        <p>قرار دادن یک بیگانه روی صفحه، مانند قرار دادن سفینه روی صفحه است. رفتار بیگانه به‌وسیله‌ی کلاسی به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Alien</span><span class="rlm">‏</span> کنترل می‌شود، که ساختار آن شبیه کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Ship</span><span class="rlm">‏</span> است. برای سادگی کار، در اینجا هم از تصاویر بیت‌مپ استفاده خواهیم کرد. می‌توانید خودتان تصویری برای بیگانه پیدا کنید، یا اینکه از تصویر نشان داده شده در <refFig xmlns="urn:dox:pycc">۱۳-۱</refFig> استفاده کنید، که در منابع کتاب در نشانی <span class="rlm">‏</span><a dir="ltr" target="_blank" href="https://nostarch.com/pythoncrashcourse2e/">nostarch.com/pythoncrashcourse2e/</a><span class="rlm">‏</span> قابل دسترس است. این تصویر پس‌زمینه‌ی خاکستری دارد، که منطبق با رنگ پس‌زمینه‌ی صفحه‌ی بازی است. یادتان باشد که فایل عکس انتخاب‌شده را در پوشه‌ی <span class="rlm">‏</span><span class="ident" dir="ltr">images</span><span class="rlm">‏</span> ذخیره کنید.</p><a id="p257"></a>
+                        <figure class="fig" id="ch13_fig01"><img class="fig" src="images/ch13_fig01.jpg" />
+                            <figcaption class="fig">شکل ۱۳-۱: تصویر بیگانه که برای ساخت ناوگان بیگانگان استفاده خواهد شد</figcaption>
+                        </figure>
+                        <div class="sect" id="ch13lev2sec1"><a class="bkmk" name="ch13lev2sec1"></a>
+                            <h4>ایجاد کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Alien</span><span class="rlm">‏</span></h4>
+                            <p>حالا کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Alien</span><span class="rlm">‏</span> را می‌نویسیم و آن را با نام <span class="rlm">‏</span><span class="ident" dir="ltr">alien.py</span><span class="rlm">‏</span> ذخیره می‌کنیم:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">alien.py</div>
+                                <pre class="snippet" dir="ltr">import pygame
+from pygame.sprite import Sprite
+
+class Alien(Sprite):
+    """A class to represent a single alien in the fleet."""
+
+    def __init__(self, ai_game):
+        """Initialize the alien and set its starting position."""
+        super().__init__()
+        self.screen = ai_game.screen
+
+        # Load the alien image and set its rect attribute.
+        self.image = pygame.image.load('images/alien.bmp')
+        self.rect = self.image.get_rect()
+
+        # Start each new alien near the top left of the screen.
+<span class="n" dir="ltr">1</span>        self.rect.x = self.rect.width
+        self.rect.y = self.rect.height
+
+        # Store the alien's exact horizontal position.
+<span class="n" dir="ltr">2</span>        self.x = float(self.rect.x)</pre>
+                            </div>
+                            <p>این کلاس عمدتاً مانند کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Ship</span><span class="rlm">‏</span> است، جز اینکه نحوه‌ی قرارگیری بیگانه‌ها در روی صفحه متفاوت است. در ابتدا، هر کدام از بیگانه‌ها را نزدیک گوشه‌ی بالای چپ صفحه می‌گذاریم؛ فاصله‌ای به انداز‌ه‌ی عرض بیگانه به طرف چپ آن اضافه می‌کنیم و هم‌چنین فاصله‌ای به انداز‌ه‌ی ارتفاع آن به بالای آن اضافه می‌نماییم <span class="n" dir="ltr">1</span>، تا به خوبی قابل مشاهده باشد. بیشتر <a id="p258"></a>سرعت افقی بیگانه برای ما مهم است، لذا موقعیت افقی هر بیگانه را به‌طور دقیق ردیابی می‌کنیم <span class="n" dir="ltr">2</span>.</p>
+                            <p>این کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Alien</span><span class="rlm">‏</span> نیازی به متدی برای ترسیم آن روی صفحه ندارد؛ در عوض، از یکی از متدهای گروه پای‌گیم برای ترسیم خودکار تمام عناصر گروه روی صفحه استفاده خواهیم کرد.</p>
+                        </div>
+                        <div class="sect" id="ch13lev2sec2"><a class="bkmk" name="ch13lev2sec2"></a>
+                            <h4>ایجاد نمونه‌ای از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Alien</span><span class="rlm">‏</span></h4>
+                            <p>می‌خواهیم نمونه‌ای از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Alien</span><span class="rlm">‏</span> ایجاد کنیم، تا بتوانیم اولین بیگانه را روی صفحه ببینیم. از آنجا که این بخشی از کار زمینه‌سازی ما محسوب می‌شود، لذا کد مربوط به این نمونه را در انتهای متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">__init__()</span><span class="rlm">‏</span> در کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">AlienInvasion</span><span class="rlm">‏</span> قرار می‌دهیم. در نهایت، قصد داریم ناوگان کاملی از بیگانه‌ها ایجاد کنیم، که کار زیادی خواهد داشت، لذا برای آن یک متد کمکی به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_create_fleet()</span><span class="rlm">‏</span> ایجاد خواهیم کرد.</p>
+                            <p>ترتیب متدها در یک کلاس اهمیتی ندارد، فقط کافی است که برای نحوه‌ی قرارگیری آن‌ها از نظم یکسانی پیروی کنید. من متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_create_fleet()</span><span class="rlm">‏</span> را درست قبل از متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_update_screen()</span><span class="rlm">‏</span> قرار می‌دهم، ولی آن را در هر جای دیگری از کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">AlienInvasion</span><span class="rlm">‏</span> نیز می‌توان قرار داد. ابتدا کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Alien</span><span class="rlm">‏</span> را ایمپورت می‌کنیم.</p>
+                            <p>در اینجا، دستورالعمل‌های <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">import</span><span class="rlm">‏</span> مربوط به فایل <span class="rlm">‏</span><span class="ident" dir="ltr">alien_invasion.py</span><span class="rlm">‏</span> را می‌بینید:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">alien_invasion.py</div>
+                                <pre class="snippet" dir="ltr"><span class="ash">--<span class="it">snip</span>--</span>
+<span class="ash">from bullet import Bullet</span>
+from alien import Alien</pre>
+                            </div>
+                            <p>متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">__init__()</span><span class="rlm">‏</span> نیز به‌صورت زیر تغییر می‌کند:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">alien_invasion.py</div>
+                                <pre class="snippet" dir="ltr">    <span class="ash">def __init__(self):</span>
+        <span class="ash">--<span class="it">snip</span>--</span>
+        <span class="ash">self.ship = Ship(self)</span>
+        <span class="ash">self.bullets = pygame.sprite.Group()</span>
+        self.aliens = pygame.sprite.Group()
+
+        self._create_fleet()</pre>
+                            </div>
+                            <p>یک گروه برای قرار دادن ناوگان بیگانه‌ها درست می‌کنیم، و متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_create_fleet()</span><span class="rlm">‏</span> را که الآن خواهیم نوشت، فراخوانی می‌کنیم.</p>
+                            <p>متد جدید <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_create_fleet()</span><span class="rlm">‏</span> به‌صورت زیر است:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">alien_invasion.py</div>
+                                <pre class="snippet" dir="ltr">    def _create_fleet(self):
+        """Create the fleet of aliens."""
+        # Make an alien.
+        alien = Alien(self)
+        self.aliens.add(alien)</pre>
+                            </div>
+                            <p>در این متد، یک نمونه از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Alien</span><span class="rlm">‏</span> ایجاد می‌کنیم، و سپس آن را به گروهی اضافه می‌کنیم که قرار است حاوی تمام ناوگان بیگانه‌ها باشد. بیگانه به‌طور پیش‌فرض در گوشه‌ی بالای چپ صفحه قرار می‌گیرد، که برای اولین بیگانه مکان کاملاً مناسبی است.</p><a id="p259"></a>
+                            <p>برای اینکه بیگانه روی صفحه نمایش داده شود، لازم است که متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">draw()</span><span class="rlm">‏</span> گروه را در <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_update_screen()</span><span class="rlm">‏</span> فراخوانی کنیم:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">alien_invasion.py</div>
+                                <pre class="snippet" dir="ltr">    
+<span class="ash">def _update_screen(self):</span>
+        <span class="ash">--<span class="it">snip</span>--</span>
+        <span class="ash">for bullet in self.bullets.sprites():</span>
+            <span class="ash">bullet.draw_bullet()</span>
+        self.aliens.draw(self.screen)
+
+        <span class="ash">pygame.display.flip()</span></pre>
+                            </div>
+                            <p>وقتی که متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">draw()</span><span class="rlm">‏</span> را روی یک گروه فراخوانی می‌کنید، پای‌گیم هر کدام از عناصر گروه را در مکانی که به‌وسیله‌ی صفت <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">rect</span><span class="rlm">‏</span> آن تعریف شده است، ترسیم می‌کند. متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">draw()</span><span class="rlm">‏</span> نیاز به یک آرگومان دارد: سطحی که عناصر گروه باید روی آن ترسیم شود. <refFig xmlns="urn:dox:pycc">۱۳-۲</refFig> اولین بیگانه را روی صفحه نشان می‌دهد.</p>
+                            <figure class="fig" id="ch13_fig02"><img class="fig" src="images/ch13_fig02.jpg" />
+                                <figcaption class="fig">شکل ۱۳-۲: نخستین بیگانه ظاهر می‌شود.</figcaption>
+                            </figure>
+                            <p>حالا که نخستین بیگانه به درستی نمایش داده شد، کد لازم برای ترسیم تمام ناوگان را می‌نویسیم.</p>
+                        </div>
+                    </div>
+                    <div class="sect" id="ch13lev1sec3"><a class="bkmk" name="ch13lev1sec3"></a>
+                        <h3>ساختن ناوگان بیگانگان</h3>
+                        <p>برای ترسیم ناوگان بیگانه‌ها، اول باید ببینیم چند تا بیگانه در عرض صفحه جا می‌شوند، و چند ردیف از آن‌ها را می‌توان در ارتفاع صفحه جا داد. ابتدا مسئله‌ی فاصله‌گذاری افقی بیگانه‌ها را حل می‌کنیم و یک ردیف از آن‌ها درست می‌کنیم؛ بعد فاصله‌گذاری عمودی را تعیین می‌کنیم و یک ناوگان کامل ایجاد می‌نماییم.</p>
+                        <div class="sect" id="ch13lev2sec3"><a class="bkmk" name="ch13lev2sec3"></a>
+                            <h4>تعیین اینکه در یک ردیف چند بیگانه جا می‌شوند</h4>
+                            <a id="p260"></a>
+                            <p>برای اینکه ببینیم چند بیگ‍‍انه در یک ردیف جا می‌شوند، اول باید ببینیم چقدر فضای افقی داریم. عرض صفحه در <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">settings.screen_width</span><span class="rlm">‏</span> ذخیره شده است، ولی در هر طرف صفحه نیاز به یک حاشیه‌ی خالی داریم. این حاشیه را به انداز‌ه‌ی عرض یک بیگانه در نظر می‌گیریم. از آنجا که دو حاشیه داریم، لذا فضای موجود برای بیگانه‌ها برابر است با عرض صفحه منهای دو برابر عرض بیگانه:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">available_space_x = settings.screen_width – (2 * alien_width)</pre>
+                            </div>
+                            <p>هم‌چنین، باید فاصله‌ی بین بیگانه‌ها را مشخص کنیم؛ آن را هم برابر با عرض بیگانه در نظر می‌گیریم. فضای لازم برای نشان دادن یک بیگانه دو برابر عرض آن است: یک عرض برای خود بیگانه و یک عرض برای فضای خالی طرف راست آن. برای مشخص کردن تعداد بیگانه‌هایی که در صفحه جا می‌شوند، فضای موجود را بر دو برابر عرض بیگانه تقسیم می‌کنیم. از <span class="emphasis">تقسیم کف</span> (<span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">//</span><span class="rlm">‏</span>) استفاده می‌کنیم، که دو عدد را بر هم تقسیم می‌کند و باقی‌مانده را دور می‌اندازد، به‌طوری که برای تعداد بیگانه‌ها یک عدد صحیح حاصل می‌شود:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">number_aliens_x = available_space_x // (2 * alien_width)</pre>
+                            </div>
+                            <p>برای ایجاد ناوگان بیگانه‌ها از این محاسبه استفاده خواهیم کرد.</p>
+                            <div class="note">
+                                <h6 class="note-title">توجه</h6>
+                                <p>یکی از محاسن بزرگ برنامه‌نویسی آن است که حتماً لازم نیست که از همان اول مطمئن باشید که فرمول‌هایتان درست هستند. می‌توانید امتحان کنید ببینید درست کار می‌کنند یا نه. نهایتش این است که صفحه پر از بیگانه‌ها می‌شود، یا بر عکس، می‌بینید که تعداد بیگانه‌ها خیلی کم است. بعد می‌توانید بر اساس آنچه روی صفحه می‌بینید، محاسبات را بازبینی کنید.</p>
+                            </div>
+                        </div>
+                        <div class="sect" id="ch13lev2sec4"><a class="bkmk" name="ch13lev2sec4"></a>
+                            <h4>ایجاد ردیفی از بیگانه‌ها</h4>
+                            <p>حالا آماده‌ایم که یک ردیف کامل از بیگانه‌ها ایجاد کنیم. از آنجا که کد ما برای ایجاد یک بیگانه درست کار می‌کند، لذا متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_create_fleet()</span><span class="rlm">‏</span> را بازنویسی می‌کنیم تا یک ردیف کامل از بیگانه‌ها ایجاد کند:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">alien_invasion.py</div>
+                                <pre class="snippet" dir="ltr">    <span class="ash">def _create_fleet(self):</span>
+        <span class="ash">"""Create the fleet of aliens."""</span>
+        # Create an alien and find the number of aliens in a row.
+        # Spacing between each alien is equal to one alien width.
+<span class="n" dir="ltr">1</span>        alien = Alien(self)
+<span class="n" dir="ltr">2</span>        alien_width = alien.rect.width
+<span class="n" dir="ltr">3</span>        available_space_x = self.settings.screen_width - (2 * alien_width)
+        number_aliens_x = available_space_x // (2 * alien_width)
+
+        # Create the first row of aliens.
+<span class="n" dir="ltr">4</span>        for alien_number in range(number_aliens_x):
+            # Create an alien and place it in the row.
+            alien = Alien(self)
+<span class="n" dir="ltr">5</span>            alien.x = alien_width + 2 * alien_width * alien_number
+            alien.rect.x = alien.x
+            self.aliens.add(alien)</pre>
+                            </div><a id="p261"></a>
+                            <p>قبلاً درباره‌ی قسمت عمده‌ی این کد فکر کرده‌ایم. برای تعیین محل بیگانه‌ها لازم است که طول و عرض بیگانه را بدانیم، لذا در <span class="n" dir="ltr">1</span> قبل از انجام محاسبات، یک بیگانه ایجاد می‌کنیم. این بیگانه جزئی از ناوگان نیست، بنابراین، آن را به گروه <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">aliens</span><span class="rlm">‏</span> اضافه نمی‌کنیم. در <span class="n" dir="ltr">2</span>، عرض بیگانه را از صفت <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">rect</span><span class="rlm">‏</span> آن می‌گیریم و این مقدار را در <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">alien_width</span><span class="rlm">‏</span> ذخیره می‌کنیم تا مجبور نباشیم که مرتب از طریق صفت <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">rect</span><span class="rlm">‏</span> عمل کنیم. در <span class="n" dir="ltr">3</span>، فضای افقی موجود برای بیگانه‌ها را تعیین می‌کنیم و تعداد بیگانه‌هایی را که در آن فضا جا می‌شوند، محاسبه می‌نماییم.</p>
+                            <p>بعد حلقه‌ای ایجاد می‌کنیم از ۰ تا تعداد بیگانه‌هایی که باید بسازیم <span class="n" dir="ltr">4</span>. در بدنه‌ی حلقه، یک بیگانه‌ی جدید ایجاد می‌کنیم و مقدار مختصه‌ی <span class="rlm">‏</span><span class="lr" dir="ltr">x</span><span class="rlm">‏</span> آن را تعیین می‌کنیم تا در جای خود در ردیف قرار گیرد <span class="n" dir="ltr">5</span>. هر بیگانه به فاصله‌ی یک عرض بیگانه در طرف راست از حاشیه‌ی چپ قرار می‌گیرد. سپس برای هر بیگانه دو برابر عرض آن را در نظر می‌گیریم، که شامل فضای خالی طرف راست آن نیز هست، و این عدد را در جایگاه بیگانه در ردیف ضرب می‌کنیم. با استفاده از صفت <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">x</span><span class="rlm">‏</span> بیگانه، موقعیت مستطیل آن را تعیین می‌کنیم. سپس بیگانه‌ی جدید را به گروه <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">aliens</span><span class="rlm">‏</span> اضافه می‌کنیم.</p>
+                            <p>اکنون وقتی که بازی <span class="emphasis">تهاجم بیگانگان</span> را اجرا می‌کنید، شاهد نخستین ردیف از بیگانه‌ها خواهید بود، مانند <refFig xmlns="urn:dox:pycc">۱۳-۳</refFig>.</p>
+                            <figure class="fig" id="ch13_fig03"><img class="fig" src="images/ch13_fig03.jpg" />
+                                <figcaption class="fig">شکل ۱۳-۳: ردیف اول بیگانه‌ها.</figcaption>
+                            </figure>
+                            <p>ردیف اول در طرف چپ قرار گرفته است، که برای اجرای بازی خیلی هم خوب است. علت آن است که این ناوگان قرار است به طرف راست حرکت کند تا آنکه به لبه‌ی صفحه برسد، بعد کمی پایین بیاید، سپس به طرف چپ حرکت کند، و الی آخر. مانند بازی کلاسیک <span class="emphasis">مهاجمان فضا</span>، این حرکت جالب‌تر از آن است که ناوگان مستقیماً به طرف پایین سقوط کند. این حرکت را ادامه خواهیم داد تا آنکه تمام بیگانه‌ها ساقط شوند، یا اینکه یکی از آن‌ها به سفینه برخورد کند یا به پایین صفحه برسد.</p>
+                            <div class="note">
+                                <h6 class="note-title">توجه</h6>
+                                <a id="p262"></a>
+                                <p>بسته به عرض صفحه‌ای که انتخاب کرده‌اید، چینش ردیف اول بیگانه‌ها ممکن است روی سیستم شما اندکی متفاوت است.</p>
+                            </div>
+                        </div>
+                        <div class="sect" id="ch13lev2sec5"><a class="bkmk" name="ch13lev2sec5"></a>
+                            <h4>بازساخت <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_create_fleet()</span><span class="rlm">‏</span></h4>
+                            <p>اگر کدی که تا اینجا نوشتیم، تمام آن چیزی می‌بود که برای ساخت ناوگان به آن نیاز داشتیم، ممکن بود <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_create_fleet()</span><span class="rlm">‏</span> را به همین صورت که هست، بگذاریم. ولی هنوز کارهای دیگری مانده است، بنابراین بهتر است این متد را کمی تمیزکاری کنیم. متد کمکی جدیدی به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_create_alien()</span><span class="rlm">‏</span> اضافه می‌کنیم و آن را از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_create_fleet()</span><span class="rlm">‏</span> فراخوانی می‌کنیم:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">alien_invasion.py</div>
+                                <pre class="snippet" dir="ltr">    <span class="ash">def _create_fleet(self):</span>
+        
+<span class="ash">--<span class="it">snip</span>--</span>
+        <span class="ash"># Create the first row of aliens.</span>
+        <span class="ash">for alien_number in range(number_aliens_x):</span>
+            self._create_alien(alien_number)
+
+    def _create_alien(self, alien_number):
+        """Create an alien and place it in the row."""
+        <span class="ash">alien = Alien(self)</span>
+        alien_width = alien.rect.width
+        <span class="ash">alien.x = alien_width + 2 * alien_width * alien_number</span>
+        <span class="ash">alien.rect.x = alien.x</span>
+        <span class="ash">self.aliens.add(alien)</span></pre>
+                            </div>
+                            <p>متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_create_alien()</span><span class="rlm">‏</span> علاوه بر <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">self</span><span class="rlm">‏</span> به یک پارامتر دیگر نیاز دارد: شماره‌ی بیگانه‌ای که می‌خواهیم بسازیم. از همان کدی که در <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_create_fleet()</span><span class="rlm">‏</span> نوشته بودیم، استفاده می‌کنیم، جز اینکه عرض بیگانه را به جای اینکه به‌صورت آرگومان به متد بدهیم، در داخل آن محاسبه می‌کنیم. این بازساخت افزودن ردیف‌های جدید و ایجاد ناوگان کامل را تسهیل خواهد کرد.</p>
+                        </div>
+                        <div class="sect" id="ch13lev2sec6"><a class="bkmk" name="ch13lev2sec6"></a>
+                            <h4>افزودن ردیف‌ها</h4>
+                            <p>برای تکمیل ناوگان، تعداد سطرهایی را که در صفحه جا می‌شوند، تعیین می‌کنیم، و سپس حلقه را تکرار می‌کنیم، تا آنکه تمام سطرها ایجاد شوند. به‌منظور تعیین تعداد سطرها، ابتدا با تفریق کردن ارتفاع بیگانه از بالا، ارتفاع سفینه از پایین، و دو ارتفاع بیگانه از پایین صفحه، فضای عمودی موجود را محاسبه می‌کنیم:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">available_space_y = settings.screen_height – (3 * alien_height) – ship_height</pre>
+                            </div>
+                            <p>این محاسبه به‌گونه‌ای است که مقداری فضای خالی در بالای سفینه باقی می‌گذارد، تا آنکه بازیکن در ابتدای هر سطح بازی، فرصت داشته باشد که شروع به ساقط کردن بیگانه‌ها کند.</p>
+                            <p>هر ردیف باید در پایین مقداری فضای خالی داشته باشد، که آن را برابر با ارتفاع یک بیگانه می‌گیریم. برای پیدا کردن تعداد ردیف‌ها، فضای موجود را بر دو برابر ارتفاع بیگانه تقسیم می‌کنیم. از تقسیم کف استفاده می‌کنیم، زیرا می‌خواهیم که برای تعداد سطرها یک عدد صحیح به دست آید. (در اینجا هم باز اگر محاسبات اشتباه باشد، فوراً معلوم می‌شود و می‌توانیم روش‌مان را اصلاح کنیم تا آنکه به فاصله‌گذاری مناسب برسیم.)</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">number_rows = available_height_y // (2 * alien_height)</pre>
+                            </div><a id="p263"></a>
+                            <p>حالا که می‌دانیم که چند ردیف در ناوگان جا می‌شود، می‌توانیم کد مربوط به ایجاد ردیف را تکرار کنیم:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">alien_invasion.py</div>
+                                <pre class="snippet" dir="ltr">    <span class="ash">def _create_fleet(self):</span>
+        <span class="ash">--<span class="it">snip</span>--</span>
+        <span class="ash">alien = Alien(self)</span>
+<span class="n" dir="ltr">1</span>        alien_width, alien_height = alien.rect.size
+        <span class="ash">available_space_x = self.settings.screen_width - (2 * alien_width)</span>
+        <span class="ash">number_aliens_x = available_space_x // (2 * alien_width)</span>
+
+        # Determine the number of rows of aliens that fit on the screen.
+        ship_height = self.ship.rect.height
+<span class="n" dir="ltr">2</span>        available_space_y = (self.settings.screen_height -
+                                (3 * alien_height) - ship_height)
+        number_rows = available_space_y // (2 * alien_height)
+
+        # Create the full fleet of aliens.
+<span class="n" dir="ltr">3</span>        for row_number in range(number_rows):
+            <span class="ash">for alien_number in range(number_aliens_x):</span>
+                self._create_alien(alien_number, row_number)
+
+    def _create_alien(self, alien_number, row_number):
+        <span class="ash">"""Create an alien and place it in the row."""</span>
+        <span class="ash">alien = Alien(self)</span>
+        alien_width, alien_height = alien.rect.size
+        <span class="ash">alien.x = alien_width + 2 * alien_width * alien_number</span>
+        <span class="ash">alien.rect.x = alien.x</span>
+<span class="n" dir="ltr">4</span>        alien.rect.y = alien.rect.height + 2 * alien.rect.height * row_number
+        <span class="ash">self.aliens.add(alien)</span></pre>
+                            </div>
+                            <p>نیاز به عرض و ارتفاع بیگانه داریم، ازاین‌رو در <span class="n" dir="ltr">1</span> از صفت <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">size</span><span class="rlm">‏</span> استفاده می‌کنیم، که توپلی است حاوی عرض و ارتفاع یک شیء <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">rect</span><span class="rlm">‏</span>. برای محاسبه‌ی تعداد ردیف‌هایی که در صفحه جا می‌شود، محاسبه‌ی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">available_space_y</span><span class="rlm">‏</span> را درست بعد از محاسبه‌ی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">available_space_x</span><span class="rlm">‏</span> قرار می‌دهیم <span class="n" dir="ltr">2</span>. محاسبه را داخل پرانتز قرار می‌دهیم تا بتوانیم آن را به دو سطر تقسیم کنیم، تا سطرها، همان‌گونه که توصیه شده، از ۷۹ کاراکتر بیشتر نشود.</p>
+                            <p>برای ایجاد چند ردیف، از دو حلقه‌ی تو در تو استفاده می‌کنیم: یک حلقه‌ی بیرونی و یک حلقه‌ی درونی <span class="n" dir="ltr">3</span>. حلقه‌ی درونی بیگانه‌ها را در یک ردیف ایجاد می‌کند. حلقه‌ی بیرونی از ۰ تا تعداد ردیف‌های مورد نظر اجرا می‌شود؛ پایتون کد مربوط به ساختن یک ردیف را مورد استفاده قرار می‌دهد، و آن را <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">number_rows</span><span class="rlm">‏</span> بار تکرار می‌کند.</p>
+                            <p>برای ساختن حلقه‌های تو در تو، حلقه‌ی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">for</span><span class="rlm">‏</span> جدید را بنویسید و کدی را که می‌خواهید تکرار شود، تورفتگی بدهید. (در اکثر ویرایشگرهای متنی، به آسانی می‌توان تورفتگی بلوک‌های کد را بیشتر یا کمتر کرد، ولی برای راهنمایی در این مورد به <span class="ref"><a href="c38-appb.xhtml">ضمیمه‌ی ب</a></span> مراجعه کنید.) حالا وقتی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_create_alien()</span><span class="rlm">‏</span> را فراخوانی می‌کنیم، یک آرگومان برای تعداد ردیف‌ها به آن می‌دهیم به‌طوری که هر ردیف در صفحه کمی پایین‌تر قرار گیرد.</p>
+                            <p>تعریف <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_create_alien()</span><span class="rlm">‏</span> نیازمند پارامتری برای تعداد ردیف‌ها است. در داخل <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_create_alien()</span><span class="rlm">‏</span>، مقدار مختصه‌ی <span class="rlm">‏</span><span class="lr" dir="ltr">y</span><span class="rlm">‏</span> بیگانه را در صورتی که در ردیف اول نباشد، تغییر می‌دهیم <span class="n" dir="ltr">4</span>، به این صورت که ابتدا به اندازه‌ی یک ارتفاع بیگانه در نظر می‌گیریم تا در بالای صفحه مقدار فضای خالی وجود داشته باشد. هر ردیف به انداز‌ه‌ی دو ارتفاع بیگانه پایین‌تر از <a id="p264"></a>ردیف قبلی است، لذا ارتفاع بیگانه را در دو و سپس در شماره‌ی ردیف ضرب می‌کنیم. ردیف اول شماره‌ی ۰ است، لذا موقعیت عمودی ردیف اول تغییری نمی‌کند. تمام ردیف‌های بعدی هر کدام در موقعیتی پایین‌تر در صفحه قرار می‌گیرند.</p>
+                            <p>اکنون وقتی که بازی را اجرا می‌کنید، باید ناوگان کاملی از بیگانه‌ها را، مانند <refFig xmlns="urn:dox:pycc">۱۳-۴</refFig>، ببینید.</p>
+                            <figure class="fig" id="ch13_fig04"><img class="fig" src="images/ch13_fig04.jpg" />
+                                <figcaption class="fig">شکل ۱۳-۴: ناوگان کامل ظاهر می‌شود.</figcaption>
+                            </figure>
+                            <p>در قسمت بعد، کاری می‌کنیم که ناوگان حرکت کند!</p>
+                            <div class="sidebar">
+                                <h6 class="sidebar-title">خودتان امتحان کنید</h6>
+                                <p class="tiy1"><span class="tiy" id="ch13_tiy01"><span class="tiy-num">۱۳-۱</span>. <span class="tiy-title">ستاره‌ها</span>: </span> تصویری از یک ستاره پیدا کنید. جدولی از ستاره‌ها را روی صفحه نمایش دهید.</p>
+                                <p class="tiy1"><span class="tiy" id="ch13_tiy02"><span class="tiy-num">۱۳-۲</span>. <span class="tiy-title">ستاره‌های بهتر</span>: </span> برای اینکه الگوی ستاره‌های شما واقعی‌تر به نظر برسد، بهتر است محل قرارگیری هر ستاره را تا حدودی تصادفی تعیین کنید. اگر یادتان باشد، می‌توانید به‌صورت زیر یک عدد تصادفی به دست آورید:</p>
+                                <div class="snippet">
+                                    <pre class="snippet" dir="ltr">from random import randint
+random_number = randint(-10, 10)</pre>
+                                </div>
+                                <p>این کد یک عدد صحیح تصادفی بین <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">-10</span><span class="rlm">‏</span> و <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">10</span><span class="rlm">‏</span> برمی‌گرداند. با استفاده از کدی که در <span class="ref"><a href="c26-ch13.xhtml#ch13_tiy01">تمرین <span dir="ltr">۱۳-۱</span></a></span> نوشتید، موقعیت هر ستاره را به اندازه‌ی یک مقدار تصادفی جابه‌جا کنید.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sect" id="ch13lev1sec4"><a class="bkmk" name="ch13lev1sec4"></a>
+                        <h3>ایجاد حرکت برای ناوگان</h3>
+                        <a id="p265"></a>
+                        <p>حالا می‌خواهیم کاری کنیم که ناوگان بیگانه‌ها در عرض صفحه به طرف راست حرکت کند تا آنکه به لبه‌ی صفحه برسد، سپس به مقدار معینی به طرف پایین جابه‌جا شود و در جهت معکوس حرکت را ادامه دهد. این حرکت را ادامه می‌دهیم تا زمانی که تمام بیگانه‌ها تیر بخورند، یا یکی از آن‌ها به سفینه برخورد کند، یا اینکه یکی از آن‌ها به پایین صفحه برسد. ابتدا حرکت ناوگان به طرف راست را ایجاد می‌کنیم.</p>
+                        <div class="sect" id="ch13lev2sec7"><a class="bkmk" name="ch13lev2sec7"></a>
+                            <h4>حرکت دادن بیگانه‌ها به طرف راست</h4>
+                            <p>برای حرکت دادن بیگانه‌ها، از متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">update()</span><span class="rlm">‏</span> در <span class="rlm">‏</span><span class="ident" dir="ltr">alien.py</span><span class="rlm">‏</span> استفاده می‌کنیم. این متد را برای هر کدام از بیگانه‌های موجود در گروه بیگانگان فراخوانی خواهیم کرد. ابتدا، مقداری را برای تنظیم سرعت بیگانه به تنظیمات اضافه می‌کنیم:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">settings.py</div>
+                                <pre class="snippet" dir="ltr">    <span class="ash">def __init__(self):</span>
+        <span class="ash">--<span class="it">snip</span>--</span>
+        # Alien settings
+        self.alien_speed = 1.0</pre>
+                            </div>
+                            <p>سپس از این مقدار در متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">update()</span><span class="rlm">‏</span> بهره می‌گیریم:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">alien.py</div>
+                                <pre class="snippet" dir="ltr">    <span class="ash">def __init__(self, ai_game):</span>
+        <span class="ash">"""Initialize the alien and set its starting position."""</span>
+        <span class="ash">super().__init__()</span>
+        <span class="ash">self.screen = ai_game.screen</span>
+        self.settings = ai_game.settings
+        <span class="ash">--<span class="it">snip</span>--</span>
+
+    def update(self):
+        """Move the alien to the right."""
+<span class="n" dir="ltr">1</span>        self.x += self.settings.alien_speed
+<span class="n" dir="ltr">2</span>        self.rect.x = self.x</pre>
+                            </div>
+                            <p>صفتی برای تنظیمات در <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">__init__()</span><span class="rlm">‏</span> ایجاد می‌کنیم، تا بتوانیم در <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">update()</span><span class="rlm">‏</span> به سرعتِ بیگانه دسترسی پیدا کنیم. هر بار که مکان یک بیگانه را به‌روز می‌کنیم، آن را به مقدار ذخیره شده در <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">alien_speed</span><span class="rlm">‏</span> به طرف راست جابه‌جا می‌کنیم. مکان دقیق بیگانه را در <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">self.x</span><span class="rlm">‏</span> قرار می‌دهیم، که مقدار اعشاری نیز قبول می‌کند <span class="n" dir="ltr">1</span>. سپس با استفاده از مقدار <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">self.x</span><span class="rlm">‏</span>، مکان <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">rect</span><span class="rlm">‏</span> بیگانه را به‌روز می‌کنیم <span class="n" dir="ltr">2</span>.</p>
+                            <p>در حلقه‌ی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">while</span><span class="rlm">‏</span> اصلی، از قبل فراخوانی‌هایی برای به‌روزآوری مکان سفینه و گلوله‌ها داریم. حالا یک فراخوانی نیز برای به‌روزآوری مکان هر بیگانه اضافه می‌کنیم:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">alien_invasion.py</div>
+                                <pre class="snippet" dir="ltr">        <span class="ash">while True:</span>
+            <span class="ash">self._check_events()</span>
+            <span class="ash">self.ship.update()</span>
+            <span class="ash">self._update_bullets()</span>
+            self._update_aliens()
+            <span class="ash">self._update_screen()</span></pre>
+                            </div><a id="p266"></a>
+                            <p>می‌خواهیم کدی برای مدیریت حرکت ناوگان اضافه کنیم، ازاین‌رو، متد جدیدی به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_update_aliens()</span><span class="rlm">‏</span> ایجاد می‌کنیم. موقعیت بیگانه‌ها را بعد از گلوله‌ها به‌روز می‌کنیم، زیرا بعداً می‌خواهیم ببینیم که آیا گلوله به هیچ‌کدام از بیگانه‌ها اصابت کرده است یا نه.</p>
+                            <p>فرقی نمی‌کند که این متد را در کجای کلاس قرار دهید. ولی برای اینکه سازمان‌دهی خوبی داشته باشیم، آن را درست بعد از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_update_bullets()</span><span class="rlm">‏</span> قرار می‌دهیم، تا مطابق با ترتیب فراخوانی در حلقه‌ی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">while</span><span class="rlm">‏</span> باشد. نسخه‌ی اول <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_update_aliens()</span><span class="rlm">‏</span> به‌صورت زیر است:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">alien_invasion.py</div>
+                                <pre class="snippet" dir="ltr">    def _update_aliens(self):
+        """Update the positions of all aliens in the fleet."""
+        self.aliens.update()</pre>
+                            </div>
+                            <p>از متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">update()</span><span class="rlm">‏</span> روی گروه <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">aliens</span><span class="rlm">‏</span> استفاده می‌کنیم، که سبب می‌شود که متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">update()</span><span class="rlm">‏</span> هر کدام از بیگانه‌ها فراخوانی شود. حالا وقتی که بازی <span class="emphasis">تهاجم بیگانگان</span> را اجرا می‌کنید، خواهید دید که ناوگان بیگانه‌ها به طرف راست حرکت می‌کند و از کنار صفحه خارج می‌شود.</p>
+                        </div>
+                        <div class="sect" id="ch13lev2sec8"><a class="bkmk" name="ch13lev2sec8"></a>
+                            <h4>ایجاد تنظیمات برای جهت ناوگان</h4>
+                            <p>حالا تنظیماتی را درست می‌کنیم که سبب خواهد شد که ناوگان بیگانه‌ها وقتی که به لبه‌ی راست صفحه می‌رسد، مقداری پایین برود و به طرف چپ راه بیفتد. چگونگی پیاده‌سازی این رفتار به‌صورت زیر است:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">settings.py</div>
+                                <pre class="snippet" dir="ltr">        <span class="ash"># Alien settings</span>
+        <span class="ash">self.alien_speed = 1.0</span>
+        self.fleet_drop_speed = 10
+        # fleet_direction of 1 represents right; -1 represents left.
+        self.fleet_direction = 1</pre>
+                            </div>
+                            <p>مقدار <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">fleet_drop_speed</span><span class="rlm">‏</span> در تنظیمات، مشخص می‌کند که ناوگان وقتی به لبه‌ی صفحه می‌رسد، با چه سرعتی پایین می‌آید. بهتر است که این سرعت از سرعت حرکت افقی بیگانه‌ها جدا باشد، تا بتوانید این دو سرعت را به‌طور مستقل تنظیم کنید.</p>
+                            <p>برای پیاده‌سازی تنظیم <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">fleet_direction</span><span class="rlm">‏</span>، می‌توانستیم از یک مقدار متنی مانند <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">'left'</span><span class="rlm">‏</span> یا <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">'right'</span><span class="rlm">‏</span> استفاده کنیم، ولی در این صورت می‌بایست برای مشخص کردن جهت ناوگان از دستورالعمل‌های <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">if-elif</span><span class="rlm">‏</span> بهره می‌گرفتیم. با این حال، از آنجا که فقط با دو جهت سر و کار داریم، بهتر است که از مقادیر <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">1</span><span class="rlm">‏</span> و <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">-1</span><span class="rlm">‏</span> استفاده کنیم، و هر بار که جهت ناوگان عوض می شود، یکی از این مقادیر را به دیگری تبدیل کنیم. (استفاده از عدد از جهت دیگری نیز مناسب است و آن این است که وقتی که حرکت به طرف راست صورت می‌گیرد، مقدار مختصه‌ی <span class="rlm">‏</span><span class="lr" dir="ltr">x</span><span class="rlm">‏</span> بیگانه اضافه می‌شود، و در حرکت به طرف چپ، مقدار مختصه‌ی <span class="rlm">‏</span><span class="lr" dir="ltr">x</span><span class="rlm">‏</span> کم می‌شود.)</p>
+                        </div>
+                        <div class="sect" id="ch13lev2sec9"><a class="bkmk" name="ch13lev2sec9"></a>
+                            <h4>وارسی رسیدن بیگانه به لبه‌ی صفحه</h4>
+                            <p>نیاز به متدی داریم برای وارسی اینکه آیا یک بیگانه به لبه‌ی راست یا چپ صفحه برخورد کرده است. هم‌چنین، باید متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">update()</span><span class="rlm">‏</span> را تغییر دهیم تا اینکه هر بیگانه در جهت صحیح حرکت کند. این کد بخشی از کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Alien</span><span class="rlm">‏</span> است:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">alien.py</div>
+                                <pre class="snippet" dir="ltr">    def check_edges(self):
+        """Return True if alien is at edge of screen."""
+        screen_rect = self.screen.get_rect()
+<a id="p267"></a><span class="n" dir="ltr">1</span>        if self.rect.right &gt;= screen_rect.right or self.rect.left &lt;= 0:
+            return True
+
+    <span class="ash">def update(self):</span>
+        """Move the alien right or left."""
+<span class="n" dir="ltr">2</span>        self.x += (self.settings.alien_speed *
+                        self.settings.fleet_direction)
+        <span class="ash">self.rect.x = self.x</span></pre>
+                            </div>
+                            <p>می‌توانیم متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">check_edges()</span><span class="rlm">‏</span> را روی هر کدام از بیگانه‌ها فراخوانی کنیم تا ببینیم به لبه‌ی چپ یا راست صفحه رسیده است یا نه. بیگانه وقتی به لبه‌ی راست صفحه رسیده است که مقدار صفت <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">right</span><span class="rlm">‏</span> از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">rect</span><span class="rlm">‏</span> آن بزرگ‌تر یا مساوی با صفت <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">right</span><span class="rlm">‏</span> از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">rect</span><span class="rlm">‏</span> صفحه باشد. و زمانی به لبه‌ی چپ رسیده است که مقدار <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">left</span><span class="rlm">‏</span> آن کوچک‌تر یا مساوی با <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">0</span><span class="rlm">‏</span> باشد <span class="n" dir="ltr">1</span>.</p>
+                            <p>متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">update()</span><span class="rlm">‏</span> را تغییر می‌دهیم تا امکان حرکت به چپ یا راست داشته باشد، به این صورت که سرعت بیگانه را در مقدار <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">fleet_direction</span><span class="rlm">‏</span> ضرب می‌کنیم <span class="n" dir="ltr">2</span>. اگر مقدار <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">fleet_direction</span><span class="rlm">‏</span> برابر با <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">1</span><span class="rlm">‏</span> باشد، در آن صورت مقدار <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">alien_speed</span><span class="rlm">‏</span> به مکان کنونی بیگانه اضافه خواهد شد، به‌طوری که بیگانه به طرف راست جابه‌جا خواهد شد؛ اما اگر <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">fleet_direction</span><span class="rlm">‏</span> برابر با <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">-1</span><span class="rlm">‏</span> باشد، این مقدار از مکان بیگانه تفریق خواهد شد، و باعث حرکت به طرف چپ خواهد شد.</p>
+                        </div>
+                        <div class="sect" id="ch13lev2sec10"><a class="bkmk" name="ch13lev2sec10"></a>
+                            <h4>پایین آوردن ناوگان و تغییر دادن جهت</h4>
+                            <p>وقتی که یک بیگانه به لبه می‌رسد، تمام ناوگان باید کمی پایین بیاید و تغییر جهت بدهد. بنابراین، باید مقداری کد به <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">AlienInvasion</span><span class="rlm">‏</span> اضافه شود، چرا که در اینجا است که وارسی می‌کنیم که آیا هر کدام از بیگانه‌ها به لبه‌ی چپ یا راست رسیده است یا خیر. برای انجام این کار، متدهای <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_check_fleet_edges()</span><span class="rlm">‏</span> و <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_change_fleet_direction()</span><span class="rlm">‏</span> را می‌نویسیم، و سپس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_update_aliens()</span><span class="rlm">‏</span> را تغییر می‌دهیم. این متدهای جدید را پس از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_create_alien()</span><span class="rlm">‏</span> قرار می‌دهیم، ولی البته محل قرارگیری متدها در یک کلاس اهمیت خاصی ندارد.</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">alien_invasion.py</div>
+                                <pre class="snippet" dir="ltr">    def _check_fleet_edges(self):
+        """Respond appropriately if any aliens have reached an edge."""
+<span class="n" dir="ltr">1</span>        for alien in self.aliens.sprites():
+            if alien.check_edges():
+<span class="n" dir="ltr">2</span>                self._change_fleet_direction()
+                break
+
+    def _change_fleet_direction(self):
+        """Drop the entire fleet and change the fleet's direction."""
+        for alien in self.aliens.sprites():
+<span class="n" dir="ltr">3</span>            alien.rect.y += self.settings.fleet_drop_speed
+        self.settings.fleet_direction *= -1</pre>
+                            </div>
+                            <p>در <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_check_fleet_edges()</span><span class="rlm">‏</span>، روی ناوگان حلقه تشکیل می‌دهیم، و <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">check_edges()</span><span class="rlm">‏</span> را روی هر کدام از بیگانه‌ها فراخوانی می‌کنیم <span class="n" dir="ltr">1</span>. اگر <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">check_edges()</span><span class="rlm">‏</span> مقدار <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">True</span><span class="rlm">‏</span> برگرداند، می‌فهمیم که یک بیگانه به لبه رسیده است، و کل ناوگان باید تغییر جهت دهد؛ لذا <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_change_fleet_direction()</span><span class="rlm">‏</span> را فراخوانی می‌کنیم و حلقه را می‌شکنیم <span class="n" dir="ltr">2</span>. در <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_change_fleet_direction()</span><span class="rlm">‏</span>، روی تمام بیگانه‌ها حلقه تشکیل می‌دهیم و هر کدام را بر اساس مقدار <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">fleet_drop_speed</span><span class="rlm">‏</span> تنظیمات، پایین می‌آوریم <span class="n" dir="ltr">3</span>؛ سپس مقدار <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">fleet_direction</span><span class="rlm">‏</span> را در <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">-1</span><span class="rlm">‏</span> ضرب می‌کنیم. سطری که جهت ناوگان را تغییر می‌دهد، بخشی از حلقه‌ی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">for</span><span class="rlm">‏</span> نیست. ما می‌خواهیم موقعیت عمودی هر کدام از بیگانه‌ها را تغییر دهیم، ولی جهت ناوگان را فقط یک بار می‌خواهیم عوض کنیم.</p><a id="p268"></a>
+                            <p>تغییرات <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_update_aliens()</span><span class="rlm">‏</span> به‌صورت زیر است:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">alien_invasion.py</div>
+                                <pre class="snippet" dir="ltr">    <span class="ash">def _update_aliens(self):</span>
+        """
+        Check if the fleet is at an edge,
+          then update the positions of all aliens in the fleet.
+        """
+        self._check_fleet_edges()
+        
+<span class="ash">self.aliens.update()</span></pre>
+                            </div>
+                            <p>تغییری که در این متد داده‌ایم، این است که قبل از به‌روزرسانی مکان هر بیگانه، <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_check_fleet_edges()</span><span class="rlm">‏</span> را فراخوانی می‌کنیم.</p>
+                            <p>حالا وقتی که بازی را اجرا می‌کنید، ناوگان بین لبه‌های صفحه به چپ و راست حرکت می‌کند، و هر بار که به لبه می‌رسد، مقدار پایین می‌افتد. اکنون می‌توانیم شروع به ساقط کردن بیگانه‌ها کنیم و ببینیم که آیا هیچ‌کدام از بیگانه‌ها به سفینه برخورد می‌کند یا به پایین صفحه می‌رسد؟</p>
+                            <div class="sidebar">
+                                <h6 class="sidebar-title">خودتان امتحان کنید</h6>
+                                <p class="tiy1"><span class="tiy" id="ch13_tiy03"><span class="tiy-num">۱۳-۳</span>. <span class="tiy-title">قطره‌های باران</span>: </span> تصویری از یک قطره‌ی باران پیدا کنید و جدولی از قطرات باران ایجاد نمایید. کاری کنید که قطره‌های باران به طرف پایین صفحه سقوط کنند و از صفحه خارج شوند.</p>
+                                <p class="tiy1"><span class="tiy" id="ch13_tiy04"><span class="tiy-num">۱۳-۴</span>. <span class="tiy-title">باران پیوسته</span>: </span> کدی را که در <span class="ref"><a href="c26-ch13.xhtml#ch13_tiy03">تمرین <span dir="ltr">۱۳-۳</span></a></span> نوشتید، تغییر دهید، به‌طوری که وقتی یک ردیف از قطره‌های باران از پایین صفحه خارج می‌شود، ردیف جدیدی در بالای صفحه ظاهر شود و شروع به افتادن کند.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sect" id="ch13lev1sec5"><a class="bkmk" name="ch13lev1sec5"></a>
+                        <h3>تیراندازی به بیگانه‌ها</h3>
+                        <p>تا اینجا سفینه و ناوگان بیگانه‌ها را ساختیم، ولی وقتی که گلوله‌ها به بیگانه‌ها می‌رساند، به سادگی از روی آن‌ها عبور می‌کنند، چرا که وارسی از نظر برخورد را انجام نمی‌دهیم. در برنامه‌نویسی بازی، <span class="emphasis">برخورد</span> زمانی اتفاق می‌افتد که عناصر بازی روی هم می‌افتند. برای اینکه گلوله‌ها باعث سقوط بیگانه‌ها شود، از متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">sprite.groupcollide()</span><span class="rlm">‏</span> استفاده می‌کنیم تا برخورد بین اعضای دو گروه را تشخیص دهیم. </p>
+                        <div class="sect" id="ch13lev2sec11"><a class="bkmk" name="ch13lev2sec11"></a>
+                            <h4>تشخیص برخورد گلوله</h4>
+                            <p>می‌خواهیم وقتی گلوله‌ای به یک بیگانه برخورد می‌کند، فوراً از آن مطلع شویم، تا بلافاصله بیگانه را ناپدید نماییم. برای این منظور، بلافاصله بعد از به‌روزآوری مکان تمام گلوله‌ها، وارسی از نظر برخورد را انجام می‌دهیم.</p>
+                            <p>تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">sprite.groupcollide()</span><span class="rlm">‏</span> مستطیل‌های هر کدام از عناصر یک گروه را با مستطیل‌های هر کدام از عناصر گروه دیگر مقایسه می‌کند. مثلاً در اینجا <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">rect</span><span class="rlm">‏</span> هر گلوله را با <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">rect</span><span class="rlm">‏</span> هر بیگانه مقایسه می‌نماید و یک دیکشنری برمی‌گرداند که حاوی گلوله‌ها و بیگانه‌هایی است که به هم برخورد کرده‌اند. هر کدام از کلیدهای <a id="p269"></a>این دیکشنری یک گلوله خواهد بود، و مقدار مربوط به آن بیگانه‌ای خواهد بود که گلوله به آن اصابت کرده است. (از این گلوله در <span class="ref"><a href="c27-ch14.xhtml">فصل ۱۴</a></span> برای پیاده‌سازی سیستم امتیازدهی استفاده خواهیم کرد.)</p>
+                            <p>کد زیر را به پایان <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_update_bullets()</span><span class="rlm">‏</span> اضافه می‌کنیم تا برخورد بین گلوله‌ها و بیگانه‌ها را مشخص کند:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">alien_invasion.py</div>
+                                <pre class="snippet" dir="ltr">    <span class="ash">def _update_bullets(self):</span>
+        <span class="ash">"""Update position of bullets and get rid of old bullets."""</span>
+        <span class="ash">--<span class="it">snip</span>--</span>
+
+        # Check for any bullets that have hit aliens.
+        #   If so, get rid of the bullet and the alien.
+        collisions = pygame.sprite.groupcollide(
+                self.bullets, self.aliens, True, True)</pre>
+                            </div>
+                            <p>کد جدید که اضافه کردیم، موقعیت تمام گلوله‌های موجود در <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">self.bullets</span><span class="rlm">‏</span> را با تمام بیگانه‌های موجود در <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">self.aliens</span><span class="rlm">‏</span> مقایسه می‌کند، و هرگونه هم‌پوشانی را شناسایی می‌کند. هر گاه مستطیل یک گلوله و یک بیگانه روی هم می‌افتند، <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">groupcollide()</span><span class="rlm">‏</span> به دیکشنری برگشتی خود یک زوج کلید-مقدار اضافه می‌کند. دو آرگومان <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">True</span><span class="rlm">‏</span> به پای‌گیم می‌گویند که تمام گلوله‌ها و بیگانه‌هایی را که برخورد کرده‌اند، حذف کند. (اگر بخواهید گلوله‌ی پرقدرتی بسازید که تا بالای صفحه می‌رود و هر بیگانه‌ای را که در مسیرش قرار بگیرد، نابود می‌کند، باید مقدار آرگومان بولی اول را <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">False</span><span class="rlm">‏</span> قرار دهید و مقدار آرگومان بولی دوم را <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">True</span><span class="rlm">‏</span> نگه دارید. به این ترتیب، بیگانه‌های گلوله‌خورده ناپدید خواهند شد، ولی تمام گلوله‌ها تا زمانی که از بالای صفحه ناپدید شوند، فعال خواهند ماند.)</p>
+                            <p>حالا وقتی که بازی <span class="emphasis">تهاجم بیگانگان</span> را اجرا می‌کنید، بیگانه‌هایی که با تیر می‌خورند، ناپدید می‌شوند. <refFig xmlns="urn:dox:pycc">۱۳-۵</refFig> ناوگانی را نشان می‌دهد که برخی از آن‌ها ساقط شده‌اند.</p>
+                            <figure class="fig" id="ch13_fig05"><img class="fig" src="images/ch13_fig05.jpg" />
+                                <figcaption class="fig">شکل ۱۳-۵: می‌توانیم بیگانه‌ها را با تیر بزنیم!</figcaption>
+                            </figure>
+                        </div>
+                        <div class="sect" id="ch13lev2sec12"><a class="bkmk" name="ch13lev2sec12"></a>
+                            <h4>ساختن گلوله‌های بزرگ‌تر برای آزمایش</h4>
+                            <a id="p270"></a>
+                            <p>می‌توانید بسیاری از ویژگی‌های بازی را صرفاً با اجرا کردن بازی آزمایش کنید. ولی آزمایش کردن برخی ویژگی‌ها با نسخه‌ی معمولی بازی زحمت زیادی دارد. مثلاً کار سختی است که بخواهید چندین بار تمام بیگانه‌ها را با تیر بزنید تا ببینید کد شما نسبت به ناوگان خالی درست پاسخ می‌دهد یا نه.</p>
+                            <p>برای آزمایش کردن برخی ویژگی‌ها، می‌توانید تنظیمات بازی را به‌گونه‌ای تغییر دهید که بتوانید روی حوزه‌ی خاصی تمرکز کنید. مثلاً می‌توانید صفحه را کوچک‌تر کنید تا تعداد کمتری از بیگانه‌ها در آن جا شوند تا راحت‌تر بتوانید همه‌ی آن‌ها را با تیر بزنید، یا اینکه سرعت گلوله‌ها را زیاد کنید و یک‌باره تعداد زیادی گلوله به خودتان بدهید.</p>
+                            <p>تغییر مورد علاقه‌ی خود من برای آزمایش کردن بازی <span class="emphasis">تهاجم بیگانگان</span> استفاده از گلوله‌های بسیار پهن است که حتی پس از برخورد با بیگانه هم فعال می‌مانند (رک. <refFig xmlns="urn:dox:pycc">۱۳-۶</refFig>). مثلاً می‌توانید مقدار <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">bullet_width</span><span class="rlm">‏</span> را در تنظمیات معادل ۳۰۰، یا حتی ۳۰۰۰، بگیرید، تا بتوانید خیلی سریع تمام ناوگان را ساقط کنید!</p>
+                            <figure class="fig" id="ch13_fig06"><img class="fig" src="images/ch13_fig06.jpg" />
+                                <figcaption class="fig">شکل ۱۳-۶: گلوله‌های فوق‌قدرتمند امکان آزمایش آسان‌تر برخی جنبه‌های بازی را فراهم می‌کنند.</figcaption>
+                            </figure>
+                            <p>با این‌گونه تغییرات، بهتر می‌توانید بازی را آزمایش کنید و شاید حتی بتوانید توانایی‌های دیگری برای بازیکن‌ها ایجاد کنید. فقط یادتان باشد که وقتی آزمایش ویژگی مورد نظر به پایان رسید، دوباره تنظیمات را به حالت اول برگردانید.</p>
+                        </div>
+                        <div class="sect" id="ch13lev2sec13"><a class="bkmk" name="ch13lev2sec13"></a>
+                            <h4>پر کردن مجدد ناوگان</h4>
+                            <p>یکی از ویژگی‌های کلیدی بازی <span class="emphasis">تهاجم بیگانگان</span> آن است که بیگانه‌ها خستگی‌ناپذیرند: هر بار ناوگان نابود می‌شود، باید ناوگان جدیدی ظاهر شود.</p>
+                            <p>برای اینکه پس از نابود شدن یک ناوگان، ناوگان دیگری از بیگانه‌ها پدیدار شود، ابتدا وارسی می‌کنیم ببینیم آیا گروه <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">aliens</span><span class="rlm">‏</span> خالی است. اگر خالی باشد، متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_create_fleet()</span><span class="rlm">‏</span> را فراخوانی می‌کنیم. این وارسی را در پایان <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_update_bullets()</span><span class="rlm">‏</span> انجام می‌دهیم، زیرا بیگانه‌ها در اینجا نابود می‌شوند.</p><a id="p271"></a>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">alien_invasion.py</div>
+                                <pre class="snippet" dir="ltr">    <span class="ash">def _update_bullets(self):</span>
+        <span class="ash">--<span class="it">snip</span>--</span>
+<span class="n" dir="ltr">1</span>        if not self.aliens:
+            # Destroy existing bullets and create new fleet.
+<span class="n" dir="ltr">2</span>            self.bullets.empty()
+            self._create_fleet()</pre>
+                            </div>
+                            <p>در <span class="n" dir="ltr">1</span>، وارسی می‌کنیم که آیا گروه <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">aliens</span><span class="rlm">‏</span> خالی است یا خیر. گروه خالی به‌عنوان مقدار <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">False</span><span class="rlm">‏</span> ارزیابی می‌شود، بنابراین، به سادگی می‌توانیم خالی بودن گروه را وارسی کنیم. اگر خالی باشد، با فراخوانی متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">empty()</span><span class="rlm">‏</span> که تمام اسپرایت‌های باقی‌مانده را از گروه حذف می‌کند، تمام گلوله‌های موجود را دور می‌ریزیم <span class="n" dir="ltr">2</span>. هم‌چنین، متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_create_fleet()</span><span class="rlm">‏</span> را فراخوانی می‌کنیم، که صفحه را دوباره با بیگانه‌ها پر می‌کند.</p>
+                            <p>حالا به محض اینکه ناوگان موجود را نابود کنید، ناوگان دیگری ظاهر می‌شود.</p>
+                        </div>
+                        <div class="sect" id="ch13lev2sec14"><a class="bkmk" name="ch13lev2sec14"></a>
+                            <h4>افزایش سرعت گلوله‌ها</h4>
+                            <p>اگر در وضعیت کنونی بازی سعی کرده باشید بیگانه‌ها را با تیر بزنید، شاید متوجه شده باشید که سرعت حرکت گلوله‌ها برای بازی چندان مناسب نیست. شاید سرعت گلوله‌ها در سیستم شما زیادی آهسته یا تند باشد. اکنون می‌توانید تنظیمات را تغییر دهید تا بازی روی سیستم شما جالب و لذت‌بخش باشد.</p>
+                            <p>می‌توانیم با تغییر دادن مقدار <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">bullet_speed</span><span class="rlm">‏</span> در <span class="rlm">‏</span><span class="ident" dir="ltr">settings.py</span><span class="rlm">‏</span>، سرعت گلوله‌ها را تنظیم کنیم. من روی سیستم خودم مقدار <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">bullet_speed</span><span class="rlm">‏</span> را برابر با ۱٫۵ قرار می‌دهم تا گلوله‌ها کمی سریع‌تر حرکت کنند:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">settings.py</div>
+                                <pre class="snippet" dir="ltr">        <span class="ash"># Bullet settings</span>
+        self.bullet_speed = 1.5
+        <span class="ash">self.bullet_width = 3</span>
+        <span class="ash">--<span class="it">snip</span>--</span></pre>
+                            </div>
+                            <p>مقدار مناسب برای این پارامتر بستگی به سرعت سیستم دارد، بنابراین، شما باید مقداری را که برای خودتان مناسب است، پیدا کنید. می‌توانید تنظیمات دیگر را هم تغییر دهید.</p>
+                        </div>
+                        <div class="sect" id="ch13lev2sec15"><a class="bkmk" name="ch13lev2sec15"></a>
+                            <h4>بازساخت <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_update_bullets()</span><span class="rlm">‏</span></h4>
+                            <p>در اینجا، متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_update_bullets()</span><span class="rlm">‏</span> را بازساخت می‌کنیم تا کارهای مختلف زیادی در داخل آن انجام نشود. کد مربوط به برخورد گلوله با بیگانه‌ها را به متد جداگانه‌ای منتقل می‌کنیم:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">alien_invasion.py</div>
+                                <pre class="snippet" dir="ltr">    <span class="ash">def _update_bullets(self):</span>
+        <span class="ash">--<span class="it">snip</span>--</span>
+        <span class="ash"># Get rid of bullets that have disappeared.</span>
+        <span class="ash">for bullet in self.bullets.copy():</span>
+            <span class="ash">if bullet.rect.bottom &lt;= 0:</span>
+                 <span class="ash">self.bullets.remove(bullet)</span>
+
+        self._check_bullet_alien_collisions()
+
+    def _check_bullet_alien_collisions(self):
+        """Respond to bullet-alien collisions."""
+        # Remove any bullets and aliens that have collided.
+<a id="p272"></a>        <span class="ash">collisions = pygame.sprite.groupcollide(</span>
+                <span class="ash">self.bullets, self.aliens, True, True)</span>
+
+        <span class="ash">if not self.aliens:</span>
+            <span class="ash"># Destroy existing bullets and create new fleet.</span>
+            <span class="ash">self.bullets.empty()</span>
+            <span class="ash">self._create_fleet()</span></pre>
+                            </div>
+                            <p>در اینجا متدی به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_check_bullet_alien_collisions()</span><span class="rlm">‏</span> ایجاد کرده‌ایم که موارد برخورد گلوله با بیگانه‌ها را شناسایی می‌کند، و در صورتی که تمام ناوگان نابود شده باشد، اقدام مناسب را انجام می‌دهد. این کار موجب کوتاه‌تر شدن <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_update_bullets()</span><span class="rlm">‏</span> می‌شود و توسعه‌ی بیشتر را تسهیل می‌کند.</p>
+                            <div class="sidebar">
+                                <h6 class="sidebar-title">خودتان امتحان کنید</h6>
+                                <p class="tiy1"><span class="tiy" id="ch13_tiy05"><span class="tiy-num">۱۳-۵</span>. <span class="tiy-title">شلیک جانبی، بخش ۲</span>: </span> از زمان <span class="ref"><a href="c25-ch12.xhtml#ch12_tiy06">تمرین <span dir="ltr">۱۲-۶</span></a></span>، با عنوان شلیک جانبی، راه زیادی آمده‌ایم. برای این تمرین، سعی کنید شلیک جانبی را تا همین سطحی که در بازی <span class="emphasis">تهاجم بیگانگان</span> رسیده‌ایم، جلو ببرید. ناوگانی از بیگانه‌ها به آن اضافه کنید، و کاری کنید که به‌صورت جانبی به سمت سفینه در حرکت باشند. یا اینکه کدی بنویسید که بیگانه‌ها را در موقعیت‌هایی تصادفی در سمت راست صفحه قرار می‌دهد، و سپس آن‌ها را به سمت سفینه می‌فرستد. هم‌چنین، کدی بنویسید که بیگانه‌ها وقتی تیر می‌خورند، ناپدید شوند.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sect" id="ch13lev1sec6"><a class="bkmk" name="ch13lev1sec6"></a>
+                        <h3>پایان بازی</h3>
+                        <p>اگر بازی برد و باخت نداشته باشد، هیجانی نخواهد داشت. اگر بازیکن سرعت عمل کافی در تیراندازی به بیگانه‌ها نداشته باشد، بیگانه‌ها با سفینه برخورد می‌کنند و آن را نابود می‌سازند. در عین حال، به بازیکن فقط تعداد محدودی سفینه می‌دهیم، و در صورتی که یکی از بیگانه‌ها به پایین صفحه برسد، سفینه نابود می‌شود. وقتی که بازیکن تمام سفینه‌هایش را استفاده کرد، بازی تمام می‌شود.</p>
+                        <div class="sect" id="ch13lev2sec16"><a class="bkmk" name="ch13lev2sec16"></a>
+                            <h4>شناسایی برخورد بیگانه و سفینه</h4>
+                            <p>ابتدا برخورد بین بیگانه‌ها و سفینه را وارسی می‌کنیم تا در صورت برخورد، پاسخ مناسبی به آن بدهیم. وارسی برخورد بیگانه و سفینه را بلافاصله بعد از به‌روزرسانی موقعیت بیگانه‌های موجود در <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">AlienInvasion</span><span class="rlm">‏</span> انجام می‌دهیم:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">alien_invasion.py</div>
+                                <pre class="snippet" dir="ltr">    <span class="ash">def _update_aliens(self):</span>
+        <span class="ash">--<span class="it">snip</span>--</span>
+        <span class="ash">self.aliens.update()</span>
+
+        # Look for alien-ship collisions.
+<span class="n" dir="ltr">1</span>        if pygame.sprite.spritecollideany(self.ship, self.aliens):
+<span class="n" dir="ltr">2</span>            print("Ship hit!!!")</pre>
+                            </div><a id="p273"></a>
+                            <p>تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">spritecollideany()</span><span class="rlm">‏</span> دو آرگومان می‌گیرد: یک اسپرایت و یک گروه. تابع به دنبال یکی از اعضای گروه می‌گردد که با اسپرایت برخورد کرده باشد، و به محض اینکه یک عضو را پیدا کرد که با اسپرایت برخورد کرده است، دیگر دست از جست‌وجو برمی‌دارد. در اینجا، تابع روی گروه <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">aliens</span><span class="rlm">‏</span> حلقه تشکیل می‌دهد و اولین بیگانه‌ای را که با سفینه برخورد کرده باشد، برمی‌گرداند.</p>
+                            <p>اگر هیچ‌گونه برخوردی صورت نگرفته باشد، تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">spritecollideany()</span><span class="rlm">‏</span> مقدار <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">None</span><span class="rlm">‏</span> برمی‌گرداند، و بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">if</span><span class="rlm">‏</span> در <span class="n" dir="ltr">1</span> اجرا نخواهد شد. اگر یک بیگانه پیدا کند که با سفینه برخورد کرده است، در آن صورت بیگانه را برمی‌گرداند و بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">if</span><span class="rlm">‏</span> اجرا می‌شود: این بلوک جمله‌ی <span class="emphasis">Ship hit!!!</span> را نمایش می‌دهد <span class="n" dir="ltr">2</span>. وقتی که یک بیگانه به سفینه برخورد می‌کند، باید چند کار را انجام دهیم: باید تمام بیگانه‌ها و گلوله‌های باقی‌مانده را حذف کنیم، سفینه را دوباره در مرکز قرار دهیم، و ناوگان جدیدی ایجاد کنیم. قبل از آنکه کدی برای انجام تمام این کارها بنویسیم، لازم است که مطمئن شویم که رویکرد ما برای شناسایی برخورد بیگانه‌ها و سفینه درست کار می‌کند. نوشتن یک دستور <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">print()</span><span class="rlm">‏</span> راه ساده‌ای است برای اینکه اطمینان حاصل کنیم که شناسایی برخورد درست انجام می‌شود.</p>
+                            <p>حالا وقتی که <span class="emphasis">تهاجم بیگانگان</span> را اجرا می‌کنید، هر گاه بیگانه‌ای با سفینه برخورد کند، پیام <span class="emphasis">Ship hit!!!</span> در ترمینال ظاهر خواهد شد. وقتی که این ویژگی را آزمایش می‌کنید، برای <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">alien_drop_speed</span><span class="rlm">‏</span> مقدار بالاتری، مثلاً ۵۰ یا ۱۰۰، در نظر بگیرید، تا بیگانه‌ها سریع‌تر به سفینه‌ی شما برسند.</p>
+                        </div>
+                        <div class="sect" id="ch13lev2sec17"><a class="bkmk" name="ch13lev2sec17"></a>
+                            <h4>پاسخ‌گویی به برخورد بیگانه و سفینه</h4>
+                            <p>اکنون باید ببینیم که وقتی بیگانه‌ای با سفینه برخورد می‌کند، دقیقاً چه اتفاقی باید بیفتد. به جای اینکه نمونه‌ی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">ship</span><span class="rlm">‏</span> را نابود کنیم و نمونه‌ی جدیدی بسازیم، در محاسبه‌ی آمار بازی، شمارش خواهیم کرد که سفینه چند بار مورد اصابت قرار گرفته است. محاسبه‌ی آمار برای امتیازدهی مفید واقع خواهد شد.</p>
+                            <p>بنابراین، کلاس جدیدی به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">GameStats</span><span class="rlm">‏</span> برای محاسبه‌ی آمار بازی ایجاد می‌کنیم، و آن را در فایل <span class="rlm">‏</span><span class="ident" dir="ltr">game_stats.py</span><span class="rlm">‏</span> ذخیره می‌کنیم:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">game_stats.py</div>
+                                <pre class="snippet" dir="ltr">class GameStats:
+    """Track statistics for Alien Invasion."""
+
+    def __init__(self, ai_game):
+        """Initialize statistics."""
+        self.settings = ai_game.settings
+        self.reset_stats()
+
+    def reset_stats(self):
+        """Initialize statistics that can change during the game."""
+        self.ships_left = self.settings.ship_limit</pre>
+                            </div>
+                            <p>یک نمونه از کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">GameStats</span><span class="rlm">‏</span> برای تمام مدتی که بازی در حال اجرا است، ایجاد می‌کنیم. ولی هر بار که بازیکن دور جدیدی از بازی را شروع می‌کند، لازم است که برخی از آمارها را به حالت اول برگردانیم. برای این منظور، اکثر آمارها را به جای اینکه مستقیماً در <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">__init__()</span><span class="rlm">‏</span> مقداردهی کنیم، در <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">reset_stats()</span><span class="rlm">‏</span> مقدارگذاری اولیه می‌کنیم. این متد را زمانی که نمونه‌ی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">GameStats</span><span class="rlm">‏</span> ساخته شد <span class="n" dir="ltr">1</span>، از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">__init__()</span><span class="rlm">‏</span> فراخوانی می‌کنیم، تا آمارها به درستی مقداردهی شود. سپس هر گاه بازیکن دور جدیدی از بازی را شروع می‌کند، قادر خواهیم بود متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">reset_stats()</span><span class="rlm">‏</span> را فراخوانی کنیم.</p><a id="p274"></a>
+                            <p>در حال حاضر فقط یک آمار داریم، یعنی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">ships_left</span><span class="rlm">‏</span>، که مقدار آن در طول بازی تغییر می‌کند. تعداد سفینه‌هایی که بازیکن با آن شروع می‌کند باید در <span class="rlm">‏</span><span class="ident" dir="ltr">settings.py</span><span class="rlm">‏</span> با عنوان <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">ship_limit</span><span class="rlm">‏</span> ذخیره شود:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">settings.py</div>
+                                <pre class="snippet" dir="ltr">        <span class="ash"># Ship settings</span>
+        <span class="ash">self.ship_speed = 1.5</span>
+        self.ship_limit = 3</pre>
+                            </div>
+                            <p>چند تغییر هم باید در <span class="rlm">‏</span><span class="ident" dir="ltr">alien_invasion.py</span><span class="rlm">‏</span> بدهیم تا یک نمونه از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">GameStats</span><span class="rlm">‏</span> بسازیم. ابتدا، دستورالعمل‌های <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">import</span><span class="rlm">‏</span> را در بالای فایل تکمیل می‌کنیم:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">alien_invasion.py</div>
+                                <pre class="snippet" dir="ltr"><span class="ash">import sys</span>
+from time import sleep
+
+<span class="ash">import pygame</span>
+
+<span class="ash">from settings import Settings</span>
+from game_stats import GameStats
+<span class="ash">from ship import Ship</span>
+<span class="ash">--<span class="it">snip</span>--</span></pre>
+                            </div>
+                            <p>تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">sleep()</span><span class="rlm">‏</span> را از مدول <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">time</span><span class="rlm">‏</span> در کتابخانه‌ی استاندارد پایتون ایمپورت می‌کنیم تا بتوانیم وقتی سفینه مورد اصابت قرار می‌گیرد، بازی را چند لحظه موقتاً متوقف کنیم. هم‌چنین، کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">GameStats</span><span class="rlm">‏</span> را ایمپورت می‌کنیم.</p>
+                            <p>یک نمونه از کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">GameStats</span><span class="rlm">‏</span> در متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">__init__()</span><span class="rlm">‏</span> ایجاد می‌کنیم:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">alien_invasion.py</div>
+                                <pre class="snippet" dir="ltr">    <span class="ash">def __init__(self):</span>
+        <span class="ash">--<span class="it">snip</span>--</span>
+        <span class="ash">self.screen = pygame.display.set_mode(</span>
+            <span class="ash">(self.settings.screen_width, self.settings.screen_height))</span>
+        <span class="ash">pygame.display.set_caption("Alien Invasion")</span>
+
+        # Create an instance to store game statistics.
+        self.stats = GameStats(self)
+
+        <span class="ash">self.ship = Ship(self)</span>
+        <span class="ash">--<span class="it">snip</span>--</span></pre>
+                            </div>
+                            <p>نمونه را پس از ایجاد پنجره‌ی بازی، ولی قبل از تعریف عناصر دیگر بازی، از قبیل سفینه، ایجاد می‌کنیم.</p>
+                            <p>وقتی که یک بیگانه به سفینه برخورد می‌کند، از تعداد سفینه‌های باقی‌مانده، یکی کم می‌کنیم، تمام بیگانه‌ها و گلوله‌های باقی‌مانده را نابود می‌کنیم، ناوگان جدیدی ایجاد می‌کنیم، و دوباره سفینه را در وسط صفحه قرار می‌دهیم. علاوه بر این، چند لحظه در بازی مکث ایجاد می‌کنیم تا بازیکن متوجه برخورد شود و بتواند برای ناوگان جدید آمده شود.</p>
+                            <p>قسمت عمده‌ی این کد را در متد جدیدی به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_ship_hit()</span><span class="rlm">‏</span> قرار می‌دهیم. این متد را وقتی بیگانه‌ای به سفینه برخورد می‌کند، از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_update_aliens()</span><span class="rlm">‏</span> فراخوانی می‌کنیم:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">alien_invasion.py</div>
+                                <pre class="snippet" dir="ltr">    def _ship_hit(self):
+        """Respond to the ship being hit by an alien."""
+
+<a id="p275"></a>        # Decrement ships_left.
+<span class="n" dir="ltr">1</span>        self.stats.ships_left -= 1
+
+        # Get rid of any remaining aliens and bullets.
+<span class="n" dir="ltr">2</span>        self.aliens.empty()
+        self.bullets.empty()
+
+        # Create a new fleet and center the ship.
+<span class="n" dir="ltr">3</span>        self._create_fleet()
+        self.ship.center_ship()
+
+        # Pause.
+<span class="n" dir="ltr">4</span>        sleep(0.5)</pre>
+                            </div>
+                            <p>متد جدید <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_ship_hit()</span><span class="rlm">‏</span> پاسخ در مقابل برخورد بیگانه با سفینه را هماهنگ‌سازی می‌کند. در داخل <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_ship_hit()</span><span class="rlm">‏</span>، از تعداد سفینه‌های باقی‌مانده در <span class="n" dir="ltr">1</span> یکی کم می‌شود، و سپس گروه‌های <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">aliens</span><span class="rlm">‏</span> و <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">bullets</span><span class="rlm">‏</span> را خالی می‌کنیم <span class="n" dir="ltr">2</span>.</p>
+                            <p>سپس ناوگان جدیدی ایجاد می‌کنیم و سفینه را در وسط قرار می‌دهیم <span class="n" dir="ltr">3</span>. (بعداً متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">center_ship()</span><span class="rlm">‏</span> را به کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Ship</span><span class="rlm">‏</span> اضافه خواهیم کرد.) پس از آنکه تمام عناصر بازی به‌روزرسانی شد، ولی قبل از آنکه هرگونه تغییراتی روی صفحه ترسیم شود، یک مکث ایجاد می‌کنیم، تا بازیکن متوجه شود که سفینه‌اش مورد اصابت قرار گرفته است <span class="n" dir="ltr">4</span>. فراخوانی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">sleep()</span><span class="rlm">‏</span> اجرای برنامه را به مدت نیم ثانیه متوقف می‌کند تا بازیکن ببیند که بیگانه به سفینه اصابت کرده است. وقتی که تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">sleep()</span><span class="rlm">‏</span> پایان یافت، اجرای کد به سراغ متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_update_screen()</span><span class="rlm">‏</span> می‌رود، که ناوگان جدید را روی صفحه ترسیم می‌کند.</p>
+                            <p>در <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_update_aliens()</span><span class="rlm">‏</span>، وقتی که یک بیگانه به سفینه برخورد می‌کند، به جای فراخوانی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">print()</span><span class="rlm">‏</span>، فراخوانی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_ship_hit()</span><span class="rlm">‏</span> را قرار می‌دهیم:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">alien_invasion.py</div>
+                                <pre class="snippet" dir="ltr">    <span class="ash">def _update_aliens(self):</span>
+        <span class="ash">--<span class="it">snip</span>--</span>
+        <span class="ash">if pygame.sprite.spritecollideany(self.ship, self.aliens):</span>
+            self._ship_hit()</pre>
+                            </div>
+                            <p>متد جدید <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">center_ship()</span><span class="rlm">‏</span> به‌صورت زیر است؛ آن را به انتهای <span class="rlm">‏</span><span class="ident" dir="ltr">ship.py</span><span class="rlm">‏</span> اضافه کنید:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">ship.py</div>
+                                <pre class="snippet" dir="ltr">    def center_ship(self):
+        """Center the ship on the screen."""
+        self.rect.midbottom = self.screen_rect.midbottom
+        self.x = float(self.rect.x)</pre>
+                            </div>
+                            <p>سفینه را به همان صورتی که در <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">__init__()</span><span class="rlm">‏</span> عمل کرده بودیم، در وسط صفحه قرار می‌دهیم. پس از این کار، مقدار صفت <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">self.x</span><span class="rlm">‏</span> را به حالت اول برمی‌گردانیم، تا بتوانیم موقعیت دقیق سفینه را ردیابی کنیم.</p>
+                            <div class="note">
+                                <h6 class="note-title">توجه</h6>
+                                <p>دقت کنید که ما هرگز بیشتر از یک سفینه ایجاد نمی‌کنیم؛ برای تمام بازی، فقط یک سفینه می‌سازیم و هر گاه مورد اصابت قرار گرفت، دوباره آن را به وسط صفحه می‌آوریم. مقدار <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">ships_left</span><span class="rlm">‏</span> در آمارهای بازی مشخص خواهد کرد که چه زمانی بازیکن از تمام سفینه‌هایش استفاده کرده است.</p>
+                            </div>
+                            <p>بازی را اجرا کنید، چند بیگانه را سرنگون کنید و بعد بگذارید که یک بیگانه به سفینه برخورد کند. در این زمان، باید مکثی در بازی پدیدار شود، و سپس ناوگان جدید ظاهر شود و سفینه دوباره در وسط پایین صفحه قرار گیرد.</p>
+                        </div>
+                        <div class="sect" id="ch13lev2sec18"><a class="bkmk" name="ch13lev2sec18"></a>
+                            <h4>بیگانه‌هایی که به پایین صفحه می‌رسند</h4>
+                            <a id="p276"></a>
+                            <p>اگر یک بیگانه به پایین صفحه برسد، بازی باید مانند زمانی که بیگانه به سفینه برخورد می‌کند، پاسخ بدهد. برای وارسی وقوع این مسئله، متد جدیدی به <span class="rlm">‏</span><span class="ident" dir="ltr">alien_invasion.py</span><span class="rlm">‏</span> اضافه کنید:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">alien_invasion.py</div>
+                                <pre class="snippet" dir="ltr">    def _check_aliens_bottom(self):
+        """Check if any aliens have reached the bottom of the screen."""
+        screen_rect = self.screen.get_rect()
+        for alien in self.aliens.sprites():
+<span class="n" dir="ltr">1</span>            if alien.rect.bottom &gt;= screen_rect.bottom:
+                # Treat this the same as if the ship got hit.
+                self._ship_hit()
+                break</pre>
+                            </div>
+                            <p>متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_check_aliens_bottom()</span><span class="rlm">‏</span> وارسی می‌کند که آیا هیچ‌کدام از بیگانه‌ها به پایین صفحه رسیده است یا خیر. یک بیگانه زمانی به پایین صفحه می‌رسد که مقدار <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">rect.bottom</span><span class="rlm">‏</span> آن بزرگ‌تر یا مساوی با صفت <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">rect.bottom</span><span class="rlm">‏</span> صفحه باشد <span class="n" dir="ltr">1</span>. اگر بیگانه‌ای به پایین برسد، در آن صورت <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_ship_hit()</span><span class="rlm">‏</span> را فراخوانی می‌کنیم. زمانی که یک بیگانه به پایین رسیده است، دیگر نیازی به وارسی کردن بقیه نیست، ازاین‌رو پس از فراخوانی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_ship_hit()</span><span class="rlm">‏</span>، حلقه را می‌شکنیم.</p>
+                            <p>این متد را از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_update_aliens()</span><span class="rlm">‏</span> فراخوانی می‌کنیم:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">alien_invasion.py</div>
+                                <pre class="snippet" dir="ltr">    <span class="ash">def _update_aliens(self):</span>
+        <span class="ash">--<span class="it">snip</span>--</span>
+        <span class="ash"># Look for alien-ship collisions.</span>
+        <span class="ash">if pygame.sprite.spritecollideany(self.ship, self.aliens):</span>
+            <span class="ash">self._ship_hit()</span>
+
+        # Look for aliens hitting the bottom of the screen.
+        self._check_aliens_bottom()</pre>
+                            </div>
+                            <p>متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_check_aliens_bottom()</span><span class="rlm">‏</span> را پس از به‌روزرسانی موقعیت بیگانه‌ها و پس از وارسی از نظر برخورد بیگانه‌ها با سفینه، فراخوانی می‌کنیم <span class="n" dir="ltr">2</span>. حالا هر گاه بیگانه‌ای به سفینه برخورد کند یا اینکه یکی از بیگانه‌ها به پایین صفحه برسد، ناوگان جدیدی ظاهر خواهد شد.</p>
+                        </div>
+                        <div class="sect" id="ch13lev2sec19"><a class="bkmk" name="ch13lev2sec19"></a>
+                            <h4>بازی تمام است!</h4>
+                            <p>بازی <span class="emphasis">تهاجم بیگانگان</span> حالا کامل‌تر حس می‌شود، ولی هرگز تمام نمی‌شود. مقدار <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">ships_left</span><span class="rlm">‏</span> فقط مرتب منفی‌تر می‌شود. در اینجا یک فلگ <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">game_active</span><span class="rlm">‏</span> به‌عنوان صفتی از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">GameStats</span><span class="rlm">‏</span> اضافه می‌کنیم تا وقتی سفینه‌های بازیکن تمام شد، بازی را تمام کند. مقدار این صفت را در پایان <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">__init__()</span><span class="rlm">‏</span> در کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">GameStats</span><span class="rlm">‏</span> تعیین می‌کنیم:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">game_stats.py</div>
+                                <pre class="snippet" dir="ltr">    <span class="ash">def __init__(self, ai_game):</span>
+        <span class="ash">--<span class="it">snip</span>--</span>
+        # Start Alien Invasion in an active state.
+        self.game_active = True</pre>
+                            </div><a id="p277"></a>
+                            <p>حالا کدی را به <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_ship_hit()</span><span class="rlm">‏</span> اضافه می‌کنیم که وقتی بازیکن از تمام سفینه‌هایش استفاده کرد، به <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">game_active</span><span class="rlm">‏</span> مقدار <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">False</span><span class="rlm">‏</span> می‌دهد:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">alien_invasion.py</div>
+                                <pre class="snippet" dir="ltr">    <span class="ash">def _ship_hit(self):</span>
+        <span class="ash">"""Respond to ship being hit by alien."""</span>
+        if self.stats.ships_left &gt; 0:
+            <span class="ash"># Decrement ships_left.</span>
+            <span class="ash">self.stats.ships_left -= 1</span>
+           <span class="ash">--<span class="it">snip</span>--</span>
+            <span class="ash"># Pause.</span>
+            <span class="ash">sleep(0.5)</span>
+        else:
+            self.stats.game_active = False</pre>
+                            </div>
+                            <p>قسمت عمده‌ی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_ship_hit()</span><span class="rlm">‏</span> تغییری نمی‌کند. تمام کد موجود را به یک بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">if</span><span class="rlm">‏</span> منتقل کرده‌ایم که فقط در صورتی اجرا می‌شود که بازیکن لااقل یک سفینه‌ی باقی‌مانده داشته باشد. اگر این‌طور باشد، یک ناوگان جدید ایجاد می‌کنیم، مکث می‌کنیم، و سپس ادامه می‌دهیم. اما اگر هیچ سفینه‌ای برای بازیکن باقی نمانده باشد، مقدار <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">game_active</span><span class="rlm">‏</span> را <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">False</span><span class="rlm">‏</span> می‌کنیم.</p>
+                        </div>
+                        <div class="sect" id="ch13lev2sec20"><a class="bkmk" name="ch13lev2sec20"></a>
+                            <h4>شناسایی اینکه چه بخش‌هایی از بازی باید اجرا شوند</h4>
+                            <p>باید مشخص کنیم که چه بخش‌هایی از بازی باید همیشه اجرا شوند، و چه بخش‌هایی باید فقط زمانی که بازی فعال است، اجرا شوند:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">alien_invasion.py</div>
+                                <pre class="snippet" dir="ltr">    <span class="ash">def run_game(self):</span>
+        <span class="ash">"""Start the main loop for the game."""</span>
+        <span class="ash">while True:</span>
+            <span class="ash">self._check_events()</span>
+
+            if self.stats.game_active:
+                <span class="ash">self.ship.update()</span>
+                <span class="ash">self._update_bullets()</span>
+                <span class="ash">self._update_aliens()</span>
+
+            <span class="ash">self._update_screen()</span></pre>
+                            </div>
+                            <p>در حلقه‌ی اصلی، همیشه باید <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">_check_events()</span><span class="rlm">‏</span> را فراخوانی کنیم، حتی وقتی که بازی غیرفعال است. مثلاً هنوز هم لازم است که ببینیم که آیا کاربر کلید <span class="rlm">‏</span><span class="key" dir="ltr">q</span><span class="rlm">‏</span> را زده است یا روی دکمه‌ی پنجره کلیک کرده است. صفحه را هم باید به‌روزرسانی کنیم، تا بتوانیم تا مدتی که کاربر تصمیم به شروع بازی جدید می‌گیرد، صفحه را تغییر دهیم. دیگر فراخوانی‌های تابع باید فقط زمانی که بازی فعال است، انجام شود، زیرا وقتی که بازی غیرفعال است، نیازی نیست که موقعیت عناصر بازی را به‌روزرسانی کنیم.</p>
+                            <p>حالا وقتی که بازی <span class="emphasis">تهاجم بیگانگان</span> را بازی می‌کنید، در صورتی که سفینه‌هایتان تمام شود، بازی بی‌حرکت خواهد شد.</p>
+                            <div class="sidebar">
+                                <h6 class="sidebar-title">خودتان امتحان کنید</h6>
+                                <a id="p278"></a>
+                                <p class="tiy1"><span class="tiy" id="ch13_tiy06"><span class="tiy-num">۱۳-۶</span>. <span class="tiy-title">پایان بازی:</span>: </span> در شلیک جانبی، تعداد دفعاتی را که سفینه مورد اصابت قرار می‌گیرد و تعداد دفعاتی را که یک بیگانه مورد اصابت سفینه قرار می‌گیرد، ثبت کنید. شرط مناسبی برای پایان بازی در نظر بگیرید، و هر گاه این موقعیت بروز کرد، بازی را متوقف کنید.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sect" id="ch13lev1sec7"><a class="bkmk" name="ch13lev1sec7"></a>
+                        <h3>خلاصه</h3>
+                        <p>در این فصل، یاد گرفتید که چگونه با ایجاد ناوگانی از بیگانه‌ها، تعداد زیادی عناصر یکسان به بازی اضافه کنید. با استفاده از حلقه‌های تو در تو، شبکه‌ای از عناصر ایجاد کردید، و با فراخوانی متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">update()</span><span class="rlm">‏</span> هر عنصر، توانستید مجموعه‌ی بزرگی از عناصر بازی را حرکت دهید. یاد گرفتید که جهت حرکت اشیا روی صفحه را کنترل کنید و به موقعیت‌های خاصی پاسخ دهید، مثلاً زمانی که ناوگان به لبه‌ی صفحه می‌رسد. شناسایی و پاسخ‌دهی به برخورد ها را فراگرفتید، مثلاً زمانی که گلوله‌ها به بیگانه‌ها اصابت می‌کند، یا بیگانه‌ها به سفینه برخورد می‌کنند. هم‌چنین، یاد گرفتید که آمار بازی را محاسبه کنید و با استفاده از فلگ <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">game_active</span><span class="rlm">‏</span>، مشخص کنید که چه زمانی بازی تمام می‌شود.</p>
+                        <p>در فصل بعد که فصل آخر این پروژه است، دکمه‌ای برای شروع بازی اضافه می‌کنیم تا بازیکن بتواند به انتخاب خود در ابتدا بازی را شروع کند و پس از آنکه بازی تمام شد، دوباره بازی کند. هر گاه بازیکن تمام ناوگان را ساقط کرد، سرعت بازی را افزایش خواهیم داد، و یک سیستم امتیازدهی نیز به بازی اضافه خواهیم کرد. حاصل نهایی کار ما برنامه‌ای خواهد بود که کاملاً قابل بازی کردن است!</p>
+                    </div>
+                </div>
+                <div class="row pager">
+                    <div class="col-md-5 text-center text-md-left pager-prev"><a href="c25-ch12.xhtml"><span><span>فصل ۱۲</span>: <span>سفینه‌ای که گلوله شلیک می‌کند</span></span></a></div>
+                    <div class="col-md-2 text-center pager-title"><a href="c01-cover.xhtml">آغاز</a></div>
+                    <div class="col-md-5 text-center text-md-right pager-next"><a href="c27-ch14.xhtml"><span><span>فصل ۱۴</span>: <span>امتیازدهی</span></span></a></div>
+                </div>
+            </main>
+            <aside class="col-md-2 order-md-first">
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item"><a class="nav-link" href="../">دورهٔ فشردهٔ پایتون</a></li>
+                    <li class="nav-item"><a class="nav-link" href="c06-toc.xhtml">فهرست</a></li>
+                </ul>
+            </aside>
+        </div>
+    </div>
+    <div class="container">
+        <div id="footer" class="row">
+            <div class="col-sm-6">
+                <p><span>© ۱۴۰۰، قاسم کیانی مقدم.</span></p>
+            </div>
+            <div class="col-sm-6">
+                <p class="text-right"><span><a target="_blank" rel="me" href="https://linkedin.com/in/ghasemkiani" title="لینکدین"><span class="fab fa-linkedin"></span></a></span><span> </span><span><a target="_blank" rel="me" href="https://github.com/ghasemkiani" title="گیت‌هاب"><span class="fab fa-github"></span></a></span><span> </span><span><a target="_blank" rel="me" href="https://twitter.com/ghasemkiani" title="توئیتر"><span class="fab fa-twitter"></span></a></span><span> </span><span><a target="_blank" rel="me" href="https://facebook.com/ghasemkiani" title="فیس‌بوک"><span class="fab fa-facebook"></span></a></span><span> </span><span><a target="_blank" rel="me" href="https://telegram.me/ghasemkiani" title="تلگرام"><span class="fab fa-telegram"></span></a></span><span> </span><span><a target="_blank" rel="me" href="https://instagram.com/ghasem.kiani" title="اینستاگرام"><span class="fab fa-instagram"></span></a></span><span> </span><span><a target="_blank" rel="me" href="https://mastodon.social/@ghasemkiani" title="ماستودون"><span class="fab fa-mastodon"></span></a></span></p>
+            </div>
+        </div>
+    </div>
+    <script crossorigin="anonymous" src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"></script>
+    <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"></script>
+    <script crossorigin="anonymous" src="https://cdn.rtlcss.com/bootstrap/v4.0.0/js/bootstrap.min.js" integrity="sha384-54+cucJ4QbVb99v8dcttx/0JRx4FHMmhOWi4W+xrXpKcsKQodCBwAvu3xxkZAwsH"></script>
+    <script src="https://www.googletagmanager.com/gtag/js?id=undefined"></script>
+    <script src="data:application/javascript;charset=UTF-8;base64,KCgoew0KICAgIGlkDQp9KSA9PiB7DQogICAgd2luZG93LmRhdGFMYXllciA9IHdpbmRvdy5kYXRhTGF5ZXIgfHwgW107DQoNCiAgICBmdW5jdGlvbiBndGFnKCkgew0KICAgICAgICBkYXRhTGF5ZXIucHVzaChhcmd1bWVudHMpOw0KICAgIH0NCiAgICBndGFnKCJqcyIsIG5ldyBEYXRlKCkpOw0KICAgIGd0YWcoImNvbmZpZyIsIGlkKTsNCn0pKHt9KSk7Cg=="></script>
+</body>
+
+</html>

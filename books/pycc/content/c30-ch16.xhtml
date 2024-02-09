@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>دانلود داده‌ها</title>
+    <meta name="description" content="وب‌سایت قاسم کیانی مقدم" />
+    <meta name="keywords" content="قاسم کیانی مقدم, وب‌سایت, وب‌سایت قاسم کیانی مقدم, کتاب, فارسی, کتاب فارسی, ترجمه, برنامه‌نویسی, جاوا, جاوا اسکریپت, پزشکی, طب اطفال" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" crossorigin="anonymous" href="https://cdn.rtlcss.com/bootstrap/v4.0.0/css/bootstrap.min.css" integrity="sha384-P4uhUIGk/q1gaD/NdgkBIl3a6QywJjlsFJFk7SPRdruoGddvRVSwv5qFnvZ73cpz" />
+    <link rel="stylesheet" crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" />
+    <link rel="icon" type="image/x-icon" href="../../../favicon.ico" />
+    <style type="text/css">
+        @import url(https://fonts.googleapis.com/css?family=Droid%20Sans);
+        @import url(https://fonts.googleapis.com/css?family=Droid%20Serif);
+        @import url(https://fonts.googleapis.com/css?family=Droid%20Arabic%20Kufi);
+        @import url(https://fonts.googleapis.com/css?family=Droid%20Arabic%20Naskh);
+
+        html,
+        body,
+        input,
+        textarea,
+        select,
+        option,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: Droid Arabic Naskh, Droid Serif;
+        }
+
+        nav,
+        .nav {
+            font-family: Droid Arabic Kufi, Droid Sans;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: Droid Arabic Naskh, Droid Serif;
+        }
+
+        #footer {
+            margin-top: 0.5rem;
+            padding-top: 0.5rem;
+            border-top: #eeeeee solid thick;
+        }
+    </style>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Courier+Prime);
+
+        div.row.pager {
+            margin-top: 0.5em;
+            padding: 0.5em 0;
+            border-top: solid #cccccc 2px;
+            background-color: #dddddd;
+        }
+
+        div.pager-prev {}
+
+        div.pager-title {}
+
+        div.pager-next {}
+    </style>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+
+<body style="min-height: 75rem;">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+        <div class="container"><a class="navbar-brand" href="../../../">وب‌سایت قاسم کیانی مقدم</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#divNavBarToggle" aria-controls="divNavBarToggle" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div id="divNavBarToggle" class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link" href="../../">کتاب‌ها<span class="sr-only"> (current)</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../../essays/">مقالات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../../translation/">ترجمه</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../../about/">درباره</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../../contact/">تماس</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <main class="col-md-10 order-md-last">
+                <div class="ch" id="ch16">
+                    <h2 class="ch-title"><a class="bkmk" name="ch16"></a><a class="rtoc" href="c06-toc.xhtml"><span class="ch-title-num">۱۶</span><br /><span class="ch-title-text">دانلود داده‌ها</span></a></h2><img style="float:   right; margin-left:  0.5em; margin-bottom: 0.25em;" alt="تصویر ابتدای فصل" src="images/ch.svg" />
+                    <a id="p333"></a>
+                    <p>در این فصل، دادگان‌هایی را از منابع آنلاین دانلود می‌کنیم و برای آن داده‌ها، مصورسازی‌های قابل‌استفاده ایجاد می‌کنیم. در اینترنت می‌توانید انواع و اقسام داده‌ها را پیدا کنید، که بسیاری از آن‌ها به‌طور کامل بررسی نشده است. توانایی تحلیل کردن این داده‌ها به شما امکان می‌دهد که الگوها و همبستگی‌هایی را پیدا کنید که قبلاً کسی متوجه آن‌ها نشده است.</p>
+                    <p>ما داده‌ها را با دو فرمت شایع <span class="rlm">‏</span><span class="lr" dir="ltr">CSV</span><span class="rlm">‏</span> و <span class="rlm">‏</span><span class="lr" dir="ltr">JSON</span><span class="rlm">‏</span> دریافت و مصورسازی خواهیم کرد. برای تحلیل داده‌های ذخیره شده با فرمت <span class="rlm">‏</span><span class="lr" dir="ltr">CSV</span><span class="rlm">‏</span> (<span class="rlm">‏</span><span class="lr" dir="ltr">comma-separated values</span><span class="rlm">‏</span>؛ مقادیر جدا شده با کاما) از مدول <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">csv</span><span class="rlm">‏</span> پایتون استفاده خواهیم کرد و دمای بالا و پایین را در طول زمان در دو مکان متفاوت تحلیل خواهیم کرد. سپس، با استفاده از <span class="rlm">‏</span><span class="lr" dir="ltr">Matplotlib</span><span class="rlm">‏</span>، یک نمودار بر اساس داده‌های دانلود شده ایجاد خواهیم کرد تا تغییرات دما را در دو محیط متفاوت، یکی شهر سیتکا (<span class="rlm">‏</span><span class="lr" dir="ltr">Sitka</span><span class="rlm">‏</span>) در ایالت آلاسکا و دیگری دث وَلی (<span class="rlm">‏</span><span class="lr" dir="ltr">Death Valley</span><span class="rlm">‏</span>) در ایالت کالیفرنیا، به‌صورت مصور نمایش دهیم. بعداً در این فصل از مدول <span class="rlm">‏</span><span class="lr" dir="ltr">json</span><span class="rlm">‏</span> برای دسترسی به داده‌های زمین‌لرزه که با فرمت <span class="rlm">‏</span><span class="lr" dir="ltr">JSON</span><span class="rlm">‏</span> ذخیره شده است، استفاده خواهیم کرد و با استفاده از <span class="rlm">‏</span><span class="lr" dir="ltr">Plotly</span><span class="rlm">‏</span> نقشه‌ای از جهان ترسیم خواهیم کرد که در آن مکان و بزرگی زمین‌لرزه‌های اخیر نمایش داده شده است.</p><a id="p334"></a>
+                    <p>در پایان این فصل، خواهید توانست با انواع و فرمت‌های مختلف داده‌ها کار کنید، و درک عمیق‌تری از نحوه‌ی ساخت مصورسازی‌های پیچیده خواهید داشت. داشتن توانایی دسترسی به انواع فرمت‌های مختلف دید آنلاین و مصورسازی آن‌ها، مهارت بسیار مهمی برای کار با دادگان‌های دنیای واقعی است.</p>
+                    <div class="sect" id="ch16lev1sec1"><a class="bkmk" name="ch16lev1sec1"></a>
+                        <h3>فرمت فایل <span class="rlm">‏</span><span class="lr" dir="ltr">CSV</span><span class="rlm">‏</span></h3>
+                        <p>یک راه ساده برای ذخیره کردن داده‌ها در یک فایل متنی این است که داده‌ها را به‌صورت مقادیری که با کاما از هم جدا شده‌اند، بنویسید، که به این فرمت، <span class="emphasis">مقادیر جدا شده با کاما</span> (<span class="emphasis"><span class="rlm">‏</span><span class="lr" dir="ltr">comma-separated values</span><span class="rlm">‏</span></span>) می‌گویند. فایل حاصله، فایل <span class="emphasis"><span class="rlm">‏</span><span class="lr" dir="ltr">CSV</span><span class="rlm">‏</span></span> نامیده می‌شود. به‌عنوان مثال، در اینجا یک سری داده‌های هواشناسی را با فرمت <span class="rlm">‏</span><span class="lr" dir="ltr">CSV</span><span class="rlm">‏</span> می‌بینید:</p>
+                        <div class="snippet">
+                            <pre class="snippet" dir="ltr">"USW00025333","SITKA AIRPORT, AK US","2018-01-01","0.45",,"48","38"</pre>
+                        </div>
+                        <p>این گزیده‌ای از داده‌های هواشناسی مربوط به روز ۱ ژانویه‌ی ۲۰۱۸ در شهر سیتکا در ایالت آلاسکا است. این داده‌ها شامل بالاترین و پایین‌ترین دما و نیز چند اندازه‌گیری دیگر از آن روز است. خواندن فایل‌های <span class="rlm">‏</span><span class="lr" dir="ltr">CSV</span><span class="rlm">‏</span> برای انسان‌ها راحت نیست، ولی پردازش آن‌ها به‌وسیله‌ی برنامه و استخراج مقادیر از آن به راحتی قابل‌انجام است، که این باعث تسریع فرایند تحلیل داده‌ها می‌شود.</p>
+                        <p>ابتدا با مجموعه‌ی کوچکی از داده‌های هواشناسی سیتکا که با فرمت <span class="rlm">‏</span><span class="lr" dir="ltr">CSV</span><span class="rlm">‏</span> ثبت شده است، شروع می‌کنیم. این داده‌ها در وب‌سایت این کتاب به نشانی <span class="rlm">‏</span><a dir="ltr" target="_blank" href="https://nostarch.com/pythoncrashcourse2e/">https://nostarch.com/pythoncrashcourse2e/</a><span class="rlm">‏</span> در دسترس است. در محلی که برای برنامه‌های این فصل در نظر گرفته‌اید، پوشه‌ای به نام <span class="rlm">‏</span><span class="ident" dir="ltr">data</span><span class="rlm">‏</span> ایجاد کنید. فایل <span class="rlm">‏</span><span class="ident" dir="ltr">sitka_weather_07-2018_simple.csv</span><span class="rlm">‏</span> را به این پوشه‌ی جدید کپی کنید. (پس از آنکه منابع کتاب را دانلود کردید، تمام فایل‌های لازم برای این پروژه را در اختیار خواهید داشت.)</p>
+                        <div class="note">
+                            <h6 class="note-title">توجه</h6>
+                            <p>داده‌های هواشناسی برای این پروژه در اصل از نشانی <span class="rlm">‏</span><a dir="ltr" target="_blank" href="https://ncdc.noaa.gov/cdo-web/">https://ncdc.noaa.gov/cdo-web/</a><span class="rlm">‏</span> دانلود شده است.</p>
+                        </div>
+                        <div class="sect" id="ch16lev2sec1"><a class="bkmk" name="ch16lev2sec1"></a>
+                            <h4>تجزیه‌ی عناوین فایل <span class="rlm">‏</span><span class="lr" dir="ltr">CSV</span><span class="rlm">‏</span></h4>
+                            <p>مدول <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">csv</span><span class="rlm">‏</span> پایتون در کتابخانه‌ی استاندارد سطرهای یک فایل <span class="rlm">‏</span><span class="lr" dir="ltr">CSV</span><span class="rlm">‏</span> را تجزیه (<span class="rlm">‏</span><span class="lr" dir="ltr">parse</span><span class="rlm">‏</span>) می‌کند و به ما امکان می‌دهد که به سرعت مقادیر مورد نظر را از آن استخراج کنیم. ابتدا سطر اول فایل را بررسی می‌کنیم که حاوی عناوین داده‌ها است. این عنوان‌ها به ما می‌گوید که داده‌ها حاوی چه اطلاعاتی است:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">sitka_highs.py</div>
+                                <pre class="snippet" dir="ltr">import csv
+
+filename = 'data/sitka_weather_07-2018_simple.csv'
+<span class="n" dir="ltr">1</span>with open(filename) as f:
+<span class="n" dir="ltr">2</span>    reader = csv.reader(f)
+<span class="n" dir="ltr">3</span>    header_row = next(reader)
+    print(header_row)</pre>
+                            </div>
+                            <p>پس از ایمپورت کردن مدول <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">csv</span><span class="rlm">‏</span>، نام فایلی که با آن کار می‌کنیم را به متغیر <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">filename</span><span class="rlm">‏</span> اختصاص می‌دهیم. سپس فایل را باز می‌کنیم و <a id="p335"></a>شیء فایل حاصله را به متغیر <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">f</span><span class="rlm">‏</span> اختصاص می‌دهیم <span class="n" dir="ltr">1</span>. آنگاه متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">csv.reader()</span><span class="rlm">‏</span> را فراخوانی می‌کنیم و شیء فایل را به‌عنوان آرگومان به آن می‌دهیم تا یک شیء خواننده برای آن فایل ایجاد شود <span class="n" dir="ltr">2</span>. شیء خواننده را به متغیر <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">reader</span><span class="rlm">‏</span> اختصاص می‌دهیم.</p>
+                            <p>مدول <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">csv</span><span class="rlm">‏</span> حاوی یک تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">next()</span><span class="rlm">‏</span> است، که وقتی شیء خواننده به آن داده شود، سطر بعدی فایل را برمی‌گرداند. در برنامه‌ی بالا، تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">next()</span><span class="rlm">‏</span> را فقط یک بار فراخوانی می‌کنیم، تا سطر اول فایل به دست آید، که حاوی عناوین فایل است <span class="n" dir="ltr">3</span>. داده‌های برگردانده شده را در متغیر <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">header_row</span><span class="rlm">‏</span> ذخیره می‌کنیم. همان طور که می‌بینید، <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">header_row</span><span class="rlm">‏</span> حاوی عنوان‌هایی معنادار و مرتبط با هواشناسی است و به ما می‌گوید که هر سطر داده‌ها حاوی چه اطلاعاتی است:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">['STATION', 'NAME', 'DATE', 'PRCP', 'TAVG', 'TMAX', 'TMIN']</pre>
+                            </div>
+                            <p>شیء <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">reader</span><span class="rlm">‏</span> سطر اول مقادیر جدا شده با کاما را از فایل پردازش می‌کند و هر کدام از آن‌ها را به‌عنوان یک آیتم در یک لیست ذخیره می‌کند. عنوان <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">STATION</span><span class="rlm">‏</span> نشان‌دهنده‌ی کد ایستگاه هواشناسی است که این داده‌ها را ثبت کرده است. موقعیت این عنوان به ما می‌گوید که نخستین مقدار هر سطر کد ایستگاه هواشناسی خواهد بود. عنوان <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">NAME</span><span class="rlm">‏</span> نشان می‌دهد که دومین مقدار هر سطر نام ایستگاه هواشناسی خواهد بود که داده‌ها را ثبت کرده است. بقیه‌ی عناوین هم نوع اطلاعات دیگر در هر سطر را مشخص می‌کند. داده‌هایی که فعلاً بیشتر مورد نظر ما است، شامل تاریخ، دمای بیشینه (<span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">TMAX</span><span class="rlm">‏</span>)، و دمای کمینه (<span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">TMIN</span><span class="rlm">‏</span>) است. این‌ها داده‌های ساده‌ای است که فقط شامل اطلاعات مربوط به بارش و دما است. شما وقتی خودتان داده‌های هواشناسی را دانلود کنید، می‌توانید اندازه‌گیری‌های دیگری مانند سرعت و جهت باد، و داده‌های مفصل‌تر مربوط به بارش را در آن بگنجانید.</p>
+                        </div>
+                        <div class="sect" id="ch16lev2sec2"><a class="bkmk" name="ch16lev2sec2"></a>
+                            <h4>پرینت کردن عنوان‌ها و موقعیت آن‌ها</h4>
+                            <p>برای اینکه فهمیدن داده‌هایی عنوان فایل آسان‌تر باشد، هر کدام از عنوان‌ها و موقعیت آن در لیست را پرینت می‌کنیم:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">sitka_highs.py</div>
+                                <pre class="snippet" dir="ltr">
+<span class="ash">--<span class="it">snip</span>--</span>
+<span class="ash">with open(filename) as f:</span>
+    <span class="ash">reader = csv.reader(f)</span>
+    <span class="ash">header_row = next(reader)</span>
+
+<span class="n" dir="ltr">1</span>    for index, column_header in enumerate(header_row):
+        print(index, column_header)</pre>
+                            </div>
+                            <p>وقتی که روی یک لیست حلقه می‌زنید، تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">enumerate()</span><span class="rlm">‏</span> ایندکس و مقدار هر کدام از آیتم‌های لیست را برمی‌گرداند <span class="n" dir="ltr">1</span>. (دقت کنید که سطر <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">print(header_row)</span><span class="rlm">‏</span> را حذف کرده‌ایم و به جای آن این کد را که مفصل‌تر است، گذاشته‌ایم.)</p>
+                            <p>در خروجی زیر، ایندکس هر کدام از عنوان‌ها نمایش داده شده است:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">0 STATION
+1 NAME
+2 DATE
+3 PRCP
+4 TAVG
+5 TMAX
+6 TMIN</pre>
+                            </div><a id="p336"></a>
+                            <p>در اینجا می‌بینیم که تاریخ و دمای بیشینه در ستون‌های ۲ و ۵ ذخیره شده‌اند. برای کاوش این داده‌ها، از هر کدام از سطرهای داده‌ها در فایل <span class="rlm">‏</span><span class="ident" dir="ltr">sitka_weather_07-2018_simple.csv</span><span class="rlm">‏</span>، مقادیر مربوط به ایندکس‌های ۲ و ۵ را استخراج می‌کنیم.</p>
+                        </div>
+                        <div class="sect" id="ch16lev2sec3"><a class="bkmk" name="ch16lev2sec3"></a>
+                            <h4>استخراج کردن و خواندن داده‌ها</h4>
+                            <p>اکنون که می‌دانیم چه ستون‌هایی از داده‌ها را لازم داریم، مقداری از آن داده‌ها را می‌خوانیم. ابتدا دمای بیشینه‌ی هر روز ا می‌خوانیم:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">sitka_highs.py</div>
+                                <pre class="snippet" dir="ltr">
+<span class="ash">--<span class="it">snip</span>--</span>
+<span class="ash">with open(filename) as f:</span>
+    <span class="ash">reader = csv.reader(f)</span>
+    <span class="ash">header_row = next(reader)</span>
+
+    # Get high temperatures from this file.
+<span class="n" dir="ltr">1</span>    highs = []
+<span class="n" dir="ltr">2</span>    for row in reader:
+<span class="n" dir="ltr">3</span>        high = int(row[5])
+        highs.append(high)
+
+print(highs)</pre>
+                            </div>
+                            <p>یک لیست خالی به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">highs</span><span class="rlm">‏</span> ایجاد می‌کنیم <span class="n" dir="ltr">1</span>، و سپس روی سطرهای باقی‌مانده‌ی فایل یک حلقه تشکیل می‌دهیم <span class="n" dir="ltr">2</span>. شیء <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">reader</span><span class="rlm">‏</span> فایل <span class="rlm">‏</span><span class="lr" dir="ltr">CSV</span><span class="rlm">‏</span> را از همان جایی که رسیده بود، ادامه می‌دهد و هر یک از سطرهای بعد از موقعیت فعلی را برمی‌گرداند. از آنجا که سطر عنوان ررا قبلاً خوانده‌ایم، لذا حلقه از سطر دوم شروع خواهد کرد که داده‌های اصلی از آنجا شروع می‌شود. در هر دور، داده‌های ایندکس ۵ را که مربوط به‌عنوان <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">TMAX</span><span class="rlm">‏</span> است، می‌گیریم و آن را به متغیر <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">high</span><span class="rlm">‏</span> اختصاص می‌دهیم <span class="n" dir="ltr">3</span>. داده‌ها به‌صورت رشته ذخیره شده است، بنابراین، آن را با استفاده از تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">int()</span><span class="rlm">‏</span> به فرمت عددی تبدیل می‌کنیم تا بتوانیم از آن استفاده کنیم. سپس این مقدار را به لیست <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">highs</span><span class="rlm">‏</span> اضافه می‌کنیم.</p>
+                            <p>کد زیر داده‌ها را که اکنون در <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">highs</span><span class="rlm">‏</span> ذخیره شده است، نشان می‌دهد:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">[62, 58, 70, 70, 67, 59, 58, 62, 66, 59, 56, 63, 65, 58, 56, 59, 64, 60, 60,
+ 61, 65, 65, 63, 59, 64, 65, 68, 66, 64, 67, 65]</pre>
+                            </div>
+                            <p>ما دمای بیشینه‌ی مربوط به هر تاریخ را استخراج کردیم و هر کدام از مقادیر را در یک لیست ذخیره کردیم. حالا این داده‌ها را مصورسازی می‌کنیم.</p>
+                        </div>
+                        <div class="sect" id="ch16lev2sec4"><a class="bkmk" name="ch16lev2sec4"></a>
+                            <h4>ترسیم داده‌ها به‌صورت نمودار دما</h4>
+                            <p>برای مصورسازی این داده‌های دما، ابتدا با استفاده از <span class="rlm">‏</span><span class="lr" dir="ltr">Matplotlib</span><span class="rlm">‏</span> نمودار ساده‌ای از دمای بیشینه ایجاد می‌کنیم، به‌صورت زیر:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">sitka_highs.py</div>
+                                <pre class="snippet" dir="ltr">
+<span class="ash">import csv</span>
+
+import matplotlib.pyplot as plt
+
+<span class="ash">filename = 'data/sitka_weather_07-2018_simple.csv'</span>
+<span class="ash">with open(filename) as f:</span>
+    <span class="ash">--<span class="it">snip</span>--</span>
+<a id="p337"></a>   # Plot the high temperatures.
+plt.style.use('seaborn')
+fig, ax = plt.subplots()
+<span class="n" dir="ltr">1</span>ax.plot(highs, c='red')
+
+# Format plot.
+<span class="n" dir="ltr">2</span>plt.title("Daily high temperatures, July 2018", fontsize=24)
+<span class="n" dir="ltr">3</span>plt.xlabel('', fontsize=16)
+plt.ylabel("Temperature (F)", fontsize=16)
+plt.tick_params(axis='both', which='major', labelsize=16)
+
+plt.show()</pre>
+                            </div>
+                            <p>لیست دماهای بیشینه را به <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">plot()</span><span class="rlm">‏</span> می‌دهیم و آرگومان <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">c='red'</span><span class="rlm">‏</span> را نیز به آن می‌دهیم تا نقطه‌ها را به رنگ قرمز ترسیم کند <span class="n" dir="ltr">1</span>. (می‌خواهیم دمای بیشینه را با قرمز و دمای کمینه را با آبی ترسیم کنیم.) سپس برخی دیگر از مشخصات نمودار را تعیین می‌کنیم، از قبیل عنوان، اندازه‌ی فونت، و برچسب‌ها <span class="n" dir="ltr">2</span>، که این‌ها را در <span class="ref"><a href="c29-ch15.xhtml">فصل ۱۵</a></span> یاد گرفتید. از آنجا که هنوز باید تاریخ‌ها را اضافه کنیم، لذا برای محور <span class="rlm">‏</span><span class="lr" dir="ltr">x</span><span class="rlm">‏</span> برچسبی تعیین نمی‌کنیم، ولی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">plt.xlabel()</span><span class="rlm">‏</span> اندازه‌ی فونت را تغییر می‌دهد تا برچسب‌های پیش‌فرض راحت‌تر قابل خواندن باشند <span class="n" dir="ltr">3</span>. <refFig xmlns="urn:dox:pycc">۱۶-۱</refFig> نمودار حاصله را نشان می‌دهد: نمودار خطی ساده‌ای از دمای بیشینه‌ی ژوئیه‌ی ۲۰۱۸ در شهر سیتکا از ایالت آلاسکا.</p>
+                            <figure class="fig" id="ch16_fig01"><img class="fig" src="images/ch16_fig01.jpg" />
+                                <figcaption class="fig">شکل ۱۶-۱: یک نمودار خطی که دمای بیشینه‌ی ژوئیه‌ی ۲۰۱۸ را در شهر سیتکا از ایالت آلاسکا نشان می‌دهد.</figcaption>
+                            </figure>
+                        </div>
+                        <div class="sect" id="ch16lev2sec5"><a class="bkmk" name="ch16lev2sec5"></a>
+                            <h4>مدول <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">datetime</span><span class="rlm">‏</span></h4>
+                            <p>در اینجا تاریخ‌ها را هم به نمودار اضافه می‌کنیم تا مفیدتر باشد. اولین تاریخ در سطر دوم فایل داده‌های هواشناسی درج شده است:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">"USW00025333","SITKA AIRPORT, AK US","2018-07-01","0.25",,"62","50"</pre>
+                            </div><a id="p338"></a>
+                            <p>داده‌ها به‌صورت یک رشته خوانده می‌شود، لذا نیاز به روشی داریم که رشته‌ی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">"2018-07-01"</span><span class="rlm">‏</span> را به شیئی که معرف این تاریخ باشد، تبدیل کنیم. می‌توانیم با استفاده از متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">strptime()</span><span class="rlm">‏</span> از مدول <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">datetime</span><span class="rlm">‏</span>، شیئی بسازیم که نماینده‌ی تاریخ ۱ ژوئیه‌ی ۲۰۱۸ است. ببینیم <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">strptime()</span><span class="rlm">‏</span> در ترمینال چگونه کار می‌کند:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">&gt;&gt;&gt; <span class="bo">from datetime import datetime</span>
+&gt;&gt;&gt; <span class="bo">first_date = datetime.strptime('2018-07-01', '%Y-%m-%d')</span>
+&gt;&gt;&gt; <span class="bo">print(first_date)</span>
+2018-07-01 00:00:00</pre>
+                            </div>
+                            <p>ابتدا کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">datetime</span><span class="rlm">‏</span> را از مدول <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">datetime</span><span class="rlm">‏</span> ایمپورت می‌کنیم. سپس متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">strptime()</span><span class="rlm">‏</span> را فراخوانی می‌کنیم و رشته‌ی تاریخ مورد نظر را به‌عنوان آرگومان اول به آن می‌دهیم. آرگومان دوم به پایتون می‌گوید که تاریخ چگونه فرمت شده است. در این مثال، پایتون <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">'%Y-'</span><span class="rlm">‏</span> را به این صورت تفسیر می‌کند که بخشی از رشته که قبل از اول خط تیره است، غدد چهار رقمی سال است؛ <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">'%m-'</span><span class="rlm">‏</span> نشان می‌دهد که بخشی از رشته که قبل از خط تیره‌ی دوم است، عددی است که نشان‌دهنده‌ی ماه است؛ و <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">'%d'</span><span class="rlm">‏</span> بدان معنا است که بخش آخر رشته، روز ماه را نشان می‌دهد، که بین ۱ تا ۳۱ است.</p>
+                            <p>متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">strptime()</span><span class="rlm">‏</span> برای مشخص کردن نحوه‌ی تفسیر تاریخ می‌تواند آرگومان‌های مختلفی بگیرد. <refTab xmlns="urn:dox:pycc">۱۶-۱</refTab> برخی از این آرگومان‌ها را نشان می‌دهد.</p>
+                            <p>آرگومان‌های غرامت تاریخ و زمان برای مدول <span class="strong">Table ۱۶-۱:</span>.</p>
+                            <table class="topbot-d" xmlns="http://www.w3.org/1999/xhtml">
+                                <colgroup>
+                                    <col style="width:30%" />
+                                    <col style="width:70%" />
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td style="vertical-align: top;" class="table-h">
+                                            <p><span class="strong">آرگومان</span></p>
+                                        </td>
+                                        <td style="vertical-align: top;" class="table-h">
+                                            <p><span class="strong">معنا</span></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="vertical-align: top;" class="table-b">
+                                            <p><span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">%A</span><span class="rlm">‏</span></p>
+                                        </td>
+                                        <td style="vertical-align: top;" class="table-b">
+                                            <p>نام روز هفته، مانند <span class="emphasis"><span class="rlm">‏</span><span class="lr" dir="ltr">Monday</span><span class="rlm">‏</span></span></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="vertical-align: top;" class="table-b">
+                                            <p><span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">%B</span><span class="rlm">‏</span></p>
+                                        </td>
+                                        <td style="vertical-align: top;" class="table-b">
+                                            <p>نام ماه، مانند <span class="emphasis"><span class="rlm">‏</span><span class="lr" dir="ltr">January</span><span class="rlm">‏</span></span></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="vertical-align: top;" class="table-b">
+                                            <p><span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">%m</span><span class="rlm">‏</span></p>
+                                        </td>
+                                        <td style="vertical-align: top;" class="table-b">
+                                            <p>ماه، به‌صورت عدد (از ۰۱ تا ۱۲)</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="vertical-align: top;" class="table-b">
+                                            <p><span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">%Y</span><span class="rlm">‏</span></p>
+                                        </td>
+                                        <td style="vertical-align: top;" class="table-b">
+                                            <p>عدد چهاررقمی سال، مانند ۲۰۱۹</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="vertical-align: top;" class="table-b">
+                                            <p><span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">%y</span><span class="rlm">‏</span></p>
+                                        </td>
+                                        <td style="vertical-align: top;" class="table-b">
+                                            <p>عدد دورقمی سال، مانند ۱۹</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="vertical-align: top;" class="table-b">
+                                            <p><span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">%H</span><span class="rlm">‏</span></p>
+                                        </td>
+                                        <td style="vertical-align: top;" class="table-b">
+                                            <p>ساعت، با فرمت ۲۴-ساعته (۰۰ تا ۲۳)</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="vertical-align: top;" class="table-b">
+                                            <p><span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">%I</span><span class="rlm">‏</span></p>
+                                        </td>
+                                        <td style="vertical-align: top;" class="table-b">
+                                            <p>ساعت، با فرمت ۱۲-ساعته (۰۱ تا ۱۲)</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="vertical-align: top;" class="table-b">
+                                            <p><span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">%p</span><span class="rlm">‏</span></p>
+                                        </td>
+                                        <td style="vertical-align: top;" class="table-b">
+                                            <p><span class="rlm">‏</span><span class="key" dir="ltr">am</span><span class="rlm">‏</span> یا <span class="rlm">‏</span><span class="key" dir="ltr">pm</span><span class="rlm">‏</span></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="vertical-align: top;" class="table-b">
+                                            <p><span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">%M</span><span class="rlm">‏</span></p>
+                                        </td>
+                                        <td style="vertical-align: top;" class="table-b">
+                                            <p>دقیقه (۰۰ تا ۵۹)</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="vertical-align: top;" class="table-ba">
+                                            <p><span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">%S</span><span class="rlm">‏</span></p>
+                                        </td>
+                                        <td style="vertical-align: top;" class="table-ba">
+                                            <p>ثانیه (۰۰ تا ۶۱)</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="sect" id="ch16lev2sec6"><a class="bkmk" name="ch16lev2sec6"></a>
+                            <h4>رسم منحنی تاریخ</h4>
+                            <p>اکنون می‌توانیم نمودار دما را بهبود بخشیم، به این صورت که دماهای بالای روزانه را استخراج می‌کنیم و این دماهای بالا و تاریخ‌ها را به‌صورت زیر به <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">plot()</span><span class="rlm">‏</span> می‌دهیم:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">sitka_highs.py</div>
+                                <pre class="snippet" dir="ltr">
+<span class="ash">import csv</span>
+from datetime import datetime
+
+<span class="ash">import matplotlib.pyplot as plt</span>
+
+<span class="ash">filename = 'data/sitka_weather_07-2018_simple.csv'</span>
+<a id="p339"></a><span class="ash">with open(filename) as f:</span>
+    <span class="ash">reader = csv.reader(f)</span>
+    <span class="ash">header_row = next(reader)</span>
+
+    # Get dates and high temperatures from this file.
+<span class="n" dir="ltr">1</span>    dates, highs = [], []
+    <span class="ash">for row in reader:</span>
+<span class="n" dir="ltr">2</span>        current_date = datetime.strptime(row[2], '%Y-%m-%d')
+        <span class="ash">high = int(row[5])</span>
+        dates.append(current_date)
+        <span class="ash">highs.append(high)</span>
+
+<span class="ash"># Plot the high temperatures.</span>
+<span class="ash">plt.style.use('seaborn')</span>
+<span class="ash">fig, ax = plt.subplots()</span>
+<span class="n" dir="ltr">3</span>ax.plot(dates, highs, c='red')
+
+<span class="ash"># Format plot.</span>
+<span class="ash">plt.title("Daily high temperatures, July 2018", fontsize=24)</span>
+<span class="ash">plt.xlabel('', fontsize=16)</span>
+<span class="n" dir="ltr">4</span>fig.autofmt_xdate()
+<span class="ash">plt.ylabel("Temperature (F)", fontsize=16)</span>
+<span class="ash">plt.tick_params(axis='both', which='major', labelsize=16)</span>
+
+<span class="ash">plt.show()</span></pre>
+                            </div>
+                            <p>دو لیست خالی ایجاد می‌کنیم و تاریخ‌ها و دماهای بالا را که از فایل <span class="n" dir="ltr">1</span> درآورده‌ایم، در آن‌ها قرار می‌دهیم. سپس داده‌های حاوی اطلاعات تاریخ (یعنی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">row[2]</span><span class="rlm">‏</span>) را به یک شیء <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">datetime</span><span class="rlm">‏</span> تبدیل می‌کنیم <span class="n" dir="ltr">2</span>، ‎و آن را به <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">dates</span><span class="rlm">‏</span> پیوست می‌کنیم. تاریخ‌ها و دماهای بالا را به تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">plot()</span><span class="rlm">‏</span> می‌دهیم <span class="n" dir="ltr">3</span>. فراخوانی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">fig.autofmt_xdate()</span><span class="rlm">‏</span> <span class="n" dir="ltr">4</span>، برچسب‌های تاریخ را به‌صورت مورب ترسیم می‌کند تا روی هم نیفتند. <refFig xmlns="urn:dox:pycc">۱۶-۲</refFig> نمودار جدید را نشان می‌دهد.</p>
+                            <figure class="fig" id="ch16_fig02"><img class="fig" src="images/ch16_fig02.jpg" />
+                                <figcaption class="fig">شکل ۱۶-۲: با افزودن تاریخ‌ها به محور <span class="rlm">‏</span><span class="lr" dir="ltr">x</span><span class="rlm">‏</span>، حالا نمودار مفهوم‌تر شده است.</figcaption>
+                            </figure>
+                        </div>
+                        <div class="sect" id="ch16lev2sec7"><a class="bkmk" name="ch16lev2sec7"></a>
+                            <h4>ترسیم دوره‌ی زمانی طولانی‌تر</h4>
+                            <a id="p340"></a>
+                            <p>حالا که زمینه‌ی ترسیم نمودار فراهم شده است، می‌توانیم داده‌های بیشتری اضافه کنیم تا تصویر کامل‌تری از آب‌وهوا در سیتکا داشته باشیم. فایل <span class="rlm">‏</span><span class="ident" dir="ltr">sitka_weather_2018_simple.csv</span><span class="rlm">‏</span> را، که حاوی داده‌های آب‌وهوایی یک سال کامل برای شهر سیتکا است، به پوشه‌ای که داده‌های مربوط به برنامه‌های این فصل را در آن ذخیره می‌کنید، کپی کنید.</p>
+                            <p>حالا می‌توانیم نمودار آب‌وهوا را برای یک سال کامل ایجاد کنیم:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">sitka_highs.py</div>
+                                <pre class="snippet" dir="ltr"><span class="ash">--<span class="it">snip</span>--</span>
+<span class="n" dir="ltr">1</span>filename = 'data/sitka_weather_2018_simple.csv'
+<span class="ash">with open(filename) as f:</span>
+<span class="ash">--<span class="it">snip</span>--</span>
+<span class="ash"># Format plot.</span>
+<span class="n" dir="ltr">2</span>plt.title("Daily high temperatures - 2018", fontsize=24)
+<span class="ash">plt.xlabel('', fontsize=16)</span>
+<span class="ash">--<span class="it">snip</span>--</span></pre>
+                            </div>
+                            <p>نام فایل را تغییر می‌دهیم تا از فایل داده‌های جدید <span class="rlm">‏</span><span class="ident" dir="ltr">sitka_weather_2018_simple.csv</span><span class="rlm">‏</span> استفاده کند <span class="n" dir="ltr">1</span>، و عنوان نمودار را هم بر اساس تغییر محتوای آن، اصلاح می‌کنیم <span class="n" dir="ltr">2</span>. <refFig xmlns="urn:dox:pycc">۱۶-۳</refFig> نمودار حاصله را نشان می‌دهد.</p>
+                            <figure class="fig" id="ch16_fig03"><img class="fig" src="images/ch16_fig03.jpg" />
+                                <figcaption class="fig">شکل ۱۶-۳: داده‌های آب‌و‌هوایی برای یک سال</figcaption>
+                            </figure>
+                        </div>
+                        <div class="sect" id="ch16lev2sec8"><a class="bkmk" name="ch16lev2sec8"></a>
+                            <h4>ترسیم سری دوم داده‌ها</h4>
+                            <p>برای اینکه نمودار ما باز هم مفیدتر باشد، می‌توانیم دماهای پایین را هم به آن اضافه کنیم. باید دماهای پایین را از فایل داده‌ها استخراج کنیم و سپس آن‌ها را به‌صورت زیر به نمودارمان اضافه کنیم:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">sitka_highs_lows.py</div>
+                                <pre class="snippet" dir="ltr"><span class="ash">--<span class="it">snip</span>--</span>
+<span class="ash">filename = 'sitka_weather_2018_simple.csv'</span>
+<a id="p341"></a><span class="ash">with open(filename) as f:</span>
+    <span class="ash">reader = csv.reader(f)</span>
+    <span class="ash">header_row = next(reader)</span>
+
+    # Get dates, and high and low temperatures from this file.
+<span class="n" dir="ltr">1</span>    dates, highs, lows = [], [], []
+    <span class="ash">for row in reader:</span>
+        <span class="ash">current_date = datetime.strptime(row[2], '%Y-%m-%d')</span>
+        <span class="ash">high = int(row[5])</span>
+<span class="n" dir="ltr">2</span>        low = int(row[6])
+        <span class="ash">dates.append(current_date)</span>
+        <span class="ash">highs.append(high)</span>
+        lows.append(low)
+
+# Plot the high and low temperatures.
+<span class="ash">plt.style.use('seaborn')</span>
+<span class="ash">fig, ax = plt.subplots()</span>
+<span class="ash">ax.plot(dates, highs, c='red')</span>
+<span class="n" dir="ltr">3</span>ax.plot(dates, lows, c='blue')
+
+<span class="ash"># Format plot.</span>
+<span class="n" dir="ltr">4</span>plt.title("Daily high and low temperatures - 2018", fontsize=24)
+<span class="ash">--<span class="it">snip</span>--</span></pre>
+                            </div>
+                            <p>در <span class="n" dir="ltr">1</span>، لیست خالی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">lows</span><span class="rlm">‏</span> را اضافه می‌کنیم که دماهای خالی را آن قرار داده می‌شود، و سپس دمای پایین را برای هر تاریخ از جایگاه هفتم هر ردیف (<span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">row[6]</span><span class="rlm">‏</span>) استخراج و ذخیره می‌کنیم <span class="n" dir="ltr">2</span>. در <span class="n" dir="ltr">3</span>، تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">plot()</span><span class="rlm">‏</span> را برای دماهای پایین فراخوانی می‌کنیم و این مقادیر را به رنگ آبی ترسیم می‌کنیم. در پایان، عنوان را نیز اصلاح می‌کنیم <span class="n" dir="ltr">4</span>. <refFig xmlns="urn:dox:pycc">۱۶-۴</refFig> نمودار حاصله را نشان می‌دهد.</p>
+                            <figure class="fig" id="ch16_fig04"><img class="fig" src="images/ch16_fig04.jpg" />
+                                <figcaption class="fig">شکل ۱۶-۴: نمایش دو سری داده‌ها روی یک نمودار.</figcaption>
+                            </figure>
+                        </div>
+                        <div class="sect" id="ch16lev2sec9"><a class="bkmk" name="ch16lev2sec9"></a>
+                            <h4>رنگ زدن ناحیه‌ای از نمودار</h4>
+                            <a id="p342"></a>
+                            <p>با توجه به اینکه دو سری از داده‌ها را به نمودار اضافه کرده‌ایم، حالا می‌توانیم دامنه‌ی دما را برای هر روز مشاهده کنیم. می‌توانیم برای تکمیل نمودار، دامنه‌ی دمای پایین و بالای هر روز را رنگ بزنیم. برای انجام این کار، از متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">fill_between()</span><span class="rlm">‏</span> استفاده می‌کنیم، که یک سری مقادیر <span class="rlm">‏</span><span class="lr" dir="ltr">x</span><span class="rlm">‏</span> و دو سری مقادیر <span class="rlm">‏</span><span class="lr" dir="ltr">y</span><span class="rlm">‏</span> را می‌گیرد، و فضای بین دو سری مقدار <span class="rlm">‏</span><span class="lr" dir="ltr">y</span><span class="rlm">‏</span> را رنگ می‌کند:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">sitka_highs_lows.py</div>
+                                <pre class="snippet" dir="ltr"><span class="ash">--<span class="it">snip</span>--</span>
+<span class="ash"># Plot the high and low temperatures.</span>
+<span class="ash">plt.style.use('seaborn')</span>
+<span class="ash">fig, ax = plt.subplots()</span>
+<span class="n" dir="ltr">1</span>ax.plot(dates, highs, c='red', alpha=0.5)
+ax.plot(dates, lows, c='blue', alpha=0.5)
+<span class="n" dir="ltr">2</span>plt.fill_between(dates, highs, lows, facecolor='blue', alpha=0.1)
+<span class="ash">--<span class="it">snip</span>--</span></pre>
+                            </div>
+                            <p>آرگومان <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">alpha</span><span class="rlm">‏</span> در <span class="n" dir="ltr">1</span>، شفافیت رنگ را کنترل می‌کند. مقدار ۰ برای <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">alpha</span><span class="rlm">‏</span> به‌معنای کاملاً شفاف است، و مقدار ۱ (که پیش‌فرض است) به‌معنای کاملاً کدر است. تعیین مقدار ۰٫۵ برای <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">alpha</span><span class="rlm">‏</span> سبب می‌شود که خطوط قرمز و آبی نمودار روشن‌تر به نظر برسند.</p>
+                            <p>در <span class="n" dir="ltr">2</span>، لیست <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">dates</span><span class="rlm">‏</span> را به‌عنوان مقادیر <span class="rlm">‏</span><span class="lr" dir="ltr">x</span><span class="rlm">‏</span>، و دو سری <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">highs</span><span class="rlm">‏</span> و <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">lows</span><span class="rlm">‏</span> را به‌عنوان مقادیر <span class="rlm">‏</span><span class="lr" dir="ltr">y</span><span class="rlm">‏</span> به <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">fill_between()</span><span class="rlm">‏</span> می‌دهیم. آرگومان <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">facecolor</span><span class="rlm">‏</span> رنگ ناحیه‌ی رنگ شده را مشخص می‌کند؛ برای <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">alpha</span><span class="rlm">‏</span>، مقدار پایین ۰٫۱ به آن می‌دهیم، تا آنکه منطقه‌ی رنگ شده که دو سری داده‌ها را بهم وصل می‌کند، توجه را از اطلاعات اصلی این دو سری داده‌ها منحرف نکند. <refFig xmlns="urn:dox:pycc">۱۶-۵</refFig> نمودار را با ناحیه‌ی رنگ‌شده‌ی بین دماهای پایین و بالا نشان می‌دهد.</p>
+                            <figure class="fig" id="ch16_fig05"><img class="fig" src="images/ch16_fig05.jpg" />
+                                <figcaption class="fig">شکل ۱۶-۵: ناحیه‌ی بین دو مجموعه‌های داده‌ها رنگ زده شده است.</figcaption>
+                            </figure>
+                            <p>رنگ زدن سبب می‌شود که دامنه‌ی بین دو مجموعه‌ی داده‌ها به سادگی قابل‌تشخیص باشد.</p>
+                        </div>
+                        <div class="sect" id="ch16lev2sec10"><a class="bkmk" name="ch16lev2sec10"></a>
+                            <h4>وارسی خطا</h4>
+                            <a id="p343"></a>
+                            <p>انتظار ما این است که بتوانیم کد <span class="rlm">‏</span><span class="ident" dir="ltr">sitka_highs_lows.py</span><span class="rlm">‏</span> را برای داده‌های هر منطقه‌ای اجرا کنیم. ولی برخی ایستگاه‌های هواشناسی داده‌های متفاوتی را نسبت به ایستگاه‌های دیگر جمع‌آوری می‌کنند، و برخی ایستگاه‌ها هم ممکن است اختلال داشته باشند و داده‌های مورد انتظار را جمع‌آوری نکنند. وجود داده‌های مفقوده می‌تواند سبب بروز استثناهایی شود که منجر به کرش کردن برنامه‌ی ما خواهد شد، مگر آنکه به درستی به آن رسیدگی کنیم.</p>
+                            <p>به‌عنوان مثال، ببینیم که اگر بخواهیم نمودار دما را برای منطقه‌ی دِث وَلی (<span class="rlm">‏</span><span class="lr" dir="ltr">Death Valley</span><span class="rlm">‏</span>) در کالیفرنیا جمع‌آوری کنیم، چه اتفاقی می‌افتد. فایل <span class="rlm">‏</span><span class="ident" dir="ltr">death_valley_2018_simple.csv</span><span class="rlm">‏</span> را به پوشه‌ای که برای داده‌های برنامه‌های این فصل در نظر گرفته‌اید، کپی کنید.</p>
+                            <p>اول کد را اجرا می‌کنیم تا ببینیم چه سرفصل‌هایی در این فایل داده‌ها در نظر گرفته شده‌اند:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">death_valley_highs_lows.py</div>
+                                <pre class="snippet" dir="ltr">import csv
+
+filename = 'data/death_valley_2018_simple.csv'
+with open(filename) as f:
+    reader = csv.reader(f)
+    header_row = next(reader)
+
+    for index, column_header in enumerate(header_row):
+        print(index, column_header)</pre>
+                            </div>
+                            <p>خروجی آن به‌صورت زیر است:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">0 STATION
+1 NAME
+2 DATE
+3 PRCP
+4 TMAX
+5 TMIN
+6 TOBS</pre>
+                            </div>
+                            <p>تاریخ در اینجا هم در موقعیت ایندکس ۲ است. اما دماهای بالا و پایین در ایندکس‌های ۴ و ۵ هستند، بنابراین، لازم است که ایندکس‌ها را در کد تغییر دهیم تا منطبق با مکان جدید آن‌ها باشد. این ایستگاه به‌جای دمای متوسط روز، این ایستگاه مقدار <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">TOBS</span><span class="rlm">‏</span> را درج کرده است که نشان‌دهنده‌ی دما در یک زمان مشخص است.</p>
+                            <p>من یکی از موارد قرائت دما را از این فایل حذف کردم تا ببینیم وقتی که فایل داده‌های مفقوده داشته باشد، چه اتفاقی می‌افتد. برنامه‌ی <span class="rlm">‏</span><span class="ident" dir="ltr">sitka_highs_lows.py</span><span class="rlm">‏</span> را تغییر دهید تا نمودار مرروبط به دث ولی را با استفاده از ایندکس‌هایی که دیدیم ایجاد کند، تا ببینیم چه نتیجه‌ای حاصل می‌شود.</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">death_valley_highs_lows.py</div>
+                                <pre class="snippet" dir="ltr"><span class="ash">--<span class="it">snip</span>--</span>
+filename = 'data/death_valley_2018_simple.csv'
+<span class="ash">with open(filename) as f:</span>
+    <span class="ash">--<span class="it">snip</span>--</span>
+    <span class="ash"># Get dates, and high and low temperatures from this file.</span>
+    <span class="ash">dates, highs, lows = [], [], []</span>
+    <span class="ash">for row in reader:</span>
+        <span class="ash">current_date = datetime.strptime(row[2], '%Y-%m-%d')</span>
+<a id="p344"></a><span class="n" dir="ltr">1</span>      high = int(row[4])
+        low = int(row[5])
+        <span class="ash">dates.append(current_date)</span>
+<span class="ash">--<span class="it">snip</span>--</span></pre>
+                            </div>
+                            <p>در <span class="n" dir="ltr">1</span>، ایندکس‌ها را تغییر داده‌ایم تا منطبق بر مکان <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">TMAX</span><span class="rlm">‏</span> و <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">TMIN</span><span class="rlm">‏</span> در این فایل باشد.</p>
+                            <p>وقتی که این برنامه را اجرا می‌کنیم، به یک خطا می‌رسیم، که در سطر آخر خروجی زیر نشان داده شده است:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">Traceback (most recent call last):
+  File "death_valley_highs_lows.py", line 15, in &lt;module&gt;
+    high = int(row[4])
+ValueError: invalid literal for int() with base 10: ''</pre>
+                            </div>
+                            <p>رهگیری خطا مشخص می‌کند که پایتون نتوانسته است دمای بالا را برای یکی از تاریخ‌ها پردازش کند، چرا که نمی‌تواند یک رشته‌ی خالی (<span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">''</span><span class="rlm">‏</span>) را به عدد صحیح تبدیل کند. به‌جای اینکه به داده‌ها نگاه کنیم و ببینیم که کدام‌یک از داده‌ها مفقوده است، کلاً به‌طور مستقیم به مسئله‌ی داده‌های مفقوده رسیدگی می‌کنیم.</p>
+                            <p>روی کدی که مقادیر را از فایل <span class="rlm">‏</span><span class="lr" dir="ltr">CSV</span><span class="rlm">‏</span> می‌خواند، وارسی خطا انجام می‌دهیم، تا به استثناهایی که ممکن است بروز کند، رسیدگی کنیم. نحوه‌ی کار به این صورت است:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">death_valley_highs_lows.py</div>
+                                <pre class="snippet" dir="ltr"><span class="ash">--<span class="it">snip</span>--</span>
+<span class="ash">filename = 'data/death_valley_2018_simple.csv'</span>
+<span class="ash">with open(filename) as f:</span>
+    <span class="ash">--<span class="it">snip</span>--</span>
+    <span class="ash">for row in reader:</span>
+            <span class="ash">current_date = datetime.strptime(row[2], '%Y-%m-%d')</span>
+<span class="n" dir="ltr">1</span>            try:
+                <span class="ash">high = int(row[4])</span>
+                <span class="ash">low = int(row[5])</span>
+            except ValueError:
+<span class="n" dir="ltr">2</span>                print(f"Missing data for {current_date}")
+<span class="n" dir="ltr">3</span>            else:
+                <span class="ash">dates.append(current_date)</span>
+                <span class="ash">highs.append(high)</span>
+                <span class="ash">lows.append(low)</span>
+
+<span class="ash"># Plot the high and low temperatures.</span>
+<span class="ash">--<span class="it">snip</span>--</span>
+
+<span class="ash"># Format plot.</span>
+<span class="n" dir="ltr">4</span>title = "Daily high and low temperatures - 2018\nDeath Valley, CA"
+plt.title(title, fontsize=20)
+<span class="ash">plt.xlabel('', fontsize=16)</span>
+<span class="ash">--<span class="it">snip</span>--</span></pre>
+                            </div>
+                            <p>هر بار که یک سطر را بررسی می‌کنیم، سعی می‌کنیم تاریخ و دمای بالا و پایین را استخراج کنیم <span class="n" dir="ltr">1</span>. اگر هر کدام از داده‌ها مفقوده باشد، پایتون یک خطای <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">ValueError</span><span class="rlm">‏</span> ایجاد می‌کند، و ما به این صورت به آن رسیدگی می‌کنیم که پیغام خطایی را پرینت می‌کنیم که حاوی تاریخ داده‌های مفقوده است <span class="n" dir="ltr">2</span>. پس از نمایش دادن خطا، حلقه به‌سراغ پردازش سطر بعدی می‌رود. اگر تمام داده‌های مربوط به یک تاریخ بدون خطا بازیابی شود، بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">else</span><span class="rlm">‏</span> اجرا <a id="p345"></a>می‌شود و داده‌ها به لیست مربوطه پیوست می‌شود <span class="n" dir="ltr">3</span>. از آنجا که این نمودار، اطلاعات مکان جدیدی را نشان می‌دهد، لذا عنوان نمودار را اصلاح می‌کنیم و نام مکان را هم به آن اضافه می‌کنیم، و اندازه‌ی فونت آن را کوچک‌تر می‌کنیم تا عنوان بلندتر در آن جا شود. </p>
+                            <p>حالا وقتی که <span class="rlm">‏</span><span class="ident" dir="ltr">death_valley_highs_lows.py</span><span class="rlm">‏</span> را اجرا می‌کنید، خواهید دید که فقط یک تاریخ داده‌های مفقوده داشته است:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">Missing data for 2018-02-18 00:00:00</pre>
+                            </div>
+                            <p>از آنجا که خطا به درستی رسیدگی می‌شود، لذا کد ما می‌تواند نمودار را ایجاد کند، که در آن از داده‌های مفقوده صرف‌نظر شده است. <refFig xmlns="urn:dox:pycc">۱۶-۶</refFig> نمودار حاصله را نشان می‌دهد.</p>
+                            <figure class="fig" id="ch16_fig06"><img class="fig" src="images/ch16_fig06.jpg" />
+                                <figcaption class="fig">شکل ۱۶-۶: دماهای پایین و بالای روزانه برای دث ولی.</figcaption>
+                            </figure>
+                            <p>با مقایسه‌ی این نمودار با نمودار سیتکا، می‌بینیم که همان طور که انتظار می‌رود، دث ولی به‌طور کلی، گرم‌تر از جنوب شرقی آلاسکا است. ضمن اینکه دامنه‌ی دماهای هر روز در بیابان وسیع‌تر است. ارتفاع ناحیه‌ی هاشور زده این مطلب را مشخص می‌کند.</p>
+                            <p>خیلی از اوقات، خواهید دید که دادگان‌هایی که با آن‌ها کار می‌کنید، دارای داده‌های مفقوده، یا غلط فرمت شده، یا نادرست هستند. می‌توانید از ابزارهایی که در نیمه‌ی اول این کتاب یاد گرفتید، برای حل‌وفصل این مسائل استفاده کنید. در اینجا ما از یک بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">try-except-else</span><span class="rlm">‏</span> برای رسیدگی به داده‌های مفقوده استفاده کردیم. بعضی وقت‌ها ممکن است از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">continue</span><span class="rlm">‏</span> برای عبور کردن از روی برخی از داده‌ها استفاده کنید، یا اینکه بعضی از داده‌های استخراج شده را با استفاده از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">remove()</span><span class="rlm">‏</span> یا <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">del</span><span class="rlm">‏</span> حذف کنید. از هر کدام از این روش‌ها می‌توانید استفاده کنید، به شرطی که نتیجه‌ی آن یک مصورسازی بامعنی و درست باشد.</p>
+                        </div>
+                        <div class="sect" id="ch16lev2sec11"><a class="bkmk" name="ch16lev2sec11"></a>
+                            <h4>دانلود کردن داده‌های دیگر</h4>
+                            <p>اگر می‌خواهید خودتان داده‌های هواشناسی دیگری را دانلود کنید، این مراحل را انجام دهید:</p>
+                            <ol xmlns="urn:dox:pycc">
+                                <li xmlns="http://www.w3.org/1999/xhtml">به سایت داده‌های آنلاین اقلیمی اداره‌ی ملی اقیانوسی و جوی (<span class="rlm">‏</span><span class="lr" dir="ltr">NOAA</span><span class="rlm">‏</span>) به نشانی <span class="rlm">‏</span><a dir="ltr" target="_blank" href="https://www.ncdc.noaa.gov/cdo-web/">https://www.ncdc.noaa.gov/cdo-web/</a><span class="rlm">‏</span> بروید. در قسمت <span class="emphasis"><span class="rlm">‏</span><span class="lr" dir="ltr">Discover Data By</span><span class="rlm">‏</span></span>، روی <span class="strong"><span class="rlm">‏</span><span class="lr" dir="ltr">Search Tool</span><span class="rlm">‏</span></span> کلیک کنید. در مربع <span class="emphasis"><span class="rlm">‏</span><span class="lr" dir="ltr">Select a Dataset</span><span class="rlm">‏</span></span>، گزینه‌ی <span class="strong"><span class="rlm">‏</span><span class="lr" dir="ltr">Daily Summaries</span><span class="rlm">‏</span></span> را انتخاب کنید.</li><a xmlns="http://www.w3.org/1999/xhtml" id="p346"></a>
+                                <li xmlns="http://www.w3.org/1999/xhtml">دامنه‌ی تاریخ مورد نظر را انتخاب کنید، و در قسمت <span class="emphasis"><span class="rlm">‏</span><span class="lr" dir="ltr">Search For</span><span class="rlm">‏</span></span>، گزینه‌ی <span class="strong"><span class="rlm">‏</span><span class="lr" dir="ltr">ZIP Codes</span><span class="rlm">‏</span></span> را انتخاب نمایید. کد پستی مورد نظر خود را وارد کنید، و روی <span class="strong"><span class="rlm">‏</span><span class="lr" dir="ltr">Search</span><span class="rlm">‏</span></span> کلیک کنید.</li>
+                                <li xmlns="http://www.w3.org/1999/xhtml">در صفحه‌ی بعد، نقشه و اطلاعات مربوط به منطقه‌ی مورد نظر به شما نشان داده می‌شود. در زیر نام محل، روی <span class="strong"><span class="rlm">‏</span><span class="lr" dir="ltr">View Full Details</span><span class="rlm">‏</span></span> کلیک کنید، و یا اینکه روی نقشه کلیک کنید و سپس روی <span class="strong"><span class="rlm">‏</span><span class="lr" dir="ltr">Full Details</span><span class="rlm">‏</span></span> کلیک نمایید.</li>
+                                <li xmlns="http://www.w3.org/1999/xhtml">پایین‌تر بروید و روی <span class="strong"><span class="rlm">‏</span><span class="lr" dir="ltr">Station List</span><span class="rlm">‏</span></span> کلیک کنید، تا ایستگاه‌های هواشناسی موجود در آن منطقه را مشاهده کنید. یکی از ایستگاه‌ها را انتخاب کنید، و روی <span class="strong"><span class="rlm">‏</span><span class="lr" dir="ltr">Add to Cart</span><span class="rlm">‏</span></span> کلیک کنید. با آنکه این سایت از سبد خرید استفاده می‌کند، ولی این داده‌ها رایگان است. در گوشه‌ی بالای راست، روی سبد خرید کلیک کنید.</li>
+                                <li xmlns="http://www.w3.org/1999/xhtml">در <span class="emphasis"><span class="rlm">‏</span><span class="lr" dir="ltr">Select the Output</span><span class="rlm">‏</span></span>، گزینه‌ی <span class="strong"><span class="rlm">‏</span><span class="lr" dir="ltr">Custom GHCN-Daily CSV</span><span class="rlm">‏</span></span> را انتخاب کنید. دامنه‌ی تاریخ را وارسی کنید، و روی <span class="strong"><span class="rlm">‏</span><span class="lr" dir="ltr">Continue</span><span class="rlm">‏</span></span> کلیک کنید.</li>
+                                <li xmlns="http://www.w3.org/1999/xhtml">در صفحه‌ی بعد، می‌توانید نوع داده‌هایی را که می‌خواهید، انتخاب کنید. مثلاً می‌توانید یک نوع از داده‌ها را، با تمرکز بر دمای هوا، دانلود کنید، یا اینکه می‌توانید تمام داده‌های موجود این ایستگاه را دانلود کنید. وقتی که انتخاب کردید، روی <span class="strong"><span class="rlm">‏</span><span class="lr" dir="ltr">Continue</span><span class="rlm">‏</span></span> کلیک کنید.</li>
+                                <li xmlns="http://www.w3.org/1999/xhtml">در صفحه‌ی آخر، خلاصه‌ای از سفارش خود را خواهید دید. آدرس ایمیلتان را وارد کنید و روی <span class="strong"><span class="rlm">‏</span><span class="lr" dir="ltr">Submit Order</span><span class="rlm">‏</span></span> کلیک کنید. اول یک ایمیل تأیید دریافت می‌کنید که نشان می‌دهد سفارش شما دریافت شده است، و پس از چند دقیقه، ایمیل دیگری حاوی لینکی برای دانلود کردن داده‌های مورد نظر به دستتان خواهد رسید.</li>
+                            </ol>
+                            <p>ساختار داده‌هایی که دانلود می‌کنید، درست مثل همین داده‌هایی است که در این قسمت، استفاده کردیم. شاید سرفصل آن‌ها با آنچه در این قسمت، دیدیم، متفاوت باشد. ولی اگر از مراحلی که در بالا گفتیم، پیروی کنید، خواهید توانست داده‌های مورد نظرتان را مصورسازی کنید.</p>
+                            <div class="sidebar">
+                                <h6 class="sidebar-title">خودتان امتحان کنید</h6>
+                                <p class="tiy1"><span class="tiy" id="ch16_tiy01"><span class="tiy-num">۱۶-۱</span>. <span class="tiy-title">نزولات جوی در سیتکا</span>: </span> سیتکا از نظر آب و هوایی یک جنگل بارانی معتدل است، بنابراین، نزولات جوی زیادی دارد. در فایل داده‌ای <span class="rlm">‏</span><span class="ident" dir="ltr">sitka_weather_2018_simple.csv</span><span class="rlm">‏</span>، سرفصلی به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">PRCP</span><span class="rlm">‏</span> وجود دارد که نشان‌دهنده‌ی مقدار روزانه‌ی بارش است. یک مصورسازی بر اساس داده‌های این ستون ایجاد کنید. می‌توانید این تمرین را برای دث ولی نیز تکرار کنید، تا معلوم شود که میزان بارش در بیابان چقدر کم است.</p>
+                                <p class="tiy1"><span class="tiy" id="ch16_tiy02"><span class="tiy-num">۱۶-۲</span>. <span class="tiy-title">مقایسه‌ی سیتکا و دث ولی</span>: </span> مقیاس دما نمودارهای سیتکا و دث ولی، دامنه‌های دمایی متفاوتی را در بر می‌گیرد. برای اینکه دامنه‌ی دمایی این دو مکان را به درستی با هم مقایسه کنید، نیاز به مقیاس‌های یکسانی در محور <span class="rlm">‏</span><span class="lr" dir="ltr">y</span><span class="rlm">‏</span> دارید. تنظیمات محور <span class="rlm">‏</span><span class="lr" dir="ltr">y</span><span class="rlm">‏</span> را در یکی از دو نمودار <refFig xmlns="urn:dox:pycc">۱۶-۵</refFig> و <refFig xmlns="urn:dox:pycc">۱۶-۶</refFig> یا هر دوی آن‌ها تغییر دهید. آنگاه مقایسه‌ی مستقیمی بین دامنه‌ی زمانی این دو محل (یا هر دو محل دیگری که مورد نظر خودتان است) انجام دهید.</p>
+                                <p class="tiy1"><span class="tiy" id="ch16_tiy03"><span class="tiy-num">۱۶-۳</span>. <span class="tiy-title">سان‌فرانسیسکو</span>: </span> آیا دماها در سان‌فرانسیسکو بیشتر به سیتکا شباهت دارد یا به دث ولی؟ داده‌هایی را برای سان‌فرانسیسکو دانلود کنید و نمودار دماهای بالا و پایین این شهر را ترسیم کنید تا بتوانید مقایسه کنید.</p><a id="p347"></a>
+                                <p class="tiy1"><span class="tiy" id="ch16_tiy04"><span class="tiy-num">۱۶-۴</span>. <span class="tiy-title">نمایه‌های خودکار</span>: </span> در این قسمت، نمایه‌ی مربوط به ستون‌های <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">TMIN</span><span class="rlm">‏</span> و <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">TMAX</span><span class="rlm">‏</span> را خودمان در برنامه تعیین کردیم. در اینجا، نمایه‌ها را با استفاده از سطر سرفصل مشخص کنید، تا برنامه‌ی شما هم برای سیتکا و هم برای دث ولی قابل استفاده باشد. عنوان نمودار را هم به‌طور خودکار با استفاده از نام ایستگاه مشخص کنید.</p>
+                                <p class="tiy1"><span class="tiy" id="ch16_tiy05"><span class="tiy-num">۱۶-۵</span>. <span class="tiy-title">کاوش</span>: </span> چند مصورسازی دیگر تهیه کنید و در آن داده‌هایی مختلف هواشناسی را برای محل‌هایی که مورد نظر خودتان است، به تصویر بکشید.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sect" id="ch16lev1sec2"><a class="bkmk" name="ch16lev1sec2"></a>
+                        <h3>ترسیم نقشه‌ی دادگان‌های جهانی: فرمت <span class="rlm">‏</span><span class="lr" dir="ltr">JSON</span><span class="rlm">‏</span></h3>
+                        <p>در این قسمت، دادگانی را دانلود خواهید کرد که نشان‌دهنده‌ی تمام زلزله‌های رخ داده در جهان در طی ماه قبل است. سپس نقشه‌ای تهیه خیکک محل این زلزله‌ها و اهمیت هر کدام از آن‌ها را نشان می‌دهد. از آنجا که این داده‌ها با فرمت <span class="rlm">‏</span><span class="lr" dir="ltr">JSON</span><span class="rlm">‏</span> ذخیره شده است، از مدول <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">json</span><span class="rlm">‏</span> برای کار کردن با آن استفاده خواهیم کرد. با استفاده از ابزار نقشه‌کشی آسان <span class="rlm">‏</span><span class="lr" dir="ltr">Plotly</span><span class="rlm">‏</span> برای داده‌های مبتنی بر مکان، مصورسازی‌هایی ایجاد خواهید کرد که توزیع جهانی زمین‌لرزه‌ها را به‌روشنی نشان می‌دهد.</p>
+                        <div class="sect" id="ch16lev2sec12"><a class="bkmk" name="ch16lev2sec12"></a>
+                            <h4>دانلود کردن داده‌های زلزله</h4>
+                            <p>فایل <span class="rlm">‏</span><span class="ident" dir="ltr">eq_1_day_m1.json</span><span class="rlm">‏</span> را به پوشه‌ای که برای ذخیره‌ی داده‌های برنامه‌های این فصل در نظر گرفته‌اید، کپی کنید. زمین‌لرزه‌ها بر اساس بزرگی آن‌ها در مقیاس ریشتر دسته‌بندی می‌شوند. این فایل حاوی داده‌های تمام زمین‌لرزه‌ها با بزرگی <span class="rlm">‏</span><span class="lr" dir="ltr">M1</span><span class="rlm">‏</span> یا بالاتر است که در ۲۴ ساعت گذشته (در زمان نوشتن این کتاب) رخ داده است. این داده‌ها از فید داده‌های زمین‌لرزه‌ای سازمان زمین‌شناسی آمریکا است که می‌توانید در نشانی <span class="rlm">‏</span><a dir="ltr" target="_blank" href="https://earthquake.usgs.gov/earthquakes/feed/">https://earthquake.usgs.gov/earthquakes/feed/</a><span class="rlm">‏</span> به آن مراجعه کنید.</p>
+                        </div>
+                        <div class="sect" id="ch16lev2sec13"><a class="bkmk" name="ch16lev2sec13"></a>
+                            <h4>بررسی داده‌های <span class="rlm">‏</span><span class="lr" dir="ltr">JSON</span><span class="rlm">‏</span></h4>
+                            <p>وقتی که فایل <span class="rlm">‏</span><span class="ident" dir="ltr">eq_1_day_m1.json</span><span class="rlm">‏</span> را باز می‌کنید، خواهید دید که متن متراکمی دارد که به‌سختی قابل خواندن است:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">{"type":"FeatureCollection","metadata":{"generated":1550361461000,...
+{"type":"Feature","properties":{"mag":1.2,"place":"11km NNE of Nor...
+{"type":"Feature","properties":{"mag":4.3,"place":"69km NNW of Ayn...
+{"type":"Feature","properties":{"mag":3.6,"place":"126km SSE of Co...
+{"type":"Feature","properties":{"mag":2.1,"place":"21km NNW of Teh...
+{"type":"Feature","properties":{"mag":4,"place":"57km SSW of Kakto...
+<span class="ash">--<span class="it">snip</span>--</span></pre>
+                            </div>
+                            <p>فرمت این فایل بیشتر برای خواندن کامپیوتر است تا انسان. ولی می‌توان دید که فایل حاوی چند دیکشنری است، و نیز اطلاعاتی مانند بزرگی و محل زمین‌لرزه که مورد نظر ما است.</p><a id="p348"></a>
+                            <p>مدول <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">json</span><span class="rlm">‏</span> ابزارهای مختلفی برای کار با داده‌های <span class="rlm">‏</span><span class="lr" dir="ltr">JSON</span><span class="rlm">‏</span> در اختیار ما قرار می‌دهد. برخی از این ابزارها این امکان را فراهم می‌کند که فایل را بهتر فرمت کنیم تا در ابتدا بتوانیم داده‌های خام را آسان‌تر بررسی کنیم و سپس شروع به کار برنامه‌نویسی بر روی آن کنیم.</p>
+                            <p>پس در ابتدا داده‌ها را لود می‌کنیم و آن را با فرمتی که خواندن آن آسان‌تر باشد، نمایش می‌دهیم. این فایل داده‌ها خیلی طولانی است، لذا به‌جای اینکه آن را نمایش دهیم، داده‌ها را درون فایل جدیدی می‌نویسیم. آنگاه می‌توانیم آن فایل را باز کنیم و داده‌های آن را مشاهده کنیم:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">eq_explore_data.py</div>
+                                <pre class="snippet" dir="ltr">import json
+
+# Explore the structure of the data.
+filename = 'data/eq_data_1_day_m1.json'
+with open(filename) as f:
+<span class="n" dir="ltr">1</span>    all_eq_data = json.load(f)
+
+<span class="n" dir="ltr">2</span>readable_file = 'data/readable_eq_data.json'
+with open(readable_file, 'w') as f:
+<span class="n" dir="ltr">3</span>    json.dump(all_eq_data, f, indent=4)</pre>
+                            </div>
+                            <p>ابتدا مدول <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">json</span><span class="rlm">‏</span> را ایمپورت می‌کنیم، تا داده‌ها را به درستی از فایل بخوانیم، و آنگاه کل مجموعه‌ی داده‌ها را در <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">all_eq_data</span><span class="rlm">‏</span> ذخیم <span class="n" dir="ltr">1</span>. تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">json.load()</span><span class="rlm">‏</span> داده‌ها را به فرمتی تبدیل می‌کند که پایتون می‌تواند با آن کار کند: یعنی در این مورد، آن را به یک دیکشنری بزرگ تبدیل می‌نماید. در <span class="n" dir="ltr">2</span>، فایلی ایجاد می‌کنیم تا این داده‌ها را با فرمتی که راحت‌تر قابل خواندن باشد، در آن بنویسیم. تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">json.dump()</span><span class="rlm">‏</span> یک شیء داده‌ای <span class="rlm">‏</span><span class="lr" dir="ltr">JSON</span><span class="rlm">‏</span> و یک شیء فایل را می‌گیرد و داده‌ها را در آن فایل می‌نویسد <span class="n" dir="ltr">3</span>. آرگومان <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">indent=4</span><span class="rlm">‏</span> به تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">dump()</span><span class="rlm">‏</span> می‌گوید که داده‌ها را با تورفتگی متناسب با ساختار داده‌ها فرمت کند.</p>
+                            <p>وقتی که به پوشه‌ی <span class="emphasis">data</span> بروید و فایل <span class="rlm">‏</span><span class="ident" dir="ltr">readable_eq_data.json</span><span class="rlm">‏</span> را باز کنید، اولین بخش از چیزی که می‌بینید، به‌صورت زیر خواهد بود:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">readable_eq_data.json</div>
+                                <pre class="snippet" dir="ltr">{
+    "type": "FeatureCollection",
+<span class="n" dir="ltr">1</span>    "metadata": {
+        "generated": 1550361461000,
+        "url": "https://earthquake.usgs.gov/earthquakes/.../1.0_day.geojson",
+        "title": "USGS Magnitude 1.0+ Earthquakes, Past Day",
+        "status": 200,
+        "api": "1.7.0",
+        "count": 158
+    },
+<span class="n" dir="ltr">2</span>    "features": [
+    <span class="ash">--<span class="it">snip</span>--</span></pre>
+                            </div>
+                            <p>بخش اول فایل حاوی قسمتی با کلید <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">"metadata"</span><span class="rlm">‏</span> است. در اینجا مشخص شده است که فایل داده‌ای در چه زمانی ایجاد شده است و داده‌ها در محیط آنلاین در کجا قرار دارد. هم‌چنین، عنوان قابل‌فهم فایل و تعداد زمین‌لرزه‌های موجود در فایل در اینجا درج شده است. در این دوره‌ی ۲۴ ساعته، ۱۵۸ زمین‌لرزه ثبت شده است.</p><a id="p349"></a>
+                            <p>این فایل <span class="emphasis">geoJSON</span> ساختار خاصی دارد که برای داده‌های مبتنی بر مکان مناسب است. اطلاعات در لیستی ذخیره شده که به کلید <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">"features"</span><span class="rlm">‏</span> اختصاص داده شده است <span class="n" dir="ltr">2</span>. از آنجا که این فایل حاوی داده‌های زمین‌لرزه است، لذا داده‌ها در لیستی قرار داده شده که هر آیتم آن معرف یک زمین‌لرزه است. شاید چنین ساختاری سردرگم کننده به نظر برسد، ولی بسیار قدرتمند است. این روش به زمین‌شناسان امکان می‌دهد که هر چقدر اطلاعات که بخواهند درباره‌ی هر زمین‌لرزه در یک دیکشنری ذخیره کنند، و سپس تمام آن دیکشنری‌ها را در یک لیست بزرگ قرار دهند.</p>
+                            <p>در اینجا، نگاهی به یک دیکشنری می‌اندازیم که معرف یک زمین‌لرزه است:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">readable_eq_data.json</div>
+                                <pre class="snippet" dir="ltr">    <span class="ash">--<span class="it">snip</span>--</span>
+        {
+            "type": "Feature",
+<span class="n" dir="ltr">1</span>            "properties": {
+                "mag": 0.96,
+                <span class="ash">--<span class="it">snip</span>--</span>
+<span class="n" dir="ltr">2</span>                "title": "M 1.0 - 8km NE of Aguanga, CA"
+            },
+<span class="n" dir="ltr">3</span>            "geometry": {
+                "type": "Point",
+                "coordinates": [
+<span class="n" dir="ltr">4</span>                    -116.7941667,
+<span class="n" dir="ltr">5</span>                    33.4863333,
+                    3.22
+                ]
+            },
+            "id": "ci37532978"
+        },</pre>
+                            </div>
+                            <p>کلید <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">"properties"</span><span class="rlm">‏</span> حاوی اطلاعات زیادی درباره‌ی هر زمین‌لرزه است <span class="n" dir="ltr">1</span>. چیزی که بیشتر مورد نظر ما است، بزرگ زمین‌لرزه است، که در کلید <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">"mag"</span><span class="rlm">‏</span> ذخیره شده است. در ضمن، عنوان هر زمین‌لرزه نیز برای ما لازم است، چرا که بزرگی و مکان زمین‌لرزه را به‌طور خلاصه نشان می‌دهد <span class="n" dir="ltr">2</span>.</p>
+                            <p>کلید <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">"geometry"</span><span class="rlm">‏</span> به ما کمک می‌کند که محل زمین‌لرزه را تشخیص دهیم <span class="n" dir="ltr">3</span>. برای رسم هر رویداد بر روی نقشه، به این اطلاعات نیاز داریم. طول جغرافیایی <span class="n" dir="ltr">4</span> و عرض جغرافیایی <span class="n" dir="ltr">5</span> هر زمین‌لرزه در لیستی با کلید <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">"coordinates"</span><span class="rlm">‏</span> درج شده است.</p>
+                            <p>میزان تودرتوگذاری در این فایل خیلی بیشتر از میزانی است که در کد ما استفاده می‌شود، بنابراین، اگر تا حدودی گیج کننده به نظر می‌رسد، نگران آن نباشید: اکثر پیچیدگی را پایتون خودش درک می‌کند. ما در هر زمان فقط با یک یا دو سطح تودرتوگذاری سروکار خواهیم داشت.ابتدا دیکشنری مربوط به هر زمین‌لرزه ثبت‌شده در دوره‌ی ۲۴ ساعته را به دست می‌آوریم.</p>
+                            <div class="note">
+                                <h6 class="note-title">توجه</h6>
+                                <p>وقتی که درباره‌ی مکان حرف می‌زنیم، خیلی وقت‌ها اول عرض جغرافیایی را بیان می‌کنیم، و سپس طول جغرافیایی را. شاید سرچشمه‌ی این قرارداد آن بوده باشد که ما انسان‌ها عرض جغرافیایی را خیلی پیش از آنکه مفهوم طول جغرافیایی را بشناسیم، کشف کردیم. با این حال، بسیاری از سامانه‌های مکانی جغرافیایی ابتدا طول جغرافیایی را می‌نویسند و بعد عرض جغرافیایی را، چرا که این متناظر با قرارداد <span class="rlm">‏</span><span class="lr" dir="ltr">(x, y)</span><span class="rlm">‏</span> است که در فرمول‌های ریاضی به کار می‌بریم. فرمت <span class="rlm">‏</span><span class="lr" dir="ltr">geoJSON</span><span class="rlm">‏</span> از قرارداد <span class="rlm">‏</span><span class="lr" dir="ltr">(longitude, latitude)</span><span class="rlm">‏</span> پیروی می‌کند، و اگر شما بخواهید از فریم‌ورک دیگری استفاده کنید، باید حتماً ببینید که از چه قراردادی پیروی می‌کند.</p>
+                            </div>
+                        </div>
+                        <div class="sect" id="ch16lev2sec14"><a class="bkmk" name="ch16lev2sec14"></a>
+                            <h4>ایجاد لیستی از تمام زمین‌لرزه‌ها</h4>
+                            <a id="p350"></a>
+                            <p>ابتدا لیستی درست می‌کنیم که حاوی تمام اطلاعات درباره‌ی هر زمین‌لرزه است.</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">eq_explore_data.py</div>
+                                <pre class="snippet" dir="ltr"><span class="ash">import json</span>
+
+<span class="ash"># Explore the structure of the data.</span>
+<span class="ash">filename = 'data/eq_data_1_day_m1.json'</span>
+<span class="ash">with open(filename) as f:</span>
+    <span class="ash">all_eq_data = json.load(f)</span>
+
+all_eq_dicts = all_eq_data['features']
+print(len(all_eq_dicts))</pre>
+                            </div>
+                            <p>داده‌های مربوط به کلید <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">'features'</span><span class="rlm">‏</span> را می‌گیریم و آن را در <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">all_eq_dicts</span><span class="rlm">‏</span> ذخیره می‌کنیم. می‌دانیم که این فایل حاوی اطلاعات مربوط به ۱۵۸ زمین‌لرزه است، و خروجی هم نشان می‌دهد که توانسته‌ایم همه‌ی آن‌ها را استخراج کنیم:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">158</pre>
+                            </div>
+                            <p>دقت کنید که این کد چقدر کوتاه است. فایل فرمت‌شد‌ه‌ی <span class="rlm">‏</span><span class="ident" dir="ltr">readable_eq_data.json</span><span class="rlm">‏</span> حاوی بیش از ۶٬۰۰۰ سطر است. ولی فقط با چند سطر کد می‌توانیم تمام آن داده‌ها را بخوانیم و در یک لیست پایتون ذخیره کنیم. در مرحله‌ی بعد، بزرگی هر زمین‌لرزه را به دست می‌آوریم.</p>
+                        </div>
+                        <div class="sect" id="ch16lev2sec15"><a class="bkmk" name="ch16lev2sec15"></a>
+                            <h4>استخراج بزرگی زمین‌لرزه</h4>
+                            <p>با استفاده از لیست حاوی داده‌های مربوط به زمین‌لرزه، می‌توانیم روی لیست حلقه تشکیل دهیم، و اطلاعاتی را که می‌خواهیم، استخراج کنیم. در اینجا، بزرگی هر زمین‌لرزه را استخراج می‌کنیم:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">eq_explore_data.py</div>
+                                <pre class="snippet" dir="ltr"><span class="ash">--<span class="it">snip</span>--</span>
+<span class="ash">all_eq_dicts = all_eq_data['features']</span>
+
+<span class="n" dir="ltr">1</span>mags = []
+for eq_dict in all_eq_dicts:
+<span class="n" dir="ltr">2</span>    mag = eq_dict['properties']['mag']
+    mags.append(mag)
+
+print(mags[:10])</pre>
+                            </div>
+                            <p>یک لیست خالی برای نگه‌داشتن بزرگی زمین‌لرزه‌ها ایجاد می‌کنیم و سپس یک حلقه روی دیکشنری <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">all_eq_dicts</span><span class="rlm">‏</span> تشکیل می‌کنیم <span class="n" dir="ltr">1</span>. در داخل حلقه، هر زمین‌لرزه با یک دیکشنری <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">eq_dict</span><span class="rlm">‏</span> مشخص می‌شود. بزرگی زمین‌لرزه در قسمت <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">'properties'</span><span class="rlm">‏</span> این دیکشنری تحت کلید <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">'mag'</span><span class="rlm">‏</span> ذخیره شده است <span class="n" dir="ltr">2</span>. بزرگی را در متغیر <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">mag</span><span class="rlm">‏</span> قرار می‌دهیم، و سپس آن را به لیست <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">mags</span><span class="rlm">‏</span> پیوست می‌کنیم.</p>
+                            <p>ده مقدار اول لیست بزرگی‌ها را پرینت می‌کنیم، تا ببینیم داده‌های صحیح را به دست آورده‌ایم یا خیر:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">[0.96, 1.2, 4.3, 3.6, 2.1, 4, 1.06, 2.3, 4.9, 1.8]</pre>
+                            </div><a id="p351"></a>
+                            <p>حالا، داده‌های مکان را برای هر زمین‌لرزه استخراج می‌کنیم، تا بتوانیم محل زمین‌لرزه را روی نقشه مسخص کنیم.</p>
+                        </div>
+                        <div class="sect" id="ch16lev2sec16"><a class="bkmk" name="ch16lev2sec16"></a>
+                            <h4>استخراج داده‌های مکان</h4>
+                            <p>داده‌های مکان با کلید <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">"geometry"</span><span class="rlm">‏</span> ذخیره شده است. در داخل این دیکشنری، یک کلید <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">"coordinates"</span><span class="rlm">‏</span> قرار دارد، که دو مقدار اول این لیست، طول و عرض جغرافیایی هستند. نحوه‌ی استخراج این داده‌ها به‌صورت زیر است:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">eq_explore_data.py</div>
+                                <pre class="snippet" dir="ltr"><span class="ash">--<span class="it">snip</span>--</span>
+<span class="ash">all_eq_dicts = all_eq_data['features']</span>
+
+mags, lons, lats = [], [], []
+<span class="ash">for eq_dict in all_eq_dicts:</span>
+    <span class="ash">mag = eq_dict['properties']['mag']</span>
+<span class="n" dir="ltr">1</span>    lon = eq_dict['geometry']['coordinates'][0]
+    lat = eq_dict['geometry']['coordinates'][1]
+    <span class="ash">mags.append(mag)</span>
+    lons.append(lon)
+    lats.append(lat)
+
+<span class="ash">print(mags[:10])</span>
+print(lons[:5])
+print(lats[:5])</pre>
+                            </div>
+                            <p>لیست‌هایی خالی برای طول و عرض جغرافیایی درست می‌کنیم. کد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">eq_dict['geometry']</span><span class="rlm">‏</span> به عنصر هندسه در دیکشنری زمین‌لرزه دسترسی پیدا می‌کند <span class="n" dir="ltr">1</span>. کلید دوم، <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">'coordinates'</span><span class="rlm">‏</span>، لیست مقادیر مربوط به <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">'coordinates'</span><span class="rlm">‏</span> را به ما می‌دهد. و سرانجام، نخستین مقدار در لیست مختصات را که نشان‌دهنده‌ی طول جغرافیایی زمین‌لرزه است، با ایندکس ۰ می‌گیریم.</p>
+                            <p>با پرینت کردن پنج مورد اول طول‌ها و عرض‌های جغرافیایی، مشخص می‌شود که داده‌هایی که می‌گیریم، درست است:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr"><span class="ash">[0.96, 1.2, 4.3, 3.6, 2.1, 4, 1.06, 2.3, 4.9, 1.8]</span>
+[-116.7941667, -148.9865, -74.2343, -161.6801, -118.5316667]
+[33.4863333, 64.6673, -12.1025, 54.2232, 35.3098333]</pre>
+                            </div>
+                            <p>با داشتن این داده‌ها، می‌توانیم به‌سراغ تعیین موقعیت هر زمین‌لرزه بر روی نقشه برویم.</p>
+                        </div>
+                        <div class="sect" id="ch16lev2sec17"><a class="bkmk" name="ch16lev2sec17"></a>
+                            <h4>ساختن نقشه‌ای از جهان</h4>
+                            <p>با اطلاعاتی که تا اینجا استخراج کردیم، می‌توانیم نقشه‌ی ساده‌ای از جهان بسازیم. گرچه هنوز منظره‌ی قابل‌ارائه‌ای نخواهد داشت، ولی می‌خواهیم قبل از آنکه به مسائل استایل و چگونگی نمایش آن بپردازیم، مطمئن شویم که اطلاعات به درستی نمایش داده خواهد شد. نقشه‌ی اولیه‌ی ما به‌صورت زیر است:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">eq_world_map.py</div>
+                                <pre class="snippet" dir="ltr"><span class="ash">import json</span>
+
+<span class="n" dir="ltr">1</span>from plotly.graph_objs import Scattergeo, Layout
+from plotly import offline
+
+<span class="ash">--<span class="it">snip</span>--</span>
+<a id="p352"></a><span class="ash">for eq_dict in all_eq_dicts:</span>
+    <span class="ash">--<span class="it">snip</span>--</span>
+
+# Map the earthquakes.
+<span class="n" dir="ltr">2</span>data = [Scattergeo(lon=lons, lat=lats)]
+<span class="n" dir="ltr">3</span>my_layout = Layout(title='Global Earthquakes')
+
+<span class="n" dir="ltr">4</span>fig = {'data': data, 'layout': my_layout}
+offline.plot(fig, filename='global_earthquakes.html')</pre>
+                            </div>
+                            <p>نوع نمودار <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Scattergeo</span><span class="rlm">‏</span> و کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Layout</span><span class="rlm">‏</span> را ایمپورت می‌کنیم، و سپس برای ترسیم نقشه، مدول <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">offline</span><span class="rlm">‏</span> را ایمپورت می‌نماییم <span class="n" dir="ltr">1</span>. در اینجا هم به همان صورت که برای نمودار ستونی عمل کردیم، لیستی به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">data</span><span class="rlm">‏</span> ایجاد می‌کنیم. شیء <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Scattergeo</span><span class="rlm">‏</span> را در داخل لیست ایجاد می‌کنیم <span class="n" dir="ltr">2</span>، چرا که در هر مصورسازی، می‌توانیم بیش از یک دادگان را ترسیم کنیم. نوع نمودار <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Scattergeo</span><span class="rlm">‏</span> به ما امکان می‌دهد که نمودار پراکندگی را روی نقشه بیندازیم. در ساده‌ترین شکل این نمودار، فقط باید لیستی از طول‌ها و لیستی از عرض‌های جغرافیایی را به آن بدهیم.</p>
+                            <p>عنوان مناسبی را برای نمودار تعیین می‌کنیم <span class="n" dir="ltr">3</span>، و یک دیکشنری به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">fig</span><span class="rlm">‏</span> ایجاد می‌کنیم که حاوی داده‌ها و چیدمان است <span class="n" dir="ltr">4</span>. سرانجام، <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">fig</span><span class="rlm">‏</span> را به تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">plot()</span><span class="rlm">‏</span> می‌دهیم، و یک نام گویا نیز برای خروجی انتخاب می‌کنیم. وقتی که این فایل را اجرا می‌کنید، نقشه‌ای مانند <refFig xmlns="urn:dox:pycc">۱۶-۷</refFig> خواهید دید. زمین‌لرزه‌ها معمولاً در نزدیکی مرز صفحات تکتونیک اتفاق می‌افتند، و نمودار ما نیز همین را نشان می‌دهد.</p>
+                            <figure class="fig" id="ch16_fig07"><img class="fig" src="images/ch16_fig07.jpg" />
+                                <figcaption class="fig">شکل ۱۶-۷: نقشه‌ی ساده‌ای که محل وقوع زمین‌لرزه‌های ۲۴ ساعت گذشته را نشان می‌دهد.</figcaption>
+                            </figure>
+                            <p>تغییرات زیادی را می‌توانیم در این نقشه بدهیم تا آن را معنادارتر و مفهوم‌تر کنیم. پس در اینجا برخی از این تغییرات را انجام می‌دهیم.</p>
+                        </div>
+                        <div class="sect" id="ch16lev2sec18"><a class="bkmk" name="ch16lev2sec18"></a>
+                            <h4>روش دیگری برای مشخص کردن داده‌های نمودار</h4>
+                            <a id="p353"></a>
+                            <p>قبل از آنکه نمودار را پیکربندی کنیم، روشی دیگر و اندکی متفاوت را برای تعیین داده‌های یک نمودار <span class="rlm">‏</span><span class="lr" dir="ltr">Plotly</span><span class="rlm">‏</span> بررسی می‌کنیم. در نمودار کنونی، لیست <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">data</span><span class="rlm">‏</span> در یک سطر تعریف می‌شود:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">data = [Scattergeo(lon=lons, lat=lats)]</pre>
+                            </div>
+                            <p>این یکی از ساده‌ترین روش‌ها برای تعریف داده‌های نمودار در <span class="rlm">‏</span><span class="lr" dir="ltr">Plotly</span><span class="rlm">‏</span> است. ولی در صورتی که بخواهید نحوه‌ی نمایش آن را سفارشی‌سازی کنید، این بهترین روش نیست. در اینجا روش هم‌ارز دیگری را برای تعریف داده‌های نمودار کنونی می‌بینید:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">data = [{
+    'type': 'scattergeo',
+    'lon': lons,
+    'lat': lats,
+}]</pre>
+                            </div>
+                            <p>در این رویکرد، تمام اطلاعات مربوط به داده‌ها به‌صورت زوهای کلید-مقدار در یک دیکشنری ارائه شده است. اگر این کد را در برنامه‌ی <span class="rlm">‏</span><span class="ident" dir="ltr">eq_plot.py</span><span class="rlm">‏</span> قرار دهید، همان نموداری را خواهید دید که قبلاً ایجاد کردیم. با این فرمت، راحت‌تر از روش قبل می‌توانیم سفارشی‌سازی‌ها را مشخص کنیم.</p>
+                        </div>
+                        <div class="sect" id="ch16lev2sec19"><a class="bkmk" name="ch16lev2sec19"></a>
+                            <h4>سفارشی‌سازی انداز‌ه‌ی علامت</h4>
+                            <p>وقتی که می‌خواهیم استایل نمایش نقشه را بهبود بخشیم، باید ببینیم چه جنبه‌هایی از داده‌ها را می‌خواهیم واضح‌تر نمایش دهیم. نقشه‌ی کنونی محل هر زمین‌لرزه را نشان می‌دهد، ولی شدت زمین‌لرزه را مشخص نمی‌کند. ما می‌خواهیم که بینندگان بتوانند فوراً دریابند که مهم‌ترین زمین‌لرزه‌ها در چه نقاطی از جهان رخ داده است.</p>
+                            <p>برای این منظور، اندازه‌ی علامت‌ها را بسته به بزرگ هر زمین‌لرزه تغییر می‌دهیم:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">eq_world_map.py</div>
+                                <pre class="snippet" dir="ltr"><span class="ash">import json</span>
+<span class="ash">--<span class="it">snip</span>--</span>
+<span class="ash"># Map the earthquakes.</span>
+data = [{
+    'type': 'scattergeo',
+    'lon': lons,
+    'lat': lats,
+<span class="n" dir="ltr">1</span>    'marker': {
+<span class="n" dir="ltr">2</span>        'size': [5*mag for mag in mags],
+    },
+}]
+<span class="ash">my_layout = Layout(title='Global Earthquakes')</span>
+<span class="ash">--<span class="it">snip</span>--</span></pre>
+                            </div><a id="p354"></a>
+                            <p>پکیج <span class="rlm">‏</span><span class="lr" dir="ltr">Plotly</span><span class="rlm">‏</span> سفارشی‌سازی‌های مختلفی را روی سری داده‌ها امکان‌پذیر می‌سازد، که هر کدام از آن‌ها را می‌توان با یک زوج کلید-مقدار مشخص کرد. در اینجا، با استفاده از کلید <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">'marker'</span><span class="rlm">‏</span>، اندازه‌ی هر کدام از طریق علامت‌های روی نقشه را مشخص می‌کنیم <span class="n" dir="ltr">1</span>. مقدار <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">'marker'</span><span class="rlm">‏</span> را یک دیکشنری تو در تو تعیین کرده‌ایم، چرا که برای هر علامت می‌توان تنظیمات مختلفی را تعیین کرد.</p>
+                            <p>می‌خواهیم که انداز‌ه‌ی علامت متناسب با بزرگی هر زمین‌لرزه باشد. ولی اگر فقط لیست <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">mags</span><span class="rlm">‏</span> را به تابع بدهیم، علامت‌ها چنان کوچک خواهند بود که تفاوت اندازه به سادگی قابل تشخیص نخواهد بود. باید بزرگی را در ضریبی ضرب کنیم تا اندازه‌ی علامت به حد مناسبی برسد. روی نمایشگر من، ضریب ۵ برای این منظور مناسب است؛ شاید برای نقشه‌ی شما مقدار اندکی کوچک‌تر یا بزرگ‌تری مناسب باشد. برای ایجاد علامت مناسب برای هر مقدار در لیست <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">mags</span><span class="rlm">‏</span>، از <span class="rlm">‏</span><span class="lr" dir="ltr">list comprehension</span><span class="rlm">‏</span> استفاده می‌کنیم <span class="n" dir="ltr">2</span>.</p>
+                            <p>وقتی که این کد را اجرا کنید، نقشه‌ای مانند <refFig xmlns="urn:dox:pycc">۱۶-۸</refFig> خواهید دید. این نقشه خیلی بهتر از قبل است، ولی باز هم می‌توانیم آن را بهتر کنیم.</p>
+                            <figure class="fig" id="ch16_fig08"><img class="fig" src="images/ch16_fig08.jpg" />
+                                <figcaption class="fig">شکل ۱۶-۸: نقشه حالا بزرگی هر زمین‌لرزه را نشان می‌دهد.</figcaption>
+                            </figure>
+                        </div>
+                        <div class="sect" id="ch16lev2sec20"><a class="bkmk" name="ch16lev2sec20"></a>
+                            <h4>استفاده از رنگ علامت‌ها</h4>
+                            <p>می‌توانیم رنگ هر علامت را هم سفارشی کنیم تا نوعی طبقه‌بندی برای شدت زمین‌لرزه‌ها داشته باشیم. برای این منظور، از مقیاس‌های رنگ (<span class="rlm">‏</span><span class="lr" dir="ltr">colorscales</span><span class="rlm">‏</span>) در پکیج <span class="rlm">‏</span><span class="lr" dir="ltr">Plotly</span><span class="rlm">‏</span> استفاده می‌کنیم. قبل از انجام این تغییرات، فایل <span class="rlm">‏</span><span class="ident" dir="ltr">eq_data_30_day_m1.json</span><span class="rlm">‏</span> را به دایرکتوری داده‌های خود کپی کنید. این فایل حاوی داده‌های زمین‌لرزه برای یک دوره‌ی ۳۰ روزه است، و چون این دادگان بزرگ‌تر است، نقشه‌ی بسیار جالب‌تری از آن حاصل می‌شود.</p>
+                            <p>نحوه‌ی استفاده از مقیاس رنگ برای نمایش دادن بزرگ هر زمین‌لرزه به‌صورت زیر است:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">eq_world_map.py</div>
+                                <pre class="snippet" dir="ltr"><span class="ash">--<span class="it">snip</span>--</span>
+<span class="n" dir="ltr">1</span>filename = 'data/eq_data_30_day_m1.json'
+<span class="ash">--<span class="it">snip</span>--</span>
+<span class="ash"># Map the earthquakes.</span>
+<span class="ash">data = [{</span>
+    <span class="ash">--<span class="it">snip</span>--</span>
+<a id="p355"></a>    <span class="ash">'marker': {</span>
+        <span class="ash">'size': [5*mag for mag in mags],</span>
+<span class="n" dir="ltr">2</span>        'color': mags,
+<span class="n" dir="ltr">3</span>        'colorscale': 'Viridis',
+<span class="n" dir="ltr">4</span>        'reversescale': True,
+<span class="n" dir="ltr">5</span>        'colorbar': {'title': 'Magnitude'},
+    <span class="ash">},</span>
+<span class="ash">}]</span>
+<span class="ash">--<span class="it">snip</span>--</span></pre>
+                            </div>
+                            <p>دقت کنید که نام فایل مربوط به دادگان ۳۰ روزه را در برنامه وارد کنید <span class="n" dir="ltr">1</span>. در اینجا تمام تغییرات مهم در دیکشنری <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">'marker'</span><span class="rlm">‏</span> اتفاق می‌افتد، زیرا فقط می‌خواهیم منظره‌ی علامت‌ها را تغییر دهیم. مقدار <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">'color'</span><span class="rlm">‏</span> به <span class="rlm">‏</span><span class="lr" dir="ltr">Plotly</span><span class="rlm">‏</span> می‌گوید که برای مشخص کردن محل هر علامت در مقیاس رنگ، از چه مقادیری استفاده کند <span class="n" dir="ltr">2</span>. ما برای تعیین رنگ از لیست <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">mags</span><span class="rlm">‏</span> استفاده می‌کنیم. مقدار <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">'colorscale'</span><span class="rlm">‏</span> مشخص می‌کند که از چه دامنه‌ی رنگی استفاده شود: <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">'Viridis'</span><span class="rlm">‏</span> یک مقیاس رنگ است که از آبی تیره تا زرد روشن امتداد دارد، و برای این دادگان مناسب است <span class="n" dir="ltr">3</span>. به <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">'reversescale'</span><span class="rlm">‏</span> مقدار <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">True</span><span class="rlm">‏</span> می‌دهیم، تا زرد روشن برای مقادیر پایین‌تر و آبی تیره برای زمین‌لرزه‌های شدیدتر استفاده شود <span class="n" dir="ltr">4</span>. مقدار <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">'colorbar'</span><span class="rlm">‏</span> امکان تنظیم نحوه‌ی نمایش مقیاس رنگ را در کنار نقشه فراهم می‌کند. در اینجا برای مقیاس رنگ، عنوان <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">'Magnitude'</span><span class="rlm">‏</span> در نظر می‌گیریم تا مشخص باشد که رنگ‌ها نشان‌دهنده‌ی بزرگی زمین‌لرزه هستند <span class="n" dir="ltr">4</span>.</p>
+                            <p>حالا وقتی که برنامه را اجرا کنید، نقشه‌ی بسیار قشنگ‌تری را خواهید دید. در <refFig xmlns="urn:dox:pycc">۱۶-۹</refFig>، مقیاس رنگ شدت هر کدام از زمین‌لرزه‌ها را نشان می‌دهد. با ترسیم این تعداد زیاد زمین‌لرزه‌ها، مرز صفحه‌های تکتونیک به‌روشنی آشکار می‌شود.</p>
+                            <figure class="fig" id="ch16_fig09"><img class="fig" src="images/ch16_fig09.jpg" />
+                                <figcaption class="fig">شکل ۱۶-۹: برای زمین‌لرزه‌های ۳۰ روز، بزرگی هر زمین‌لرزه با تغییر رنگ و اندازه نشان داده شده است.</figcaption>
+                            </figure>
+                        </div>
+                        <div class="sect" id="ch16lev2sec21"><a class="bkmk" name="ch16lev2sec21"></a>
+                            <h4>مقیاس‌های رنگ دیگر</h4>
+                            <a id="p356"></a>
+                            <p>چندین مقیاس رنگ دیگر نیز هست که می‌توانید از آن‌ها استفاده کنید. برای اینکه مقیاس‌های رنگ موجود را ببینید، برنامه‌ی کوتاه زیر را در فایلی به نام <span class="rlm">‏</span><span class="ident" dir="ltr">show_color_scales.py</span><span class="rlm">‏</span> ذخیره کنید:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">show_color_scales.py</div>
+                                <pre class="snippet" dir="ltr">from plotly import colors
+
+for key in colors.PLOTLY_SCALES.keys():
+    print(key)</pre>
+                            </div>
+                            <p>پکیج <span class="rlm">‏</span><span class="lr" dir="ltr">Plotly</span><span class="rlm">‏</span> مقیاس‌های رنگ را در مدول <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">colors</span><span class="rlm">‏</span> ذخیره می‌کند. مقیاس‌های رنگ در دیکشنری <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">PLOTLY_SCALES</span><span class="rlm">‏</span> تعریف شده‌اند، و نام هر مقیاس رنگ به‌عنوان کلید آن در دیکشنری به کار رفته است. خروجی برنامه، تمام مقیاس‌های رنگ موجود را نشان می‌دهد:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">Greys
+YlGnBu
+Greens
+<span class="ash">--<span class="it">snip</span>--</span>
+Viridis</pre>
+                            </div>
+                            <p>می‌توانید این مقیاس‌های رنگ را امتحان کنید؛ یادتان باشد که هر کدام از این مقیاس‌ها را می‌توانید با استفاده از پارامتر <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">reversescale</span><span class="rlm">‏</span> معکوس کنید.</p>
+                            <div class="note">
+                                <h6 class="note-title">توجه</h6>
+                                <p>اگر دیکشنری <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">PLOTLY_SCALES</span><span class="rlm">‏</span> را پرینت کنید، می‌توانید نحوه‌ی تعریف مقیاس‌های رنگ را ببینید. هر مقیاس یک رنگ شروع و یک رنگ پایان دارد، و در بعضی از مقیاس‌ها، یک یا چند رنگ بند نیز تعریف شده است. <span class="rlm">‏</span><span class="lr" dir="ltr">Plotly</span><span class="rlm">‏</span> فام‌های مختلف را بین این رنگ‌های تعریف شده درون‌یابی می‌کند.</p>
+                            </div>
+                        </div>
+                        <div class="sect" id="ch16lev2sec22"><a class="bkmk" name="ch16lev2sec22"></a>
+                            <h4>افزودن متن <span class="rlm">‏</span><span class="lr" dir="ltr">hover</span><span class="rlm">‏</span></h4>
+                            <p>در پایان، متنی توضیحی اضافه می‌کنیم که هر وقت ماوس را از روی علامت یک زمین‌لرزه عبور می‌دهید، نمایش داده شود. علاوه بر نمایش دادن طول و عرض جغرافیایی، که به‌طور پیش‌فرض نمایش داده می‌شود، بزرگی زمین‌لرزه و نیز توضیحی درباره‌ی محل تقریبی آن نیز نمایش داده خواهد شد.</p>
+                            <p>برای انجام این تغییر، لازم است که داده‌های دیگری را نیز از فایل بگیریم و آن را هم به دیکشنری <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">data</span><span class="rlm">‏</span> اضافه کنیم:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">eq_world_map.py</div>
+                                <pre class="snippet" dir="ltr"><span class="ash">--<span class="it">snip</span>--</span>
+<span class="n" dir="ltr">1</span>mags, lons, lats, hover_texts = [], [], [], []
+<span class="ash">for eq_dict in all_eq_dicts:</span>
+    <span class="ash">--<span class="it">snip</span>--</span>
+    <span class="ash">lat = eq_dict['geometry']['coordinates'][1]</span>
+<span class="n" dir="ltr">2</span>    title = eq_dict['properties']['title']
+    <span class="ash">mags.append(mag)</span>
+    <span class="ash">lons.append(lon)</span>
+    <span class="ash">lats.append(lat)</span>
+    hover_texts.append(title)
+<span class="ash">--<span class="it">snip</span>--</span>
+<a id="p357"></a><span class="ash"># Map the earthquakes.</span>
+<span class="ash">data = [{</span>
+    <span class="ash">'type': 'scattergeo',</span>
+    <span class="ash">'lon': lons,</span>
+    <span class="ash">'lat': lats,</span>
+<span class="n" dir="ltr">3</span>    'text': hover_texts,
+    <span class="ash">'marker': {</span>
+        <span class="ash">--<span class="it">snip</span>--</span>
+    <span class="ash">},</span>
+<span class="ash">}]</span>
+<span class="ash">--<span class="it">snip</span>--</span></pre>
+                            </div>
+                            <p>ابتدا لیستی به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">hover_texts</span><span class="rlm">‏</span> ایجاد می‌کنیم تا برچسب هر زمین‌لرزه را در آن ذخیره کنیم <span class="n" dir="ltr">1</span>. قسمت <span class="rlm">‏</span><span class="lr" dir="ltr">“title”</span><span class="rlm">‏</span> داده‌های زمین‌لرزه حاوی نام مشخصی برای بزرگی و محل هر زمین‌لرزه، علاوه بر طول و عرض جغرافیایی آن است. در <span class="n" dir="ltr">2</span>، این اطلاعات را استخراج می‌کنیم و آن را به متغیر <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">title</span><span class="rlm">‏</span> اختصاص می‌دهیم، و سپس آن را به لیست <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">hover_texts</span><span class="rlm">‏</span> پیوست می‌کنیم.</p>
+                            <p>وقتی که کلید <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">'text'</span><span class="rlm">‏</span> را در شیء <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">data</span><span class="rlm">‏</span> قرار می‌دهیم، <span class="rlm">‏</span><span class="lr" dir="ltr">Plotly</span><span class="rlm">‏</span> از این مقدار برای برچسب هر علامت استفاده می‌کند و وقتی ماوس از روی علامت عبور می‌کند، آن را نمایش می‌دهد. وقتی که لیستی به تعداد علامت‌ها به آن می‌دهیم، <span class="rlm">‏</span><span class="lr" dir="ltr">Plotly</span><span class="rlm">‏</span> برچسب هر علامت را از آن استخراج می‌کند <span class="n" dir="ltr">3</span>. با اجرای برنامه، خواهید دید که وقتی ماوس را روی یک علامت می‌برید، توصیفی از محل وقوع زمین‌لرزه و بزرگی آن ظاهر می‌شود.</p>
+                            <p>این خیلی جالب است! تقریباً با ۴۰ سطر کد، نقشه‌ای جذاب و پرمحتوا از فعالیت لرزه‌ای در جهان ایجاد کردیم که ساختار زمین‌شناختی کره‌ی زمین را نیز نشان می‌دهد. <span class="rlm">‏</span><span class="lr" dir="ltr">Plotly</span><span class="rlm">‏</span> طیف وسیعی را روش‌ها را برای استفاده از منظره و رفتار مصورسازی‌ها در اختیار شما قرار می‌دهد. با استفاده از گزینه‌های مختلف این پکیج، می‌توانید نمودارها و نقشه‌هایی بسازید که دقیقاً همان چیزی را که می‌خواهید، به شما نشان می‌دهند.</p>
+                            <div class="sidebar">
+                                <h6 class="sidebar-title">خودتان امتحان کنید</h6>
+                                <p class="tiy1"><span class="tiy" id="ch16_tiy06"><span class="tiy-num">۱۶-۶</span>. <span class="tiy-title">بازساخت</span>: </span> حلقه‌ای که داده‌ها را از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">all_eq_dicts</span><span class="rlm">‏</span> استخراج می‌کند، از سه متغیر بزرگی، طول جغرافیایی، و عرض جغرافیایی برای هر زمین‌لرزه استفاده می‌کند و سپس این مقادیر را به لیست‌های مربوطه اضافه می‌کند. این رویکرد را برای این اتخاذ کردیم که چگونگی بیرون کشیدن داده‌ها از فایل <span class="rlm">‏</span><span class="lr" dir="ltr">JSON</span><span class="rlm">‏</span> را به‌وضوح مشاهده کنید، ولی حتماً لازم نیست به این صورت عمل کنید. به‌جای استفاده از این متغیرهای موقتی، استخراج هر مقدار از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">eq_dict</span><span class="rlm">‏</span> و پیوست کردن آن به لیست مربوطه را در یک سطر انجام دهید. با این کار، بدنه‌ی این حلقه فقط چهار سطر خواهد بود.</p>
+                                <p class="tiy1"><span class="tiy" id="ch16_tiy07"><span class="tiy-num">۱۶-۷</span>. <span class="tiy-title">عنوان خودکار</span>: </span> در این قسمت، عنوان را در زمان تعریف <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">my_layout</span><span class="rlm">‏</span> به‌صورت دستی مشخص کردیم، بدان معنا که هر بار فایل مبدأ تغییر کند، باید یادمان باشد که عنوان را اصلاح کنیم. ولی می‌توانید به جای آن از عنوان مجموعه‌ی داده‌ها که در بخش متادیتای فایل <span class="rlm">‏</span><span class="lr" dir="ltr">JSON</span><span class="rlm">‏</span> ثبت شده است، استفاده کنید. این مقدار را استخراج کنید، آن را به متغیری اختصاص دهید، و از آن به‌عنوان عنوان نقشه در زمان تعریف <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">my_layout</span><span class="rlm">‏</span> استفاده کنید.</p><a id="p358"></a>
+                                <p class="tiy1"><span class="tiy" id="ch16_tiy08"><span class="tiy-num">۱۶-۸</span>. <span class="tiy-title">زمین‌لرزه‌های اخیر</span>: </span> می‌توانید فایل داده‌های حاوی اطلاعات مربوط به زمین‌لرزه‌های ۱ ساعت گذشته، ۱ روز گذشته، ۷ وز گذشته، و ۳۰ روز گذشته را از اینترنت بگیرید. اگر به نشانی <span class="rlm">‏</span><a dir="ltr" target="_blank" href="https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php">https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php</a><span class="rlm">‏</span> بروید، لینک‌های مختلفی برای دریافت لیست زمین‌لرزه‌های دوره‌های زمانی مختلف با بزرگی‌های متفاوت را خواهید دید. یکی از این دادگان‌ها را دانلود کنید، و یک مصورسازی از فعالیت‌های لرزه‌ای اخیر ایجاد کنید.</p>
+                                <p class="tiy1"><span class="tiy" id="ch16_tiy09"><span class="tiy-num">۱۶-۹</span>. <span class="tiy-title">آتش‌سوزی‌های جهان</span>: </span> در منابع این فصل، فایلی به نام <span class="rlm">‏</span><span class="ident" dir="ltr">world_fires_1_day.csv</span><span class="rlm">‏</span> یافت می‌شود. این فایل حاوی اطلاعات مربوط به آتش‌سوزی‌ها در مناطق مختلف جهان است، از جمله طول و عرض جغرافیایی و میزان روشنایی هر مورد. با استفاده از کارهای پردازش داده‌ها در بخش اول این فصل و کارهای آماده‌سازی نقشه در این قسمت، نقشه‌ای بسازید که مشخص کند در چه مناطقی از جهان، آتش‌سوزی بروز کرده است.</p>
+                                <p>می‌توانید جدیدترین نسخه‌ی این داده‌ها را از نشانی <span class="rlm">‏</span><a dir="ltr" target="_blank" href="https://earthdata.nasa.gov/earth-observation-data/near-real-time/firms/active-fire-data/">https://earthdata.nasa.gov/earth-observation-data/near-real-time/firms/active-fire-data/</a><span class="rlm">‏</span> دانلود کنید. در این صفحه، لینک داده‌ها با فرمت <span class="rlm">‏</span><span class="lr" dir="ltr">CSV</span><span class="rlm">‏</span> در بخش <span class="emphasis"><span class="rlm">‏</span><span class="lr" dir="ltr">TXT</span><span class="rlm">‏</span></span> درج شده است.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sect" id="ch16lev1sec3"><a class="bkmk" name="ch16lev1sec3"></a>
+                        <h3>خلاصه</h3>
+                        <p>در این فصل، نحوه‌ی کار با دادگان‌های دنیای واقعی را فراگرفتید. یاد گرفتید که فایل‌های <span class="rlm">‏</span><span class="lr" dir="ltr">CSV</span><span class="rlm">‏</span> و <span class="rlm">‏</span><span class="lr" dir="ltr">JSON</span><span class="rlm">‏</span> را پردازش کنید، و داده‌های مورد نظرتان را از آن‌ها استخراج کنید. با استفاده از داده‌های تاریخی هواشناسی، با نحوه‌ی کار با <span class="rlm">‏</span><span class="lr" dir="ltr">Matplotlib</span><span class="rlm">‏</span> آشنا شدید، از جمله اینکه چگونه از مدول <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">datetime</span><span class="rlm">‏</span> استفاده کنید، و چگونه چندین سری داده‌ها را در یک نمودار ترسیم کنید. با استفاده از <span class="rlm">‏</span><span class="lr" dir="ltr">Plotly</span><span class="rlm">‏</span>، داده‌های جغرافیایی را روی نقشه‌ی جهان ترسیم کردید و نحوه‌ی تنظیم استایل نقشه و نمودار را نیز فراگرفتید.</p>
+                        <p>به تدریج که تجربه‌ی شما در کار با فایل‌های <span class="rlm">‏</span><span class="lr" dir="ltr">CSV</span><span class="rlm">‏</span> و <span class="rlm">‏</span><span class="lr" dir="ltr">JSON</span><span class="rlm">‏</span>بیشتر شود، خواهید توانست تقریباً هر نوع داده‌هایی را تحلیل کنید. می‌توانید جدیدترین دادگان‌ها را با این فرمت‌ها از اینترنت دانلود کنید. بر اساس کار با این فرمت‌ها، نحوه‌ی کار با فرمت‌های داده‌ای دیگر را نیز به آسانی یاد خواهید گرفت.</p>
+                        <p>در فصل بعد، برنامه‌هایی خواهید نوشت که به‌طور خودکار داده‌های مورد نظر را از منابع آنلاین می‌گیرند، و سپس بر اساس آن‌ها، مصورسازی ایجاد می‌کنند. این مهارت‌ها برای کسانی که به‌عنوان سرگرمی برنامه‌نویسی می‌کنند، بسیار جالب است، اما اگر قصد برنامه‌نویسی حرفه‌ای داشته باشید، مهارت‌هایی ضروری به شمار می‌رود.</p>
+                    </div>
+                </div>
+                <div class="row pager">
+                    <div class="col-md-5 text-center text-md-left pager-prev"><a href="c29-ch15.xhtml"><span><span>فصل ۱۵</span>: <span>تولید داده‌ها</span></span></a></div>
+                    <div class="col-md-2 text-center pager-title"><a href="c01-cover.xhtml">آغاز</a></div>
+                    <div class="col-md-5 text-center text-md-right pager-next"><a href="c31-ch17.xhtml"><span><span>فصل ۱۷</span>: <span>کار با واسط‌های برنامه‌نویسی</span></span></a></div>
+                </div>
+            </main>
+            <aside class="col-md-2 order-md-first">
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item"><a class="nav-link" href="../">دورهٔ فشردهٔ پایتون</a></li>
+                    <li class="nav-item"><a class="nav-link" href="c06-toc.xhtml">فهرست</a></li>
+                </ul>
+            </aside>
+        </div>
+    </div>
+    <div class="container">
+        <div id="footer" class="row">
+            <div class="col-sm-6">
+                <p><span>© ۱۴۰۰، قاسم کیانی مقدم.</span></p>
+            </div>
+            <div class="col-sm-6">
+                <p class="text-right"><span><a target="_blank" rel="me" href="https://linkedin.com/in/ghasemkiani" title="لینکدین"><span class="fab fa-linkedin"></span></a></span><span> </span><span><a target="_blank" rel="me" href="https://github.com/ghasemkiani" title="گیت‌هاب"><span class="fab fa-github"></span></a></span><span> </span><span><a target="_blank" rel="me" href="https://twitter.com/ghasemkiani" title="توئیتر"><span class="fab fa-twitter"></span></a></span><span> </span><span><a target="_blank" rel="me" href="https://facebook.com/ghasemkiani" title="فیس‌بوک"><span class="fab fa-facebook"></span></a></span><span> </span><span><a target="_blank" rel="me" href="https://telegram.me/ghasemkiani" title="تلگرام"><span class="fab fa-telegram"></span></a></span><span> </span><span><a target="_blank" rel="me" href="https://instagram.com/ghasem.kiani" title="اینستاگرام"><span class="fab fa-instagram"></span></a></span><span> </span><span><a target="_blank" rel="me" href="https://mastodon.social/@ghasemkiani" title="ماستودون"><span class="fab fa-mastodon"></span></a></span></p>
+            </div>
+        </div>
+    </div>
+    <script crossorigin="anonymous" src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"></script>
+    <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"></script>
+    <script crossorigin="anonymous" src="https://cdn.rtlcss.com/bootstrap/v4.0.0/js/bootstrap.min.js" integrity="sha384-54+cucJ4QbVb99v8dcttx/0JRx4FHMmhOWi4W+xrXpKcsKQodCBwAvu3xxkZAwsH"></script>
+    <script src="https://www.googletagmanager.com/gtag/js?id=undefined"></script>
+    <script src="data:application/javascript;charset=UTF-8;base64,KCgoew0KICAgIGlkDQp9KSA9PiB7DQogICAgd2luZG93LmRhdGFMYXllciA9IHdpbmRvdy5kYXRhTGF5ZXIgfHwgW107DQoNCiAgICBmdW5jdGlvbiBndGFnKCkgew0KICAgICAgICBkYXRhTGF5ZXIucHVzaChhcmd1bWVudHMpOw0KICAgIH0NCiAgICBndGFnKCJqcyIsIG5ldyBEYXRlKCkpOw0KICAgIGd0YWcoImNvbmZpZyIsIGlkKTsNCn0pKHt9KSk7Cg=="></script>
+</body>
+
+</html>

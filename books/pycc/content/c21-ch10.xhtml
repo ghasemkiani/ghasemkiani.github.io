@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>فایل‌ها و استثناها</title>
+    <meta name="description" content="وب‌سایت قاسم کیانی مقدم" />
+    <meta name="keywords" content="قاسم کیانی مقدم, وب‌سایت, وب‌سایت قاسم کیانی مقدم, کتاب, فارسی, کتاب فارسی, ترجمه, برنامه‌نویسی, جاوا, جاوا اسکریپت, پزشکی, طب اطفال" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" crossorigin="anonymous" href="https://cdn.rtlcss.com/bootstrap/v4.0.0/css/bootstrap.min.css" integrity="sha384-P4uhUIGk/q1gaD/NdgkBIl3a6QywJjlsFJFk7SPRdruoGddvRVSwv5qFnvZ73cpz" />
+    <link rel="stylesheet" crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" />
+    <link rel="icon" type="image/x-icon" href="../../../favicon.ico" />
+    <style type="text/css">
+        @import url(https://fonts.googleapis.com/css?family=Droid%20Sans);
+        @import url(https://fonts.googleapis.com/css?family=Droid%20Serif);
+        @import url(https://fonts.googleapis.com/css?family=Droid%20Arabic%20Kufi);
+        @import url(https://fonts.googleapis.com/css?family=Droid%20Arabic%20Naskh);
+
+        html,
+        body,
+        input,
+        textarea,
+        select,
+        option,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: Droid Arabic Naskh, Droid Serif;
+        }
+
+        nav,
+        .nav {
+            font-family: Droid Arabic Kufi, Droid Sans;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: Droid Arabic Naskh, Droid Serif;
+        }
+
+        #footer {
+            margin-top: 0.5rem;
+            padding-top: 0.5rem;
+            border-top: #eeeeee solid thick;
+        }
+    </style>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Courier+Prime);
+
+        div.row.pager {
+            margin-top: 0.5em;
+            padding: 0.5em 0;
+            border-top: solid #cccccc 2px;
+            background-color: #dddddd;
+        }
+
+        div.pager-prev {}
+
+        div.pager-title {}
+
+        div.pager-next {}
+    </style>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+
+<body style="min-height: 75rem;">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+        <div class="container"><a class="navbar-brand" href="../../../">وب‌سایت قاسم کیانی مقدم</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#divNavBarToggle" aria-controls="divNavBarToggle" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div id="divNavBarToggle" class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link" href="../../">کتاب‌ها<span class="sr-only"> (current)</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../../essays/">مقالات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../../translation/">ترجمه</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../../about/">درباره</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../../contact/">تماس</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <main class="col-md-10 order-md-last">
+                <div class="ch" id="ch10">
+                    <h2 class="ch-title"><a class="bkmk" name="ch10"></a><a class="rtoc" href="c06-toc.xhtml"><span class="ch-title-num">۱۰</span><br /><span class="ch-title-text">فایل‌ها و استثناها</span></a></h2><img style="float:   right; margin-left:  0.5em; margin-bottom: 0.25em;" alt="تصویر ابتدای فصل" src="images/ch.svg" />
+                    <a id="p183"></a>
+                    <p>اکنون که مهارت‌های اساسی را برای نوشتن برنامه‌های سازمان‌دهی‌شده و سهل‌الاستفاده به دست آورده‌اید، وقت آن است که سعی کنید برنامه‌هایی بنویسید که مفید و قابل استفاده باشند. در این فصل، نحوه‌ی کار کردن با فایل‌ها را یاد می‌گیرید، تا بتوانید با برنامه‌هایتان داده‌های زیادی را به سرعت تحلیل کنید. یاد خواهید گرفت که به خطاها رسیدگی کنید، تا برنامه‌های شما در صورت مواجه شدن با موقعیت‌های غیرمنتظره، کرش نکنند. با <span class="emphasis">استثناها</span> آشنا خواهید شد، که اشیای ویژه‌ای هستند که پایتون برای مدیریت خطاهایی که در زمان اجرای برنامه بروز می‌کنند، ایجاد می‌کند. هم‌چنین، با مدول <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">json</span><span class="rlm">‏</span> آشنا خواهید شد که به شما امکان می‌دهد که داده‌های کاربر را ذخیره کنید، تا پس از اجرای برنامه از بین نرود.</p>
+                    <p>وقتی که کار کردن با فایل‌ها و ذخیره کردن داده‌ها را یاد بگیرید، خواهید توانست برنامه‌هایی بنویسید که افراد راحت‌تر بتوانند با آن‌ها کار کنند. کاربران خواهد توانست انتخاب کنند که چه داده‌هایی و چه زمانی در برنامه وارد کنند. افراد می‌توانند برنامه‌ی شما را اجرا کنند، مقداری کار کنند، سپس برنامه را ببندند، و بعداً ادامه‌ی کار را از سر گیرند. فراگیری کار با استثناها به شما کمک خواهد کرد که به موقعیت‌هایی که در آن فایل مورد نظر شما وجود ندارد، رسیدگی کنید، و مشکلات دیگری را که باعث کرش کردن برنامه‌ی شما می‌شوند، حل‌وفصل کنید. با این کار برنامه‌های شما در برخورد با داده‌های بد، مقاوم‌تر می‌شود، صرف‌نظر از اینکه این داده‌های نامناسب <a id="p184"></a>حاصل از اشتباهات معمولی باشد، یا ناشی از تلاش بدخواهانه برای نفوذ در برنامه‌های شما. با مهارت‌هایی که در این فصل یاد می‌گیرید، خواهید توانست برنامه‌هایی کاربردی‌تر، سودمندتر، و پایدارتر بنویسید.</p>
+                    <div class="sect" id="ch10lev1sec1"><a class="bkmk" name="ch10lev1sec1"></a>
+                        <h3>خواندن از فایل</h3>
+                        <p>مقدار زیادی از داده‌ها در فایل‌های متنی ذخیره می‌شود. فایل‌های متنی می‌تواند حاوی داده‌های آب‌وهوا، داده‌های ترافیک، داده‌های اجتماعی-اقتصادی، آثار ادبی، و غیره باشد. خواندن فایل خصوصاً برای برنامه‌های تحلیل داده‌ها سودمند است، ولی برای هر موقعیت دیگری هم که در آن بخواهید اطلاعات ذخیره شده در یک فایل را تحلیل کنید یا تغییر دهید، قابل استفاده است. مثلاً می‌توانید برنامه‌ای بنویسید که محتویات یک فایل متنی را می‌خواند و مجدداً فایل را با فرمت دیگری می‌نویسد، به‌طوری که مرورگر بتواند آن را نمایش دهد.</p>
+                        <p>وقتی که می‌خواهید با اطلاعات ذخیره‌شده در یک فایل متنی کار کنید، نخستین قدم این است که فایل را به داخل حافظه بخوانید. می‌توانید کل محتویات فایل را یک‌باره بخوانید، یا اینکه آن را سطر به سطر بخوانید.</p>
+                        <div class="sect" id="ch10lev2sec1"><a class="bkmk" name="ch10lev2sec1"></a>
+                            <h4>خواندن کل فایل</h4>
+                            <p>در ابتدا، نیاز به فایلی داریم که چند سطر متن توی آن باشد. مثلاً فرض کنید فایلی داریم تا حاوی مقدار عدد <span class="emphasis"><span class="rlm">‏</span><span class="lr" dir="ltr">π</span><span class="rlm">‏</span></span> تا ۳۰ رقم اعشار است، به‌طوری که هر ۱۰ رقم اعشار در یک سطر نوشته شده است:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">pi_digits.txt</div>
+                                <pre class="snippet" dir="ltr">3.1415926535
+  8979323846
+  2643383279</pre>
+                            </div>
+                            <p>برای اینکه بتوانید مثال‌های زیر را اجرا کنید، می‌توانید این سطرها را در یک ویرایشگر بنویسید و فایل را با نام <span class="rlm">‏</span><span class="ident" dir="ltr">pi_digits.txt</span><span class="rlm">‏</span> ذخیره کنید، یا اینکه فایل را از منابع کتاب به نشانی <span class="rlm">‏</span><a dir="ltr" target="_blank" href="https://nostarch.com/pythoncrashcourse2e/">nostarch.com/pythoncrashcourse2e/</a><span class="rlm">‏</span> دانلود کنید. فایل را در همان پوشه‌ای قرار دهید که برنامه‌های این فصل را در آن ذخیره می‌کنید.</p>
+                            <p>برنامه‌ی زیر، این فایل را باز می‌کند و می‌خواند و سپس محتویات آن را نمایش می‌دهد:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">file_reader.py</div>
+                                <pre class="snippet" dir="ltr">with open('pi_digits.txt') as file_object:
+    contents = file_object.read()
+print(contents)</pre>
+                            </div>
+                            <p>سطر اول این برنامه کارهای زیادی انجام می‌دهد. اول به تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">open()</span><span class="rlm">‏</span> نگاه می‌کنیم. برای اینکه هر کاری با یک فایل انجام دهید، حتی اگر فقط بخواهید محتویات آن را نمایش دهید، ابتدا باید برای دسترسی به فایل، آن را <span class="emphasis">باز</span> کنید. تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">open()</span><span class="rlm">‏</span> نیاز به یک آرگومان دارد: نام فایلی که می‌خواهید باز کنید. پایتون در همان پوشه‌ای دنبال این فایل می‌گردد که برنامه‌ی در حال اجرای کنونی در آن ذخیره شده است. در این مثال، فایل <span class="rlm">‏</span><span class="ident" dir="ltr">file_reader.py</span><span class="rlm">‏</span> در حال اجرا است، بنابراین، پایتون در همان پوشه‌ای که <span class="rlm">‏</span><span class="ident" dir="ltr">file_reader.py</span><span class="rlm">‏</span> ذخیره شده است، دنبال فایل <span class="rlm">‏</span><span class="ident" dir="ltr">pi_digits.txt</span><span class="rlm">‏</span> می‌گردد. تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">open()</span><span class="rlm">‏</span> شیئی برمی‌گرداند که معرف فایل است. در اینجا، دستور <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">open('pi_digits.txt')</span><span class="rlm">‏</span> شیئی برمی‌گرداند که معرف <span class="rlm">‏</span><span class="ident" dir="ltr">pi_digits.txt</span><span class="rlm">‏</span> است. پایتون این شیء را به <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">file_object</span><span class="rlm">‏</span> اختصاص می‌دهد، که بعداً در این برنامه با آن کار خواهیم کرد.</p><a id="p185"></a>
+                            <p>کلیدواژه‌ی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">with</span><span class="rlm">‏</span> زمانی که دیگر نیازی به فایل نباشد، دسترسی آن را می‌بندد. دقت کنید که در این برنامه می‌توانیم <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">open()</span><span class="rlm">‏</span> را فراخوانی کنیم، ولی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">close()</span><span class="rlm">‏</span> را نه. می‌توانستید فایل را با فراخوانی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">open()</span><span class="rlm">‏</span> و <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">close()</span><span class="rlm">‏</span> باز کنید و ببندید، ولی اگر اشکالی در برنامه‌ی شما مانع از اجرا شدن متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">close()</span><span class="rlm">‏</span> شود، در آن صورت ممکن است فایل هرگز بسته نشود. شاید این موضوع پیش‌پاافتاده به نظر برسد، ولی عدم بسته شدن صحیح فایل ممکن است موجب از دست رفتن یا خراب شدن داده‌ها شود. و اگر <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">close()</span><span class="rlm">‏</span> را در برنامه‌تان زودتر از زمان لازم فراخوانی کنید، ممکن است سبب شود که تلاش داشته باشید که با یک فایل <span class="emphasis">بسته‌شده</span> کار کنید (فایلی که به آن دسترسی ندارید)، که این منجر به خطاهای دیگری خواهد شد. شاید همیشه معلوم نباشد که دقیقاً کجا باید فایل را ببندید، ولی با ساختاری که در اینجا نشان داده شد، پایتون خودش این موضوع را برای شما حل خواهد کرد. تنها کاری که باید بکنید، این است که فایل را باز کنید و هر کاری دارید با آن انجام دهید، و خیالتان راحت باشد که پایتون خودش وقتی اجرای بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">with</span><span class="rlm">‏</span> تمام شد، آن را به‌طور خودکار خواهد بست.</p>
+                            <p>وقتی که یک شیء فایل برای <span class="rlm">‏</span><span class="ident" dir="ltr">pi_digits.txt</span><span class="rlm">‏</span> به دست آوردیم، در سطر دوم برنامه با استفاده از متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">read()</span><span class="rlm">‏</span>، کل محتویات فایل را می‌خوانیم و آن را به‌صورت یک رشته‌ی بلند در <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">contents</span><span class="rlm">‏</span> ذخیره می‌کنیم. وقتی که مقدار <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">contents</span><span class="rlm">‏</span> را نمایش می‌دهیم، تمام محتویات فایل را مشاهده می‌کنیم:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">3.1415926535
+  8979323846
+  2643383279
+<br /></pre>
+                            </div>
+                            <p>تنها تفاوت این خروجی با فایل اصلی، یک سطر خالی اضافه در پایان خروجی است. علت این سطر اضافه آن است که <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">read()</span><span class="rlm">‏</span> وقتی به آخر فایل رسید، یک رشته‌ی خالی برمی‌گرداند؛ این رشته‌ی خالی به‌صورت یک سطر خالی ظاهر می‌شود. اگر می‌خواهید این سطر خالی اضافه را پاک کنید، می‌توانید در فراخوانی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">print()</span><span class="rlm">‏</span> از متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">rstrip()</span><span class="rlm">‏</span> استفاده کنید:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr"><span class="ash">with open('pi_digits.txt') as file_object:</span>
+    <span class="ash">contents = file_object.read()</span>
+    print(contents.rstrip())</pre>
+                            </div>
+                            <p>اگر یادتان باشد، متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">rstrip()</span><span class="rlm">‏</span> نویسه‌های فضای سفید را از طرف راست رشته حذف می‌کند. حالا خروجی دقیقاً با محتویات فایل اصلی مطابقت دارد:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">3.1415926535
+  8979323846
+  2643383279</pre>
+                            </div>
+                        </div>
+                        <div class="sect" id="ch10lev2sec2"><a class="bkmk" name="ch10lev2sec2"></a>
+                            <h4>مسیرهای فایل</h4>
+                            <p>وقتی که نام فایل ساده‌ای مانند <span class="rlm">‏</span><span class="ident" dir="ltr">pi_digits.txt</span><span class="rlm">‏</span> به تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">open()</span><span class="rlm">‏</span> می‌دهید، پایتون در پوشه‌ای که فایل در حال اجرای کنونی (یعنی فایل برنامه‌ی شما با پسوند <span class="emphasis">.py</span>) در آن قرار دارد، به دنبال فایل می‌گردد.</p>
+                            <p>بعضی وقت‌ها، بسته به اینکه سازمان‌دهی کارهای شما چطوری باشد، ممکن است فایل مورد نظر شما در همان پوشه‌ی فایل برنامه قرار نداشته باشد. مثلاً شاید فایل‌های برنامه را در پوشه‌ای به نام <a id="p186"></a><span class="rlm">‏</span><span class="ident" dir="ltr">python_work</span><span class="rlm">‏</span> ذخیره کرده باشید؛ در داخل <span class="rlm">‏</span><span class="ident" dir="ltr">python_work</span><span class="rlm">‏</span>، پوشه‌ی دیگری به نام <span class="rlm">‏</span><span class="ident" dir="ltr">text_files</span><span class="rlm">‏</span> داشته باشید، تا فایل‌های برنامه‌ی شما از فایل‌های متنی که روی آن کار می‌کنید، جدا باشد. با آنکه <span class="rlm">‏</span><span class="ident" dir="ltr">text_files</span><span class="rlm">‏</span> در داخل <span class="rlm">‏</span><span class="ident" dir="ltr">python_work</span><span class="rlm">‏</span> است، ولی صرف دادن نام فایلی که در پوشه‌ی <span class="emphasis">text_files</span> قرار دارد، به تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">open()</span><span class="rlm">‏</span> کفایت نخواهد کرد، چرا که پایتون فقط توی <span class="rlm">‏</span><span class="ident" dir="ltr">python_work</span><span class="rlm">‏</span> نگاه می‌کند، و بعد متوقف می‌شود؛ نمی‌رود و توی <span class="rlm">‏</span><span class="ident" dir="ltr">text_files</span><span class="rlm">‏</span> هم نگاه کند. برای اینکه پایتون فایل‌ها را از پوشه‌ی دیگری غیر از پوشه‌ای که فایل برنامه‌ی شما در آن ذخیره شده است، باز کند، باید یک <span class="emphasis">مسیر فایل</span> به آن بدهید، که مکان خاصی را در سیستم شما برای پایتون مشخص می‌کند تا در آن دنبال فایل بگردد.</p>
+                            <p>از آنجا که <span class="rlm">‏</span><span class="ident" dir="ltr">text_files</span><span class="rlm">‏</span> داخل <span class="rlm">‏</span><span class="ident" dir="ltr">python_work</span><span class="rlm">‏</span> است، بنابراین، می‌توانید از یک مسیر نسبی فایل برای باز کردن <span class="rlm">‏</span><span class="ident" dir="ltr">text_files</span><span class="rlm">‏</span> استفاده کنید. <span class="emphasis">مسیر نسبی فایل</span> محلی را نسبت به پوشه‌ی برنامه‌ی در حال اجرای کنونی مشخص می‌کند. مثلاً می‌نویسید:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">with open('text_files/<span class="it">filename</span>.txt') as file_object:</pre>
+                            </div>
+                            <p>این سطر به پایتون می‌گوید که فایل <span class="rlm">‏</span><span class="ident" dir="ltr">.txt</span><span class="rlm">‏</span> مورد نظر را در پوشه‌ی <span class="rlm">‏</span><span class="ident" dir="ltr">text_files</span><span class="rlm">‏</span> پیدا کند، و فرض آن بر این است که <span class="rlm">‏</span><span class="ident" dir="ltr">text_files</span><span class="rlm">‏</span> در داخل پوشه‌ی <span class="rlm">‏</span><span class="ident" dir="ltr">python_work</span><span class="rlm">‏</span> قرار دارد (که همین طور هم هست).</p>
+                            <div class="note">
+                                <h6 class="note-title">توجه</h6>
+                                <p>سیستم‌های ویندوز به جای اسلش (<span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">/</span><span class="rlm">‏</span>) از بک‌اسلش (<span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">\</span><span class="rlm">‏</span>) برای مسیرهای فایل استفاده می‌کند، ولی با این حال می‌توانید در برنامه‌تان از اسلش استفاده کنید.</p>
+                            </div>
+                            <p>هم‌چنین، می‌توانید محل دقیق فایل در کامپیوترتان را به پایتون بگویید، صرف‌نظر از اینکه برنامه‌ی در حال اجرا کجا ذخیره شده باشد. به این روش <span class="emphasis">مسیر مطلق فایل</span> گفته می‌شود. در صورتی که مسیر نسبی قابل استفاده نباشد، می‌توانید از مسیر مطلق استفاده کنید. به‌عنوان مثال، اگر پوشه‌ی <span class="rlm">‏</span><span class="ident" dir="ltr">text_files</span><span class="rlm">‏</span> را در جایی غیر از <span class="rlm">‏</span><span class="ident" dir="ltr">python_work</span><span class="rlm">‏</span> گذاشته باشید—مثلاً در پوشه‌ای به نام <span class="rlm">‏</span><span class="ident" dir="ltr">other_files</span><span class="rlm">‏</span>—در آن صورت با دادن مسیر <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">'text_files/<span class="it">filename</span>.txt'</span><span class="rlm">‏</span> به تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">open()</span><span class="rlm">‏</span> کار انجام نخواهد شد، چرا که پایتون فقط آن محل را در داخل <span class="rlm">‏</span><span class="ident" dir="ltr">python_work</span><span class="rlm">‏</span> جست‌وجو خواهد کرد. باید مسیر کامل را بنویسید تا مشخص کنید که پایتون در کجا باید دنبال فایل را پیدا کند.</p>
+                            <p>مسیرهای مطلق معمولاً بلندتر از مسیرهای نسبی هستند، بنابراین، بهتر است مسیر را به یک متغیر اختصاص دهید و بعد آن متغیر را به تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">open()</span><span class="rlm">‏</span> بدهید:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">file_path = '/home/ehmatthes/other_files/text_files/<span class="it">filename</span>.txt'
+with open(file_path) as file_object:</pre>
+                            </div>
+                            <p>با استفاده از مسیر مطلق، می‌توانید فایل‌ها را از هر جایی از سیستمتان بخوانید. فعلاً بهتر است فایل‌ها را در همان پوشه‌ی فایل‌های برنامه و یا در پوشه‌ای مانند <span class="rlm">‏</span><span class="ident" dir="ltr">text_files</span><span class="rlm">‏</span> در داخل پوشه‌ی فایل‌های برنامه ذخیره کنید.</p>
+                            <div class="note">
+                                <h6 class="note-title">توجه</h6>
+                                <p>اگر در مسیر فایل از بک‌اسلش استفاده کنید، با خطا مواجه خواهید شد، زیرا از بک‌اسلش در رشته‌ها به‌صورت دنباله‌ی گریز برای نویسه‌های دیگر استفاده می‌شود. مثلاً در مسیر <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">"C:\path\to\file.txt"</span><span class="rlm">‏</span>، دنباله‌ی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">\t</span><span class="rlm">‏</span> به‌عنوان تَب تفسیر می‌شود. پس اگر بخواهید از بک‌اسلش استفاده کنید، باید آن را به‌صورت دنباله‌ی گریز وارد کنید، یعنی به این صورت: <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">"C:\\path\\to\\file.txt"</span><span class="rlm">‏</span>.</p>
+                            </div>
+                        </div>
+                        <div class="sect" id="ch10lev2sec3"><a class="bkmk" name="ch10lev2sec3"></a>
+                            <h4>خواندن سطر به سطر</h4>
+                            <a id="p187"></a>
+                            <p>خیلی وقت‌ها وقتی فایلی را می‌خوانید، لازم است که محتویات آن را به‌صورت سطر به سطر بررسی کنید. مثلاً شاید به دنبال اطلاعات خاصی در فایل می‌گردید، یا شاید می‌خواهید تغییری در فایل اعمال کنید. به‌عنوان مثال، شاید بخواهید یک فایل حاوی اطلاعات هواشناسی را بخوانید و با سطرهایی که شرح آن‌ها حاوی کلمه‌ی <span class="emphasis"><span class="rlm">‏</span><span class="lr" dir="ltr">sunny</span><span class="rlm">‏</span></span> (آفتابی) است، کار کنید. در یک گزارش خبری، ممکن است به دنبال سطرهایی باشید که با تگ <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">&lt;headline&gt;</span><span class="rlm">‏</span> (سرخط) مشخص شده است، تا آن سطرها را با فرمت دیگری بنویسید.</p>
+                            <p>می‌توانید از یک حلقه‌ی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">for</span><span class="rlm">‏</span> روی شیء فایل استفاده کنید تا هر کدام از سطرهای فایل را یکی‌یکی بررسی کنید:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">file_reader.py</div>
+                                <pre class="snippet" dir="ltr"><span class="n" dir="ltr">1</span>filename = 'pi_digits.txt'
+<span class="n" dir="ltr">2</span>with open(filename) as file_object:
+<span class="n" dir="ltr">3</span>    for line in file_object:
+        print(line)
+</pre>
+                            </div>
+                            <p>در <span class="n" dir="ltr">1</span>، نام فایلی را که می‌خواهیم بخوانیم به متغیر <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">filename</span><span class="rlm">‏</span> اختصاص می‌دهیم. این روش متداولی برای کار کردن با فایل‌ها است. از آنجا که متغیر <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">filename</span><span class="rlm">‏</span> نشان‌دهنده‌ی خود فایل نیست—صرفاً رشته‌ای است که پایتون فایل را در کجا باید پیدا کند—لذا به آسانی می‌توانید به جای <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">'pi_digits.txt'</span><span class="rlm">‏</span>، نام فایل دیگری را که می‌خواهید با آن کار کنید، قرار دهید. پس از فراخوانی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">open()</span><span class="rlm">‏</span>، شیئی که معرف فایل و محتویات آن است، به متغیر <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">file_object</span><span class="rlm">‏</span> اختصاص داده می‌شود <span class="n" dir="ltr">2</span>. باز دوباره از دستور نحوی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">with</span><span class="rlm">‏</span> استفاده می‌کنیم تا پایتون فایل را به‌صورت صحیحی باز کند و ببندد. برای بررسی محتویات فایل، با استفاده از حلقه روی شیء فایل، هر سطر فایل را بررسی می‌کنیم <span class="n" dir="ltr">3</span>.</p>
+                            <p>وقتی که سطر را یکی‌یکی نمایش می‌دهیم، سطرهای خالی حتی بیشتری می‌بینیم:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">3.1415926535
+
+  8979323846
+
+  2643383279
+<br /></pre>
+                            </div>
+                            <p>علت آن است که یک نویسه‌ی نامرئی آخر سطر در پایان هر کدام از سطرهای فایل متنی وجود دارد. تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">print</span><span class="rlm">‏</span> هم هر بار که آن را فراخوانی می‌کنیم، یک آخر سطر دیگر اضافه می‌کند، بنابراین، در پایان هر سطر دو آخر سطر داریم: یکی از خود فایل و دیگری از تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">print()</span><span class="rlm">‏</span>. با بکارگیری <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">rstrip()</span><span class="rlm">‏</span> در هر فراخوانی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">print()</span><span class="rlm">‏</span>، این سطرهای خالی اضافی را حذف می‌کنیم:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr"><span class="ash">filename = 'pi_digits.txt'</span>
+<span class="ash">with open(filename) as file_object:</span>
+    <span class="ash">for line in file_object:</span>
+        print(line.rstrip())</pre>
+                            </div><a id="p188"></a>
+                            <p>حالا باز خروجی با محتویات فایل مطابقت پیدا می‌کند:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">3.1415926535
+  8979323846
+  2643383279</pre>
+                            </div>
+                        </div>
+                        <div class="sect" id="ch10lev2sec4"><a class="bkmk" name="ch10lev2sec4"></a>
+                            <h4>ایجاد لیستی از سطرها از یک فایل</h4>
+                            <p>وقتی که از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">with</span><span class="rlm">‏</span> استفاده می‌کنید، شیء فایلی که از تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">open()</span><span class="rlm">‏</span> برگردانده می‌شود، فقط در داخل بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">with</span><span class="rlm">‏</span> حاوی آن در دسترس است. اگر بخواهید دسترسی به محتویات فایل را در خارج از بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">with</span><span class="rlm">‏</span> حفظ کنید، می‌توانید در داخل بلوک، سطرهای فایل را در یک لیست ذخیره کنید، و سپس با آن لیست کار کنید. می‌توانید بخش‌هایی از فایل را همان جا بررسی کنید و پردازش بخش‌های دیگر را به جای دیگری از برنامه موکول کنید.</p>
+                            <p>مثال زیر سطرهای <span class="rlm">‏</span><span class="ident" dir="ltr">pi_digits.txt</span><span class="rlm">‏</span> را در داخل بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">with</span><span class="rlm">‏</span> در یک لیست ذخیره می‌کند، و سپس در خارج از بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">with</span><span class="rlm">‏</span>، سطرها را نمایش می‌دهد:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr"><span class="ash">filename = 'pi_digits.txt'</span>
+<span class="ash">with open(filename) as file_object:</span>
+<span class="n" dir="ltr">1</span>    lines = file_object.readlines()
+
+<span class="n" dir="ltr">2</span>for line in lines:
+    print(line.rstrip())</pre>
+                            </div>
+                            <p>در <span class="n" dir="ltr">1</span>، متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">readlines()</span><span class="rlm">‏</span> سطرهای فایل را می‌گیرد و آن‌ها را در لیستی ذخیره می‌کند. این لیست به <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">lines</span><span class="rlm">‏</span> اختصاص داده می‌شود که می‌توان بعد از پایان یافتن بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">with</span><span class="rlm">‏</span> نیز با آن کار کرد. در <span class="n" dir="ltr">2</span>، با استفاده از یک حلقه‌ی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">for</span><span class="rlm">‏</span> ساده، هر کدام از سطرهای <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">lines</span><span class="rlm">‏</span> را نمایش می‌دهیم. از آنجا که هر کدام از آیتم‌های <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">lines</span><span class="rlm">‏</span> متناظر با یکی از سطرهای فایل است، لذا خروجی دقیقاً با محتویات فایل مطابقت دارد.</p>
+                        </div>
+                        <div class="sect" id="ch10lev2sec5"><a class="bkmk" name="ch10lev2sec5"></a>
+                            <h4>کار کردن با محتویات یک فایل</h4>
+                            <p>پس از آنکه فایلی را به داخل حافظه خواندید، می‌توانید هر کاری خواستید با داده‌ها بکنید، پس در اینجا رقم‌های اعشار عدد <span class="emphasis"><span class="rlm">‏</span><span class="lr" dir="ltr">π</span><span class="rlm">‏</span></span> را به اختصار بررسی می‌کنیم. اول سعی می‌کنیم یک رشته‌ی واحد بسازیم که حاوی تمام رقم‌های موجود در فایل باشد و فضای سفید نداشته باشد:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">pi_string.py</div>
+                                <pre class="snippet" dir="ltr"><span class="ash">filename = 'pi_digits.txt'</span>
+
+<span class="ash">with open(filename) as file_object:</span>
+    <span class="ash">lines = file_object.readlines()</span>
+
+<span class="n" dir="ltr">1</span>pi_string = ''
+<span class="n" dir="ltr">2</span>for line in lines:
+    pi_string += line.rstrip()
+
+<span class="n" dir="ltr">3</span>print(pi_string)
+print(len(pi_string))</pre>
+                            </div><a id="p189"></a>
+                            <p>ابتدا فایل را باز می‌کنیم و سطرهای حاوی ارقام را در یک لیست ذخیره می‌کنیم، درست همان طور که در مثال قبل عمل کردیم. در <span class="n" dir="ltr">1</span>، متغیری به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">pi_string</span><span class="rlm">‏</span> ایجاد می‌کنیم و ارقام عدد <span class="emphasis"><span class="rlm">‏</span><span class="lr" dir="ltr">π</span><span class="rlm">‏</span></span> را در آن قرار می‌دهیم. سپس حلقه‌ای تشکیل می‌دهیم و در آن هر کدام از سطرهای ارقام را به رشته‌ی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">pi_string</span><span class="rlm">‏</span> اضافه می‌کنیم و نویسه‌ی آخر سطر را از هر سطر حذف می‌کنیم <span class="n" dir="ltr">2</span>. در <span class="n" dir="ltr">3</span>، رشته را نمایش می‌دهیم و طول آن را هم پرینت می‌کنیم:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">3.1415926535  8979323846  2643383279
+36</pre>
+                            </div>
+                            <p>متغیر <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">pi_string</span><span class="rlm">‏</span> حاوی فضای سفیدی است که در هر سطر در طرف چپ قرار داشته است. برای اینکه از شر این‌ها خلاص شویم، می‌توانیم به جای <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">rstrip()</span><span class="rlm">‏</span> از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">strip()</span><span class="rlm">‏</span> استفاده کنیم:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr"><span class="ash">--<span class="it">snip</span>--</span>
+<span class="ash">for line in lines:</span>
+    pi_string += line.strip()
+
+<span class="ash">print(pi_string)</span>
+<span class="ash">print(len(pi_string))</span></pre>
+                            </div>
+                            <p>حال رشته‌ای داریم که حاوی عدد <span class="emphasis"><span class="rlm">‏</span><span class="lr" dir="ltr">π</span><span class="rlm">‏</span></span> تا ۳۰ رقم اعشار است. طول این رشته، با در نظر گرفتن رقم ۳ اول آن و ممیز اعشاری، ۳۲ نویسه است:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">3.141592653589793238462643383279
+32</pre>
+                            </div>
+                            <div class="note">
+                                <h6 class="note-title">توجه</h6>
+                                <p>وقتی که پایتون از یک فایل متنی می‌خواند، تمام متن موجود در فایل را به‌عنوان رشته تلقی می‌کند. اگر عددی را بخوانید و بخواهید از مقدار آن برای محاسبات عددی استفاده کنید، باید که عدد را با استفاده از تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">int()</span><span class="rlm">‏</span> به عدد صحیح یا با استفاده از تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">float()</span><span class="rlm">‏</span> به عدد ممیز شناور تبدیل کنید.</p>
+                            </div>
+                        </div>
+                        <div class="sect" id="ch10lev2sec6"><a class="bkmk" name="ch10lev2sec6"></a>
+                            <h4>فایل‌های بزرگ: یک میلیون رقم</h4>
+                            <p>تا اینجا تمرکز ما بر تحلیل یک فایل متنی بوده که فقط حاوی سه سطر است، ولی کد این مثال‌ها روی فایل‌های بسیار بزرگ‌تر هم به همین صورت کار خواهد کرد. اگر فایلی متنی داشته باشیم که حاوی عدد <span class="emphasis"><span class="rlm">‏</span><span class="lr" dir="ltr">π</span><span class="rlm">‏</span></span> تا ۱٬۰۰۰٬۰۰۰ رقم اعشار باشد، نه فقط ۳۰ رقم، باز هم می‌توانیم رشته‌ی واحدی بسازیم که حاوی تمام این ارقام باشد. اصلاً لازم نیست که برنامه را تغییر دهیم، فقط باید فایل دیگری به آن بدهیم. البته فقط ۵۰ رقم اعشار را نمایش خواهیم داد، تا مجبور نشویم برای مشاهده‌ی یک میلیون رقم، پنجره‌ی ترمینال را اسکرول کنیم:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">pi_string.py</div>
+                                <pre class="snippet" dir="ltr">filename = 'pi_million_digits.txt'
+
+<span class="ash">with open(filename) as file_object:</span>
+    <span class="ash">lines = file_object.readlines()</span>
+<a id="p190"></a><span class="ash">pi_string = ''</span>
+<span class="ash">for line in lines:</span>
+    <span class="ash">pi_string += line.strip()</span>
+
+print(f"{pi_string[:52]}...")
+<span class="ash">print(len(pi_string))</span></pre>
+                            </div>
+                            <p>خروجی نشان می‌دهد که ما واقعاً رشته‌ای حاوی عدد <span class="emphasis"><span class="rlm">‏</span><span class="lr" dir="ltr">π</span><span class="rlm">‏</span></span> تا ۱٬۰۰۰٬۰۰۰ رقم اعشار داریم:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">3.14159265358979323846264338327950288419716939937510...
+1000002</pre>
+                            </div>
+                            <p>پایتون ذاتاً محدودیتی از نظر مقدار داده‌هایی که می‌توانید با آن کار کنید، ندارد؛ می‌توانید با هر چقدر داده که از عهده‌ی حافظه‌ی سیستم شما ساخته باشد، کار کنید.</p>
+                            <div class="note">
+                                <h6 class="note-title">توجه</h6>
+                                <p>برای اجرای این برنامه (و بسیاری مثال‌های دیگر بعد از آن)، لازم است که منابع این کتاب را از نشانی <span class="rlm">‏</span><a dir="ltr" target="_blank" href="https://nostarch.com/pythoncrashcourse2e/">nostarch.com/pythoncrashcourse2e/</a><span class="rlm">‏</span> دانلود کنید.</p>
+                            </div>
+                        </div>
+                        <div class="sect" id="ch10lev2sec7"><a class="bkmk" name="ch10lev2sec7"></a>
+                            <h4>آیا روز تولد شما در عدد <span class="emphasis"><span class="rlm">‏</span><span class="lr" dir="ltr">π</span><span class="rlm">‏</span></span> هست؟</h4>
+                            <p>من همیشه کنجکاو بودم که بدانم که آیا روز تولد من در میان ارقام عدد <span class="emphasis"><span class="rlm">‏</span><span class="lr" dir="ltr">π</span><span class="rlm">‏</span></span> یافت می‌شود یا نه. در اینجا برنامه‌ای می‌نویسیم که ببینیم آیا تاریخ تولد کسی در یک میلیون رقم اول عدد <span class="emphasis"><span class="rlm">‏</span><span class="lr" dir="ltr">π</span><span class="rlm">‏</span></span> هست یا نه. برای این کار، تاریخ تولد را به‌صورت رشته‌ای از اعداد نمایش می‌دهیم و نگاه می‌کنیم ببینیم این رشته در <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">pi_string</span><span class="rlm">‏</span> ظاهر می‌شود یا نه:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">
+<span class="ash">--<span class="it">snip</span>--</span>
+
+<span class="ash">for line in lines:</span>
+    <span class="ash">pi_string += line.strip()</span>
+<span class="n" dir="ltr">1</span>birthday = input("Enter your birthday, in the form mmddyy: ")
+<span class="n" dir="ltr">2</span>if birthday in pi_string:
+    print("Your birthday appears in the first million digits of pi!")
+else:
+    print("Your birthday does not appear in the first million digits of pi.")</pre>
+                            </div>
+                            <p>در <span class="n" dir="ltr">1</span>، روز تولد کاربر را می‌پرسیم، و سپس در <span class="n" dir="ltr">2</span>، وارسی می‌کنیم ببینیم آیا این رشته در <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">pi_string</span><span class="rlm">‏</span> یافت می‌شود. بگذارید ببینیم:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">Enter your birthdate, in the form mmddyy: <span class="bo">120372</span>
+Your birthday appears in the first million digits of pi!</pre>
+                            </div>
+                            <p>روز تولد من در ارقام عدد <span class="emphasis"><span class="rlm">‏</span><span class="lr" dir="ltr">π</span><span class="rlm">‏</span></span> هست! وقتی که محتولات یک فایل را خواندید، می‌توانید هرگونه وارسی که خواستید، روی آن انجام دهید.</p><a id="p191"></a>
+                            <div class="sidebar">
+                                <h6 class="sidebar-title">خودتان امتحان کنید</h6>
+                                <p class="tiy1"><span class="tiy" id="ch10_tiy01"><span class="tiy-num">۱۰-۱</span>. <span class="tiy-title">یاد گرفتن پایتون</span>: </span> یک فایل خالی را در ویرایشگر متنی خود باز کنید و چند سطر خلاصه از آنچه تا اینجا درباره‌ی پایتون فراگرفته‌اید، بنویسید. هر سطر را با عبارت <span class="emphasis"><span class="rlm">‏</span><span class="lr" dir="ltr">In Python you can…</span><span class="rlm">‏</span></span> آغاز کنید. فایل را در همان پوشه‌ی تمرین‌های این فصل با نام <span class="rlm">‏</span><span class="ident" dir="ltr">learning_python.txt</span><span class="rlm">‏</span> ذخیره کنید. برنامه‌ای بنویسید که فایل را می‌خواند و آنچه را نوشتید، سه بار نمایش می‌دهد. یک بار محتویات فایل را با خواندن تمام فایل نمایش دهید، یک بار با تشکیل حلقه روی شیء فایل آن را نمایش دهید، و یک بار هم با ذخیره کردن سطرها در یک لیست و سپس کار کردن با آن‌ها در خارج از بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">with</span><span class="rlm">‏</span> نمایش دهید.</p>
+                                <p class="tiy1"><span class="tiy" id="ch10_tiy02"><span class="tiy-num">۱۰-۲</span>. <span class="tiy-title">یاد گرفتن زبان <span class="rlm">‏</span><span class="lr" dir="ltr">C</span><span class="rlm">‏</span></span>: </span> می‌توانید با استفاده از متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">replace()</span><span class="rlm">‏</span>، هر کلمه‌ای را در یک رشته با کلمه‌ی دیگری جایگزین کنید. در اینجا مثال ساده‌ای ارائه می‌کنیم که نشان می‌دهد که چگونه می‌توانید کلمه‌ی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">'dog'</span><span class="rlm">‏</span> را در یک جمله با کلمه‌ی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">'cat'</span><span class="rlm">‏</span> جایگزین نمایید:</p>
+                                <div class="snippet">
+                                    <pre class="snippet" dir="ltr">&gt;&gt;&gt; <span class="bo">message = "I really like dogs."</span>
+&gt;&gt;&gt; <span class="bo">message.replace('dog', 'cat')</span>
+'I really like cats.'</pre>
+                                </div>
+                                <p>هر کدام از سطرهای متن موجود در فایل <span class="rlm">‏</span><span class="ident" dir="ltr">learning_python.txt</span><span class="rlm">‏</span> که ایجاد کردید را بخوانید، و کلمه‌ی <span class="emphasis"><span class="rlm">‏</span><span class="lr" dir="ltr">Python</span><span class="rlm">‏</span></span> را با نام یک زبان برنامه‌نویسی دیگر، مانند <span class="emphasis"><span class="rlm">‏</span><span class="lr" dir="ltr">C</span><span class="rlm">‏</span></span>، جایگزین کنید. سطرهای تغییر یافته را روی صفحه نمایش دهید.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sect" id="ch10lev1sec2"><a class="bkmk" name="ch10lev1sec2"></a>
+                        <h3>نوشتن فایل</h3>
+                        <p>یکی از ساده‌ترین راه‌ها برای ذخیره کردن داده‌ها، نوشتن آن در یک فایل است. وقتی که متن را در فایل می‌نویسید، پس از بستن پنجره‌ی ترمینال که خروجی برنامه در آن نمایش داده شده است، باز هم خروجی در دسترس شما خواهد بود. می‌توانید پس از اجرای برنامه، خروجی را بررسی کنید، و نیز می‌توانید فایل‌های خروجی را با دیگران به اشتراک بگذارید. به‌علاوه، می‌توانید برنامه‌هایی بنویسید که متن را دوباره به داخل حافظه می‌خوانند و بعداً دوباره با آن کار می‌کنند.</p>
+                        <div class="sect" id="ch10lev2sec8"><a class="bkmk" name="ch10lev2sec8"></a>
+                            <h4>نوشتن در یک فایل خالی</h4>
+                            <p>برای نوشتن متن در یک فایل، باید آرگومان دیگری نیز به <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">open()</span><span class="rlm">‏</span> بدهید که به پایتون می‌گوید که می‌خواهید در فایل بنویسید. برای اینکه طرز انجام این کار را ببینید، پیام ساده‌ای می‌نویسیم و به جای نمایش دادن آن روی صفحه‌ی نمایش، آن را در یک فایل می‌نویسیم:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">write_message.py</div>
+                                <pre class="snippet" dir="ltr">filename = 'programming.txt'
+
+<span class="n" dir="ltr">1</span>with open(filename, 'w') as file_object:
+<span class="n" dir="ltr">2</span>    file_object.write("I love programming.")</pre>
+                            </div>
+                            <p>فراخوانی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">open()</span><span class="rlm">‏</span> در این مثال دو آرگومان دارد <span class="n" dir="ltr">1</span>. اولی مانند قبل نام فایلی است که می‌خواهیم باز کنیم. آرگومان دوم، <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">'w'</span><span class="rlm">‏</span>، به پایتون می‌گوید که می‌خواهیم فایل را در <span class="emphasis">حالت نوشتن</span> باز کنیم. شما می‌توانید یک فایل را <a id="p192"></a>در <span class="emphasis">حالت خواندن</span> (<span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">'r'</span><span class="rlm">‏</span>) باز کنید، یا <span class="emphasis">حالت نوشتن</span> (<span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">'w'</span><span class="rlm">‏</span>)، یا <span class="emphasis">حالت پیوست کردن</span> (<span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">'a'</span><span class="rlm">‏</span>)، و یا حالتی که امکان خواندن و نوشتن در فایل را دارید (<span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">'r+'</span><span class="rlm">‏</span>). اگر آرگومان حالت را حذف کنید، پایتون به‌طور پیش‌فرض فایل را در حالت فقط خواندنی باز می‌کند.</p>
+                            <p>تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">open()</span><span class="rlm">‏</span> فایلی را که می‌خواهید در آن بنویسید، اگر از قبل وجود نداشته باشد، به‌طور خودکار ایجاد می‌کند. اما لازم است که در باز کردن یک فایل در حالت نوشتن (<span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">'w'</span><span class="rlm">‏</span>) دقت به خرج دهید، زیرا اگر فایل از قبل وجود داشته باشد، پایتون قبل از برگرداندن شیء فایل، محتویات فایل را پاک می‌کند.</p>
+                            <p>در <span class="n" dir="ltr">2</span>، با استفاده از متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">write()</span><span class="rlm">‏</span> روی شیء فایل، رشته‌ای را در فایل می‌نویسیم. این برنامه هیچ‌گونه خروجی ترمینال ندارد، ولی اگر فایل <span class="rlm">‏</span><span class="ident" dir="ltr">programming.txt</span><span class="rlm">‏</span> را باز کنید، یک سطر در آن خواهید دید:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">programming.txt</div>
+                                <pre class="snippet" dir="ltr">I love programming.</pre>
+                            </div>
+                            <p>این فایل مانند هر فایل دیگری روی کامپیوتر شما است. می‌توانید آن را باز کنید، متنی در آن بنویسید، از آن کپی کنید، پیست کنید، و الی آخر.</p>
+                            <div class="note">
+                                <h6 class="note-title">توجه</h6>
+                                <p>پایتون فقط می‌تواند رشته‌ها را در یک فایل متنی بنویسد. اگر بخواهید داده‌های عددی در یک فایل متنی بنویسید، باید داده‌ها را با استفاده از تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">str()</span><span class="rlm">‏</span> به فرمت عددی تبدیل کنید.</p>
+                            </div>
+                        </div>
+                        <div class="sect" id="ch10lev2sec9"><a class="bkmk" name="ch10lev2sec9"></a>
+                            <h4>نوشتن سطرهای متعدد</h4>
+                            <p>تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">write()</span><span class="rlm">‏</span> به متنی که می‌نویسید، آخر سطر اضافه نمی‌کند. بنابراین، اگر بیش از یک سطر بنویسید و نویسه‌ی آخر سطر در بین آن‌ها قرار ندهید، ممکن است فایل شما آن‌گونه که مقصود شما بوده، به نظر نرسد:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr"><span class="ash">filename = 'programming.txt'</span>
+
+<span class="ash">with open(filename, 'w') as file_object:</span>
+    <span class="ash">file_object.write("I love programming.")</span>
+    file_object.write("I love creating new games.")</pre>
+                            </div>
+                            <p>اگر فایل <span class="rlm">‏</span><span class="ident" dir="ltr">programming.txt</span><span class="rlm">‏</span> را باز کنید، خواهید دید که دو سطر به هم چسبیده‌اند:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">I love programming.I love creating new games.</pre>
+                            </div>
+                            <p>اگر در فراخوانی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">write()</span><span class="rlm">‏</span>، نویسه‌ی آخر سطر هم اضافه کنید، سبب خواهد شد که هر رشته در سطر جدایی نوشته شود:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr"><span class="ash">filename = 'programming.txt'</span>
+
+<span class="ash">with open(filename, 'w') as file_object:</span>
+    file_object.write("I love programming.\n")
+    file_object.write("I love creating new games.\n")</pre>
+                            </div>
+                            <p>حالا خروجی در سطرهای جدا نمایش داده می‌شود:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">I love programming.
+I love creating new games.</pre>
+                            </div><a id="p193"></a>
+                            <p>از اسپیس، تَب، و سطر خالی نیز می‌توانید برای فرمت کردن خروجی خود استفاده کنید، همان طور که در خروجی ترمینال عمل می‌کردید.</p>
+                        </div>
+                        <div class="sect" id="ch10lev2sec10"><a class="bkmk" name="ch10lev2sec10"></a>
+                            <h4>پیوست کردن به فایل</h4>
+                            <p>اگر بخواهید به یک فایل، محتوا اضافه کنید، نه اینکه محتوای جدید را جایگزین محتوای قبلی آن کنید، می‌توانید فایل را در <span class="emphasis">حالت پیوست کردن</span> باز کنید. وقتی که فایلی را در حالت پیوست باز می‌کنید، پایتون محتوای فایل را قبل از برگرداندن شیء فایل پاک نمی‌کند. هر سطری که به فایل اضافه کنید، به انتهای فایل افزوده خواهد شد. اگر فایل از قبل وجود نداشته باشد، پایتون فایلی خالی برایتان ایجاد خواهد کرد.</p>
+                            <p>برنامه‌ی <span class="rlm">‏</span><span class="ident" dir="ltr">write_message.py</span><span class="rlm">‏</span> را تغییر می‌دهیم و به فایل <span class="rlm">‏</span><span class="ident" dir="ltr">programming.txt</span><span class="rlm">‏</span> که از قبل موجود است، مطالبی اضافه می‌کنیم در زمینه‌ی اینکه چرا برنامه‌نویسی را دوست داریم:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">write_message.py</div>
+                                <pre class="snippet" dir="ltr"><span class="ash">filename = 'programming.txt'</span>
+
+<span class="n" dir="ltr">1</span>with open(filename, 'a') as file_object:
+<span class="n" dir="ltr">2</span>    file_object.write("I also love finding meaning in large datasets.\n")
+    file_object.write("I love creating apps that can run in a browser.\n")</pre>
+                            </div>
+                            <p>در <span class="n" dir="ltr">1</span>، با استفاده از آرگومان <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">'a'</span><span class="rlm">‏</span>، فایل را برای پیوست کردن باز می‌کنیم، نه اینکه بخواهیم محتوای جدید را جایگزین فایل موجود کنیم. در <span class="n" dir="ltr">2</span>، دو سطر جدید را می‌نویسیم که به فایل <span class="rlm">‏</span><span class="ident" dir="ltr">programming.txt</span><span class="rlm">‏</span> اضافه می‌شود:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">programming.txt</div>
+                                <pre class="snippet" dir="ltr">
+<span class="ash">I love programming.</span>
+<span class="ash">I love creating new games.</span>
+I also love finding meaning in large datasets.
+I love creating apps that can run in a browser.</pre>
+                            </div>
+                            <p>در نهایت، فایلی داریم که در آن به دنبال محتوای اولیه، محتوای جدیدی که اضافه کرده‌ایم، قرار گرفته است.</p>
+                            <div class="sidebar">
+                                <h6 class="sidebar-title">خودتان امتحان کنید</h6>
+                                <p class="tiy1"><span class="tiy" id="ch10_tiy03"><span class="tiy-num">۱۰-۳</span>. <span class="tiy-title">مهمان</span>: </span> برنامه‌ای بنویسید که از کاربر نام او را می‌پرسد. وقتی که کاربر پاسخ داد، نام او را در فایلی به نام <span class="rlm">‏</span><span class="ident" dir="ltr">guest.txt</span><span class="rlm">‏</span> بنویسید.</p>
+                                <p class="tiy1"><span class="tiy" id="ch10_tiy04"><span class="tiy-num">۱۰-۴</span>. <span class="tiy-title">دفتر مهمانان</span>: </span> یک حلقه‌ی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">while</span><span class="rlm">‏</span> بنویسید که از کاربران نام آن‌ها را می‌پرسد. وقتی که نامشان را وارد کردند، یک پیام خوشامدگویی نمایش دهید و سطری حاکی از دیدار آن‌ها را به فایلی به نام اضافه کنید. دقت کنید که هر کدام از اسامی در این فایل در یک سطر جدید نوشته شود.</p>
+                                <p class="tiy1"><span class="tiy" id="ch10_tiy05"><span class="tiy-num">۱۰-۵</span>. <span class="tiy-title">نظرسنجی برنامه‌نویسی</span>: </span> یک حلقه‌ی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">while</span><span class="rlm">‏</span> بنویسید که از افراد می‌پرسد که چرا برنامه‌نویسی را دوست دارند. هر بار کسی علتی را وارد می‌کند، این پاسخ را به فایلی که همه‌ی پاسخ‌ها در آن ذخیره شده است، اضافه کنید.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sect" id="ch10lev1sec3"><a class="bkmk" name="ch10lev1sec3"></a>
+                        <h3>استثناها</h3>
+                        <a id="p194"></a>
+                        <p>پایتون از اشیای ویژه‌ای به نام <span class="emphasis">استثنا</span> برای مدیریت خطاهایی که در حین اجرا برنامه بروز می‌کنند، استفاده می‌کند. هر گاه خطایی بروز می‌کند که پایتون نداند چکار باید بکند، یک شیء استثنا ایجاد می‌کند. اگر کدی برای رسیدگی به این استثنا بنویسید، برنامه به اجرای خود ادامه خواهد داد. اگر به استثنا رسیدگی نکنید، برنامه توقف خواهد کرد و یک <span class="emphasis">گزارش خطا</span> را نمایش خواهد داد، که شامل گزارشی از استثنای ایجاد شده است.</p>
+                        <p>برای رسیدگی به استثناها از بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">try-except</span><span class="rlm">‏</span> استفاده می‌شود. بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">try-except</span><span class="rlm">‏</span> از پایتون می‌خواهد که کاری را انجام دهد، ولی در عین حال، مشخص می‌کند که اگر استثنایی بروز کند، چه بکند. وقتی که از بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">try-except</span><span class="rlm">‏</span> استفاده می‌کنید، برنامه‌ی شما حتی اگر مشکلی پیش بیاید، به اجرای خود ادامه خواهد داد. به جای رهگیری خطا، که ممکن است مشاهده‌ی آن برای کاربران سردرگم‌کننده باشد، کاربران شاهد پیام‌های خطای مناسبی خواهند بود که شما خودتان می‌نویسید.</p>
+                        <div class="sect" id="ch10lev2sec11"><a class="bkmk" name="ch10lev2sec11"></a>
+                            <h4>رسیدگی به استثنای <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">ZeroDivisionError</span><span class="rlm">‏</span></h4>
+                            <p>نگاهی به خطای ساده‌ای می‌اندازیم که سبب می‌شود که پایتون یک استثنا ایجاد کند. احتمالاً می‌دانید که نمی‌توان یک عدد را بر صفر تقسیم کرد، ولی به هر حال، اجازه بدهید که از پایتون بخواهیم که این کار را انجام دهد:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">division_calculator.py</div>
+                                <pre class="snippet" dir="ltr">
+print(5/0)</pre>
+                            </div>
+                            <p>طبیعتاً پایتون نمی‌تواند این کار را بکند، بنابراین، یک گزارش خطا حاصل می‌شود:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">Traceback (most recent call last):
+  File "division_calculator.py", line 1, in &lt;module&gt;
+    print(5/0)
+<span class="n" dir="ltr">1</span>ZeroDivisionError: division by zero</pre>
+                            </div>
+                            <p>خطای گزارش شده در <span class="n" dir="ltr">1</span>، یعنی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">ZeroDivisionError</span><span class="rlm">‏</span>، یک شیء استثنا است. پایتون این نوع شیء را در پاسخ به موقعیتی ایجاد می‌کند که در آن نمی‌تواند کاری را که از آن خواسته‌ایم، انجام دهد. وقتی که این اتفاق می‌افتد، پایتون برنامه را متوقف می‌کند و به ما می‌گوید که چه نوع استثنایی ایجاد شده است. می‌توانیم با استفاده از این اطلاعات برنامه‌مان را تغییر دهیم. به پایتون می‌گوییم که زمانی که این نوع استثنا بروز می‌کند، چه کاری باید انجام دهد؛ به این ترتیب، اگر دوباره اتفاق افتاد، آمادگی لازم را خواهیم داشت.</p>
+                        </div>
+                        <div class="sect" id="ch10lev2sec12"><a class="bkmk" name="ch10lev2sec12"></a>
+                            <h4>استفاده از بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">try-except</span><span class="rlm">‏</span></h4>
+                            <p>وقتی که فکر می‌کنید ممکن است خطایی بروز کند، می‌توانید یک بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">try-except</span><span class="rlm">‏</span> بنویسید تا به آن استثنا که ممکن است بروز کند، رسیدگی کنید. به پایتون می‌گویید که سعی کند کدی را اجرا کند، و بعد به آن می‌گویید که اگر آن کد منجر به نوع خاصی از استثنا شد، چه کاری انجام بدهد.</p>
+                            <p>در اینجا یک بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">try-except</span><span class="rlm">‏</span> را برای رسیدگی به استثنای <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">ZeroDivisionError</span><span class="rlm">‏</span> می‌بینید:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">try:
+    <span class="ash">print(5/0)</span>
+except ZeroDivisionError:
+    print("You can't divide by zero!")</pre>
+                            </div><a id="p195"></a>
+                            <p>سطر <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">print(5/0)</span><span class="rlm">‏</span> را که باعث استثنا می‌شود، داخل بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">try</span><span class="rlm">‏</span> قرار داده‌ایم. اگر کد در بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">try</span><span class="rlm">‏</span> درست کار کرد، پایتون از روی بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">except</span><span class="rlm">‏</span> عبور می‌کند. ولی اگر کد درون بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">try</span><span class="rlm">‏</span> منجر به خطا شد، پایتون به دنبال یک بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">except</span><span class="rlm">‏</span> می‌گردد که خطای آن با خطای ایجاد شده مطابقت داشته باشد، و کد درون بلوک را اجرا می‌کند.</p>
+                            <p>در این مثال، کد درون بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">try</span><span class="rlm">‏</span> خطای <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">ZeroDivisionError</span><span class="rlm">‏</span> ایجاد می‌کند، بنابراین، پایتون به دنبال یک بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">except</span><span class="rlm">‏</span> می‌گردد که نحوه‌ی پاسخ‌گویی به این خطا را مشخص کرده باشد. سپس پایتون کد درون آن بلوک را اجرا می‌کند، و کاربر به جای گزارش رهگیری خطا، پیام خطای مناسبی را مشاهده می‌کند:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">You can't divide by zero!</pre>
+                            </div>
+                            <p>اگر بعد از بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">try-except</span><span class="rlm">‏</span>، کد دیگری هم باشد، برنامه به اجرای خود ادامه خواهد داد، چرا که ما برای پایتون مشخص کرده‌ایم که چگونه به خطا رسیدگی کند. در اینجا مثالی را بررسی می‌کنیم که در آن گرفتن خطا، امکان ادامه‌ی اجرای برنامه را فراهم می‌کند.</p>
+                        </div>
+                        <div class="sect" id="ch10lev2sec13"><a class="bkmk" name="ch10lev2sec13"></a>
+                            <h4>استفاده از استثناها برای جلوگیری از کرش کردن برنامه</h4>
+                            <p>رسیدگی صحیح به خطاها خصوصاً زمانی اهمیت دارد که برنامه بعد از بروز خطا هم باید کارهایی را انجام دهد. این مسئله در برنامه‌هایی که از کاربر ورودی می‌گیرند، زیاد اتفاق می‌افتد. اگر برنامه پاسخ مناسبی به ورودی نادرست بدهد، می‌تواند به جای کرش کردن، از کاربر درخواست ورودی معتبر بنماید.</p>
+                            <p>در اینجا یک ماشین حساب ساده درست می‌کنیم که فقط عمل تقسیم انجام می‌دهد:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">division_calculator.py</div>
+                                <pre class="snippet" dir="ltr">print("Give me two numbers, and I'll divide them.")
+print("Enter 'q' to quit.")
+while True:
+<span class="n" dir="ltr">1</span>    first_number = input("\nFirst number: ")
+    if first_number == 'q':
+        break
+<span class="n" dir="ltr">2</span>    second_number = input("Second number: ")
+    if second_number == 'q':
+        break
+<span class="n" dir="ltr">3</span>    answer = int(first_number) / int(second_number)
+    print(answer)</pre>
+                            </div>
+                            <p>این برنامه از کاربر می‌خواهد که <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">first_number</span><span class="rlm">‏</span> را وارد کند <span class="n" dir="ltr">1</span>، و اگر ورودی کاربر <span class="emphasis">q</span> نباشد، مقدار <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">second_number</span><span class="rlm">‏</span> را هم می‌پرسد <span class="n" dir="ltr">2</span>. سپس این دو عدد را تقسیم می‌کنیم و به <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">answer</span><span class="rlm">‏</span> می‌رسیم <span class="n" dir="ltr">3</span>. این برنامه هیچ کاری برای رسیدگی به خطا انجام نمی‌دهد، بنابراین، اگر از آن بخواهیم که عددی را بر صفر تقسیم کند، کرش می‌کند:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">Give me two numbers, and I'll divide them.
+Enter 'q' to quit.
+First number: <span class="bo">5</span>
+Second number: <span class="bo">0</span>
+Traceback (most recent call last):
+  File "division_calculator.py", line 9, in &lt;module&gt;
+    answer = int(first_number) / int(second_number)
+ZeroDivisionError: division by zero</pre>
+                            </div><a id="p196"></a>
+                            <p>یک ایراد این است که برنامه کرش کرده است، و ایراد دیگر اینکه گزارش رهگیری خطا برای کاربر نمایش داده شده است. کاربرانی که دانش فنی نداشته باشند، از دیدن آن گیج می‌شوند، و مهاجمانی که نیت بدی داشته باشند، ممکن است از این گزارش چیزهایی بفهمند که شما نمی‌خواهید که بدانند. مثلاً نام فایل برنامه‌ی شما را خواهند فهمید، و بخشی از کد شما را که درست کار نکرده، مشاهده خواهند کرد. یک مهاجم ماهر ممکن است با استفاده از این اطلاعات بتواند مشخص کند که چه نوع حمله‌ای بر علیه کد شما مؤثرتر خواهد بود.</p>
+                        </div>
+                        <div class="sect" id="ch10lev2sec14"><a class="bkmk" name="ch10lev2sec14"></a>
+                            <h4>بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">else</span><span class="rlm">‏</span></h4>
+                            <p>برای اینکه این برنامه را در مقابل خطاها مقاوم‌تر کنیم، می‌توانیم سطری را که ممکن است موجب خطا شود، در یک بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">try-except</span><span class="rlm">‏</span> قرار دهیم. این خطا در سطری بروز می‌کند که تقسیم را انجام می‌دهد، بنابراین، بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">try-except</span><span class="rlm">‏</span> را در آنجا قرار می‌دهیم. این مثال شامل یک بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">else</span><span class="rlm">‏</span> نیز هست. هر کدی که به اجرای موفقیت‌آمیز بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">try</span><span class="rlm">‏</span> وابسته باشد، در بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">else</span><span class="rlm">‏</span> قرار می‌گیرد:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr"><span class="ash">--<span class="it">snip</span>--</span>
+
+<span class="ash">while True:</span>
+    <span class="ash">--<span class="it">snip</span>--</span>
+
+    <span class="ash">if second_number == 'q':</span>
+        <span class="ash">break</span>
+<span class="n" dir="ltr">1</span>    try:
+        <span class="ash">answer = int(first_number) / int(second_number)</span>
+<span class="n" dir="ltr">2</span>    except ZeroDivisionError:
+        print("You can't divide by 0!")
+<span class="n" dir="ltr">3</span>    else:
+        <span class="ash">print(answer)</span></pre>
+                            </div>
+                            <p>از پایتون می‌خواهیم که سعی کند عمل تقسیم در بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">try</span><span class="rlm">‏</span> را کامل کند <span class="n" dir="ltr">1</span>. این بلوک حاوی کدی است که ممکن است موجب بروز خطا شود. هرگونه کدی که متکی به اجرای موفق بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">try</span><span class="rlm">‏</span> است، در بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">else</span><span class="rlm">‏</span> قرار داده می‌شود. در این مورد، اگر عمل تقسیم موفقیت‌آمیز باشد، در بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">else</span><span class="rlm">‏</span> می‌گوییم که نتیجه نمایش داده شود <span class="n" dir="ltr">3</span>.</p>
+                            <p>بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">except</span><span class="rlm">‏</span> به پایتون می‌گوید که در صورت بروز <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">ZeroDivisionError</span><span class="rlm">‏</span>، چگونه در <span class="n" dir="ltr">2</span> به آن پاسخ دهد. اگر بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">try</span><span class="rlm">‏</span> به علت بروز خطای تقسیم بر صفر با موفقیت به پایان نرسد، پیام مناسبی نمایش داده می‌شود که نحوه‌ی اجتناب از این نوع خطا را به کاربر اطلاع می‌دهد. برنامه به اجرای خود ادامه می‌دهد، و گزارش رهگیری خطا هرگز برای کاربر نمایش داده نمی‌شود:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">Give me two numbers, and I'll divide them.
+Enter 'q' to quit.
+First number: <span class="bo">5</span>
+Second number: <span class="bo">0</span>
+You can't divide by 0!
+<a id="p197"></a>First number: <span class="bo">5</span>
+Second number: <span class="bo">2</span>
+2.5
+First number: <span class="bo">q</span></pre>
+                            </div>
+                            <p>بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">try-except-else</span><span class="rlm">‏</span> به این صورت عمل می‌کند: پایتون تلاش می‌کند که کد موجود در بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">try</span><span class="rlm">‏</span> را اجرا کند. تنها کدی که باید داخل بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">try</span><span class="rlm">‏</span> قرار داده شود، کدی است که ممکن است موجب ایجاد یک استثنا شود. بعضی وقت‌ها کد دیگری هم هست که فقط باید در صورتی اجرا شود که بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">try</span><span class="rlm">‏</span> موفقیت‌آمیز بوده باشد؛ این کد در بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">else</span><span class="rlm">‏</span> قرار داده می‌شود. بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">except</span><span class="rlm">‏</span> به پایتون می‌گوید که در صورت بروز نوع خاصی از استثنا در هنگام تلاش برای اجرای بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">try</span><span class="rlm">‏</span>، چه کاری انجام بدهد.</p>
+                            <p>با پیش‌بینی منابع احتمالی خطا، می‌توانید برنامه‌های مقاومی بنویسید که حتی در صورت برخورد با داده‌های غیرمعتبر یا یافت نشدن منابع، به اجرای خود ادامه می‌دهند. کد شما نسبت به اشتباهات کاربران معمولی و حملات مهاجمان مقاوم خواهد بود.</p>
+                        </div>
+                        <div class="sect" id="ch10lev2sec15"><a class="bkmk" name="ch10lev2sec15"></a>
+                            <h4>رسیدگی به خطای <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">FileNotFoundError</span><span class="rlm">‏</span></h4>
+                            <p>یک مسئله‌ی شایع در کار با فایل‌ها، رسیدگی به وضعیت پیدا نشدن فایل است. فایلی که دنبال آن می‌گردید، ممکن است در محل دیگری باشد، ممکن است نام فایل غلط نوشته شده باشد، یا اینکه اصلاً ممکن است فایل وجود نداشته باشد. می‌توانید با استفاده از بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">try-except</span><span class="rlm">‏</span>، به سادگی به تمام این وضعیت‌ها رسیدگی کنید.</p>
+                            <p>مثلاً فرض کنید داریم تلاش می‌کنیم فایلی را بخوانیم که وجود ندارد. برنامه‌ی زیر تلاش می‌کند محتویات <span class="emphasis">آلیس در سرزمین عجایب</span> را بخواند، ولی من فایل <span class="rlm">‏</span><span class="ident" dir="ltr">alice.txt</span><span class="rlm">‏</span> را در دایرکتوری‌ای که <span class="rlm">‏</span><span class="ident" dir="ltr">alice.py</span><span class="rlm">‏</span> قرار دارد، ذخیره نکرده‌ام:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">alice.py</div>
+                                <pre class="snippet" dir="ltr">filename = 'alice.txt'
+with open(filename, encoding='utf-8') as f:
+    contents = f.read()</pre>
+                            </div>
+                            <p>در اینجا دو تغییر اتفاق افتاده است. یکی از آن‌ها استفاده از متغیر <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">f</span><span class="rlm">‏</span> برای نمایش دادن شیء فایل است، که این یک قرارداد متداول است. دومی استفاده از آرگومان <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">encoding</span><span class="rlm">‏</span> است. این آرگومان زمانی ضرورت دارد که کدگذاری پیش‌فرض سیستم شما با کدگذاری فایلی که می‌خواهید بخوانید، مطابقت نداشته باشد.</p>
+                            <p>پایتون نمی‌تواند فایلی را که وجود ندارد، بخواند، بنابراین، یک استثنا ایجاد می‌کند:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">Traceback (most recent call last):
+  File "alice.py", line 3, in &lt;module&gt;
+    with open(filename, encoding='utf-8') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'alice.txt'</pre>
+                            </div>
+                            <p>سطر آخر رهگیری خطا، خطای <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">FileNotFoundError</span><span class="rlm">‏</span> را گزارش می‌کند: این استثنا زمانی ایجاد می‌شود که پایتون فایلی را که می‌خواهد باز کند، پیدا نمی‌کند. <a id="p198"></a>در این مثال، تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">open()</span><span class="rlm">‏</span> خطا را ایجاد کرده است، بنابراین، برای رسیدگی به آن، بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">try</span><span class="rlm">‏</span> با سطری شروع می‌شود که حاوی فراخوانی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">open()</span><span class="rlm">‏</span> است:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr"><span class="ash">filename = 'alice.txt'</span>
+try:
+    <span class="ash">with open(filename, encoding='utf-8') as f:</span>
+        <span class="ash">contents = f.read()</span>
+except FileNotFoundError:
+    print(f"Sorry, the file {filename} does not exist.")</pre>
+                            </div>
+                            <p>در این مثال، کد موجود در بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">try</span><span class="rlm">‏</span> یک استثنای <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">FileNotFoundError</span><span class="rlm">‏</span> ایجاد می‌کند، بنابراین، پایتون به دنبال یک بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">except</span><span class="rlm">‏</span> می‌گردد که با این خطا انطباق داشته باشد. پایتون کدی را که در آن بلوک قرار دارد، اجرا می‌کند، و نتیجه‌ی آن این است که به جای رهگیری خطا، یک پیام مناسب نمایش داده می‌شود:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">Sorry, the file alice.txt does not exist.</pre>
+                            </div>
+                            <p>این برنامه در صورتی که فایل مورد نظر وجود نداشته باشد، کار زیاد دیگری برای انجام دادن ندارد، بنابراین، کد رسیدگی کننده به خطا چیز زیادی به این برنامه اضافه نمی‌کند. حالا یک مثال دیگر ارائه می‌کنیم که نشان می‌دهد که رسیدگی به استثنا چه کمکی می‌تواند هنگام کار کردن با بیش از یک فایل به شما بکند.</p>
+                        </div>
+                        <div class="sect" id="ch10lev2sec16"><a class="bkmk" name="ch10lev2sec16"></a>
+                            <h4>تحلیل متن</h4>
+                            <p>شما می‌توانید متن حاوی یک کتاب کامل را تحلیل کنید. بسیاری از آثار کلاسیک ادبیات، به خاطر اینکه مدت کپی‌رایت آن‌ها تمام شده، به‌صورت فایل متنی ساده در دسترس هستند. متن‌های استفاده شده در این قسمت از پروژه‌ی گوتنبرگ (<span class="rlm">‏</span><a dir="ltr" target="_blank" href="http://gutenberg.org/">gutenberg.org</a><span class="rlm">‏</span>) گرفته شده‌اند. پروژه‌ی گوتنبرگ حاوی مجموعه‌ای از آثار ادبی است که فاقد کپی‌رایت هستند، و اگر علاقه‌مند به استفاده از متن‌های ادبی در پروژه‌های برنامه‌نویسی هستید، می‌توانید از آن استفاده کنید.</p>
+                            <p>حالا متن کتاب <span class="emphasis">آلیس در سرزمین عجایب</span> را می‌گیریم و سعی می‌کنیم تعداد کلمات متن را بشماریم. از متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">split()</span><span class="rlm">‏</span> رشته استفاده می‌کنیم، که می‌تواند از یک رشته لیستی از کلمات بسازد. مثلاً اگر متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">split()</span><span class="rlm">‏</span> را روی رشته‌ای که فقط حاوی عنوان <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">"Alice in Wonderland"</span><span class="rlm">‏</span> است، اجرا کنیم، این نتیجه را حاصل می‌کنیم:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">&gt;&gt;&gt; <span class="bo">title = "Alice in Wonderland"</span>
+&gt;&gt;&gt; <span class="bo">title.split()</span>
+['Alice', 'in', 'Wonderland']</pre>
+                            </div>
+                            <p>متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">split()</span><span class="rlm">‏</span> یک رشته را در هر جایی که یک اسپیس داشته باشد، به چند قطعه تقسیم می‌کند، و همه‌ی آن قطعات را در یک لیست قرار می‌دهد. نتیجه‌ی آن لیستی از کلمات موجود در رشته است، گرچه برخی از کلمات ممکن است با علایم نقطه‌گذاری نیز همراه باشد. برای شمارش تعداد کلمات موجود در کتاب <span class="emphasis">آلیس در سرزمین عجایب</span>، متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">split()</span><span class="rlm">‏</span> را روی تمام متن اجرا می‌کنیم. سپس تعداد آیتم‌های موجود در لیست را تعیین می‌کنیم، تا تعداد تقریبی کلمات موجود در متن را به دست آوریم:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr"><span class="ash">filename = 'alice.txt'</span>
+<span class="ash">try:</span>
+<a id="p199"></a>    <span class="ash">with open(filename, encoding='utf-8') as f:</span>
+        <span class="ash">contents = f.read()</span>
+<span class="ash">except FileNotFoundError:</span>
+    <span class="ash">print(f"Sorry, the file {filename} does not exist.")</span>
+else:
+    # Count the approximate number of words in the file.
+<span class="n" dir="ltr">1</span>    words = contents.split()
+<span class="n" dir="ltr">2</span>    num_words = len(words)
+<span class="n" dir="ltr">3</span>    print(f"The file {filename} has about {num_words} words.")</pre>
+                            </div>
+                            <p>این بار فایل <span class="rlm">‏</span><span class="ident" dir="ltr">alice.txt</span><span class="rlm">‏</span> را به دایرکتوری برنامه انتقال داده‌ام، بنابراین، بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">try</span><span class="rlm">‏</span> این بار درست اجرا خواهد شد. در <span class="n" dir="ltr">1</span>، رشته‌ی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">contents</span><span class="rlm">‏</span> را می‌گیریم، که حاوی تمام متن کتاب <span class="emphasis">آلیس در سرزمین عجایب</span> به‌صورت یک رشته‌ی طویل است، و با استفاده از متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">split()</span><span class="rlm">‏</span>، لیستی از تمام کلمات کتاب تشکیل می‌دهیم. تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">len()</span><span class="rlm">‏</span> را روی لیست فراخوانی می‌کنیم تا طول آن را به دست آوریم، و با این کار، تعداد تقریبی کلمات موجود در رشته‌ی اصلی در <span class="n" dir="ltr">2</span> حاصل می‌شود. در <span class="n" dir="ltr">3</span>، جمله‌ای را نمایش می‌دهیم که تعداد کلمات موجود در فایل را بیان می‌کند. این کد در بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">else</span><span class="rlm">‏</span> قرار داده شده است، زیرا فقط در صورتی باید اجرا شود که بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">try</span><span class="rlm">‏</span> با موفقیت اجرا شده باشد. خروجی برنامه به ما خواهد گفت که فایل <span class="rlm">‏</span><span class="ident" dir="ltr">alice.txt</span><span class="rlm">‏</span> حاوی چند کلمه است:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">The file alice.txt has about 29465 words.</pre>
+                            </div>
+                            <p>این رقم کمی بالاتر است، چون در فایل متنی‌ای که در اینجا استفاده کردیم، توضیحات ناشر نیز گنجانده شده است، ولی به‌طور تقریبی تعداد کلمات <span class="emphasis">آلیس در سرزمین عجایب</span> را نشان می‌دهد.</p>
+                        </div>
+                        <div class="sect" id="ch10lev2sec17"><a class="bkmk" name="ch10lev2sec17"></a>
+                            <h4>کار با فایل‌های متعدد</h4>
+                            <p>در اینجا می‌خواهیم کتاب‌های بیشتری را تحلیل کنیم. ولی قبل از این کار، قسمت عمده‌ی کد فوق را به تابعی به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">count_words()</span><span class="rlm">‏</span> انتقال می‌دهیم. با این کار، خواهیم توانست به راحتی این تحلیل را بر روی فایل‌های متعدد انجام دهیم:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">word_count.py</div>
+                                <pre class="snippet" dir="ltr">def count_words(filename):
+<span class="n" dir="ltr">1</span>    """Count the approximate number of words in a file."""
+    <span class="ash">try:</span>
+        <span class="ash">with open(filename, encoding='utf-8') as f:</span>
+            <span class="ash">contents = f.read()</span>
+    <span class="ash">except FileNotFoundError:</span>
+        <span class="ash">print(f"Sorry, the file {filename} does not exist.")</span>
+    <span class="ash">else:</span>
+        <span class="ash">words = contents.split()</span>
+        <span class="ash">num_words = len(words)</span>
+        <span class="ash">print(f"The file {filename} has about {num_words} words.")</span>
+filename = 'alice.txt'
+count_words(filename)</pre>
+                            </div>
+                            <p>قسمت عمده‌ی کد تغییری نکرده است. صرفاً آن را تورفتگی دادیم و به بدنه‌ی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">count_words()</span><span class="rlm">‏</span> منتقل کردیم. بد نیست هنگام تغییر دادن یک برنامه، توضیحات را هم به روز کنید. به همین جهت، توضیحات را تبدیل به داک‌استرینگ کردیم و متن آن را در <span class="n" dir="ltr">1</span> کمی تغییر دادیم.</p><a id="p200"></a>
+                            <p>حالا می‌توانیم حلقه‌ی ساده‌ای بنویسیم تا تعداد کلمات را در هر متنی که می‌خواهیم، محاسبه کنیم. برای این منظور، نام فایل‌هایی را که می‌خواهیم تحلیل کنیم، در لیستی ذخیره می‌کنیم، و سپس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">count_words()</span><span class="rlm">‏</span> را برای هر کدام از فایل‌های موجود در لیست فراخوانی می‌کنیم. سعی می‌کنیم تعداد کلمات موجود در <span class="emphasis">آلیس در سرزمین عجایب</span>، <span class="emphasis">سیذارتا</span>، <span class="emphasis">موبی دیک</span>، و <span class="emphasis">زنان کوچک</span> را شمارش کنیم، که همه‌ی اینها بدون کپی‌رایت در دسترس هستند. من عمدتاً فایل <span class="rlm">‏</span><span class="ident" dir="ltr">siddhartha.txt</span><span class="rlm">‏</span> را در دایرکتوری حاوی فایل <span class="rlm">‏</span><span class="ident" dir="ltr">word_count.py</span><span class="rlm">‏</span> قرار نداده‌ام تا ببینیم برنامه‌ی ما با مشکل پیدا نکردن فایل چگونه برخورد می‌کند:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">
+<span class="ash">def count_words(filename):</span>
+    <span class="ash">--<span class="it">snip</span>--</span>
+
+filenames = ['alice.txt', 'siddhartha.txt', 'moby_dick.txt', 'little_women.txt']
+for filename in filenames:
+    count_words(filename)</pre>
+                            </div>
+                            <p>فایل پیدا نشده‌ی <span class="rlm">‏</span><span class="ident" dir="ltr">siddhartha.txt</span><span class="rlm">‏</span> هیچ تأثیری بر اجرای بقیه‌ی برنامه ندارد:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">The file alice.txt has about 29465 words.
+Sorry, the file siddhartha.txt does not exist.
+The file moby_dick.txt has about 215830 words.
+The file little_women.txt has about 189079 words.</pre>
+                            </div>
+                            <p>استفاده از بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">try-except</span><span class="rlm">‏</span> در این مثال دو مزیت قابل‌توجه دارد. یکی اینکه گزارش رهگیری خطا را در معرض دید کاربران قرار نمی‌دهیم، و دیگر اینکه برنامه می‌تواند به تحلیل متن‌های دیگر که قابل پیدا شدن هستند، ادامه دهد. اگر استثنای <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">FileNotFoundError</span><span class="rlm">‏</span> را که بر اثر فایل <span class="rlm">‏</span><span class="ident" dir="ltr">siddhartha.txt</span><span class="rlm">‏</span> ایجاد شده است، نگیریم، کاربر گزارش کامل رهگیری خطا را خواهد دید، و برنامه پس از تلاش برای تحلیل <span class="emphasis">سیذارتا</span>، از اجرا بازخواهد ماند. یعنی هرگز نوبت به <span class="emphasis">موبی دیک</span> یا <span class="emphasis">زنان کوچک</span> نخواهد رسید.</p>
+                        </div>
+                        <div class="sect" id="ch10lev2sec18"><a class="bkmk" name="ch10lev2sec18"></a>
+                            <h4>بروز خطا در سکوت</h4>
+                            <p>در مثال قبل، به کاربر گزارش دادیم که یکی از فایل‌ها در دسترس نیست. ولی نیازی نیست که هر استثنایی که ایجاد می‌شود، به کاربر اطلاع دهید. بعضی وقت‌ها شاید بهتر باشد که علی‌رغم وجود خطا، برنامه سکوت کند، و طوری که انگار هیچ اتفاقی نیفتاده، به کار خود ادامه دهد. برای اینکه این برنامه خطا را به سکوت برگزار کند، بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">try</span><span class="rlm">‏</span> را طبق معمول بنویسید، ولی در بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">except</span><span class="rlm">‏</span> به پایتون صراحتاً بگویید که هیچ کاری نکند. پایتون یک دستورالعمل <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">pass</span><span class="rlm">‏</span> دارد که به آن می‌گوید که در یک بلوک، هیچ کاری نکند:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr"><span class="ash">def count_words(filename):</span>
+    <span class="ash">"""Count the approximate number of words in a file."""</span>
+    <span class="ash">try:</span>
+        <span class="ash">--<span class="it">snip</span>--</span>
+
+    <span class="ash">except FileNotFoundError:</span>
+<span class="n" dir="ltr">1</span>        pass
+    <span class="ash">else:</span>
+        <span class="ash">--<span class="it">snip</span>--</span>
+
+<span class="ash">filenames = ['alice.txt', 'siddhartha.txt', 'moby_dick.txt', 'little_women.txt']</span>
+<span class="ash">for filename in filenames:</span>
+    <span class="ash">count_words(filename)</span></pre>
+                            </div><a id="p201"></a>
+                            <p>تنها تفاوت این برنامه با برنامه‌ی قبل، دستورالعمل <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">pass</span><span class="rlm">‏</span> در <span class="n" dir="ltr">1</span> است. حالا وقتی که استثنای <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">FileNotFoundError</span><span class="rlm">‏</span> ایجاد می‌شود، کد بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">except</span><span class="rlm">‏</span> اجرا می‌شود، ولی هیچ اتفاقی نمی‌افتد. نه رهگیری خطا ایجاد می‌شود، و نه پیامی در پاسخ به خطا نمایش داده می‌شود. کاربران تعداد کلمات هر کدام از فایل‌های موجود را می‌بینند، ولی از فایلی که پیدا نشده، هیچ اثری یافت نمی‌شود:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">The file alice.txt has about 29465 words.
+The file moby_dick.txt has about 215830 words.
+The file little_women.txt has about 189079 words.</pre>
+                            </div>
+                            <p>دستورالعمل <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">pass</span><span class="rlm">‏</span> به‌عنوان جانگهدار عمل می‌کند. یعنی نشان می‌دهد که خودتان تصمیم گرفته‌اید که در این محل خاص از اجرای برنامه هیچ کاری انجام ندهید، ولی شاید بعداً چیزی به اینجا اضافه کنید. به‌عنوان مثال، در این برنامه ممکن است تصمیم بگیریم که نام هر فایلی که پیدا نمی‌شود را در فایلی به نام <span class="rlm">‏</span><span class="ident" dir="ltr">missing_files.txt</span><span class="rlm">‏</span> بنویسیم. کاربران این فایل را نخواهند دید، ولی خودمان خواهیم توانست فایل را بخوانیم و به فایل‌های یافت‌نشده رسیدگی کنیم.</p>
+                        </div>
+                        <div class="sect" id="ch10lev2sec19"><a class="bkmk" name="ch10lev2sec19"></a>
+                            <h4>تصمیم‌گیری برای گزارش کردن خطاها</h4>
+                            <p>از کجا می‌دانید که کدام خطاها را به کاربران گزارش کنید و چه مواردی را به سکوت برگزار کنید؟ اگر کاربران از قبل بدانند که چه متن‌هایی قرار است تحلیل شود، در آن صورت شاید بهتر باشد به آن‌ها گفته شود که چرا برخی از فایل‌ها تحلیل نشده‌اند. اگر کاربران بدانند که قرار است چند کتاب بررسی شوند، ولی نمی‌دانند چه کتاب‌هایی، در آن صورت شاید نیازی نباشد به آن‌ها گفته شود که برخی از کتاب‌ها موجود نبودند. اگر قرار باشد اطلاعاتی به کاربران بدهید که آن‌ها در پی دانستن آن نبودند، در آن صورت ممکن است سودمندی برنامه‌ی شما کاهش یابد. ساختارهای مدیریت خطا در پایتون به شما کنترل ظریفی می‌دهند که در زمانی که مشکلی بروز می‌کند، چقدر از اطلاعات را در اختیار کاربر بگذارید؛ تصمیم‌گیری در این مورد بر عهده‌ی خود شما است.</p>
+                            <p>در صورتی که کد برنامه‌ای خوب و صحیح نوشته شده باشد، کمتر دیده می‌شود که حاوی خطاهای درونی، مانند خطاهای نحوی یا منطقی، باشد. ولی هر گاه برنامه‌ی شما وابسته به چیزی در بیرون باشد، مانند ورودی کاربر، موجود بودن یک فایل، در دسترس بودن ارتباط شبکه، و امثال آن، احتمال دارد که استثنایی بروز کند. کم‌کم به تجربه یاد خواهید گرفت که در چه جاهایی باید به استثناها رسیدگی کنید، و چقدر درباره‌ی خطاهایی که بروز می‌کند، به کاربر اطلاع‌رسانی نمایید.</p>
+                            <div class="sidebar">
+                                <h6 class="sidebar-title">خودتان امتحان کنید</h6>
+                                <p class="tiy1"><span class="tiy" id="ch10_tiy06"><span class="tiy-num">۱۰-۶</span>. <span class="tiy-title">جمع</span>: </span> یکی از مشکلات شایع در برنامه‌هایی که درخواست ورودی عددی می‌کنند، زمانی است که کاربر به جای عدد، متن وارد می‌کند. وقتی که تلاش کنید ورودی را به <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">int</span><span class="rlm">‏</span> تبدیل کنید، خطای <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">ValueError</span><span class="rlm">‏</span> دریافت خواهید کرد. برنامه‌ای بنویسید که دو عدد را می‌پرسد. سپس آن‌ها را جمع می‌کند و مجموع آن‌ها را نمایش می‌دهد. خطای <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">ValueError</span><span class="rlm">‏</span> را در زمانی که یکی از دو مقدار، عدد نباشد، بگیرید، و پیغام خطای مناسبی را نمایش دهید. برای آزمایش کردن برنامه، یک بار دو عدد به آن بدهید و دفعه‌ی بعد، به جای عدد، یک متن به آن بدهید.</p><a id="p202"></a>
+                                <p class="tiy1"><span class="tiy" id="ch10_tiy07"><span class="tiy-num">۱۰-۷</span>. <span class="tiy-title">ماشین حساب جمع</span>: </span> برنامه‌ای را که در <span class="ref"><a href="c21-ch10.xhtml#ch10_tiy06">تمرین <span dir="ltr">۱۰-۶</span></a></span> نوشتید، در یک حلقه‌ی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">while</span><span class="rlm">‏</span> قرار دهید تا کاربر بتواند مرتب عدد وارد کند، حتی در صورتی که به اشتباه به جای عدد، متن وارد کرده باشد.</p>
+                                <p class="tiy1"><span class="tiy" id="ch10_tiy08"><span class="tiy-num">۱۰-۸</span>. <span class="tiy-title">گربه‌ها و سگ‌ها</span>: </span> دو فایل به نام <span class="rlm">‏</span><span class="ident" dir="ltr">cats.txt</span><span class="rlm">‏</span> و <span class="rlm">‏</span><span class="ident" dir="ltr">dogs.txt</span><span class="rlm">‏</span> ایجاد کنید. در فایل اول لااقل سه نام گربه و در فایل دوم سه نام سگ را ذخیره کنید. برنامه‌ای بنویسید که تلاش می‌کند این فایل‌ها را بخواند و محتویات فایل را روی صفحه نمایش دهد. کدتان را در یک بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">try-except</span><span class="rlm">‏</span> قرار دهید تا خطای <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">FileNotFound</span><span class="rlm">‏</span> را بگیرید، و در صورتی که فایلی پیدا نشد، پیام مناسبی را نمایش دهید. یکی از فایل‌ها را به محل دیگری در سیستمتان ببرید، و وارسی کنید که کد موجود در بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">except</span><span class="rlm">‏</span> کارکرد درستی داشته باشد.</p>
+                                <p class="tiy1"><span class="tiy" id="ch10_tiy09"><span class="tiy-num">۱۰-۹</span>. <span class="tiy-title">سگ‌ها و گربه‌های خاموش</span>: </span> بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">except</span><span class="rlm">‏</span> را در <span class="ref"><a href="c21-ch10.xhtml#ch10_tiy08">تمرین <span dir="ltr">۱۰-۸</span></a></span> طوری تغییر دهید که در صورتی که هر کدام از فایل‌ها یافت نشود، به سکوت برگزار کند.</p>
+                                <p class="tiy1"><span class="tiy" id="ch10_tiy10"><span class="tiy-num">۱۰-۱۰</span>. <span class="tiy-title">کلمات شایع</span>: </span> به سایت پروژه‌ی گوتنبرگ (<span class="rlm">‏</span><a dir="ltr" target="_blank" href="https://gutenberg.org/">gutenberg.org</a><span class="rlm">‏</span>) مراجعه کنید و چند متن را برای تحلیل انتخاب کنید. فایل‌های متنی مربوط به آثار انتخاب شده را دانلود کنید، یا اینکه متن آن‌ها را از مرورگر کپی کنید و در فایلی متنی روی کامپیوترتان ذخیره کنید.</p>
+                                <p>می‌توانید از متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">count()</span><span class="rlm">‏</span> برای شمردن اینکه یک کلمه یا عبارت در یک رشته چند بار تکرار شده است، استفاده کنید. مثلاً کد زیر تعداد دفعاتی را که کلمه‌ی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">'row'</span><span class="rlm">‏</span> در یک رشته ظاهر شده است، تعیین می‌کند:</p>
+                                <div class="snippet">
+                                    <pre class="snippet" dir="ltr">&gt;&gt;&gt; <span class="bo">line = "Row, row, row your boat"</span>
+&gt;&gt;&gt; <span class="bo">line.count('row')</span>
+2
+&gt;&gt;&gt; <span class="bo">line.lower().count('row')</span>
+3</pre>
+                                </div>
+                                <p>دقت کنید که تبدیل کردن رشته به حروف کوچک با استفاده از متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">lower()</span><span class="rlm">‏</span> سبب می‌شود که تمام موارد تکرار کلمه‌ی مورد نظر، صرف‌نظر از حروف کوچک و بزرگ، شمارش شود.</p>
+                                <p>برنامه‌ای بنویسید که فایل‌های دانلود شده‌تان از پروژه‌ی گوتنبرگ را می‌خواند و مشخص می‌کند که کلمه‌ی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">'the'</span><span class="rlm">‏</span> در هر متن چند بار تکرار شده است. البته این شمارش تقریبی است، زیرا کلماتی هم مانند <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">'then'</span><span class="rlm">‏</span> و <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">'there'</span><span class="rlm">‏</span> شمارش خواهند شد. بعد سعی کنید عبارت <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">'the '</span><span class="rlm">‏</span> را که در آخر آن اسپیس دارد، شمارش کنید، ببینید تعداد آن چقدر کمتر می‌شود.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sect" id="ch10lev1sec4"><a class="bkmk" name="ch10lev1sec4"></a>
+                        <h3>ذخیره کردن داده‌ها</h3>
+                        <p>خیلی از اوقات شما در برنامه‌هایتان اطلاعات مختلفی را از کاربر می‌گیرید. شاید در یک بازی این امکان را به کاربران بدهید که ترجیحاتشان را ذخیره کنند، یا شاید در برنامه‌ای داده‌هایی را برای مصورسازی از کاربر بگیرید. صرف‌نظر از اینکه برنامه‌ی شما چه مقصودی داشته باشد، معمولاً اطلاعات به دست آمده از کاربر را در یک ساختمان داده‌ای، مانند لیست یا دیکشنری، ذخیره می‌کنید. وقتی که کاربر برنامه را می‌بندد، به احتمال زیاد لازم است که اطلاعاتی را که کاربر وارد کرده است، ذخیره کنید. یک راه ساده برای انجام این کار، ذخیره کردن داده‌ها با استفاده از مدول <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">json</span><span class="rlm">‏</span> است.</p><a id="p203"></a>
+                        <p>مدول <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">json</span><span class="rlm">‏</span> به شما امکان می‌دهد که ساختارهای داده‌ای ساده‌ی پایتون را در فایلی ذخیره کنید و در اجرای بعدی برنامه، دوباره داده‌ها را بخوانید. از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">json</span><span class="rlm">‏</span> برای اشتراک‌گذاری داده‌ها بین برنامه‌های مختلف پایتون نیز می‌توان استفاده کرد. نکته‌ی جالب‌تر اینکه فرمت داده‌ای <span class="rlm">‏</span><span class="lr" dir="ltr">JSON</span><span class="rlm">‏</span> مختص پایتون نیست، بنابراین، داده‌های ذخیره شده با فرمت <span class="rlm">‏</span><span class="lr" dir="ltr">JSON</span><span class="rlm">‏</span> را می‌توانید با افراد دیگری هم که با زبان‌های برنامه‌نویسی دیگر کار می‌کنند، به اشتراک بگذارید. فرمت مفید و انتقال‌پذیری است و یاد گرفتن آن هم خیلی آسان است.</p>
+                        <div class="note">
+                            <h6 class="note-title">توجه</h6>
+                            <p>فرمت <span class="rlm">‏</span><span class="lr" dir="ltr">JSON</span><span class="rlm">‏</span> (مخفف نماد شیئی جاوا اسکریپت) در اصل برای زبان جاوا اسکریپت ایجاد شد. ولی اکنون فرمت متداولی شده که در زبان‌های مختلفی، از جمله پایتون، مورد استفاده قرار می‌گیرد.</p>
+                        </div>
+                        <div class="sect" id="ch10lev2sec20"><a class="bkmk" name="ch10lev2sec20"></a>
+                            <h4>استفاده از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">json.dump()</span><span class="rlm">‏</span> و <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">json.load()</span><span class="rlm">‏</span></h4>
+                            <p>در اینجا برنامه‌ی کوتاهی می‌نویسیم که مجموعه‌ای از اعداد را ذخیره می‌کند و برنامه‌ی دیگری که آن اعداد را دوباره می‌خواند و وارد حافظه می‌کند. برنامه‌ی اول برای ذخیره کردن اعداد از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">json.dump()</span><span class="rlm">‏</span> استفاده می‌کند، و برنامه‌ی دوم از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">json.load()</span><span class="rlm">‏</span> بهره می‌گیرد.</p>
+                            <p>تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">json.dump()</span><span class="rlm">‏</span> دو آرگومان می‌گیرد: داده‌هایی که باید ذخیره شود و یک شیء فایل که می‌تواند از آن برای ذخیره کردن داده‌ها استفاده کند. به‌صورت زیر می‌توانید از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">json.dump()</span><span class="rlm">‏</span> برای ذخیره کردن لیستی از اعداد استفاده کنید:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">number_writer.py</div>
+                                <pre class="snippet" dir="ltr">import json
+numbers = [2, 3, 5, 7, 11, 13]
+<span class="n" dir="ltr">1</span>filename = 'numbers.json'
+<span class="n" dir="ltr">2</span>with open(filename, 'w') as f:
+<span class="n" dir="ltr">3</span>    json.dump(numbers, f)</pre>
+                            </div>
+                            <p>ابتدا مدول <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">json</span><span class="rlm">‏</span> را ایمپورت می‌کنیم و سپس لیستی از اعداد را برای کار ایجاد می‌کنیم. در <span class="n" dir="ltr">1</span>، یک نام فایل را انتخاب می‌کنیم تا لیست اعداد را در آن ذخیره کنیم. برای فایل‌هایی که حاوی داده‌ها با فرمت <span class="rlm">‏</span><span class="lr" dir="ltr">JSON</span><span class="rlm">‏</span> هستند، عموماً از پسوند فایل <span class="rlm">‏</span><span class="ident" dir="ltr">.json</span><span class="rlm">‏</span> استفاده می‌شود. سپس فایل را در حالت نوشتن باز می‌کنیم، تا <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">json</span><span class="rlm">‏</span> بتواند داده‌ها را در <span class="n" dir="ltr">2</span> در فایل بنویسد. در <span class="n" dir="ltr">3</span>، با استفاده از تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">json.dump()</span><span class="rlm">‏</span>، لیست <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">numbers</span><span class="rlm">‏</span> را در فایل <span class="rlm">‏</span><span class="ident" dir="ltr">numbers.json</span><span class="rlm">‏</span> ذخیره می‌کنیم.</p>
+                            <p>این برنامه خروجی ندارد، بنابراین، فایل <span class="rlm">‏</span><span class="ident" dir="ltr">numbers.json</span><span class="rlm">‏</span> را باز می‌کنیم و نگاهی به آن می‌اندازیم. داده‌ها با فرمتی ذخیره شده است که خیلی شبیه پایتون به نظر می‌رسد:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">[2, 3, 5, 7, 11, 13]</pre>
+                            </div>
+                            <p>حالا برنامه‌ای می‌نویسیم که با استفاده از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">json.load()</span><span class="rlm">‏</span>، لیست را دوباره به داخل حافظه بار می‌کند:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">number_reader.py</div>
+                                <pre class="snippet" dir="ltr">import json
+<span class="n" dir="ltr">1</span>filename = 'numbers.json'
+<span class="n" dir="ltr">2</span>with open(filename) as f:
+<span class="n" dir="ltr">3</span>    numbers = json.load(f)
+print(numbers)</pre>
+                            </div><a id="p204"></a>
+                            <p>در <span class="n" dir="ltr">1</span>، همان فایلی را که در آن نوشته‌ایم، به برنامه می‌دهیم. این بار فایل را در حالت خواندن باز می‌کنیم، زیرا پایتون در <span class="n" dir="ltr">2</span> فقط نیاز به خواندن فایل دارد. در <span class="n" dir="ltr">3</span>، با استفاده از تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">json.load()</span><span class="rlm">‏</span>، اطلاعات ذخیره شده در <span class="rlm">‏</span><span class="ident" dir="ltr">numbers.json</span><span class="rlm">‏</span> را می‌خوانیم، و آن را به متغیر <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">numbers</span><span class="rlm">‏</span> اختصاص می‌دهیم. و سرانجام، لیست اعداد بازیابی شده را نمایش می‌دهیم، و می‌بینیم که همان لیستی است که در <span class="rlm">‏</span><span class="ident" dir="ltr">number_writer.py</span><span class="rlm">‏</span> ایجاد کردیم:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">[2, 3, 5, 7, 11, 13]</pre>
+                            </div>
+                            <p>این روش ساده‌ای برای اشتراک‌گذاری اطلاعات بین برنامه‌ها است.</p>
+                        </div>
+                        <div class="sect" id="ch10lev2sec21"><a class="bkmk" name="ch10lev2sec21"></a>
+                            <h4>ذخیره کردن و خواندن داده‌های ایجاد شده به‌وسیله‌ی کاربر</h4>
+                            <p>ذخیره کردن داده‌ها با استفاده از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">json</span><span class="rlm">‏</span> برای زمانی که با داده‌های ایجاد شده به‌وسیله‌ی کاربر کار می‌کنید، مفید است، چرا که اگر داده‌های کاربر را به طریقی ذخیره نکنید، این اطلاعات پس از متوقف شدن اجرای برنامه از دست خواهد رفت. در اینجا برنامه‌ای می‌نویسیم که بار اول از کاربر نام او را می‌پرسد، ولی دفعه‌ی بعد که اجرا می‌شود، نام او را به یاد می‌آورد.</p>
+                            <p>ابتدا نام کاربر را ذخیره می‌کنیم:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">remember_me.py</div>
+                                <pre class="snippet" dir="ltr">import json
+<span class="n" dir="ltr">1</span>username = input("What is your name? ")
+filename = 'username.json'
+with open(filename, 'w') as f:
+<span class="n" dir="ltr">2</span>    json.dump(username, f)
+<span class="n" dir="ltr">3</span>    print(f"We'll remember you when you come back, {username}!")</pre>
+                            </div>
+                            <p>در <span class="n" dir="ltr">1</span>، نام کاربر را می‌پرسیم تا آن را ذخیره کنیم. سپس از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">json.dump()</span><span class="rlm">‏</span> استفاده می‌کنیم و نام کاربر و شیء فایل را به آن می‌دهیم، تا نام کاربری در <span class="n" dir="ltr">2</span> در فایل ذخیره شود. آنگاه پیامی را نمایش می‌دهیم و در <span class="n" dir="ltr">3</span> به کاربر اطلاع می‌دهیم که اطلاعات را ذخیره کرده‌ایم:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">What is your name? <span class="bo">Eric</span>
+We'll remember you when you come back, Eric!</pre>
+                            </div>
+                            <p>حالا برنامه‌ی جدید می‌نویسیم که به کاربری که قبلاً نام او ذخیره شده است، خوشامد می‌گوید:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">greet_user.py</div>
+                                <pre class="snippet" dir="ltr">import json
+filename = 'username.json'
+with open(filename) as f:
+<span class="n" dir="ltr">1</span>    username = json.load(f)
+<span class="n" dir="ltr">2</span>    print(f"Welcome back, {username}!")</pre>
+                            </div><a id="p205"></a>
+                            <p>در <span class="n" dir="ltr">1</span>، با استفاده از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">json.load()</span><span class="rlm">‏</span>، اطلاعات ذخیره شده در <span class="rlm">‏</span><span class="ident" dir="ltr">username.json</span><span class="rlm">‏</span> را می‌خوانیم و آن را به متغیر <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">username</span><span class="rlm">‏</span> اختصاص می‌دهیم. حال که نام کاربری را به دست آوردیم، در <span class="n" dir="ltr">2</span> به کاربر خوشامدگویی می‌کنیم:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">Welcome back, Eric!</pre>
+                            </div>
+                            <p>لازم است که این دو برنامه را به‌صورت یک فایل ادغام کنیم. وقتی که کسی برنامه‌ی <span class="rlm">‏</span><span class="ident" dir="ltr">remember_me.py</span><span class="rlm">‏</span> را اجرا می‌کند، برنامه باید در صورت امکان نام کاربری را بخواند؛ بنابراین، ابتدا یک بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">try</span><span class="rlm">‏</span> می‌نویسیم که تلاش می‌کند نام کاربری را بخواند. در صورتی که فایل <span class="rlm">‏</span><span class="ident" dir="ltr">username.json</span><span class="rlm">‏</span> وجود نداشته باشد، در بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">except</span><span class="rlm">‏</span> نام کاربری را می‌پرسیم و آن را برای دفعه‌ی بعد در فایل <span class="rlm">‏</span><span class="ident" dir="ltr">username.json</span><span class="rlm">‏</span> ذخیره می‌کنیم:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">remember_me.py</div>
+                                <pre class="snippet" dir="ltr">import json
+# Load the username, if it has been stored previously.
+#  Otherwise, prompt for the username and store it.
+filename = 'username.json'
+try:
+<span class="n" dir="ltr">1</span>    with open(filename) as f:
+<span class="n" dir="ltr">2</span>        username = json.load(f)
+<span class="n" dir="ltr">3</span>except FileNotFoundError:
+<span class="n" dir="ltr">4</span>    username = input("What is your name? ")
+<span class="n" dir="ltr">5</span>    with open(filename, 'w') as f:
+        json.dump(username, f)
+        print(f"We'll remember you when you come back, {username}!")
+else:
+    print(f"Welcome back, {username}!")</pre>
+                            </div>
+                            <p>در اینجا کد جدیدی وجود ندارد؛ فقط همان کد دو مثال قبل به‌صورت یک فایل ادغام شده است. در <span class="n" dir="ltr">1</span>، سعی می‌کنیم فایل <span class="rlm">‏</span><span class="ident" dir="ltr">username.json</span><span class="rlm">‏</span> را باز کنیم. اگر این فایل وجود داشته باشد، نام کاربری را در <span class="n" dir="ltr">2</span> به حافظه بار می‌کنیم و در بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">else</span><span class="rlm">‏</span>، پیامی نمایش می‌دهیم و به کاربر خوشامد می‌گوییم. اگر این اولین بار باشد که کاربر برنامه را اجرا می‌کند، در آن صورت فایل <span class="rlm">‏</span><span class="ident" dir="ltr">username.json</span><span class="rlm">‏</span> وجود نخواهد داشت و یک خطای <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">FileNotFoundError</span><span class="rlm">‏</span> در <span class="n" dir="ltr">3</span> ایجاد خواهد شد. پایتون به سراغ بلوک <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">except</span><span class="rlm">‏</span> خواهد رفت که در آن در <span class="n" dir="ltr">4</span> از کاربر خواسته می‌شود که نام کاربری خود را وارد کند. آنگاه با استفاده از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">json.dump()</span><span class="rlm">‏</span>، نام کاربری را ذخیره می‌کنیم و پیام خوشامدگویی را در <span class="n" dir="ltr">5</span> نمایش می‌دهیم.</p>
+                            <p>هر کدام از بلوک‌ها که اجرا شود، نتیجه‌ی آن یک نام کاربری است و یک پیام خوشامدگویی مناسب. اگر نخستین بار اجرای برنامه باشد، خروجی به‌صورت زیر است:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">What is your name? <span class="bo">Eric</span>
+We'll remember you when you come back, Eric!</pre>
+                            </div>
+                            <p>در غیر این صورت:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">Welcome back, Eric!</pre>
+                            </div>
+                            <p>در صورتی که برنامه قبلاً لااقل یک بار اجرا شده باشد، این خروجی را خواهید دید.</p>
+                        </div>
+                        <div class="sect" id="ch10lev2sec22"><a class="bkmk" name="ch10lev2sec22"></a>
+                            <h4>بازساخت کد</h4>
+                            <a id="p206"></a>
+                            <p>خیلی اوقات، به جایی می‌رسید که کد شما کار می‌کند، ولی متوجه می‌شوید که می‌توانید کد را با تبدیل آن به چند تابع که هر کدام کار خاصی انجام می‌دهند، بهبود بخشید. این فرایند <span class="emphasis">بازساخت کد</span> (<span class="emphasis"><span class="rlm">‏</span><span class="lr" dir="ltr">refactoring</span><span class="rlm">‏</span></span>) نامیده می‌شود. بازساخت موجب می‌شود که کد شما پاکیزه‌تر شود، و فهمیدن و توسعه دادن آن آسان‌تر باشد.</p>
+                            <p>می‌توانیم برنامه‌ی <span class="rlm">‏</span><span class="ident" dir="ltr">remember_me.py</span><span class="rlm">‏</span> را با بردن قسمت عمده‌ی منطق آن به یک یا چند تابع، بازساخت کنیم. تمرکز <span class="rlm">‏</span><span class="ident" dir="ltr">remember_me.py</span><span class="rlm">‏</span> بر خوشامدگویی به کاربر است، بنابراین، تمام کد موجود را به تابعی به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">greet_user()</span><span class="rlm">‏</span> می‌بریم:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">remember_me.py</div>
+                                <pre class="snippet" dir="ltr"><span class="ash">import json</span>
+def greet_user():
+<span class="n" dir="ltr">1</span>    """Greet the user by name."""
+    <span class="ash">filename = 'username.json'</span>
+    <span class="ash">try:</span>
+        <span class="ash">with open(filename) as f:</span>
+            <span class="ash">username = json.load(f)</span>
+    <span class="ash">except FileNotFoundError:</span>
+        <span class="ash">username = input("What is your name? ")</span>
+        <span class="ash">with open(filename, 'w') as f:</span>
+            <span class="ash">json.dump(username, f)</span>
+            <span class="ash">print(f"We'll remember you when you come back, {username}!")</span>
+    <span class="ash">else:</span>
+        <span class="ash">print(f"Welcome back, {username}!")</span>
+greet_user()</pre>
+                            </div>
+                            <p>از آنجا که حالا از یک تابع استفاده می‌کنیم، لذا توضیحات را تبدیل به یک داک‌استرینگ می‌کنیم که نحوه‌ی کار برنامه را توضیح می‌دهد <span class="n" dir="ltr">1</span>. این فایل کمی مرتب‌تر از قبل است، ولی تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">greet_user()</span><span class="rlm">‏</span> کاری بیشتر از خوشامدگویی به کاربر را انجام می‌دهد—نام کاربری را هم در صورت موجود بودن می‌خواند یا اگر وجود نداشته باشد، از کاربر می‌پرسد.</p>
+                            <p>پس باید تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">greet_user()</span><span class="rlm">‏</span> را هم بازساخت کنیم تا این همه کار متفاوت را انجام ندهد. ابتدا کد مربوط به خواندن نام کاربری را به تابع دیگری می‌بریم:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr"><span class="ash">import json</span>
+def get_stored_username():
+<span class="n" dir="ltr">1</span>    """Get stored username if available."""
+    <span class="ash">filename = 'username.json'</span>
+    <span class="ash">try:</span>
+        <span class="ash">with open(filename) as f:</span>
+            <span class="ash">username = json.load(f)</span>
+    <span class="ash">except FileNotFoundError:</span>
+<span class="n" dir="ltr">2</span>        return None
+    else:
+        return username
+<a id="p207"></a><span class="ash">def greet_user():</span>
+    <span class="ash">"""Greet the user by name."""</span>
+    username = get_stored_username()
+<span class="n" dir="ltr">3</span>    if username:
+        print(f"Welcome back, {username}!")
+    else:
+        <span class="ash">username = input("What is your name? ")</span>
+        <span class="ash">filename = 'username.json'</span>
+        <span class="ash">with open(filename, 'w') as f:</span>
+            <span class="ash">json.dump(username, f)</span>
+            <span class="ash">print(f"We'll remember you when you come back, {username}!")</span>
+<span class="ash">greet_user()</span></pre>
+                            </div>
+                            <p>تابع جدید <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">get_stored_username()</span><span class="rlm">‏</span> مقصود مشخصی دارد، که در داک‌استرینگ آن در <span class="n" dir="ltr">1</span> ذکر شده است. این تابع نام کاربری ذخیره شده را می‌خواند و در صورتی که وجود داشته باشد، نام کاربری را برمی‌گرداند. اگر فایل <span class="rlm">‏</span><span class="ident" dir="ltr">username.json</span><span class="rlm">‏</span> وجود نداشته باشد، تابع مقدار <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">None</span><span class="rlm">‏</span> برمی‌گرداند <span class="n" dir="ltr">2</span>. این روش خوبی است: یک تابع یا باید مقداری را که انتظار دارید برگرداند، یا باید <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">None</span><span class="rlm">‏</span> برگرداند. این به ما امکان می‌دهد که به سادگی مقدار برگشتی تابع را وارسی کنیم. در <span class="n" dir="ltr">3</span>، در صورتی که تلاش برای بازیابی نام کاربری موفقیت‌آمیز باشد، پیام خوشامدگویی را برای کاربر نمایش می‌دهیم، و در غیر این صورت، درخواست نام کاربری جدید می‌کنیم.</p>
+                            <p>هنوز هم باید <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">greet_user()</span><span class="rlm">‏</span> را بازساخت کنیم و یک بلوک دیگر کد را هم از آن خارج کنیم. باید کدی را که در صورتی که نام کاربری وجود نداشته باشد، درخواست نام کاربری جدید می‌کند، به تابع دیگری انتقال دهیم که مخصوص همین کار باشد:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr"><span class="ash">import json</span>
+<span class="ash">def get_stored_username():</span>
+    <span class="ash">"""Get stored username if available."""</span>
+    <span class="ash">--<span class="it">snip</span>--</span>
+
+def get_new_username():
+    """Prompt for a new username."""
+    <span class="ash">username = input("What is your name? ")</span>
+    <span class="ash">filename = 'username.json'</span>
+    <span class="ash">with open(filename, 'w') as f:</span>
+        <span class="ash">json.dump(username, f)</span>
+    return username
+<span class="ash">def greet_user():</span>
+    <span class="ash">"""Greet the user by name."""</span>
+    <span class="ash">username = get_stored_username()</span>
+    <span class="ash">if username:</span>
+        <span class="ash">print(f"Welcome back, {username}!")</span>
+    <span class="ash">else:</span>
+        username = get_new_username()
+        <span class="ash">print(f"We'll remember you when you come back, {username}!")</span>
+<span class="ash">greet_user()</span></pre>
+                            </div><a id="p208"></a>
+                            <p>در این نسخه‌ی نهایی <span class="rlm">‏</span><span class="ident" dir="ltr">remember_me.py</span><span class="rlm">‏</span>، هر تابع مقصود واحد و مشخصی دارد. تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">greet_user()</span><span class="rlm">‏</span> را فراخوانی می‌کنیم، و این تابع پیام مناسبی را نمایش می‌دهد: یا به کاربر موجود خوشامدگویی می‌کند و یا به یک کاربر جدید. برای این کار، <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">get_stored_username()</span><span class="rlm">‏</span> را فراخوانی می‌کند که فقط در صورتی که فایل نام کاربری وجود داشته باشد، مسئول گرفتن نام کاربری ذخیره شده است. نهایتاً در صورتی که لازم باشد، <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">greet_user()</span><span class="rlm">‏</span> تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">get_new_username()</span><span class="rlm">‏</span> را فراخوانی می‌کند که مسئول گرفتن نام کاربری جدید و ذخیره کردن آن است. این جداسازی کار یک بخش ضروری از نوشتن کد قابل‌فهم است که نگهداری و توسعه‌ی آن نیز به سهولت امکان‌پذیر خواهد بود.</p>
+                            <div class="sidebar">
+                                <h6 class="sidebar-title">خودتان امتحان کنید</h6>
+                                <p class="tiy1"><span class="tiy" id="ch10_tiy11"><span class="tiy-num">۱۰-۱۱</span>. <span class="tiy-title">عدد مورد علاقه</span>: </span> برنامه‌ای بنویسید که از کاربر عدد مورد علاقه‌ی او را می‌پرسد. با استفاده از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">json.dump()</span><span class="rlm">‏</span>، این عدد را در فایلی ذخیره کنید. برنامه‌ی جداگانه‌ای بنویسید که این مقدار را می‌خواند و این پیام را نمایش می‌دهد: <span class="rlm">‏</span><span class="lr" dir="ltr">“I know your favorite number! It’s _____.”</span><span class="rlm">‏</span></p>
+                                <p class="tiy1"><span class="tiy" id="ch10_tiy12"><span class="tiy-num">۱۰-۱۲</span>. <span class="tiy-title">به خاطر آوردن عدد مورد علاقه</span>: </span> دو برنامه‌ی <span class="ref"><a href="c21-ch10.xhtml#ch10_tiy11">تمرین <span dir="ltr">۱۰-۱۱</span></a></span> را در یک فایل با هم ترکیب کنید. در صورتی که عدد از قبل ذخیره شده باشد، عدد مورد علاقه‌ی کاربر را به او گزارش کنید. در غیر این صورت، عدد مورد علاقه‌ی کاربر را از او بپرسید و آن را در فایلی ذخیره کنید. برنامه را دو بار اجرا کنید تا ببینید درست کار می‌کند یا نه.</p>
+                                <p class="tiy1"><span class="tiy" id="ch10_tiy13"><span class="tiy-num">۱۰-۱۳</span>. <span class="tiy-title">اعتبارسنجی کاربر</span>: </span> در نسخه‌ی نهایی <span class="rlm">‏</span><span class="ident" dir="ltr">remember_me.py</span><span class="rlm">‏</span> فرض بر این است که کاربر قبلاً نام کاربری خود را وارد کرده یا اینکه برنامه برای اولین بار است که اجرا می‌شود. حالا باید برنامه را به‌گونه‌ای تغییر دهیم تا حالتی را که احیاناً کاربر فعلی همان کاربری نیست که قبلاً از برنامه استفاده کرده است، شناسایی کند.</p>
+                                <p>قبل از نمایش پیام خوشامدگویی در <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">greet_user()</span><span class="rlm">‏</span>، از کاربر بپرسید که نام کاربری او همین است یا نه. اگر چنین نیست، <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">get_new_username()</span><span class="rlm">‏</span> را فراخوانی کنید تا نام کاربری صحیح را بگیرد.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sect" id="ch10lev1sec5"><a class="bkmk" name="ch10lev1sec5"></a>
+                        <h3>خلاصه</h3>
+                        <p>در این فصل، با چگونگی کار با فایل‌ها آشنا شدید. یاد گرفتید که محتویات فایل را یک‌جا یا سطر به سطر بخوانید. هم‌چنین، با نحوه‌ی نوشتن در فایل یا پیوست کردن متن به انتهای فایل آشنا شدید. هم‌چنین، درباره‌ی استثناها و نحوه‌ی رسیدگی به انواع استثناهایی که به‌طور شایع در برنامه‌هایتان خواهید دید، مطالبی فراگرفتید. و بالاخره، یاد گرفتید که ساختمان‌های داده‌ای پایتون را ذخیره کنید تا بتوانید اطلاعاتی را که از کاربر می‌گیرید، ذخیره نمایید، تا آنکه هر بار برنامه اجرا می‌شود، کاربر مجبور نباشد از اول شروع کند.</p>
+                        <p>در <span class="ref"><a href="c22-ch11.xhtml">فصل ۱۱</a></span>، راه‌های مؤثری را برای آزمایش کردن کد یاد می‌گیرید. این به شما کمک خواهد کرد که از صحت برنامه‌ای که نوشته‌اید، مطمئن شوید، و نیز بتوانید اشکالات برنامه‌نویسی را در برنامه‌هایتان پیدا کنید.</p>
+                    </div>
+                </div>
+                <div class="row pager">
+                    <div class="col-md-5 text-center text-md-left pager-prev"><a href="c20-ch09.xhtml"><span><span>فصل ۹</span>: <span>کلاس</span></span></a></div>
+                    <div class="col-md-2 text-center pager-title"><a href="c01-cover.xhtml">آغاز</a></div>
+                    <div class="col-md-5 text-center text-md-right pager-next"><a href="c22-ch11.xhtml"><span><span>فصل ۱۱</span>: <span>آزمایش کد</span></span></a></div>
+                </div>
+            </main>
+            <aside class="col-md-2 order-md-first">
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item"><a class="nav-link" href="../">دورهٔ فشردهٔ پایتون</a></li>
+                    <li class="nav-item"><a class="nav-link" href="c06-toc.xhtml">فهرست</a></li>
+                </ul>
+            </aside>
+        </div>
+    </div>
+    <div class="container">
+        <div id="footer" class="row">
+            <div class="col-sm-6">
+                <p><span>© ۱۴۰۰، قاسم کیانی مقدم.</span></p>
+            </div>
+            <div class="col-sm-6">
+                <p class="text-right"><span><a target="_blank" rel="me" href="https://linkedin.com/in/ghasemkiani" title="لینکدین"><span class="fab fa-linkedin"></span></a></span><span> </span><span><a target="_blank" rel="me" href="https://github.com/ghasemkiani" title="گیت‌هاب"><span class="fab fa-github"></span></a></span><span> </span><span><a target="_blank" rel="me" href="https://twitter.com/ghasemkiani" title="توئیتر"><span class="fab fa-twitter"></span></a></span><span> </span><span><a target="_blank" rel="me" href="https://facebook.com/ghasemkiani" title="فیس‌بوک"><span class="fab fa-facebook"></span></a></span><span> </span><span><a target="_blank" rel="me" href="https://telegram.me/ghasemkiani" title="تلگرام"><span class="fab fa-telegram"></span></a></span><span> </span><span><a target="_blank" rel="me" href="https://instagram.com/ghasem.kiani" title="اینستاگرام"><span class="fab fa-instagram"></span></a></span><span> </span><span><a target="_blank" rel="me" href="https://mastodon.social/@ghasemkiani" title="ماستودون"><span class="fab fa-mastodon"></span></a></span></p>
+            </div>
+        </div>
+    </div>
+    <script crossorigin="anonymous" src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"></script>
+    <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"></script>
+    <script crossorigin="anonymous" src="https://cdn.rtlcss.com/bootstrap/v4.0.0/js/bootstrap.min.js" integrity="sha384-54+cucJ4QbVb99v8dcttx/0JRx4FHMmhOWi4W+xrXpKcsKQodCBwAvu3xxkZAwsH"></script>
+    <script src="https://www.googletagmanager.com/gtag/js?id=undefined"></script>
+    <script src="data:application/javascript;charset=UTF-8;base64,KCgoew0KICAgIGlkDQp9KSA9PiB7DQogICAgd2luZG93LmRhdGFMYXllciA9IHdpbmRvdy5kYXRhTGF5ZXIgfHwgW107DQoNCiAgICBmdW5jdGlvbiBndGFnKCkgew0KICAgICAgICBkYXRhTGF5ZXIucHVzaChhcmd1bWVudHMpOw0KICAgIH0NCiAgICBndGFnKCJqcyIsIG5ldyBEYXRlKCkpOw0KICAgIGd0YWcoImNvbmZpZyIsIGlkKTsNCn0pKHt9KSk7Cg=="></script>
+</body>
+
+</html>

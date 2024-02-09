@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>کلاس</title>
+    <meta name="description" content="وب‌سایت قاسم کیانی مقدم" />
+    <meta name="keywords" content="قاسم کیانی مقدم, وب‌سایت, وب‌سایت قاسم کیانی مقدم, کتاب, فارسی, کتاب فارسی, ترجمه, برنامه‌نویسی, جاوا, جاوا اسکریپت, پزشکی, طب اطفال" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" crossorigin="anonymous" href="https://cdn.rtlcss.com/bootstrap/v4.0.0/css/bootstrap.min.css" integrity="sha384-P4uhUIGk/q1gaD/NdgkBIl3a6QywJjlsFJFk7SPRdruoGddvRVSwv5qFnvZ73cpz" />
+    <link rel="stylesheet" crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" />
+    <link rel="icon" type="image/x-icon" href="../../../favicon.ico" />
+    <style type="text/css">
+        @import url(https://fonts.googleapis.com/css?family=Droid%20Sans);
+        @import url(https://fonts.googleapis.com/css?family=Droid%20Serif);
+        @import url(https://fonts.googleapis.com/css?family=Droid%20Arabic%20Kufi);
+        @import url(https://fonts.googleapis.com/css?family=Droid%20Arabic%20Naskh);
+
+        html,
+        body,
+        input,
+        textarea,
+        select,
+        option,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: Droid Arabic Naskh, Droid Serif;
+        }
+
+        nav,
+        .nav {
+            font-family: Droid Arabic Kufi, Droid Sans;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: Droid Arabic Naskh, Droid Serif;
+        }
+
+        #footer {
+            margin-top: 0.5rem;
+            padding-top: 0.5rem;
+            border-top: #eeeeee solid thick;
+        }
+    </style>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Courier+Prime);
+
+        div.row.pager {
+            margin-top: 0.5em;
+            padding: 0.5em 0;
+            border-top: solid #cccccc 2px;
+            background-color: #dddddd;
+        }
+
+        div.pager-prev {}
+
+        div.pager-title {}
+
+        div.pager-next {}
+    </style>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+
+<body style="min-height: 75rem;">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+        <div class="container"><a class="navbar-brand" href="../../../">وب‌سایت قاسم کیانی مقدم</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#divNavBarToggle" aria-controls="divNavBarToggle" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div id="divNavBarToggle" class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link" href="../../">کتاب‌ها<span class="sr-only"> (current)</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../../essays/">مقالات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../../translation/">ترجمه</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../../about/">درباره</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../../contact/">تماس</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <main class="col-md-10 order-md-last">
+                <div class="ch" id="ch09">
+                    <h2 class="ch-title"><a class="bkmk" name="ch09"></a><a class="rtoc" href="c06-toc.xhtml"><span class="ch-title-num">۹</span><br /><span class="ch-title-text">کلاس</span></a></h2><img style="float:   right; margin-left:  0.5em; margin-bottom: 0.25em;" alt="تصویر ابتدای فصل" src="images/ch.svg" />
+                    <a id="p157"></a>
+                    <p><span class="emphasis">برنامه‌نویسی شیءگرا</span> یکی از کارآمدترین رویکردها برای نوشتن نرم‌افزار است. در این رویکرد، شما <span class="emphasis">کلاس‌هایی</span> می‌نویسید که معرف چیزها و موقعیت‌هایی در دنیای واقعی هستند، و بر اساس این کلاس‌ها، <span class="emphasis">اشیایی</span> ایجاد می‌کنید. وقتی که یک کلاس می‌نویسید، رفتاری عمومی را تعریف می‌کنید که دسته‌ای از اشیا می‌توانند داشته باشند. وقتی که هر کدام اشیا را از آن کلاس ایجاد می‌کنید، شیء ایجاد شده به‌طور خودکار به آن رفتار عمومی مجهز می‌شود؛ سپس می‌توانید به هر شیء صفاتی را که می‌خواهید، بدهید. شگفت‌زده خواهید شد وقتی ببینید که چه خوب می‌توان موقعیت‌های دنیای واقعی را با برنامه‌نویسی شیءگرا مدل‌سازی کرد.</p>
+                    <p>به ساختن شیء از کلاس <span class="emphasis">نمونه‌سازی</span> می‌گویند، و شما با <span class="emphasis">نمونه‌هایی</span> از کلاس کار می‌کنید. در این فصل، نوشتن کلاس و ایجاد کردن نمونه‌هایی از کلاس‌ها را یاد خواهید گرفت. نوع اطلاعاتی را که می‌توان در نمونه‌ی کلاس ذخیره کرد، مشخص خواهید کرد، و عمل‌هایی را که روی آن نمونه‌ها می‌توان انجام داد، تعریف خواهید کرد. هم‌چنین، کلاس‌هایی خواهید نوشت که قابلیت‌های یک کلاس موجود را بسط می‌دهند، به‌طوری که <a id="p158"></a>کلاس‌های مشابه بتوانند به‌طور مؤثری کد مشترک داشته باشند. کلاس‌های خود را در مدول ذخیره خواهید کرد و کلاس‌هایی را که برنامه‌نویسان دیگر نوشته‌اند، به برنامه‌های خود ایمپورت خواهید کرد.</p>
+                    <p>فهمیدن برنامه‌نویسی شیءگرا به شما کمک خواهد کرد که دنیا را مانند یک برنامه‌نویس ببینید. به شما کمک خواهد کرد که واقعاً کدتان را بفهمید، نه به این صورت که در هر سطر آن چه اتفاقی می‌افتد، بلکه به این صورت که مفاهیم بزرگ‌تر آن را درک کنید. شناخت منطق کلاس‌ها شما را آموزش خواهد داد که به‌طور منطقی فکر کنید، تا بتوانید تقریباً برای حل هر مسئله‌ای که با آن برخورد می‌کنید، برنامه بنویسید.</p>
+                    <p>در ضمن به تدریج که به سراغ چالش‌های هرچه پیچیده‌تر می‌روید، استفاده از کلاس، کار را برای شما و دیگر برنامه‌نویسانی که با آنها کار می‌کنید، راحت‌تر خواهد کرد. وقتی که شما و برنامه‌نویسان دیگر بر اساس نوع منطق یکسانی کد بنویسید، خواهید توانست کار یکدیگر را درک کنید. برنامه‌های شما برای همکارانتان معنی‌دار خواهد شد، به‌طوری که همه خواهند توانست کار بیشتری را انجام دهند.</p>
+                    <div class="sect" id="ch09lev1sec1"><a class="bkmk" name="ch09lev1sec1"></a>
+                        <h3>ایجاد کردن و استفاده از یک کلاس</h3>
+                        <p>تقریباً هر چیزی را می‌توان با استفاده از کلاس مدل‌سازی کرد. برای شروع، کلاس ساده‌ای را به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Dog</span><span class="rlm">‏</span> در نظر می‌گیریم که نشان‌دهنده‌ی یک سگ است— البته نه یک سگ مشخص، بلکه هر سگی. درباره‌ی‌ سگ‌های خانگی چه می‌دانیم؟ خوب، همگی آنها دارای نام و سن هستند. این را هم می‌دانیم که اکثر سگ‌ها می‌توانند بنشینند و غَلت بزنند. این دو ویژگی (نام و سن) و این دو رفتار (نشستن و غلتیدن) را در کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Dog</span><span class="rlm">‏</span> قرار خواهیم داد، زیرا در بین اکثر سگ‌ها مشترک است. این کلاس به پایتون خواهد گفت که چگونه شیئی را که معرف یک سگ است، بسازد. پس از نوشتن این کلاس، با استفاده از آن نمونه‌هایی ایجاد خواهیم کرد که هر کدام از آنها نشان‌دهنده‌ی یک سگ خاص است.</p>
+                        <div class="sect" id="ch09lev2sec1"><a class="bkmk" name="ch09lev2sec1"></a>
+                            <h4>ایجاد کردن کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Dog</span><span class="rlm">‏</span></h4>
+                            <p>در هر نمونه‌ی ایجاد شده از کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Dog</span><span class="rlm">‏</span>، <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">name</span><span class="rlm">‏</span> و <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">age</span><span class="rlm">‏</span> را ذخیره می‌کنیم، و به هر سگ توانایی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">sit()</span><span class="rlm">‏</span> و <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">roll_over()</span><span class="rlm">‏</span> را می‌دهیم:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">dog.py</div>
+                                <pre class="snippet" dir="ltr"><span class="n" dir="ltr">1</span>class Dog:
+<span class="n" dir="ltr">2</span>    """A simple attempt to model a dog."""
+
+<span class="n" dir="ltr">3</span>    def __init__(self, name, age):
+        """Initialize name and age attributes."""
+<span class="n" dir="ltr">4</span>        self.name = name
+        self.age = age
+
+<span class="n" dir="ltr">5</span>    def sit(self):
+        """Simulate a dog sitting in response to a command."""
+        print(f"{self.name} is now sitting.")
+
+    def roll_over(self):
+        """Simulate rolling over in response to a command."""
+        print(f"{self.name} rolled over!")</pre>
+                            </div>
+                            <p>اینجا چیزهای زیادی هست که باید یاد بگیرید، ولی نگران نباشید. این ساختار را در سرتاسر این کتاب شاهد خواهید بود و فرصت کافی خواهید داشت که به آن عادت کنید. در <span class="n" dir="ltr">1</span>، <a id="p159"></a>کلاسی به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Dog</span><span class="rlm">‏</span> تعریف می‌کنیم. بنا به قرارداد، نام کلاس‌ها در پایتون با حروف بزرگ شروع می‌شود. در تعریف این کلاس پرانتز استفاده نشده است، چرا که این کلاس را از صفر ایجاد می‌کنیم. در <span class="n" dir="ltr">2</span>، یک رشته‌ی مستندات نوشته‌ایم که توضیح می‌دهد این کلاس چه کاری انجام می‌دهد. </p>
+                            <div class="sect" id="ch09lev3sec1"><a class="bkmk" name="ch09lev3sec1"></a>
+                                <h5>متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">__init__()</span><span class="rlm">‏</span></h5>
+                                <p>تابعی که بخشی از یک کلاس است، <span class="emphasis">مِتُد</span> نامیده می‌شود. تمام چیزهایی که درباره‌ی توابع یاد گرفته‌اید، برای متدها نیز مصداق دارد؛ فعلاً تنها تفاوت عملی آن‌ها در نحوه‌ی فراخواندن متدها است. متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">__init__()</span><span class="rlm">‏</span> در <span class="n" dir="ltr">3</span> متد ویژه‌ای است که پایتون هر زمان نمونه‌ی جدیدی بر اساس کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Dog</span><span class="rlm">‏</span> ایجاد می‌کنید، آن را فراخوانی می‌کند. اول و آخر نام این متد دو زیرخط قرار گرفته است، که این قرارداد در پایتون برای آن است که نام متدهای پیش‌فرض با نام متدهای شما تداخل پیدا نکند. دقت کنید که دو زیرخط اول و دو زیرخط آخر را در <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">__init__()</span><span class="rlm">‏</span> فراموش نکنید. اگر فقط یک زیرخط بگذارید، این متد در هنگام استفاده از کلاس به‌طور خودکار فراخوانی نخواهد شد، و منجر به خطاهایی خواهد شد که شناسایی آن‌ها مشکل است.</p>
+                                <p>ما برای متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">__init__()</span><span class="rlm">‏</span> سه پارامتر تعریف کرده‌ایم: <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">self</span><span class="rlm">‏</span>، <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">name</span><span class="rlm">‏</span>، و <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">age</span><span class="rlm">‏</span>. پارامتر <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">self</span><span class="rlm">‏</span> در تعریف متد لازم است، و همیشه باید پارامتر اول باشد، قبل از پارامترهای دیگر. علت اینکه این پارامتر باید در تعریف متد گنجانده شود، این است که بعداً که پایتون متد را برای ایجاد نمونه‌ی جدیدی از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Dog</span><span class="rlm">‏</span> فراخوانی می‌کند، در فراخوانی متد به‌طور خودکار آرگومان <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">self</span><span class="rlm">‏</span> را به آن خواهد داد. هر فراخوانی متد که مربوط به یک نمونه است، به‌طور خودکار آرگومان <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">self</span><span class="rlm">‏</span> را با آن می‌دهد، که اشاره‌ای به خود آن نمونه است؛ به این ترتیب، نمونه‌ی مورد نظر، دسترسی به صفات و متدهای تعریف شده در کلاس خواهد داشت. وقتی که نمونه‌ای از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Dog</span><span class="rlm">‏</span> ایجاد می‌کنیم، پایتون متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">__init__()</span><span class="rlm">‏</span> از کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Dog</span><span class="rlm">‏</span> را فراخوانی می‌کند. ما به <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Dog()</span><span class="rlm">‏</span> آرگومان‌های نام و سن می‌دهیم؛ مقدار <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">self</span><span class="rlm">‏</span> به‌طور خودکار داده می‌شود، لذا نیازی نیست که ما آن را به متد بدهیم. هر گاه بخواهیم نمونه‌ای از کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Dog</span><span class="rlm">‏</span> ایجاد کنیم، فقط برای دو پارامتر <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">name</span><span class="rlm">‏</span> و <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">age</span><span class="rlm">‏</span> به آن مقدار خواهیم داد.</p>
+                                <p>دو متغیر تعریف شده در <span class="n" dir="ltr">4</span> هر کدام پیشوند <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">self</span><span class="rlm">‏</span> دارند. هر متغیری که با پیشوند <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">self</span><span class="rlm">‏</span> تعریف شود، در دسترس هر کدام از متدهای کلاس خواهد بود، و هم‌چنین، هر گاه نمونه‌ای از کلاس ایجاد کنیم، قادر به دسترسی به این متغیرها خواهیم بود. سطر <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">self.name = name</span><span class="rlm">‏</span> مقدار مربوط به پارامتر <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">name</span><span class="rlm">‏</span> را می‌گیرد و آن را به متغیر <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">name</span><span class="rlm">‏</span> اختصاص می‌دهد که به نمونه‌ی ایجادشده وابسته است. در سطر <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">self.age = age</span><span class="rlm">‏</span> نیز همین اتفاق می‌افتد. متغیرهایی که در سرتاسر نمونه قابل دسترسی هستند، <span class="emphasis">صفت</span> (<span class="emphasis"><span class="rlm">‏</span><span class="lr" dir="ltr">attribute</span><span class="rlm">‏</span></span>) نامیده می‌شوند.</p>
+                                <p>در کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Dog</span><span class="rlm">‏</span>، دو متد دیگر نیز تعریف شده است: <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">sit()</span><span class="rlm">‏</span> و <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">roll_over()</span><span class="rlm">‏</span> <span class="n" dir="ltr">5</span>. از آنجا که این متدها برای اجرای خود نیاز به اطلاعات دیگری ندارند، لذا فقط یک پارامتر، یعنی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">self</span><span class="rlm">‏</span>، برای آن‌ها تعریف کرده‌ایم. نمونه‌هایی که بعداً ایجاد می‌کنیم، به این متدها دسترسی خواهند داشت. به عبارت دیگر، آن‌ها این توانایی را خواهند داشت که بنشینند و بغلتند. در حال حاضر، متدهای <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">sit()</span><span class="rlm">‏</span> و <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">roll_over()</span><span class="rlm">‏</span> کار زیادی انجام نمی‌دهند. صرفاً پیامی را نمایش می‌دهند که می‌گوید که سگ نشسته است یا دارد می‌غلتد. ولی این مفهوم را می‌توان به موقعیت‌های واقعی‌تری بسط داد: اگر این کلاس بخشی از یک بازی کامپیوتری واقعی می‌بود، در آن صورت این متدها حاوی کدی می‌بود که سبب می‌شد که کاراکتر انیمیشنی سگ بنشیند یا بغلتد. اگر این کلاس برای کنترل یک روبوت نوشته شده بود، در آن صورت این متدها حرکات سگ روبوتی را هدایت می‌کرد تا بنشیند یا بغلتد.</p>
+                            </div>
+                        </div>
+                        <div class="sect" id="ch09lev2sec2"><a class="bkmk" name="ch09lev2sec2"></a>
+                            <h4>ایجاد یک نمونه از کلاس</h4>
+                            <a id="p160"></a>
+                            <p>می‌توانید کلاس را به‌عنوان مجموعه‌ای از دستورالعمل‌ها برای ساختن یک نمونه در نظر بگیرید. کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Dog</span><span class="rlm">‏</span> مجموعه‌ای از دستورالعمل‌ها است که به پایتون می‌گوید که چگونه نمونه‌ای بسازد که معرف یک سگ خاص است.</p>
+                            <p>در اینجا نمونه‌ای برای یک سگ خاص می‌سازیم:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr"><span class="ash">class Dog:</span>
+    <span class="ash">--<span class="it">snip</span>--</span>
+
+<span class="n" dir="ltr">1</span>my_dog = Dog('Willie', 6)
+
+<span class="n" dir="ltr">2</span>print(f"My dog's name is {my_dog.name}.")
+<span class="n" dir="ltr">3</span>print(f"My dog is {my_dog.age} years old.")</pre>
+                            </div>
+                            <p>کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Dog</span><span class="rlm">‏</span> که در اینجا استفاده می‌کنیم، همان کلاسی است که در مثال قبلی نوشتیم. در <span class="n" dir="ltr">1</span>، به پایتون می‌گوییم که سگی به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">'Willie'</span><span class="rlm">‏</span> با سن <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">6</span><span class="rlm">‏</span> ایجاد کند. وقتی که پایتون این سطر را می‌خواند، متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">__init__()</span><span class="rlm">‏</span> از کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Dog</span><span class="rlm">‏</span> را با آرگومان‌های <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">'Willie'</span><span class="rlm">‏</span> و <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">6</span><span class="rlm">‏</span> فراخوانی می‌کند. متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">__init__()</span><span class="rlm">‏</span> نمونه‌ای ایجاد می‌کند که معرف این سگ خاص است، و مقادیر داده شده را به صفت‌های <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">name</span><span class="rlm">‏</span> و <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">age</span><span class="rlm">‏</span> آن اختصاص می‌دهد. سپس پایتون نمونه‌ای را که معرف این سگ است، برمی‌گرداند. ما این نمونه را به متغیر <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">my_dog</span><span class="rlm">‏</span> اختصاص می‌دهیم. روش قراردادی نام‌گذاری در اینجا مفید واقع می‌شود: معمولاً می‌توانیم فرض می‌کنیم که نامی مانند <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Dog</span><span class="rlm">‏</span> که با حرف بزرگ شروع می‌شود، به یک کلاس اشاره دارد، و نامی مانند <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">my_dog</span><span class="rlm">‏</span> که با حرف کوچک شروع می‌شود، به یک نمونه‌ی ایجاد شده از یک کلاس اشاره دارد.</p>
+                            <div class="sect" id="ch09lev3sec2"><a class="bkmk" name="ch09lev3sec2"></a>
+                                <h5>دسترسی به صفت‌ها</h5>
+                                <p>برای دسترسی به صفات یک نمونه از نماد نقطه استفاده می‌شود. در <span class="n" dir="ltr">2</span>، به‌صورت زیر به مقدار صفت <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">name</span><span class="rlm">‏</span> از شیء <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">my_dog</span><span class="rlm">‏</span> دسترسی پیدا کرده‌ایم:</p>
+                                <div class="snippet">
+                                    <pre class="snippet" dir="ltr">my_dog.name</pre>
+                                </div>
+                                <p>نماد نقطه در پایتون زیاد استفاده می‌شود. این دستور نحوی نشان می‌دهد که پایتون چگونه مقدار صفت را پیدا می‌کند. در واقع، پایتون ابتدا نمونه‌ی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">my_dog</span><span class="rlm">‏</span> را پیدا می‌کند، و سپس به صفت <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">name</span><span class="rlm">‏</span> مربوط به <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">my_dog</span><span class="rlm">‏</span> نگاه می‌کند. به همین صفت در کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Dog</span><span class="rlm">‏</span> به‌صورت <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">self.name</span><span class="rlm">‏</span> اشاره می‌شود. در <span class="n" dir="ltr">3</span>، از همین رویکرد برای کار با صفت <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">age</span><span class="rlm">‏</span> استفاده می‌کنیم.</p>
+                                <p>خروجی این برنامه، خلاصه‌ای از اطلاعاتی است که درباره‌ی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">my_dog</span><span class="rlm">‏</span> داریم:</p>
+                                <div class="snippet">
+                                    <pre class="snippet" dir="ltr">My dog's name is Willie.
+My dog is 6 years old.</pre>
+                                </div>
+                            </div>
+                            <div class="sect" id="ch09lev3sec3"><a class="bkmk" name="ch09lev3sec3"></a>
+                                <h5>فراخوانی متدها</h5>
+                                <p>پس از آنکه نمونه‌ای از کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Dog</span><span class="rlm">‏</span> را ایجاد کردیم، می‌توانیم با استفاده از نماد نقطه هر کدام از متدهای تعریف شده در <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Dog</span><span class="rlm">‏</span> را فراخوانی کنیم. مثلاً در اینجا کاری می‌کنیم که سگ بنشیند و غلت بزند:</p>
+                                <div class="snippet">
+                                    <pre class="snippet" dir="ltr"><span class="ash">class Dog:</span>
+    <span class="ash">--<span class="it">snip</span>--</span>
+
+<a id="p161"></a><span class="ash">my_dog = Dog('Willie', 6)</span>
+my_dog.sit()
+my_dog.roll_over()</pre>
+                                </div>
+                                <p>برای فراخوانی متد، ابتدا نام نمونه را می‌نویسیم (در این مورد، <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">my_dog</span><span class="rlm">‏</span>)، سپس نقطه می‌گذاریم، و بعد نام متدی را که می‌خواهیم فراخوانی کنیم، می‌نویسیم. وقتی که پایتون <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">my_dog.sit()</span><span class="rlm">‏</span> را می‌خواند، به دنبال متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">sit()</span><span class="rlm">‏</span> در کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Dog</span><span class="rlm">‏</span> می‌گردد و آن کد را اجرا می‌کند. پایتون سطر <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">my_dog.roll_over()</span><span class="rlm">‏</span> را نیز به همان طریق تفسیر می‌کند.</p>
+                                <p>حالا ویلی کاری را که به او گفتیم، انجام می‌دهد:</p>
+                                <div class="snippet">
+                                    <pre class="snippet" dir="ltr">Willie is now sitting.
+Willie rolled over!</pre>
+                                </div>
+                                <p>این دستور نحوی بسیار مفید است. وقتی که به صفات و متدها نام‌های گویا و روشنی مانند <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">name</span><span class="rlm">‏</span>، <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">age</span><span class="rlm">‏</span>، <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">sit()</span><span class="rlm">‏</span>، و <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">roll_over()</span><span class="rlm">‏</span> داده شده باشد، به آسانی می‌توانیم حدس بزنیم که یک قطعه‌ی کد چه کاری انجام می‌دهد، ولو آنکه قبلاً آن را ندیده باشیم.</p>
+                            </div>
+                            <div class="sect" id="ch09lev3sec4"><a class="bkmk" name="ch09lev3sec4"></a>
+                                <h5>ایجاد کردن نمونه‌های متعدد</h5>
+                                <p>می‌توانید هر چند تا نمونه که خواستید از یک کلاس بسازید. مثلاً در اینجا سگ دیگری به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">your_dog</span><span class="rlm">‏</span> ایجاد می‌کنیم:</p>
+                                <div class="snippet">
+                                    <pre class="snippet" dir="ltr"><span class="ash">class Dog:</span>
+    <span class="ash">--<span class="it">snip</span>--</span>
+
+my_dog = Dog('Willie', 6)
+your_dog = Dog('Lucy', 3)
+
+print(f"My dog's name is {my_dog.name}.")
+print(f"My dog is {my_dog.age} years old.")
+my_dog.sit()
+
+print(f"\nYour dog's name is {your_dog.name}.")
+print(f"Your dog is {your_dog.age} years old.")
+your_dog.sit()</pre>
+                                </div>
+                                <p>در این مثال، سگی به نام ویلی و سگی به نام لوسی ایجاد می‌کنیم. هر سگ نمونه‌ی جداگانه‌ای است که صفات مربوط به خود دارد و قادر به انجام مجموعه‌ی اعمال یکسانی است:</p>
+                                <div class="snippet">
+                                    <pre class="snippet" dir="ltr">My dog's name is Willie.
+My dog is 6 years old.
+Willie is now sitting.
+
+Your dog's name is Lucy.
+Your dog is 3 years old.
+Lucy is now sitting.</pre>
+                                </div>
+                                <p>حتی اگر برای سگ دوم از نام و سن یکسانی استفاده می‌کردیم، باز هم پایتون نمونه‌ی جدیدی از کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Dog</span><span class="rlm">‏</span> ایجاد می‌کرد. می‌توانید <a id="p162"></a>هر چند تا نمونه که خواستید از کلاس بسازید، فقط باید به هر کدام نام متغیر جدایی بدهید یا اینکه هر کدام در موقعیت خاصی در یک لیست یا دیکشنری قرار گیرد.</p>
+                                <div class="sidebar">
+                                    <h6 class="sidebar-title">خودتان امتحان کنید</h6>
+                                    <p class="tiy1"><span class="tiy" id="ch09_tiy01"><span class="tiy-num">۹-۱</span>. <span class="tiy-title">رستوران</span>: </span> کلاسی به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Restaurant</span><span class="rlm">‏</span> بسازید. متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">__init__()</span><span class="rlm">‏</span> مربوط به <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Restaurant</span><span class="rlm">‏</span> باید دو صفت را ذخیره کند: <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">restaurant_name</span><span class="rlm">‏</span> و <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">cuisine_type</span><span class="rlm">‏</span>. متدی به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">describe_restaurant()</span><span class="rlm">‏</span> بنویسید که این دو ویژگی را نمایش می‌دهد، و متدی به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">open_restaurant()</span><span class="rlm">‏</span> که پیامی نمایش می‌دهد دایر بر اینکه رستوران باز است.</p>
+                                    <p>نمونه‌ای به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">restaurant</span><span class="rlm">‏</span> از کلاس خود بسازید. هر کدام از دو صفت را نمایش دهید، و سپس هر کدام از دو متد آن را فراخوانی کنید.</p>
+                                    <p class="tiy1"><span class="tiy" id="ch09_tiy02"><span class="tiy-num">۹-۲</span>. <span class="tiy-title">سه رستوران</span>: </span> از همان کلاس <span class="ref"><a href="c20-ch09.xhtml#ch09_tiy01">تمرین <span dir="ltr">۹-۱</span></a></span> شروع کنید. سه نمونه‌ی دیگر از کلاس بسازید و متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">describe_restaurant()</span><span class="rlm">‏</span> را برای هر کدام از آن‌ها فراخوانی کنید.</p>
+                                    <p class="tiy1"><span class="tiy" id="ch09_tiy03"><span class="tiy-num">۹-۳</span>. <span class="tiy-title">کاربران</span>: </span> کلاسی به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">User</span><span class="rlm">‏</span> بنویسید. دو صفت <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">first_name</span><span class="rlm">‏</span> و <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">last_name</span><span class="rlm">‏</span> برای آن ایجاد کنید، و سپس چند صفت دیگر که معمولاً برای پروفایل کاربر در نظر گرفته می‌شود، به آن اضافه کنید. متدی به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">describe_user()</span><span class="rlm">‏</span> ایجاد کنید که خلاصه‌ای از اطلاعات کاربر را نمایش می‌دهد. متد دیگری نیز به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">greet_user()</span><span class="rlm">‏</span> ایجاد کنید که یک پیام خوشامدگویی سفارشی برای کاربر نمایش می‌دهد.</p>
+                                    <p>چندین نمونه برای کاربران مختلف بسازید، و هر دو متد را برای هر کاربر فراخوانی کنید.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sect" id="ch09lev1sec2"><a class="bkmk" name="ch09lev1sec2"></a>
+                        <h3>کار با کلاس‌ها و نمونه‌ها</h3>
+                        <p>می‌توانید از کلاس برای بسیاری از موقعیت‌های دنیای واقعی استفاده کنید. وقتی که کلاسی می‌نویسید، اکثر وقتتان صرف کار با نمونه‌های آن کلاس می‌شود. یکی از اولین کارهایی که انجام می‌دهید، تغییر دادن صفت‌های مربوط به یک نمونه‌ی خاص است. می‌توانید صفات یک نمونه را مستقیماً تغییر دهید، یا اینکه متدی بنویسید که مقادیر آن صفت‌ها را به‌گونه‌ی خاصی تغییر دهد:</p>
+                        <div class="sect" id="ch09lev2sec3"><a class="bkmk" name="ch09lev2sec3"></a>
+                            <h4>کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Car</span><span class="rlm">‏</span></h4>
+                            <p>در اینجا کلاسی می‌نویسیم که معرف یک خودرو است. کلاس ما اطلاعات مربوط به نوع خودرو را ذخیره خواهد کرد و متدی برای نمایش این اطلاعات خواهد داشت:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">car.py</div>
+                                <pre class="snippet" dir="ltr">
+class Car:
+    """A simple attempt to represent a car."""
+
+<span class="n" dir="ltr">1</span>    def __init__(self, make, model, year):
+        """Initialize attributes to describe a car."""
+        self.make = make
+<a id="p163"></a>        self.model = model
+        self.year = year
+
+<span class="n" dir="ltr">2</span>    def get_descriptive_name(self):
+        """Return a neatly formatted descriptive name."""
+        long_name = f"{self.year} {self.make} {self.model}"
+        return long_name.title()
+
+<span class="n" dir="ltr">3</span>my_new_car = Car('audi', 'a4', 2019)
+print(my_new_car.get_descriptive_name())</pre>
+                            </div>
+                            <p>در <span class="n" dir="ltr">1</span> در کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Car</span><span class="rlm">‏</span>، متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">__init__()</span><span class="rlm">‏</span> را تعریف می‌کنیم و در اینجا هم مانند کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Dog</span><span class="rlm">‏</span>، ابتدا پارامتر <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">self</span><span class="rlm">‏</span> به آن می‌دهیم. در ضمن، سه پارامتر دیگر نیز تعریف می‌کنیم: <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">make</span><span class="rlm">‏</span>، <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">model</span><span class="rlm">‏</span>، و <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">year</span><span class="rlm">‏</span>. متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">__init__()</span><span class="rlm">‏</span> این پارامترها را می‌گیرد و آن‌ها را به صفت‌های نمونه‌ی ساخته‌شده از این کلاس اختصاص می‌دهد. وقتی که <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Car</span><span class="rlm">‏</span> جدیدی می‌سازیم، باید سازنده، مدل، و سال را برای نمونه‌ی جدید تعیین کنیم.</p>
+                            <p>در <span class="n" dir="ltr">2</span>، متدی به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">get_descriptive_name()</span><span class="rlm">‏</span> تعریف می‌کنیم که <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">year</span><span class="rlm">‏</span>، <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">make</span><span class="rlm">‏</span>، و <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">model</span><span class="rlm">‏</span> خودرو را به‌صورت رشته‌ی فرمت شده‌ای درمی‌آورد که خودرو را توصیف می‌کند. به این ترتیب، دیگر مجبور نیستیم مقدار هر صفت را جداگانه نمایش دهیم. در این متد برای اینکه به مقادیر صفت‌ها دسترسی پیدا کنیم، از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">self.make</span><span class="rlm">‏</span>، <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">self.model</span><span class="rlm">‏</span>، و <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">self.year</span><span class="rlm">‏</span> استفاده می‌کنیم. در <span class="n" dir="ltr">3</span>، یک نمونه از کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Car</span><span class="rlm">‏</span> می‌سازیم و آن را به متغیر <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">my_new_car</span><span class="rlm">‏</span> اختصاص می‌دهیم. سپس متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">get_descriptive_name()</span><span class="rlm">‏</span> را فراخوانی می‌کنیم تا نشان دهد که چه نوع ماشینی داریم:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">2019 Audi A4</pre>
+                            </div>
+                            <p>برای اینکه کلاس جالب‌تر باشد، صفتی اضافه می‌کنیم که در طول زمان تغییر می‌کند. این صفت میزان کارکرد کیلومترشمار خودرو را نشان می‌دهد.</p>
+                        </div>
+                        <div class="sect" id="ch09lev2sec4"><a class="bkmk" name="ch09lev2sec4"></a>
+                            <h4>تعیین مقدار پیش‌فرض برای یک صفت</h4>
+                            <p>وقتی که یک نمونه ساخته می‌شود، ممکن است صفت‌هایی تعریف شده باشند که در پارامترها مقداری برای آن‌ها داده نمی‌شود. این صفت‌ها را می‌توان در متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">__init__()</span><span class="rlm">‏</span> تعریف کرد و به آن‌ها یک مقدار پیش‌فرض اختصاص داد.</p>
+                            <p>اکنون صفتی به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">odometer_reading</span><span class="rlm">‏</span> اضافه می‌کنیم که همیشه در ابتدا مقدار ۰ دارد. یک متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">read_odometer()</span><span class="rlm">‏</span> نیز اضافه می‌کنیم که به ما کمک می‌کند که عدد کیلومترشمار ماشین را بخوانیم:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr"><span class="ash">class Car:</span>
+
+    <span class="ash">def __init__(self, make, model, year):</span>
+        <span class="ash">"""Initialize attributes to describe a car."""</span>
+        <span class="ash">self.make = make</span>
+        <span class="ash">self.model = model</span>
+        <span class="ash">self.year = year</span>
+<span class="n" dir="ltr">1</span>        self.odometer_reading = 0
+
+    <span class="ash">def get_descriptive_name(self):</span>
+        <span class="ash">--<span class="it">snip</span>--</span>
+
+<a id="p164"></a><span class="n" dir="ltr">2</span>    def read_odometer(self):
+        """Print a statement showing the car's mileage."""
+        print(f"This car has {self.odometer_reading} miles on it.")
+
+<span class="ash">my_new_car = Car('audi', 'a4', 2019)</span>
+<span class="ash">print(my_new_car.get_descriptive_name())</span>
+my_new_car.read_odometer()</pre>
+                            </div>
+                            <p>این بار زمانی که پایتون متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">__init__()</span><span class="rlm">‏</span> را فراخوانی می‌کند تا نمونه‌ی جدیدی ایجاد کند، مقادیر مربوط به سازنده، مدل، و سال را مانند مثال قبل در صفت‌ها ذخیره می‌کند. سپس صفت جدیدی به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">odometer_reading</span><span class="rlm">‏</span> ایجاد می‌کند و مقدار اولیه‌ی آن را ۰ قرار می‌دهد <span class="n" dir="ltr">1</span>. متد جدیدی نیز به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">read_odometer()</span><span class="rlm">‏</span> در <span class="n" dir="ltr">2</span> اضافه کرده‌ایم که خواندن عدد کیلومترشمار ماشین را تسهیل می‌کند.</p>
+                            <p>ماشین ما در ابتدا کارکرد کیلومتر ۰ دارد:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">2019 Audi A4
+This car has 0 miles on it.</pre>
+                            </div>
+                            <p>طبیعی است که کمتر ماشینی در هنگام فروش عدد کیلومترشمار ۰ دارد، بنابراین، به طریقی باید بتوانیم مقدار این صفت را تغییر دهیم.</p>
+                        </div>
+                        <div class="sect" id="ch09lev2sec5"><a class="bkmk" name="ch09lev2sec5"></a>
+                            <h4>تغییر دادن مقادیر صفت</h4>
+                            <p>به سه طریق می‌توانید مقدار یک صفت را تغییر دهید: می‌توانید مقدار آن را مستقیماً از طریق نمونه تغییر دهید، از طریق یک متد به آن مقدار بدهید، و یا اینکه مقدار را از طریق یک متد افزایش دهید (مقدار معینی به آن اضافه کنید). نگاهی به هر کدام از این سه روش می‌اندازیم.</p>
+                            <div class="sect" id="ch09lev3sec5"><a class="bkmk" name="ch09lev3sec5"></a>
+                                <h5>تغییر دادن مستقیم مقدار صفت</h5>
+                                <p>ساده‌ترین راه برای تغییر دادن مقدار یک صفت آن است که مستقیماً از طریق یک نمونه به آن صفت دسترسی پیدا کنیم. در اینجا به‌طور مستقیم به کیلومترشمار مقدار ۲۳ می‌دهیم:</p>
+                                <div class="snippet">
+                                    <pre class="snippet" dir="ltr"><span class="ash">class Car:</span>
+    <span class="ash">--<span class="it">snip</span>--</span>
+
+<span class="ash">my_new_car = Car('audi', 'a4', 2019)</span>
+<span class="ash">print(my_new_car.get_descriptive_name())</span>
+
+<span class="n" dir="ltr">1</span>my_new_car.odometer_reading = 23
+my_new_car.read_odometer()</pre>
+                                </div>
+                                <p>در <span class="n" dir="ltr">1</span>، با استفاده از نماد نقطه به صفت <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">odometer_reading</span><span class="rlm">‏</span> دسترسی پیدا می‌کنیم و مستقیماً به آن مقدار می‌دهیم. این سطر به پایتون می‌گوید که نمونه‌ی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">my_new_car</span><span class="rlm">‏</span> را بگیرد، صفت <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">odometer_reading</span><span class="rlm">‏</span> را در آن پیدا کند، و به این صفت مقدار ۲۳ بدهد:</p>
+                                <div class="snippet">
+                                    <pre class="snippet" dir="ltr">2019 Audi A4
+This car has 23 miles on it.</pre>
+                                </div><a id="p165"></a>
+                                <p>بعضی وقت‌ها به این طریق به‌صورت مستقیم به صفت‌ها دسترسی پیدا می‌کنید، ولی برخی مواقع دیگر بهتر است متدی بنویسید که به آن مقدار بدهد.</p>
+                            </div>
+                            <div class="sect" id="ch09lev3sec6"><a class="bkmk" name="ch09lev3sec6"></a>
+                                <h5>تغییر دادن مقدار صفت از طریق یک متد</h5>
+                                <p>گاه بد نیست متدهایی داشته باشیم که مقدار برخی صفات را تغییر می‌دهند. به جای اینکه مستقیماً به صفت دسترسی پیدا کنید، مقدار را به متدی می‌دهید که به‌طور داخلی، کار تغییر مقدار صفت را انجام می‌دهد.</p>
+                                <p>در مثال زیر، متدی را به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">update_odometer()</span><span class="rlm">‏</span> می‌بینید:</p>
+                                <div class="snippet">
+                                    <pre class="snippet" dir="ltr"><span class="ash">class Car:</span>
+    <span class="ash">--<span class="it">snip</span>--</span>
+
+<span class="n" dir="ltr">1</span>    def update_odometer(self, mileage):
+        """Set the odometer reading to the given value."""
+        self.odometer_reading = mileage
+
+<span class="ash">my_new_car = Car('audi', 'a4', 2019)</span>
+<span class="ash">print(my_new_car.get_descriptive_name())</span>
+
+<span class="n" dir="ltr">2</span>my_new_car.update_odometer(23)
+my_new_car.read_odometer()</pre>
+                                </div>
+                                <p>تنها تغییری که در <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Car</span><span class="rlm">‏</span> داده می‌شود، اضافه شدن <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">update_odometer()</span><span class="rlm">‏</span> در <span class="n" dir="ltr">1</span> است. این متد عدد کیلومترشمار را می‌گیرد و آن را به <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">self.odometer_reading</span><span class="rlm">‏</span> اختصاص می‌دهد. در <span class="n" dir="ltr">2</span>، متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">update_odometer()</span><span class="rlm">‏</span> را فراخوانی می‌کنیم و به آن آرگومان <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">23</span><span class="rlm">‏</span> را می‌دهیم (متناظر با پارامتر <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">mileage</span><span class="rlm">‏</span> در تعریف متد). این متد مقدار کیلومترشمار را ۲۳ قرار می‌دهد، و متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">read_odometer()</span><span class="rlm">‏</span> عدد آن را نمایش می‌دهد:</p>
+                                <div class="snippet">
+                                    <pre class="snippet" dir="ltr">2019 Audi A4
+This car has 23 miles on it.</pre>
+                                </div>
+                                <p>می‌توانیم متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">update_odometer()</span><span class="rlm">‏</span> را بسط دهیم تا هر گاه عدد کیلومترشمار تغییر داده می‌شود، کارهای دیگری نیز انجام دهد. مثلاً در اینجا کدی اضافه می‌کنیم که کسی عدد کیلومترشمار را کاهش ندهد:</p>
+                                <div class="snippet">
+                                    <pre class="snippet" dir="ltr"><span class="ash">class Car:</span>
+    <span class="ash">--<span class="it">snip</span>--</span>
+
+    <span class="ash">def update_odometer(self, mileage):</span>
+        """
+        Set the odometer reading to the given value.
+        Reject the change if it attempts to roll the odometer back.
+        """
+<span class="n" dir="ltr">1</span>        if mileage &gt;= self.odometer_reading:
+            <span class="ash">self.odometer_reading = mileage</span>
+        else:
+<span class="n" dir="ltr">2</span>            print("You can't roll back an odometer!")</pre>
+                                </div>
+                                <p>اکنون متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">update_odometer()</span><span class="rlm">‏</span> ابتدا وارسی می‌کند که مقدار جدید کیلومترشمار ایرادی نداشته باشد، و سپس آن را تغییر می‌دهد. اگر مقدار جدید، یعنی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">mileage</span><span class="rlm">‏</span>، بزرگ‌تر یا مساوی با <a id="p166"></a>مقدار قبلی کیلومترشمار، یعنی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">self.odometer_reading</span><span class="rlm">‏</span>، باشد، در آن صورت می‌توانید عدد کیلومترشمار را به مقدار جدید تغییر دهید <span class="n" dir="ltr">1</span>. ولی اگر کوچک‌تر از عدد قبلی باشد، به شما هشدار داده می‌شود که نمی‌توانید عدد کیلومترشمار را به عقب ببرید <span class="n" dir="ltr">2</span>.</p>
+                            </div>
+                            <div class="sect" id="ch09lev3sec7"><a class="bkmk" name="ch09lev3sec7"></a>
+                                <h5>افزایش دادن مقدار یک صفت از طریق یک متد</h5>
+                                <p>بعضی وقت‌ها به جای آنکه مقدار کاملاً جدیدی به یک صفت اختصاص دهید، می‌خواهید که مقدار آن را به میزان خاصی افزایش دهید. فرض کنید ماشین دست دومی خریده‌ایم و می‌خواهیم بین زمان خرید و زمان ثبت آن، ۱۰۰ مایل به کارکرد آن اضافه کنیم. متد زیر به ما امکان می‌دهد که این مقدار افزایش را بدهیم تا به عدد کیلومترشمار اضافه شود:</p>
+                                <div class="snippet">
+                                    <pre class="snippet" dir="ltr"><span class="ash">class Car:</span>
+    <span class="ash">--<span class="it">snip</span>--</span>
+
+    <span class="ash">def update_odometer(self, mileage):</span>
+        <span class="ash">--<span class="it">snip</span>--</span>
+
+<span class="n" dir="ltr">1</span>    def increment_odometer(self, miles):
+        """Add the given amount to the odometer reading."""
+        self.odometer_reading += miles
+
+<span class="n" dir="ltr">2</span>my_used_car = Car('subaru', 'outback', 2015)
+print(my_used_car.get_descriptive_name())
+
+<span class="n" dir="ltr">3</span>my_used_car.update_odometer(23_500)
+my_used_car.read_odometer()
+
+<span class="n" dir="ltr">4</span>my_used_car.increment_odometer(100)
+my_used_car.read_odometer()</pre>
+                                </div>
+                                <p>متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">increment_odometer()</span><span class="rlm">‏</span> در <span class="n" dir="ltr">1</span> تعداد مایل‌ها را می‌گیرد و آن را به <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">self.odometer_reading</span><span class="rlm">‏</span> اضافه می‌کند. در <span class="n" dir="ltr">2</span>، ماشین مستعمل <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">my_used_car</span><span class="rlm">‏</span> را ایجاد می‌کنیم. با فراخوانی متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">update_odometer()</span><span class="rlm">‏</span> و دادن مقدار <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">23_500</span><span class="rlm">‏</span> به آن در <span class="n" dir="ltr">3</span>، عدد کیلومترشمار آن را ۲۳٬۵۰۰ قرار می‌دهیم. در <span class="n" dir="ltr">4</span>، متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">increment_odometer()</span><span class="rlm">‏</span> را فراخوانی می‌کنیم، و مقدار <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">100</span><span class="rlm">‏</span> به آن می‌دهیم، تا ۱۰۰ مایل مسافتی که از زمان خریدن ماشین تا زمان ثبت آن طی کرده‌ایم، به آن اضافه شود:</p>
+                                <div class="snippet">
+                                    <pre class="snippet" dir="ltr">2015 Subaru Outback
+This car has 23500 miles on it.
+This car has 23600 miles on it.</pre>
+                                </div>
+                                <p>به آسانی می‌توانید این متد را تغییر دهید تا مقادیر افزایشی منفی را قبول نکند، به‌طوری که هیچ‌کس از این تابع برای برگرداندن کیلومترشمار استفاده نکند.</p>
+                                <div class="note">
+                                    <h6 class="note-title">توجه</h6>
+                                    <p>با استفاده از این متد می‌توانید چگونگی تغییر دادن مقادیری مانند عدد کیلومترشمار از سوی کاربران را کنترل کنید، ولی هر کس که به برنامه دسترسی داشته باشد، می‌تواند با دسترسی مستقیم به صفت مربوطه، عدد کیلومترشمار را مستقیماً تغییر دهد. برای امنیت مؤثر، علاوه بر وارسی‌های اساسی مانند آنچه در اینجا نشان داده شد، توجه دقیق به جزئیات نیز اهمیت دارد.</p>
+                                </div>
+                                <div class="sidebar">
+                                    <h6 class="sidebar-title">خودتان امتحان کنید</h6>
+                                    <a id="p167"></a>
+                                    <p class="tiy1"><span class="tiy" id="ch09_tiy04"><span class="tiy-num">۹-۴</span>. <span class="tiy-title">تعداد مشتریان سرویس داده شده</span>: </span> با همان برنامه‌ی <span class="ref"><a href="c20-ch09.xhtml#ch09_tiy01">تمرین <span dir="ltr">۹-۱</span></a></span> (<span class="ref"><a href="c20-ch09.xhtml#p162">صفحه‌ی <span>۱۶۲</span></a></span>) شروع کنید. صفتی به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">number_served</span><span class="rlm">‏</span> با مقدار پیش‌فرض ۰ اضافه کنید. نمونه‌ای به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">restaurant</span><span class="rlm">‏</span> از این کلاس بسازید. تعداد مشتریانی را که رستوران به آن‌ها سرویس داده است، نمایش دهید، سپس مقدار آن را تغییر دهید و دوباره نمایش دهید.</p>
+                                    <p>متدی به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">set_number_served()</span><span class="rlm">‏</span> اضافه کنید که تعداد مشتریان سرویس داده شده را تغییر می‌دهد. این متد را با عدد جدیدی فراخوانی کنید و دوباره مقدار را نمایش دهید.</p>
+                                    <p>متدی به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">increment_number_served()</span><span class="rlm">‏</span> اضافه کنید که به شما امکان می‌دهد که به تعداد مشتریان سرویس داده شده، عددی اضافه کنید. این متد را با عدد دلخواهی فراخوانی کنید، که نشان‌دهنده‌ی تعداد مشتریانی است که مثلاً در طول یک روز کاری سرویس داده شده‌اند.</p>
+                                    <p class="tiy1"><span class="tiy" id="ch09_tiy05"><span class="tiy-num">۹-۵</span>. <span class="tiy-title">دفعات ورود</span>: </span> صفتی به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">login_attempts</span><span class="rlm">‏</span> به کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">User</span><span class="rlm">‏</span> در <span class="ref"><a href="c20-ch09.xhtml#ch09_tiy03">تمرین <span dir="ltr">۹-۳</span></a></span> (<span class="ref"><a href="c20-ch09.xhtml#p162">صفحه‌ی <span>۱۶۲</span></a></span>) اضافه کنید. متدی به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">increment_login_attempts()</span><span class="rlm">‏</span> اضافه کنید که به مقدار <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">login_attempts</span><span class="rlm">‏</span>، عدد ۱ اضافه می‌کند. متد دیگری به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">reset_login_attempts()</span><span class="rlm">‏</span> بنویسید که مقدار <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">login_attempts</span><span class="rlm">‏</span> را دوباره ۰ قرار می‌دهد.</p>
+                                    <p>نمونه‌ای از کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">User</span><span class="rlm">‏</span> بسازید و <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">increment_login_attempts()</span><span class="rlm">‏</span> را چندین بار فراخوانی کنید. مقدار <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">login_attempts</span><span class="rlm">‏</span> را نمایش دهید تا معلوم شود که به درستی اضافه شده است، و سپس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">reset_login_attempts()</span><span class="rlm">‏</span> را فراخوانی کنید. دوباره <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">login_attempts</span><span class="rlm">‏</span> را نمایش دهید تا مطمئن شوید که مقدار آن ۰ شده است.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sect" id="ch09lev1sec3"><a class="bkmk" name="ch09lev1sec3"></a>
+                        <h3>توارث</h3>
+                        <p>همیشه لازم نیست که نوشتن یک کلاس را از صفر شروع کنید. اگر کلاسی که می‌نویسید، نسخه‌ی تخصصی کلاس دیگری باشد که قبلاً نوشته‌اید، می‌توانید از <span class="emphasis">توارث</span> استفاده کنید. وقتی که کلاسی از کلاس دیگری <span class="emphasis">ارث می‌برد</span>، صفات و متدهای آن کلاس را دریافت می‌کند. کلاس اولیه <span class="emphasis">کلاس والد</span> نامیده می‌شود، و کلاس جدید <span class="emphasis">کلاس فرزند</span>. کلاس فرزند می‌تواند تمام صفت‌ها و متدهای کلاس والد را به ارث ببرد، ولی در عین حال، می‌تواند برای خود صفت‌ها و متدهای دیگری نیز تعریف کند.</p>
+                        <div class="sect" id="ch09lev2sec6"><a class="bkmk" name="ch09lev2sec6"></a>
+                            <h4>متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">__init__()</span><span class="rlm">‏</span> برای کلاس فرزند</h4>
+                            <p>وقتی که کلاس جدیدی بر اساس یک کلاس موجود می‌نویسید، غالباً لازم است که متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">__init__()</span><span class="rlm">‏</span> از کلاس والد را فراخوانی کنید. با این کار، مقداردهی اولیه‌ی صفات تعریف شده در متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">__init__()</span><span class="rlm">‏</span> والد انجام می‌شود تا در کلاس فرزند در دسترس قابل استفاده باشند.</p>
+                            <p>به‌عنوان مثال، فرض کنید می‌خواهیم خودروهای الکتریکی را مدل‌سازی کنیم. خودروی الکتریکی صرفاً نوع خاصی از خودرو است، بنابراین، کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">ElectricCar</span><span class="rlm">‏</span> را بر اساس همان کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Car</span><span class="rlm">‏</span> که قبلاً نوشتیم، تعریف می‌کنیم. در این صورت، فقط باید برای صفات و رفتارهایی که مخصوصاً خودروهای الکتریکی است، کد بنویسیم.</p><a id="p168"></a>
+                            <p>اول نوع ساده‌ای از کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">ElectricCar</span><span class="rlm">‏</span> را ایجاد می‌کنیم که همه‌ی کارهای کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Car</span><span class="rlm">‏</span> را انجام می‌دهد:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">electric_car.py</div>
+                                <pre class="snippet" dir="ltr"><span class="n" dir="ltr">1</span><span class="ash">class Car:</span>
+    <span class="ash">"""A simple attempt to represent a car."""</span>
+
+    <span class="ash">def __init__(self, make, model, year):</span>
+        <span class="ash">self.make = make</span>
+        <span class="ash">self.model = model</span>
+        <span class="ash">self.year = year</span>
+        <span class="ash">self.odometer_reading = 0</span>
+
+    <span class="ash">def get_descriptive_name(self):</span>
+        <span class="ash">long_name = f"{self.year} {self.make} {self.model}"</span>
+        <span class="ash">return long_name.title()</span>
+
+    <span class="ash">def read_odometer(self):</span>
+        <span class="ash">print(f"This car has {self.odometer_reading} miles on it.")</span>
+
+    <span class="ash">def update_odometer(self, mileage):</span>
+        <span class="ash">if mileage &gt;= self.odometer_reading:</span>
+            <span class="ash">self.odometer_reading = mileage</span>
+        <span class="ash">else:</span>
+            <span class="ash">print("You can't roll back an odometer!")</span>
+
+    <span class="ash">def increment_odometer(self, miles):</span>
+        <span class="ash">self.odometer_reading += miles</span>
+
+<span class="n" dir="ltr">2</span>class ElectricCar(Car):
+    """Represent aspects of a car, specific to electric vehicles."""
+
+<span class="n" dir="ltr">3</span>    def __init__(self, make, model, year):
+        """Initialize attributes of the parent class."""
+<span class="n" dir="ltr">4</span>        super().__init__(make, model, year)
+
+<span class="n" dir="ltr">5</span>my_tesla = ElectricCar('tesla', 'model s', 2019)
+print(my_tesla.get_descriptive_name())</pre>
+                            </div>
+                            <p>در <span class="n" dir="ltr">1</span>، با کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Car</span><span class="rlm">‏</span> شروع می‌کنیم. وقتی که یک کلاس فرزند ایجاد می‌کنید، کلاس والد باید بخشی از فایل کنونی باشد و قبل از کلاس فرزند در این فایل قرار گرفته باشد [یا اینکه ایمپورت شده باشد—م.]. در <span class="n" dir="ltr">2</span>، کلاس فرزند، یعنی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">ElectricCar</span><span class="rlm">‏</span>، را ایجاد می‌کنیم. نام کلاس والد باید داخل پرانتز در تعریف کلاس فرزند ذکر شود. متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">__init__()</span><span class="rlm">‏</span> در <span class="n" dir="ltr">3</span> اطلاعات لازم برای ساختن یک نمونه‌ی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Car</span><span class="rlm">‏</span> را می‌گیرد.</p>
+                            <p>تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">super()</span><span class="rlm">‏</span> در <span class="n" dir="ltr">4</span> تابع ویژه‌ای است که به شما امکان می‌دهد که متدی از کلاس والد را فراخوانی کنید. این سطر به پایتون می‌گوید که متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">__init__()</span><span class="rlm">‏</span> از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Car</span><span class="rlm">‏</span> را فراخوانی کند، که به نمونه‌ی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">ElectricCar</span><span class="rlm">‏</span> تمام صفت‌های تعریف‌شده در آن متد را می‌دهد. نام <span class="rlm">‏</span><span class="ident" dir="ltr">super</span><span class="rlm">‏</span> بدان جهت انتخاب شده است که به کلاس والد، <span class="emphasis">سوپرکلاس</span> و به کلاس فرزند، <span class="emphasis">زیرکلاس</span> نیز گفته می‌شود.</p><a id="p169"></a>
+                            <p>برای بررسی اینکه توارث درست کار می‌کند یا نه، یک خودروی برقی می‌سازیم با همان اطلاعاتی که برای ساخت یک خودروی معمولی به آن می‌دهیم. در <span class="n" dir="ltr">5</span>، نمونه‌ای از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">ElectricCar</span><span class="rlm">‏</span> ساخته‌ایم و آن را به متغیر <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">my_tesla</span><span class="rlm">‏</span> اختصاص داده‌ایم. این سطر متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">__init__()</span><span class="rlm">‏</span> را که در <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">ElectricCar</span><span class="rlm">‏</span> تعریف شده است، فراخوانی می‌کند، و آن هم به نوبه‌ی خود به پایتون می‌گوید که متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">__init__()</span><span class="rlm">‏</span> تعریف شده در کلاس والد یعنی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Car</span><span class="rlm">‏</span> را فراخوانی کند. به آن آرگومان‌های <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">'tesla'</span><span class="rlm">‏</span>، <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">'model s'</span><span class="rlm">‏</span>، و <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">2019</span><span class="rlm">‏</span> می‌دهیم.</p>
+                            <p>جدای از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">__init__()</span><span class="rlm">‏</span>، هنوز هیچ صفت یا متدی نداریم که مختص ماشین برقی باشد. فعلاً فقط می‌خواهیم مطمئن شویم که خودروی برقی رفتارهای مناسب <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Car</span><span class="rlm">‏</span> را دارد:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">2019 Tesla Model S</pre>
+                            </div>
+                            <p>نمونه‌ی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">ElectricCar</span><span class="rlm">‏</span> درست مانند یک نمونه‌ی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Car</span><span class="rlm">‏</span> عمل می‌کند، بنابراین، می‌توانیم به سراغ تعریف کردن صفت‌ها و متدهای ویژه‌ی خودروهای برقی برویم.</p>
+                        </div>
+                        <div class="sect" id="ch09lev2sec7"><a class="bkmk" name="ch09lev2sec7"></a>
+                            <h4>تعریف صفت‌ها و متدها برای کلاس فرزند</h4>
+                            <p>وقتی یک کلاس فرزند دارید که از کلاس والد ارث می‌برد، می‌توانید هرگونه صفات یا متدهای جدیدی را به کلاس فرزند اضافه کنید تا آن را از کلاس والد متمایز سازید.</p>
+                            <p>در اینجا می‌توانیم یک ویژگی را که مختص ماشین‌های برقی است (برای نمونه، انداز‌ه‌ی باتری) به آن اضافه کنیم و متدی نیز برای گزارش دادن این صفت در نظر بگیریم. اندازه‌ی باتری را ذخیره می‌کنیم و متدی می‌نویسیم که شرحی از باتری را نمایش می‌دهد:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr"><span class="ash">class Car:</span>
+    <span class="ash">--<span class="it">snip</span>--</span>
+
+<span class="ash">class ElectricCar(Car):</span>
+    <span class="ash">"""Represent aspects of a car, specific to electric vehicles."""</span>
+
+    <span class="ash">def __init__(self, make, model, year):</span>
+        """
+        Initialize attributes of the parent class.
+        Then initialize attributes specific to an electric car.
+        """
+        <span class="ash">super().__init__(make, model, year)</span>
+
+        self.battery_size = 75
+
+<span class="n" dir="ltr">2</span>    def describe_battery(self):
+        """Print a statement describing the battery size."""
+        print(f"This car has a {self.battery_size}-kWh battery.")
+
+<span class="ash">my_tesla = ElectricCar('tesla', 'model s', 2019)</span>
+<span class="ash">print(my_tesla.get_descriptive_name())</span>
+my_tesla.describe_battery()</pre>
+                            </div>
+                            <p>در <span class="n" dir="ltr">1</span>، صفت جدید <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">self.battery_size</span><span class="rlm">‏</span> را اضافه می‌کنیم و یک مقدار اولیه، مثلاً <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">75</span><span class="rlm">‏</span>، به آن می‌دهیم. این صفت در تمام نمونه‌های ساخته‌شده از کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">ElectricCar</span><span class="rlm">‏</span> وجود خواهد داشت، ولی در نمونه‌های <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Car</span><span class="rlm">‏</span> موجود نخواهد بود. هم‌چنین، <a id="p170"></a>متدی به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">describe_battery()</span><span class="rlm">‏</span> را در <span class="n" dir="ltr">2</span> تعریف می‌کنیم که اطلاعات مربوط به باتری را نمایش می‌دهد. وقتی که این متد را فراخوانی می‌کنیم، شرحی دریافت می‌کنیم که مشخصاً مختص خودروی برقی است:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">2019 Tesla Model S
+This car has a 75-kWh battery.</pre>
+                            </div>
+                            <p>حدی برای تخصصی کردن کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">ElectricCar</span><span class="rlm">‏</span> وجود ندارد. می‌توانید هر چقدر خواستید، صفت و متد به آن اضافه کنید، تا خودروی برقی را تا هر سطح دقتی که لازم باشد، مدل‌سازی کنید. صفت یا متدی که می‌تواند به هر خودرویی مربوط باشد، نه فقط خودروهای برقی، باید به کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Car</span><span class="rlm">‏</span> اضافه شود، نه به کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">ElectricCar</span><span class="rlm">‏</span>. در این صورت، هر کسی که از کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Car</span><span class="rlm">‏</span> استفاده می‌کند نیز آن قابلیت را در اختیار خواهد داشت، و کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">ElectricCar</span><span class="rlm">‏</span> فقط حاوی کدی خواهد بود که نشان‌دهنده‌ی اطلاعات و رفتار اختصاصی خودروهای برقی است.</p>
+                        </div>
+                        <div class="sect" id="ch09lev2sec8"><a class="bkmk" name="ch09lev2sec8"></a>
+                            <h4>جایگزین‌سازی متدهای کلاس والد</h4>
+                            <p>هنگام مدل‌سازی کلاس فرزند، هر متدی از کلاس والد را که عملکرد آن برای کلاس فرزند مناسب نباشد، می‌توانید جایگزین (<span class="rlm">‏</span><span class="lr" dir="ltr">override</span><span class="rlm">‏</span>) کنید. برای این کار، باید متدی را در کلاس فرزند با نام همان متد کلاس والد که می‌خواهید جایگزین کنید، تعریف کنید. پایتون از متد کلاس والد صرف‌نظر خواهد کرد، و فقط متدی را که در کلاس فرزند تعریف کنید، در نظر خواهد گرفت.</p>
+                            <p>مثلاً فرض کنید کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Car</span><span class="rlm">‏</span> متدی به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">fill_gas_tank()</span><span class="rlm">‏</span> دارد. این متد برای یک خودروی تمام-برقی بی‌معنا است، بنابراین، شاید بد نباشد که آن را جایگزین کنید. یک راه برای انجام این کار به‌صورت زیر است:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">class ElectricCar(Car):
+    <span class="ash">--<span class="it">snip</span>--</span>
+
+    def fill_gas_tank(self):
+        """Electric cars don't have gas tanks."""
+        print("This car doesn't need a gas tank!")</pre>
+                            </div>
+                            <p>حالا اگر کسی متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">fill_gas_tank()</span><span class="rlm">‏</span> را برای یک خودروی برقی فراخوانی کند، پایتون از متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">fill_gas_tank()</span><span class="rlm">‏</span> در کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Car</span><span class="rlm">‏</span> صرف‌نظر خواهد کرد و به جای آن این کد را اجرا خواهد کرد. وقتی که از توارث استفاده می‌کنید، می‌توانید در کلاس‌های فرزند هر چیزی را که قابل قبول است، نگه دارید و چیزهایی از کلاس والد را که نمی‌خواهید، جایگزین کنید.</p>
+                        </div>
+                        <div class="sect" id="ch09lev2sec9"><a class="bkmk" name="ch09lev2sec9"></a>
+                            <h4>نمونه به‌عنوان صفت</h4>
+                            <p>وقتی که چیزی از دنیای واقعی را با برنامه‌نویسی مدل‌سازی می‌کنید، شاید کار به جایی برسد که ببینید دارید جزئیات بیشتر و بیشتری را به یک کلاس اضافه می‌کنید. در این حالت، خواهید دید که تعداد زیادی صفت و متد دارید، و فایل‌های شما بیش از حد حجیم شده‌اند. در چنین موقعیت‌هایی، شاید متوجه شوید که بخشی از کلاس را می‌توان به‌صورت کلاس جداگانه‌ای نوشت. می‌توانید این کلاس بزرگ را به چند کلاس کوچک‌تر تقسیم کنید که با یکدیگر در ارتباط هستند.</p>
+                            <p>مثلاً اگر همچنان جزئیات بیشتری را به <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">ElectricCar</span><span class="rlm">‏</span> اضافه کنیم، شاید ببینیم که بسیاری از صفات و متدهایی که داریم اضافه می‌کنیم، مربوط به <a id="p171"></a>باتری خودرو هستند. در این صورت، می‌توانیم این صفت‌ها و متدها را به کلاس جداگانه‌ای به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Battery</span><span class="rlm">‏</span> منتقل کنیم. آنگاه یک نمونه از کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Battery</span><span class="rlm">‏</span> را به‌عنوان یکی از صفت‌های کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">ElectricCar</span><span class="rlm">‏</span> قرار می‌دهیم:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr"><span class="ash">class Car:</span>
+    <span class="ash">--<span class="it">snip</span>--</span>
+
+<span class="n" dir="ltr">1</span>class Battery:
+    """A simple attempt to model a battery for an electric car."""
+
+<span class="n" dir="ltr">2</span>    def __init__(self, battery_size=75):
+        """Initialize the battery's attributes."""
+        self.battery_size = battery_size
+
+<span class="n" dir="ltr">3</span>    def describe_battery(self):
+        """Print a statement describing the battery size."""
+        print(f"This car has a {self.battery_size}-kWh battery.")
+
+
+<span class="ash">class ElectricCar(Car):</span>
+    <span class="ash">"""Represent aspects of a car, specific to electric vehicles."""</span>
+
+    <span class="ash">def __init__(self, make, model, year):</span>
+        <span class="ash">"""</span>
+        <span class="ash">Initialize attributes of the parent class.</span>
+        <span class="ash">Then initialize attributes specific to an electric car.</span>
+        <span class="ash">"""</span>
+        <span class="ash">super().__init__(make, model, year)</span>
+<span class="n" dir="ltr">4</span>        self.battery = Battery()
+
+
+<span class="ash">my_tesla = ElectricCar('tesla', 'model s', 2019)</span>
+
+<span class="ash">print(my_tesla.get_descriptive_name())</span>
+my_tesla.battery.describe_battery()</pre>
+                            </div>
+                            <p>در <span class="n" dir="ltr">1</span>، کلاس جدیدی به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Battery</span><span class="rlm">‏</span> تعریف می‌کنیم که از هیچ کلاس دیگری ارث نمی‌برد. متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">__init__()</span><span class="rlm">‏</span> در <span class="n" dir="ltr">2</span> غیر از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">self</span><span class="rlm">‏</span>، یک پارامتر <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">battery_size</span><span class="rlm">‏</span> دارد. این پارامتر اختیاری است، و در صورتی که مقداری برای آن تعیین نشده باشد، مقدار ۷۵ به آن داده می‌شود. متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">describe_battery()</span><span class="rlm">‏</span> نیز در <span class="n" dir="ltr">3</span> به این کلاس منتقل شده است.</p>
+                            <p>در کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">ElectricCar</span><span class="rlm">‏</span>، اکنون صفتی به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">self.battery</span><span class="rlm">‏</span> اضافه می‌کنیم <span class="n" dir="ltr">4</span>. این سطر به پایتون می‌گوید که نمونه‌ی جدیدی از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Battery</span><span class="rlm">‏</span> ایجاد کند (با اندازه‌ی پیش‌فرض ۷۵، چرا که مقداری برای آن تعیین نکرده‌ایم) و آن نمونه را به صفت <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">self.battery</span><span class="rlm">‏</span> اختصاص می‌دهد.این کار هر زمان متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">__init__()</span><span class="rlm">‏</span> فراخوانی می‌شود، انجام می‌شود؛ اکنون هر نمونه‌ی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">ElectricCar</span><span class="rlm">‏</span> یک نمونه‌ی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Battery</span><span class="rlm">‏</span> دارد که به‌طور خودکار ایجاد شده است.</p>
+                            <p>یک خودروی الکتریکی ایجاد می‌کنیم و آن را به متغیر <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">my_tesla</span><span class="rlm">‏</span> اختصاص می‌دهیم. وقتی که می‌خواهیم باتری را توصیف کنیم، باید از طریق صفت <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">battery</span><span class="rlm">‏</span> خودرو عمل کنیم:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">my_tesla.battery.describe_battery()</pre>
+                            </div><a id="p172"></a>
+                            <p>این سطر به پایتون می‌گوید که به نمونه‌ی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">my_tesla</span><span class="rlm">‏</span> نگاه کند، صفت <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">battery</span><span class="rlm">‏</span> آن را پیدا کند، و متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">describe_battery()</span><span class="rlm">‏</span> مربوط به نمونه‌ی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Battery</span><span class="rlm">‏</span> که در آن صفت ذخیره شده است، را فراخوانی کند.</p>
+                            <p>خروجی این برنامه با آنچه در برنامه‌ی قبلی دیدیم، یکسان است:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">2019 Tesla Model S
+This car has a 75-kWh battery.</pre>
+                            </div>
+                            <p>شاید فکر کنید که این کار زحمت زیادی دارد، ولی اکنون می‌توانیم باتری را با جزئیات کامل توصیف کنیم، بدون آنکه کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">ElectricCar</span><span class="rlm">‏</span> را شلوغ کرده باشیم. حالا متد دیگری به <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Battery</span><span class="rlm">‏</span> اضافه می‌کنیم که بُردِ خودرو را با توجه به انداز‌ه‌ی باتری گزارش می‌کند:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr"><span class="ash">class Car:</span>
+    <span class="ash">--<span class="it">snip</span>--</span>
+
+<span class="ash">class Battery:</span>
+    <span class="ash">--<span class="it">snip</span>--</span>
+
+<span class="n" dir="ltr">1</span>    def get_range(self):
+        """Print a statement about the range this battery provides."""
+        if self.battery_size == 75:
+            range = 260
+        elif self.battery_size == 100:
+            range = 315
+
+        print(f"This car can go about {range} miles on a full charge.")
+
+<span class="ash">class ElectricCar(Car):</span>
+    <span class="ash">--<span class="it">snip</span>--</span>
+
+<span class="ash">my_tesla = ElectricCar('tesla', 'model s', 2019)</span>
+<span class="ash">print(my_tesla.get_descriptive_name())</span>
+<span class="ash">my_tesla.battery.describe_battery()</span>
+<span class="n" dir="ltr">2</span>my_tesla.battery.get_range()</pre>
+                            </div>
+                            <p>متد جدید <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">get_range()</span><span class="rlm">‏</span> در <span class="n" dir="ltr">1</span> تحلیل ساده‌ای را انجام می‌دهد. اگر ظرفیت باتری <span class="rlm">‏</span><span class="lr" dir="ltr">kWh</span><span class="rlm">‏</span> ۷۵ باشد، متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">get_range()</span><span class="rlm">‏</span> برد خودرو را ۲۶۰ مایل تعیین می‌کند، و اگر ظرفیت <span class="rlm">‏</span><span class="lr" dir="ltr">kWh</span><span class="rlm">‏</span> ۱۰۰ باشد، ۳۱۵ مایل. سپس این مقدار را نمایش می‌دهد. وقتی که می‌خواهیم از این متد استفاده کنیم، باز باید آن را از طریق صفت <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">battery</span><span class="rlm">‏</span> خودرو در <span class="n" dir="ltr">2</span> فراخوانی کنیم.</p>
+                            <p>خروجی برنامه، برد خودرو را بر اساس انداز‌ه‌ی باتری آن به ما می‌گوید:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">2019 Tesla Model S
+This car has a 75-kWh battery.
+This car can go about 260 miles on a full charge.</pre>
+                            </div>
+                        </div>
+                        <div class="sect" id="ch09lev2sec10"><a class="bkmk" name="ch09lev2sec10"></a>
+                            <h4>مدل‌سازی اشیای دنیای واقعی</h4>
+                            <a id="p173"></a>
+                            <p>وقتی که به سراغ مدل‌سازی چیزهای پیچیده‌تری مانند خودروهای الکتریکی می‌روید، پرسش‌های جالبی برایتان مطرح می‌شود. آیا برد خودرو خصلتی از باتری است یا از خودرو؟ اگر فقط بخواهیم یک خودرو را توصیف کنیم، احتمالاً اشکالی ندارد که متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">get_range()</span><span class="rlm">‏</span> را همچنان در ارتباط با کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Battery</span><span class="rlm">‏</span> نگه داریم. ولی اگر قرار باشد خط کامل خودروهای تولیدی یک شرکت خودروسازی را توصیف کنیم، احتمالاً بهتر است که متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">get_range()</span><span class="rlm">‏</span> را به کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">ElectricCar</span><span class="rlm">‏</span> منتقل کنیم. متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">get_range()</span><span class="rlm">‏</span> باز هم قبل از تعیین برد خودرو، اندازه‌ی باتری را وارسی خواهد کرد، ولی بردی را گزارش خواهد کرد که مختص نوع خودروی مربوط به آن باشد. یا هم اینکه می‌توانیم همچنان متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">get_range()</span><span class="rlm">‏</span> را در کلاس باتری بگذاریم، ولی پارامتری مانند <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">car_model</span><span class="rlm">‏</span> به آن بدهیم. در آن صورت، متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">get_range()</span><span class="rlm">‏</span> بر اساس اندازه‌ی باتری و مدل خودرو، برد خودرو را گزارش خواهد کرد.</p>
+                            <p>اکنون به نقطه‌ی جالبی در مسیر پیشرفت خود به‌عنوان برنامه‌نویس رسیده‌اید. وقتی که با این نوع پرسش‌ها دست و پنجه نرم می‌کنید، در سطحی بالاتر از سطح مربوط به دستور نحوی زبان برنامه‌نویسی فکر می‌کنید. به پایتون فکر نمی‌کنید، بلکه به این فکر می‌کنید که دنیای واقعی را چگونه با کد نشان دهید. وقتی که به این نقطه رسیدید، متوجه خواهید شد که غالباً رویکرد درست یا غلطی برای مدل‌سازی موقعیت‌های دنیای واقعی وجود ندارد. برخی رویکردها کارایی بالاتری نسبت به رویکردهای دیگر دارند، ولی پیدا کردن مؤثرترین روش بازنمایی نیاز به تمرین زیادی دارد. اگر کد شما همان طوری که انتظار دارید عمل می‌کند، کارتان خوب است! اگر مجبور شدید که چند بار کلاس‌هایتان را به هم بزنید و با رویکردهای مختلف بازنویسی کنید، دلسرد نشوید. در جست‌وجو برای نوشتن کد دقیق و کارآمد، همه باید این فرایند را طی کنند.</p>
+                            <div class="sidebar">
+                                <h6 class="sidebar-title">خودتان امتحان کنید</h6>
+                                <a id="p174"></a>
+                                <p class="tiy1"><span class="tiy" id="ch09_tiy06"><span class="tiy-num">۹-۶</span>. <span class="tiy-title">دکه‌ی بستنی</span>: </span> دکه‌ی بستنی نوع خاصی از رستوران است. کلاسی به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">IceCreamStand</span><span class="rlm">‏</span> بنویسید که از کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Restaurant</span><span class="rlm">‏</span> که در <span class="ref"><a href="c20-ch09.xhtml#ch09_tiy01">تمرین <span dir="ltr">۹-۱</span></a></span> (<span class="ref"><a href="c20-ch09.xhtml#p162">صفحه‌ی <span>۱۶۲</span></a></span>) یا <span class="ref"><a href="c20-ch09.xhtml#ch09_tiy04">تمرین <span dir="ltr">۹-۴</span></a></span> (<span class="ref"><a href="c20-ch09.xhtml#p167">صفحه‌ی <span>۱۶۷</span></a></span>) نوشتید، ارث می‌برد. هر کدام از این دو کلاس باشد، مشکلی ندارد؛ از هر کدام بهتر خوشتان می‌آید، استفاده کنید. صفتی به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">flavors</span><span class="rlm">‏</span> اضافه کنید که لیستی از طعم‌های بستنی را ذخیره می‌کند. متدی بنویسید که این طعم‌ها را نمایش می‌دهد. نمونه‌ای از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">IceCreamStand</span><span class="rlm">‏</span> ایجاد کنید، و این متد را فراخوانی کنید.</p>
+                                <p class="tiy1"><span class="tiy" id="ch09_tiy07"><span class="tiy-num">۹-۷</span>. <span class="tiy-title">مدیریت</span>: </span> مدیر نوع خاصی از کاربر است. کلاسی به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Admin</span><span class="rlm">‏</span> بنویسید که از کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">User</span><span class="rlm">‏</span> که در <span class="ref"><a href="c20-ch09.xhtml#ch09_tiy03">تمرین <span dir="ltr">۹-۳</span></a></span> (<span class="ref"><a href="c20-ch09.xhtml#p162">صفحه‌ی <span>۱۶۲</span></a></span>) یا در <span class="ref"><a href="c20-ch09.xhtml#ch09_tiy05">تمرین <span dir="ltr">۹-۵</span></a></span> (<span class="ref"><a href="c20-ch09.xhtml#p167">صفحه‌ی <span>۱۶۷</span></a></span>) نوشتید، ارث می‌برد. صفتی به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">privileges</span><span class="rlm">‏</span> اضافه کنید که لیستی از رشته‌هایی مانند <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">"can add post"</span><span class="rlm">‏</span>، <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">"can delete post"</span><span class="rlm">‏</span>، <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">"can ban user"</span><span class="rlm">‏</span>، و غیره را ذخیره می‌کند. متدی به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">show_privileges()</span><span class="rlm">‏</span> بنویسید که مجموعه‌ی اختیارات ویژه‌ی مدیر را نمایش می‌دهد. نمونه‌ای از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Admin</span><span class="rlm">‏</span> بسازید و متدتان را فراخوانی کنید.</p>
+                                <p class="tiy1"><span class="tiy" id="ch09_tiy08"><span class="tiy-num">۹-۸</span>. <span class="tiy-title">اختیارات</span>: </span> یک کلاس جداگانه‌ی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Privileges</span><span class="rlm">‏</span> بنویسید. این کلاس باید یک صفت به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">privileges</span><span class="rlm">‏</span> داشته باشد، که حاوی لیستی از رشته‌ها است که در <span class="ref"><a href="c20-ch09.xhtml#ch09_tiy07">تمرین <span dir="ltr">۹-۷</span></a></span> شرح داده شد. متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">show_privileges()</span><span class="rlm">‏</span> را به این کلاس منتقل کنید. یک نمونه از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Privileges</span><span class="rlm">‏</span> را به‌عنوان صفتی در کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Admin</span><span class="rlm">‏</span> بسازید. نمونه‌ای از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Admin</span><span class="rlm">‏</span> ایجاد کنید و با استفاده از متد خود، اختیارات آن را نمایش دهید.</p>
+                                <p class="tiy1"><span class="tiy" id="ch09_tiy09"><span class="tiy-num">۹-۹</span>. <span class="tiy-title">ارتقای باتری</span>: </span> از آخرین نسخه‌ی <span class="rlm">‏</span><span class="ident" dir="ltr">electric_car.py</span><span class="rlm">‏</span> که در این قسمت نوشتید، استفاده کنید. متدی به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">upgrade_battery()</span><span class="rlm">‏</span> به کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Battery</span><span class="rlm">‏</span> اضافه کنید. این متد باید اندازه‌ی باتری را وارسی کند و ظرفیت آن را در صورتی که از قبل نباشد، عدد ۱۰۰ قرار دهد. یک خودروی برقی با انداز‌ه‌ی باتری پیش‌فرض بسازید، یک بار <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">get_range()</span><span class="rlm">‏</span> را فراخوانی کنید، و سپس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">get_range()</span><span class="rlm">‏</span> را یک بار دیگر پس از ارتقای باتری، فراخوانی کنید. خواهید دید که برد خودرو افزایش یافته است.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sect" id="ch09lev1sec4"><a class="bkmk" name="ch09lev1sec4"></a>
+                        <h3>ایمپورت کردن کلاس‌ها</h3>
+                        <p>به تدریج که قابلیت‌های بیشتری به کلاس‌های خود اضافه می‌کنید، فایل‌هایتان بزرگ‌تر می‌شوند، حتی اگر از توارث به درستی استفاده کنید. با توجه به فلسفه‌ی کلی برنامه‌نویسی پایتون، بهتر است سعی کنید حتی‌الامکان از شلوغ شدن فایل‌هایتان جلوگیری کنید. برای کمک به این موضوع، پایتون به شما امکان می‌دهد که کلاس‌هایتان را در مدول‌ها ذخیره کنید و سپس کلاس‌هایی را که لازم دارید، به برنامه‌ی اصلی وارد کنید.</p>
+                        <div class="sect" id="ch09lev2sec11"><a class="bkmk" name="ch09lev2sec11"></a>
+                            <h4>ایمپورت کردن یک کلاس واحد</h4>
+                            <p>فرض کنید مدولی ایجاد می‌کنیم که فقط حاوی کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Car</span><span class="rlm">‏</span> است. در اینجا مشکل ظریفی در زمینه‌ی نام‌گذاری ایجاد می‌شود: از قبل در این فصل فایلی به نام <span class="rlm">‏</span><span class="ident" dir="ltr">car.py</span><span class="rlm">‏</span> داشتیم، ولی این مدول باید <span class="rlm">‏</span><span class="ident" dir="ltr">car.py</span><span class="rlm">‏</span> نامیده شود، زیرا حاوی کد مربوط به خودرو است. برای حل این مشکل، کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Car</span><span class="rlm">‏</span> را در فایلی به نام <span class="rlm">‏</span><span class="ident" dir="ltr">car.py</span><span class="rlm">‏</span> ذخیره می‌کنیم که جایگزین فایل <span class="rlm">‏</span><span class="ident" dir="ltr">car.py</span><span class="rlm">‏</span> می‌شود که قبلاً استفاده می‌کردیم. از حالا به بعد، هر برنامه‌ای که از این مدول استفاده می‌کند، باید نام فایل اختصاصی‌تری داشته باشد، مثلاً <span class="rlm">‏</span><span class="ident" dir="ltr">my_car.py</span><span class="rlm">‏</span>. در اینجا فایل <span class="rlm">‏</span><span class="ident" dir="ltr">car.py</span><span class="rlm">‏</span> را می‌بینیم که فقط کد مربوط به کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Car</span><span class="rlm">‏</span> در آن قرار دارد:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">car.py</div>
+                                <pre class="snippet" dir="ltr"><span class="n" dir="ltr">1</span>"""A class that can be used to represent a car."""
+
+<span class="ash">class Car:</span>
+    <span class="ash">"""A simple attempt to represent a car."""</span>
+
+    <span class="ash">def __init__(self, make, model, year):</span>
+        <span class="ash">"""Initialize attributes to describe a car."""</span>
+        <span class="ash">self.make = make</span>
+        <span class="ash">self.model = model</span>
+        <span class="ash">self.year = year</span>
+        <span class="ash">self.odometer_reading = 0</span>
+
+    <span class="ash">def get_descriptive_name(self):</span>
+        <span class="ash">"""Return a neatly formatted descriptive name."""</span>
+        <span class="ash">long_name = f"{self.year} {self.make} {self.model}"</span>
+        <span class="ash">return long_name.title()</span>
+
+    <span class="ash">def read_odometer(self):</span>
+        <span class="ash">"""Print a statement showing the car's mileage."""</span>
+        <span class="ash">print(f"This car has {self.odometer_reading} miles on it.")</span>
+
+<a id="p175"></a>    <span class="ash">def update_odometer(self, mileage):</span>
+        <span class="ash">"""</span>
+        <span class="ash">Set the odometer reading to the given value.</span>
+<br />        <span class="ash">Reject the change if it attempts to roll the odometer back.</span>
+        <span class="ash">"""</span>
+        <span class="ash">if mileage &gt;= self.odometer_reading:</span>
+            <span class="ash">self.odometer_reading = mileage</span>
+        <span class="ash">else:</span>
+            <span class="ash">print("You can't roll back an odometer!")</span>
+
+    <span class="ash">def increment_odometer(self, miles):</span>
+        <span class="ash">"""Add the given amount to the odometer reading."""</span>
+        <span class="ash">self.odometer_reading += miles</span></pre>
+                            </div>
+                            <p>در <span class="n" dir="ltr">1</span>، یک داک‌استرینگ در سطح مدول داریم که محتویات این مدول را توصیف می‌کند. شما باید برای هر مدولی که ایجاد می‌کنید، یک داک‌استرینگ بنویسید.</p>
+                            <p>حالا فایل دیگری به نام <span class="rlm">‏</span><span class="ident" dir="ltr">my_car.py</span><span class="rlm">‏</span> ایجاد می‌کنیم. این فایل کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Car</span><span class="rlm">‏</span> را ایمپورت می‌کند و سپس نمونه‌ای از آن کلاس ایجاد می‌کند:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">my_car.py</div>
+                                <pre class="snippet" dir="ltr"><span class="n" dir="ltr">1</span>from car import Car
+
+my_new_car = Car('audi', 'a4', 2019)
+print(my_new_car.get_descriptive_name())
+
+my_new_car.odometer_reading = 23
+my_new_car.read_odometer()</pre>
+                            </div>
+                            <p>دستورالعمل <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">import</span><span class="rlm">‏</span> در <span class="n" dir="ltr">1</span> به پایتون می‌گوید که مدول <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">car</span><span class="rlm">‏</span> را باز کند و کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Car</span><span class="rlm">‏</span> را ایمپورت کند. اکنون می‌توانیم از کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Car</span><span class="rlm">‏</span> استفاده کنیم، انگار که در همین فایل تعریف شده است. خروجی همان است که قبلاً دیدیم:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">2019 Audi A4
+This car has 23 miles on it.</pre>
+                            </div>
+                            <p>وارد کردن کلاس‌ها روش کارآمدی برای برنامه‌نویسی است. تصورش را بکنید که اگر می‌خواستیم کل کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Car</span><span class="rlm">‏</span> را نیز در فایل برنامه قرار دهیم، چقدر فایل بزرگ می‌شد. ولی وقتی که کلاس را به یک مدول منتقل کنید و مدول را ایمپورت کنید، باز هم همان قابلیت را دریافت می‌کنید، لیکن فایل برنامه‌ی شما مرتب می‌ماند و به آسانی قابل خواندن است. به‌علاوه، اکثر منطق برنامه در فایل‌های جداگانه ذخیره می‌شود؛ زمانی که کلاس‌های شما عملکردی را که انتظار دارید، داشته باشند، می‌توانید آن‌ها را از ذهنتان خارج کنید و بر روی منطق سطح بالاتر برنامه‌ی خود تمرکز کنید.</p>
+                        </div>
+                        <div class="sect" id="ch09lev2sec12"><a class="bkmk" name="ch09lev2sec12"></a>
+                            <h4>ذخیره کردن چندین کلاس در یک مدول</h4>
+                            <p>می‌توانید هر چند تا کلاس را که لازم بود، در یک مدول ذخیره کنید، هر چند که تمام کلاس‌های یک مدول باید به نحوی با یکدیگر در ارتباط باشند. کلاس‌های <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Battery</span><span class="rlm">‏</span> و <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">ElectricCar</span><span class="rlm">‏</span> هر دو در ارتباط با خودروها هستند، پس هر دو را به مدول <span class="rlm">‏</span><span class="ident" dir="ltr">car.py</span><span class="rlm">‏</span> اضافه می‌کنیم.</p><a id="p176"></a>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">car.py</div>
+                                <pre class="snippet" dir="ltr">"""A set of classes used to represent gas and electric cars."""
+
+<span class="ash">class Car:</span>
+    <span class="ash">--<span class="it">snip</span>--</span>
+
+<span class="ash">class Battery:</span>
+    <span class="ash">"""A simple attempt to model a battery for an electric car."""</span>
+
+    <span class="ash">def __init__(self, battery_size=70):</span>
+        <span class="ash">"""Initialize the battery's attributes."""</span>
+        <span class="ash">self.battery_size = battery_size</span>
+
+    <span class="ash">def describe_battery(self):</span>
+        <span class="ash">"""Print a statement describing the battery size."""</span>
+        <span class="ash">print(f"This car has a {self.battery_size}-kWh battery.")</span>
+
+
+    <span class="ash">def get_range(self):</span>
+        <span class="ash">"""Print a statement about the range this battery provides."""</span>
+        <span class="ash">if self.battery_size == 75:</span>
+            <span class="ash">range = 260</span>
+        <span class="ash">elif self.battery_size == 100:</span>
+            <span class="ash">range = 315</span>
+
+
+        <span class="ash">print(f"This car can go about {range} miles on a full charge.")</span>
+
+<span class="ash">class ElectricCar(Car):</span>
+    <span class="ash">"""Models aspects of a car, specific to electric vehicles."""</span>
+
+    <span class="ash">def __init__(self, make, model, year):</span>
+        <span class="ash">"""</span>
+        <span class="ash">Initialize attributes of the parent class.</span>
+        <span class="ash">Then initialize attributes specific to an electric car.</span>
+        <span class="ash">"""</span>
+        <span class="ash">super().__init__(make, model, year)</span>
+        <span class="ash">self.battery = Battery()</span></pre>
+                            </div>
+                            <p>حالا می‌توانیم فایل جدیدی به نام <span class="rlm">‏</span><span class="ident" dir="ltr">my_electric_car.py</span><span class="rlm">‏</span> ایجاد کنیم، کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">ElectricCar</span><span class="rlm">‏</span> را ایمپورت کنیم، و یک خودروی برقی بسازیم:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">my_electric_car.py</div>
+                                <pre class="snippet" dir="ltr">from car import ElectricCar
+
+my_tesla = ElectricCar('tesla', 'model s', 2019)
+
+print(my_tesla.get_descriptive_name())
+my_tesla.battery.describe_battery()
+my_tesla.battery.get_range()</pre>
+                            </div>
+                            <p>خروجی این برنامه مانند همان برنامه‌ی قبل است، ولو اینکه قسمت عمده‌ی منطق برنامه در یک مدول مخفی شده است.</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">2019 Tesla Model S
+This car has a 75-kWh battery.
+This car can go about 260 miles on a full charge.</pre>
+                            </div>
+                        </div>
+                        <div class="sect" id="ch09lev2sec13"><a class="bkmk" name="ch09lev2sec13"></a>
+                            <h4>وارد کردن چندین کلاس از یک مدول</h4>
+                            <a id="p177"></a>
+                            <p>شما می‌توانید هر چند تا کلاس را که نیاز داشتید، به فایل برنامه ایمپورت کنید. اگر بخواهیم در یک فایل یک خودروی معمولی و یک خودروی الکتریکی ایجاد کنیم، باید هر دو کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Car</span><span class="rlm">‏</span> و <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">ElectricCar</span><span class="rlm">‏</span> را ایمپورت کنیم:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">my_cars.py</div>
+                                <pre class="snippet" dir="ltr"><span class="n" dir="ltr">1</span>from car import Car, ElectricCar
+
+<span class="n" dir="ltr">2</span>my_beetle = Car('volkswagen', 'beetle', 2019)
+print(my_beetle.get_descriptive_name())
+
+<span class="n" dir="ltr">3</span>my_tesla = ElectricCar('tesla', 'roadster', 2019)
+print(my_tesla.get_descriptive_name())</pre>
+                            </div>
+                            <p>برای ایمپورت کردن چند کلاس از یک مدول، نام کلاس‌ها را با کاما از هم جدا کنید <span class="n" dir="ltr">1</span>. وقتی که کلاس‌های لازم را ایمپورت کردید، می‌توانید هر چند تا نمونه که لازم داشتید، از هر کدام از آن کلاس‌ها بسازید.</p>
+                            <p>در این مثال، در <span class="n" dir="ltr">2</span> خودروی فولکس‌واگن بیتل معمولی و در <span class="n" dir="ltr">3</span> یک خودروی برقی تسلا رودستِر ایجاد می‌کنیم:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">2019 Volkswagen Beetle
+2019 Tesla Roadster</pre>
+                            </div>
+                        </div>
+                        <div class="sect" id="ch09lev2sec14"><a class="bkmk" name="ch09lev2sec14"></a>
+                            <h4>ایمپورت کردن تمام مدول</h4>
+                            <p>کار دیگری که می‌توانید بکنید، این است که تمام مدول را وارد کنید و با استفاده از نماد نقطه به کلاس‌های مورد نظر دسترسی پیدا کنید. این رویکرد ساده است، و خواندن کد را آسان می‌کند. از آنجا که برای اشاره به نام کلاس همیشه نام مدول نیز ذکر می‌شود، لذا تداخلی با سایر نام‌های استفاده شده در فایل جاری بروز نخواهد کرد.</p>
+                            <p>در اینجا، نحوه‌ی وارد کردن تمام مدول <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">car</span><span class="rlm">‏</span> و ایجاد یک خودروی معمولی و یک خودروی برقی را می‌بینید:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">my_cars.py</div>
+                                <pre class="snippet" dir="ltr"><span class="n" dir="ltr">1</span>import car
+
+<span class="n" dir="ltr">2</span>my_beetle = car.Car('volkswagen', 'beetle', 2019)
+<span class="ash">print(my_beetle.get_descriptive_name())</span>
+
+<span class="n" dir="ltr">3</span>my_tesla = car.ElectricCar('tesla', 'roadster', 2019)
+<span class="ash">print(my_tesla.get_descriptive_name())</span></pre>
+                            </div>
+                            <p>در <span class="n" dir="ltr">1</span>، تمام مدول <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">car</span><span class="rlm">‏</span> را ایمپورت می‌کنیم. سپس با استفاده از دستور نحوی <span class="it">module_name.ClassName</span> به کلاس‌هایی که می‌خواهیم، دسترسی پیدا می‌کنیم. در <span class="n" dir="ltr">2</span>، دوباره یک فولکس‌واگن بیتل ایجاد می‌کنیم، و در <span class="n" dir="ltr">3</span>، یک تسلا رودستر ایجاد می‌نماییم.</p>
+                        </div>
+                        <div class="sect" id="ch09lev2sec15"><a class="bkmk" name="ch09lev2sec15"></a>
+                            <h4>ایمپورت تمام کلاس‌ها از مدول</h4>
+                            <p>می‌توانید تمام کلاس‌های مدول را با دستور نحوی زیر وارد کنید:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">from <span class="it">module_name</span> import *</pre>
+                            </div><a id="p178"></a>
+                            <p>این روش به دو دلیل توصیه نمی‌شود. اول اینکه بهتر است که در ابتدای فایل با خواندن دستورالعمل‌های <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">import</span><span class="rlm">‏</span> بتوانیم بفهمیم که برنامه از چه کلاس‌هایی استفاده می‌کند. در این روش، معلوم نیست که از چه کلاس‌هایی از مدول می‌خواهید استفاده کنید. به‌علاوه، این رویکرد ممکن است منجر به اشتباه شدن نام‌ها در فایل شود. اگر اتفاقاً کلاسی را ایمپورت کنید که نام آن با نام دیگری در فایل برنامه‌ی شما یکسان باشد، ممکن است منجر به خطاهایی شود که تشخیص آن‌ها دشوار است. این روش را در اینجا بیان می‌کنیم، چون با آنکه روش توصیه‌شده‌ای نیست، ولی ممکن است در کدهای دیگران شاهد آن باشید.</p>
+                            <p>اگر بخواهید کلاس‌های زیادی را از یک مدول وارد کنید، شاید راحت‌تر باشد که کل مدول را وارد کنید و از دستور نحوی <span class="it">module_name.ClassName</span> استفاده کنید. در این حالت، دیگر در بالای فایل نام تمام کلاس‌های استفاده شده را نخواهید دید، ولی به روشنی معلوم خواهد بود که مدول مورد نظر در چه جاهایی از این برنامه مورد استفاده قرار گرفته است. به‌علاوه، از هرگونه تداخل نام که در صورت ایمپورت کردن تمام کلاس‌های مدول ممکن است بروز کند، جلوگیری خواهد شد.</p>
+                        </div>
+                        <div class="sect" id="ch09lev2sec16"><a class="bkmk" name="ch09lev2sec16"></a>
+                            <h4>ایمپورت کردن یک مدول به مدول دیگر</h4>
+                            <p>بعضی وقت‌ها ممکن است بخواهید که کلاس‌های خود را در مدول‌های متعددی قرار دهید تا هیچ‌کدام از فایل‌ها بیش از حد بزرگ نشوند و در یک مدول کلاس‌های نامربوطی ذخیره نشوند. وقتی که کلاس‌هایتان را در چندین مدول ذخیره می‌کنید، شاید یکی از کلاس‌های یک مدول وابسته به کلاسی در مدول دیگری باشد. در این حالت، می‌توانید کلاس مورد نیاز را به مدول اول ایمپورت کنید.</p>
+                            <p>به‌عنوان مثال، فرض کنید کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Car</span><span class="rlm">‏</span> را در یک مدول ذخیره می‌کنیم و کلاس‌های <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">ElectricCar</span><span class="rlm">‏</span> و <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Battery</span><span class="rlm">‏</span> را در مدولی دیگر. نام مدول جدید را <span class="rlm">‏</span><span class="ident" dir="ltr">electric_car.py</span><span class="rlm">‏</span> می‌گذاریم—که جایگزین فایل <span class="rlm">‏</span><span class="ident" dir="ltr">electric_car.py</span><span class="rlm">‏</span> می‌شود که قبلاً ایجاد کردیم—و کلاس‌های <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Battery</span><span class="rlm">‏</span> و <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">ElectricCar</span><span class="rlm">‏</span> را به داخل این فایل کپی می‌کنیم:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">electric_car.py</div>
+                                <pre class="snippet" dir="ltr">"""A set of classes that can be used to represent electric cars."""
+
+<span class="n" dir="ltr">1</span>from car import Car
+
+<span class="ash">class Battery:</span>
+    <span class="ash">--<span class="it">snip</span>--</span>
+
+<span class="ash">class ElectricCar(Car):</span>
+    <span class="ash">--<span class="it">snip</span>--</span></pre>
+                            </div>
+                            <p>کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">ElectricCar</span><span class="rlm">‏</span> نیاز به کلاس والد خود <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Car</span><span class="rlm">‏</span> دارد، بنابراین، <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Car</span><span class="rlm">‏</span> را در <span class="n" dir="ltr">1</span> مستقیماً به داخل مدول ایمپورت می‌کنیم. اگر این سطر را فراموش کنیم، وقتی سعی داشته باشیم مدول <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">electric_car</span><span class="rlm">‏</span> را ایمپورت کنیم، پایتون پیام خطا خواهد داد. به‌علاوه، باید مدول <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Car</span><span class="rlm">‏</span> را تغییر دهیم، به‌گونه‌ای که فقط حاوی کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Car</span><span class="rlm">‏</span> باشد:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">car.py</div>
+                                <pre class="snippet" dir="ltr">"""A class that can be used to represent a car."""
+
+<span class="ash">class Car:</span>
+    <span class="ash">--<span class="it">snip</span>--</span></pre>
+                            </div><a id="p179"></a>
+                            <p>اکنون می‌توانیم هر مدول را جداگانه ایمپورت کنیم و هر نوع خودرویی می‌خواهیم، بسازیم:</p>
+                            <div class="snippet">
+                                <div class="snippet-title" dir="ltr">my_cars.py</div>
+                                <pre class="snippet" dir="ltr"><span class="n" dir="ltr">1</span>from car import Car
+from electric_car import ElectricCar
+
+my_beetle = Car('volkswagen', 'beetle', 2019)
+print(my_beetle.get_descriptive_name())
+
+my_tesla = ElectricCar('tesla', 'roadster', 2019)
+print(my_tesla.get_descriptive_name())</pre>
+                            </div>
+                            <p>در <span class="n" dir="ltr">1</span>، کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Car</span><span class="rlm">‏</span> را از مدول آن ایمپورت می‌کنیم، و کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">ElectricCar</span><span class="rlm">‏</span> را نیز از مدول آن ایمپورت می‌نماییم. سپس یک خودروی معمولی و یک خودروی برقی ایجاد می‌کنیم. هر دو نوع خودرو به درستی ایجاد می‌شوند:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">2019 Volkswagen Beetle
+2019 Tesla Roadster</pre>
+                            </div>
+                        </div>
+                        <div class="sect" id="ch09lev2sec17"><a class="bkmk" name="ch09lev2sec17"></a>
+                            <h4>استفاده از نام مستعار</h4>
+                            <p>همان‌گونه که در <span class="ref"><a href="c19-ch08.xhtml">فصل ۸</a></span> دیدید، وقتی از مدول‌ها برای سازمان‌دهی کد پروژه‌های خود استفاده می‌کنید، نام‌های مستعار می‌تواند بسیار سودمند باشد. هنگام ایمپورت کردن کلاس‌ها نیز می‌توانید از نام مستعار استفاده کنید.</p>
+                            <p>به‌عنوان یک مثال، برنامه‌ای را در نظر بگیرید که در آن می‌خواهید تعدادی خودروی برقی ایجاد کنید. ممکن است نوشتن (و خواندن) مکرر <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">ElectricCar</span><span class="rlm">‏</span> برایتان پرزحمت باشد. می‌توانید در دستورالعمل ایمپورت به <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">ElectricCar</span><span class="rlm">‏</span> یک نام مستعار بدهید:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">from electric_car import ElectricCar as EC</pre>
+                            </div>
+                            <p>اکنون می‌توانید برای ایجاد خودروی برقی از این نام مستعار استفاده کنید:</p>
+                            <div class="snippet">
+                                <pre class="snippet" dir="ltr">my_tesla = EC('tesla', 'roadster', 2019)</pre>
+                            </div>
+                        </div>
+                        <div class="sect" id="ch09lev2sec18"><a class="bkmk" name="ch09lev2sec18"></a>
+                            <h4>رسیدن به گردش کار مناسب</h4>
+                            <p>همان طور که می‌بینید، پایتون برای نحوه‌ی سازمان‌دهی کد در پروژه‌های بزرگ، گزینه‌های زیادی به شما می‌دهد. شما باید با روش‌های مختلف آشنا باشید، تا هم بتوانید برای سازمان‌دهی پروژه‌های خود بهترین راه را انتخاب کنید و هم بتوانید پروژه‌های افراد دیگر را بفهمید.</p>
+                            <p>در ابتدا سعی کنید ساختار کد خود را ساده نگه دارید. می‌توانید همه چیز را در یک فایل بنویسید و وقتی که همه چیز درست اجرا شد، کلاس‌ها را به مدول‌های جداگانه‌ای منتقل کنید. اگر از نحوه‌ی تعامل مدول‌ها و فایل‌ها راضی هستید، می‌توانید از زمان شروع یک پروژه، کلاس‌ها را به مدول‌های مخصوص آن‌ها منتقل کنید. بهتر است به روشی کار کنید که بتوانید به‌طور مؤثری برنامه‌نویسی کنید، بعد آن را بهبود دهید.</p><a id="p180"></a>
+                            <div class="sidebar">
+                                <h6 class="sidebar-title">خودتان امتحان کنید</h6>
+                                <p class="tiy1"><span class="tiy" id="ch09_tiy10"><span class="tiy-num">۹-۱۰</span>. <span class="tiy-title">ایمپورت کردن رستوران</span>: </span> آخرین نسخه‌ی کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Restaurant</span><span class="rlm">‏</span> را که نوشته‌اید، به یک مدول منتقل کنید. فایل دیگری درست کنید و <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Restaurant</span><span class="rlm">‏</span> را در آن ایمپورت کنید. یک نمونه‌ی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Restaurant</span><span class="rlm">‏</span> ایجاد کنید، و یکی از متدهای <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Restaurant</span><span class="rlm">‏</span> را فراخوانی کنید تا معلوم شود که دستورالعمل <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">import</span><span class="rlm">‏</span> درست کار می‌کند.</p>
+                                <p class="tiy1"><span class="tiy" id="ch09_tiy11"><span class="tiy-num">۹-۱۱</span>. <span class="tiy-title">ایمپورت کردن مدیر</span>: </span> با کارتان در <span class="ref"><a href="c20-ch09.xhtml#ch09_tiy08">تمرین <span dir="ltr">۹-۸</span></a></span> (<span class="ref"><a href="c20-ch09.xhtml#p173">صفحه‌ی <span>۱۷۳</span></a></span>) شروع کنید. کلاس‌های <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">User</span><span class="rlm">‏</span>، <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Privileges</span><span class="rlm">‏</span>، و <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Admin</span><span class="rlm">‏</span> را در یک مدول ذخیره کنید. فایل جداگانه‌ای ایجاد کنید و در آن یک نمونه از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Admin</span><span class="rlm">‏</span> ایجاد کنید و متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">show_privileges()</span><span class="rlm">‏</span> را فراخوانی کنید، تا نشان دهید که همه چیز درست کار می‌کند.</p>
+                                <p class="tiy1"><span class="tiy" id="ch09_tiy12"><span class="tiy-num">۹-۱۲</span>. <span class="tiy-title">مدول‌های متعدد</span>: </span> کلاس <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">User</span><span class="rlm">‏</span> را در یک مدول ذخیره کنید، و کلاس‌های <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Privileges</span><span class="rlm">‏</span> و <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Admin</span><span class="rlm">‏</span> را در مدول دیگری ذخیره نمایید. در فایل جداگانه‌ای، نمونه‌ای از <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Admin</span><span class="rlm">‏</span> ایجاد کنید و متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">show_privileges()</span><span class="rlm">‏</span> را فراخوانی کنید تا معلوم شود که همه چیز به درستی کار می‌کند.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sect" id="ch09lev1sec5"><a class="bkmk" name="ch09lev1sec5"></a>
+                        <h3>کتابخانه‌ی استاندارد پایتون</h3>
+                        <p><span class="emphasis">کتابخانه‌ی استاندارد پایتون</span> در تمام موارد نصب پایتون گنجانده شده است. اکنون که شما درکی اساسی از طرز کار توابع و کلاس‌ها دارید، می‌توانید شروع به استفاده از این‌گونه مدول‌ها کنید که برنامه‌نویسان دیگر نوشته‌اند. می‌توانید با گنجاندن یک دستور ساده‌ی <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">import</span><span class="rlm">‏</span> در بالای فایل برنامه‌ی خود، از هر کدام از توابع یا کلاس‌های کتابخانه‌ی استاندارد استفاده کنید. مثلاً نگاهی به یکی از مدول‌ها به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">random</span><span class="rlm">‏</span> می‌اندازیم که می‌تواند در بسیاری از موقعیت‌های دنیای واقعی سودمند باشد.</p>
+                        <p>یک تابع جالب مدول تصادفی، تابع <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">randint()</span><span class="rlm">‏</span> است. این تابع دو آرگومان عدد صحیح می‌گیرد و یک عدد صحیح تصادفی را که بین آن دو عدد (شامل خود آن‌ها) است، برمی‌گرداند.</p>
+                        <p>مثلاً به‌صورت زیر می‌توانید یک عدد تصادفی بین ۱ و ۶ انتخاب کنید:</p>
+                        <div class="snippet">
+                            <pre class="snippet" dir="ltr">&gt;&gt;&gt; <span class="bo">from random import randint</span>
+&gt;&gt;&gt; <span class="bo">randint(1, 6)</span>
+3</pre>
+                        </div>
+                        <p>یک تابع مفید دیگر، <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">choice()</span><span class="rlm">‏</span> است. این تابع یک لیست یا توپل را می‌گیرد و یک عنصر انتخاب شده‌ی تصادفی از آن را برمی‌گرداند:</p>
+                        <div class="snippet">
+                            <pre class="snippet" dir="ltr">&gt;&gt;&gt; <span class="bo">from random import choice</span>
+&gt;&gt;&gt; <span class="bo">players = ['charles', 'martina', 'michael', 'florence', 'eli']</span>
+&gt;&gt;&gt; <span class="bo">first_up = choice(players)</span>
+&gt;&gt;&gt; <span class="bo">first_up</span>
+'florence'</pre>
+                        </div><a id="p181"></a>
+                        <p>البته برای ساخت برنامه‌های مرتبط با امنیت نباید از مدول <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">random</span><span class="rlm">‏</span> استفاده کرد، لیکن برای بسیاری از پروژه‌های سرگرمی و جالب مناسب است.</p>
+                        <div class="note">
+                            <h6 class="note-title">توجه</h6>
+                            <p>مدول‌ها را از منابع خارجی نیز می‌توانید دانلود کنید. برخی از این مثال‌ها را در <span class="ref"><a href="c23-p2.xhtml">بخش ۲</a></span> خواهید دید، که در آنجا ما برای تکمیل هر پروژه نیاز به مدول‌های خارجی خواهیم داشت.</p>
+                        </div>
+                        <div class="sidebar">
+                            <h6 class="sidebar-title">خودتان امتحان کنید</h6>
+                            <p class="tiy1"><span class="tiy" id="ch09_tiy13"><span class="tiy-num">۹-۱۳</span>. <span class="tiy-title">تاس</span>: </span> کلاسی به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">Die</span><span class="rlm">‏</span> بسازید با یک صفت به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">sides</span><span class="rlm">‏</span>، که مقدار پیش‌فرض آن ۶ است. متدی به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">roll_die()</span><span class="rlm">‏</span> بنویسید که عددی تصادفی را بین ۱ و تعداد وجوه تاس نمایش می‌دهد. یک تاس شش‌وجهی بسازید و آن را ۱۰ بار بیندازید.</p>
+                            <p>یک تاس ۱۰-وجهی و یک تاس ۲۰-وجهی بسازید. هر تاس را ۱۰ بار بیندازید.</p>
+                            <p class="tiy1"><span class="tiy" id="ch09_tiy14"><span class="tiy-num">۹-۱۴</span>. <span class="tiy-title">بخت‌آزمایی</span>: </span> یک لیست یا توپل بسازید که حاوی دنباله‌ای از ۱۰ عدد و پنج حرف است. به‌طور تصادفی چهار عدد یا حرف را از لیست انتخاب کنید و پیامی را نمایش دهید که می‌گوید که هر بلیتی که با این چهار عدد یا حرف مطابقت داشته باشد، برنده‌ی جایزه است.</p>
+                            <p class="tiy1"><span class="tiy" id="ch09_tiy15"><span class="tiy-num">۹-۱۵</span>. <span class="tiy-title">تحلیل بخت‌آزمایی</span>: </span> می‌توانید با استفاده از یک حلقه ببینید که برنده شدن در بخت‌آزمایی بالا چقدر سخت است. یک لیست یا توپل به نام <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">my_ticket</span><span class="rlm">‏</span> ایجاد کنید. حلقه‌ای بنویسید که پشت سر هم اعداد را انتخاب می‌کند، تا آنکه بلیت شما برنده شود. پیامی نمایش دهید دایر بر اینکه تا زمان رسیدن به بلیت برنده، حلقه چند بار اجرا شده است.</p>
+                            <p class="tiy1"><span class="tiy" id="ch09_tiy16"><span class="tiy-num">۹-۱۶</span>. <span class="tiy-title">مدول پایتون هفته</span>: </span> یک منبع عالی برای کاوش کتابخانه‌ی استاندارد پایتون، سایتی است به نام <span class="emphasis">مدول پایتون هفته</span>. به نشانی <span class="rlm">‏</span><a dir="ltr" target="_blank" href="https://pymotw.com/">pymotw.com</a><span class="rlm">‏</span> بروید و به فهرست آن نگاه کنید. مدولی پیدا کنید که به نظرتان جالب برسد و درباره‌ی آن مطالعه کنید. مثلاً می‌توانید از مدول <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">random</span><span class="rlm">‏</span> شروع کنید.</p>
+                        </div>
+                    </div>
+                    <div class="sect" id="ch09lev1sec6"><a class="bkmk" name="ch09lev1sec6"></a>
+                        <h3>سبک نوشتن کلاس‌ها</h3>
+                        <p>از لحاظ سبک نوشتن کلاس‌ها، برخی مسائل نیاز به توضیح دارد، خصوصاً زمانی که بخواهید برنامه‌های پیچیده‌تری بنویسید.</p>
+                        <p>نام کلاس‌ها باید به‌صورت <span class="emphasis"><span class="rlm">‏</span><span class="lr" dir="ltr">CamelCase</span><span class="rlm">‏</span></span> (حالت شتری از نظر حروف کوچک و بزرگ) نوشته شود. برای این منظور، حرف اول هر کدام از کلمات را حرف بزرگ قرار دهید و از زیرخط استفاده نکنید. نام نمونه و مدول باید با حروف کوچک نوشته شود و بین کلمات زیرخط گذاشته شود.</p>
+                        <p>هر کلاس بلافاصله زیر تعریف کلاس، یک داک‌استرینگ داشته باشد. این رشته شرح مختصری از عملکرد کلاس باشد، و باید بر اساس همان فرمتی نوشته شود که برای نوشتن داک‌استرینگ در توابع استفاده می‌شود. هر مدول نیز باید حاوی یک داک‌استرینگ باشد که شرح می‌دهد که کلاس‌های موجود در مدول را برای چه منظوری می‌توان استفاده کرد.</p>
+                        <p>می‌توانید برای سازمان‌دهی کد از سطرهای خالی استفاده کنید، ولی زیاد سطر خالی نگذارید. در داخل یک کلاس می‌توانید بین متدها یک سطر خالی قرار دهید، و در داخل مدول، برای جدا کردن کلاس‌ها از دو سطر خالی استفاده کنید.</p><a id="p182"></a>
+                        <p>اگر نیاز دارید که مدولی را از کتابخانه‌ی استاندارد ایمپورت کنید و مدولی را هم که خودتان نوشته‌اید، ایمپورت نمایید، اول دستورالعمل ایمپورت کتابخانه‌ی استاندارد را بنویسید. سپس یک سطر خالی بگذارید و دستورالعمل ایمپورت مدولی را که خودتان نوشته‌اید، قرار دهید. در برنامه‌هایی که دستورالعمل‌های ایمپورت زیادی دارند، این روش سبب می‌شود که راحت‌تر بتوان فهمید که مدول‌های مختلف استفاده شده در برنامه از کجا آمده‌اند.</p>
+                    </div>
+                    <div class="sect" id="ch09lev1sec7"><a class="bkmk" name="ch09lev1sec7"></a>
+                        <h3>خلاصه</h3>
+                        <p>در این فصل، نحوه‌ی نوشتن کلاس را یاد گرفتید. یاد گرفتید که اطلاعات را در کلاس به‌صورت صفت ذخیره کنید و با نوشتن متدهایی برای کلاس، رفتار لازم را به آن بدهید. با نوشتن متد <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">__init__()</span><span class="rlm">‏</span> نیز آشنا شدید که سبب می‌شود که نمونه‌هایی که از کلاس‌های خود می‌سازید، دقیقاً همان صفت‌هایی داشته باشند که شما می‌خواهید. نحوه‌ی تغییر دادن صفت‌های یک نمونه را به‌صورت مستقیم و با استفاده از متد یاد گرفتید. هم‌چنین، یاد گرفتید که توارث می‌تواند ایجاد کلاس‌های مرتبط با یکدیگر را تسهیل کند، و یاد گرفتید که چگونه از نمونه‌های یک کلاس به‌عنوان صفتی برای کلاس دیگر استفاده کنید تا هر کلاس هرچه ساده‌تر باشد.</p>
+                        <p>دیدید که اگر کلاس‌ها را به‌صورت مدول ذخیره کنید و کلاس‌هایی را که لازم دارید به فایل‌هایی که در آن استفاده می‌شوند ایمپورت کنید، خواهید توانست سازمان‌دهی بهتری به پروژه‌های خود بدهید. درباره‌ی کتابخانه‌ی استاندارد پایتون هم چیزهایی یاد گرفتید و با مثالی از کاربرد مدول <span class="rlm">‏</span><span class="literal" dir="ltr" style="direction: ltr;">random</span><span class="rlm">‏</span> آشنا شدید. و سرانجام، مطالبی درباره‌ی سبک نوشتن کلاس‌ها بر اساس قراردادهای پایتون فراگرفتید.</p>
+                        <p>در <span class="ref"><a href="c21-ch10.xhtml">فصل ۱۰</a></span>، نحوه‌ی کار کردن با فایل‌ها را یاد می‌گیرید، تا اینکه بتوانید کارتان را در یک برنامه ذخیره کنید و کارهایی را که کاربران انجام می‌دهند، نیز ذخیره نمایید. هم‌چنین، با <span class="emphasis">استثنا</span> آشنا خواهید شد، که کلاس ویژه‌ای در پایتون است که برای کمک به پاسخ‌گویی به خطاها در مواردی که خطایی در برنامه بروز می‌کند، طراحی شده است.</p>
+                    </div>
+                </div>
+                <div class="row pager">
+                    <div class="col-md-5 text-center text-md-left pager-prev"><a href="c19-ch08.xhtml"><span><span>فصل ۸</span>: <span>تابع</span></span></a></div>
+                    <div class="col-md-2 text-center pager-title"><a href="c01-cover.xhtml">آغاز</a></div>
+                    <div class="col-md-5 text-center text-md-right pager-next"><a href="c21-ch10.xhtml"><span><span>فصل ۱۰</span>: <span>فایل‌ها و استثناها</span></span></a></div>
+                </div>
+            </main>
+            <aside class="col-md-2 order-md-first">
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item"><a class="nav-link" href="../">دورهٔ فشردهٔ پایتون</a></li>
+                    <li class="nav-item"><a class="nav-link" href="c06-toc.xhtml">فهرست</a></li>
+                </ul>
+            </aside>
+        </div>
+    </div>
+    <div class="container">
+        <div id="footer" class="row">
+            <div class="col-sm-6">
+                <p><span>© ۱۴۰۰، قاسم کیانی مقدم.</span></p>
+            </div>
+            <div class="col-sm-6">
+                <p class="text-right"><span><a target="_blank" rel="me" href="https://linkedin.com/in/ghasemkiani" title="لینکدین"><span class="fab fa-linkedin"></span></a></span><span> </span><span><a target="_blank" rel="me" href="https://github.com/ghasemkiani" title="گیت‌هاب"><span class="fab fa-github"></span></a></span><span> </span><span><a target="_blank" rel="me" href="https://twitter.com/ghasemkiani" title="توئیتر"><span class="fab fa-twitter"></span></a></span><span> </span><span><a target="_blank" rel="me" href="https://facebook.com/ghasemkiani" title="فیس‌بوک"><span class="fab fa-facebook"></span></a></span><span> </span><span><a target="_blank" rel="me" href="https://telegram.me/ghasemkiani" title="تلگرام"><span class="fab fa-telegram"></span></a></span><span> </span><span><a target="_blank" rel="me" href="https://instagram.com/ghasem.kiani" title="اینستاگرام"><span class="fab fa-instagram"></span></a></span><span> </span><span><a target="_blank" rel="me" href="https://mastodon.social/@ghasemkiani" title="ماستودون"><span class="fab fa-mastodon"></span></a></span></p>
+            </div>
+        </div>
+    </div>
+    <script crossorigin="anonymous" src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"></script>
+    <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"></script>
+    <script crossorigin="anonymous" src="https://cdn.rtlcss.com/bootstrap/v4.0.0/js/bootstrap.min.js" integrity="sha384-54+cucJ4QbVb99v8dcttx/0JRx4FHMmhOWi4W+xrXpKcsKQodCBwAvu3xxkZAwsH"></script>
+    <script src="https://www.googletagmanager.com/gtag/js?id=undefined"></script>
+    <script src="data:application/javascript;charset=UTF-8;base64,KCgoew0KICAgIGlkDQp9KSA9PiB7DQogICAgd2luZG93LmRhdGFMYXllciA9IHdpbmRvdy5kYXRhTGF5ZXIgfHwgW107DQoNCiAgICBmdW5jdGlvbiBndGFnKCkgew0KICAgICAgICBkYXRhTGF5ZXIucHVzaChhcmd1bWVudHMpOw0KICAgIH0NCiAgICBndGFnKCJqcyIsIG5ldyBEYXRlKCkpOw0KICAgIGd0YWcoImNvbmZpZyIsIGlkKTsNCn0pKHt9KSk7Cg=="></script>
+</body>
+
+</html>
